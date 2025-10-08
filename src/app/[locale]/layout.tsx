@@ -1,0 +1,60 @@
+import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import NavbarMain from "./NavbarMain";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "UNIDXS WNC - Trabajamos por la comunidad",
+  description: "UNIDXS WNC - Construyendo una sociedad más justa, solidaria e inclusiva",
+  icons: {
+    icon: '/favicon.ico',
+  },
+};
+
+export default async function RootLayout({
+  children,
+  params
+}: Readonly<{
+  children: React.ReactNode;
+  params: any;
+}>) {
+  const {locale} = await params;
+  
+  if(!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  const messages = await getMessages(locale);
+  
+  return (
+    <html lang={locale}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <NextIntlClientProvider messages={messages}>
+          {/* Navbar fijo en todas las páginas con selector de idioma integrado */}
+          <NavbarMain />
+          
+          {/* Contenido principal con padding-top para el navbar */}
+          <main className="pt-20">
+            {children}
+          </main>
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
+}
