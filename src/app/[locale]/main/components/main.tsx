@@ -18,13 +18,10 @@ export default function MainPage() {
     <section className="relative min-h-screen bg-white">
     {/* Background Image with Overlay */}
     <div className="absolute inset-0 z-0">
-    <Image
+    <img
     src="/Fondo.webp"
     alt="Fondo desenfocado"
-    fill
-    className="object-cover object-[50%] blur-xs scale-100"
-    priority
-    quality={85}
+    className="w-full h-full object-cover object-[50%] blur-xs scale-110"
     sizes="100vw"
     style={{
       filter: 'brightness(0.7)'
