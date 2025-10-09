@@ -175,10 +175,10 @@ export default function MainPage() {
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4 text-green-400" />
               <a 
-                href="tel:+18287084009" 
+                href="tel:+18282427345" 
                 className="text-sm hover:text-green-400 transition-colors"
               >
-                (828) 708-4009
+                (828) 242-7345
               </a>
             </div>
             <div className="flex items-start space-x-2 mt-4">
