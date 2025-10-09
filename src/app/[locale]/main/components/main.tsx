@@ -50,9 +50,9 @@ export default function MainPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-body text-lg sm:text-xl text-white mb-8 leading-relaxed"
+          className="font-body text-lg sm:text-xl text-white mb-8 leading-relaxed bg-gradient-to-r from-purple-600/30 to-indigo-600/30 backdrop-blur-sm border-l-4 border-purple-400 p-6 rounded-lg shadow-lg"
         >
-          
+          {t('Descripcion')}
         </motion.p>
 
         <motion.div 
