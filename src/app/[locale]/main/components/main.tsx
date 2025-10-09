@@ -203,10 +203,10 @@ export default function MainPage() {
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4 text-green-400" />
               <a 
-                href="mailto:pwitty@unidxwnc.org" 
+                href="mailto:pwitty@unidxswnc.org" 
                 className="text-sm hover:text-green-400 transition-colors break-all"
               >
-                pwitty@unidxwnc.org
+                pwitty@unidxswnc.org
               </a>
             </div>
             <div className="flex items-center space-x-2">
@@ -229,10 +229,10 @@ export default function MainPage() {
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4 text-green-400" />
               <a 
-                href="mailto:swest@unidxwnc.org" 
+                href="mailto:swest@unidxswnc.org" 
                 className="text-sm hover:text-green-400 transition-colors break-all"
               >
-                swest@unidxwnc.org
+                swest@unidxswnc.org
               </a>
             </div>
             <div className="flex items-center space-x-2">
