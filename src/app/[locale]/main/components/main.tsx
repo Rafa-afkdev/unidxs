@@ -21,7 +21,7 @@ export default function MainPage() {
     <img
     src="/Fondo.webp"
     alt="Fondo desenfocado"
-    className="w-full h-full object-cover object-[50%] blur-xs scale-110"
+    className="w-full h-full object-cover object-center blur-xs scale-100"
     sizes="100vw"
     style={{
       filter: 'brightness(0.7)'
@@ -166,9 +166,9 @@ export default function MainPage() {
         
         {/* General Contact */}
         <div>
-          <h3 className="font-sans text-lg font-bold mb-4 text-purple-200 uppercase tracking-wide">Consultas Generales</h3>
+          <h3 className="font-sans text-lg font-bold mb-4 text-purple-200 uppercase tracking-wide">{t('footer.generalContact')}</h3>
           <div className="space-y-3">
-            <p className="text-sm font-semibold text-white">Oficina UNIDXS</p>
+            <p className="text-sm font-semibold text-white">{t('footer.office')}</p>
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4 text-green-400" />
               <a 
@@ -194,7 +194,7 @@ export default function MainPage() {
 
         {/* Health Contact */}
         <div>
-          <h3 className="font-sans text-lg font-bold mb-4 text-purple-200 uppercase tracking-wide">Salud</h3>
+          <h3 className="font-sans text-lg font-bold mb-4 text-purple-200 uppercase tracking-wide">{t('footer.health')}</h3>
           <div className="space-y-3">
             <p className="text-sm font-semibold text-white">Paul Witty</p>
             <div className="flex items-center space-x-2">
@@ -220,7 +220,7 @@ export default function MainPage() {
 
         {/* Education Contact */}
         <div>
-          <h3 className="font-sans text-lg font-bold mb-4 text-purple-200 uppercase tracking-wide">Educación</h3>
+          <h3 className="font-sans text-lg font-bold mb-4 text-purple-200 uppercase tracking-wide">{t('footer.education')}</h3>
           <div className="space-y-3">
             <p className="text-sm font-semibold text-white">Sarah West</p>
             <div className="flex items-center space-x-2">
@@ -248,7 +248,7 @@ export default function MainPage() {
 
         {/* Social Media */}
         <div>
-          <h3 className="font-sans text-lg font-bold mb-4 text-purple-200 uppercase tracking-wide">Síguenos</h3>
+          <h3 className="font-sans text-lg font-bold mb-4 text-purple-200 uppercase tracking-wide">{t('footer.followUs')}</h3>
           <div className="flex flex-wrap gap-3">
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
               <Link
@@ -287,7 +287,7 @@ export default function MainPage() {
             </motion.div>
           </div>
           <p className="mt-4 text-xs text-purple-300">
-            Conéctate con nosotros en redes sociales
+            {t('footer.socialText')}
           </p>
         </div>
       </div>
@@ -296,20 +296,20 @@ export default function MainPage() {
       <div className="pt-8 border-t border-purple-500/30">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-purple-200">
-            © 2022 UNIDXS WNC. Todos los derechos reservados.
+            {t('footer.copyright')}
           </p>
           <div className="flex gap-6 text-sm">
             <Link 
               href="/privacidad" 
               className="hover:text-green-400 transition-colors text-purple-200"
             >
-              Política de Privacidad
+              {t('footer.privacy')}
             </Link>
             <Link 
               href="/terminos" 
               className="hover:text-green-400 transition-colors text-purple-200"
             >
-              Términos de Uso
+              {t('footer.terms')}
             </Link>
           </div>
         </div>

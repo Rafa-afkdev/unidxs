@@ -17,6 +17,17 @@
       "paragraph2": "We are committed to helping people develop their life projects. We work every day to eliminate barriers that prevent progress and create spaces where everyone can thrive.",
       "paragraph3": "The UNIDXS WNC Team thanks each and every person who joined us at our community events like UNIDXS for Life. We are here to serve you and build a better future together.",
       "button": "Learn More About Us"
+    },
+    "footer": {
+      "generalContact": "General Inquiries",
+      "office": "UNIDXS Office",
+      "health": "Health",
+      "education": "Education",
+      "followUs": "Follow Us",
+      "socialText": "Connect with us on social media",
+      "copyright": "© 2022 UNIDXS WNC. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use"
     }
   }
 }

@@ -17,6 +17,17 @@
       "paragraph2": "Estamos comprometidxs con las personas para que logren desarrollar sus proyectos de vida. Trabajamos día a día para eliminar las barreras que impiden el progreso y crear espacios donde todxs puedan prosperar.",
       "paragraph3": "El Equipo de UNIDXS WNC agradece a cada una de las personas que nos acompañaron en nuestros eventos comunitarios como UNIDXS for Life. Estamos aquí para servirles y construir juntos un futuro mejor.",
       "button": "Conoce Más Sobre Nosotros"
+    },
+    "footer": {
+      "generalContact": "Consultas Generales",
+      "office": "Oficina UNIDXS",
+      "health": "Salud",
+      "education": "Educación",
+      "followUs": "Síguenos",
+      "socialText": "Conéctate con nosotros en redes sociales",
+      "copyright": "© 2022 UNIDXS WNC. Todos los derechos reservados.",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Uso"
     }
   }
 }
