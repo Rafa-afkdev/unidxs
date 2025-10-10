@@ -32,7 +32,7 @@ Message:
 ${formData.message}
       `.trim()
       
-      const mailtoLink = `mailto:rafaelalejandrocastellano@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`
+      const mailtoLink = `mailto:Rball@unidxSwnc.org?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`
       window.location.href = mailtoLink
       
       setStatus('success')
