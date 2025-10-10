@@ -2,14 +2,15 @@
   "navbar": {
     "about": "Nosotros",
     "team": "Equipo",
-    "notice": "Noticias",
+    "notice": "Avisos",
     "contact": "Contacto",
+    "services": "Servicios",
     "language": "Idioma"
   },
 
   "main": {
     "Titulo": "UNIDXS",
-    "SubTitulo": "Trabajamos para la comunidad",
+    "SubTitulo": "Trabajamos juntxs por el bienestar de nuestra comunidad",
     "Descripcion": "Estamos trabajando para mejorar nuestro sitio web y brindarte una mejor experiencia. Mientras tanto, pueden ir enterándose sobre nosotros en nuestras redes sociales. ¡Pronto tendremos más novedades para ti!",
     "about": {
       "title": "Nuestra Misión",
@@ -28,6 +29,175 @@
       "copyright": "© 2022 UNIDXS WNC. Todos los derechos reservados.",
       "privacy": "Política de Privacidad",
       "terms": "Términos de Uso"
+    }
+  },
+
+  "team": {
+    "title": "Nuestro Equipo",
+    "subtitle": "Conoce a las personas que hacen posible nuestra misión",
+    "boardTitle": "Junta Directiva",
+    "boardSubtitle": "Liderazgo guiando nuestra visión y misión",
+    "teamTitle": "Nuestro Equipo",
+    "teamSubtitle": "Profesionales dedicados sirviendo a nuestra comunidad",
+    "volunteersTitle": "Voluntarios",
+    "members": {
+      "victoria": {
+        "name": "Victoria Lyall",
+        "role": "Presidenta de la Junta",
+        "description": "Liderando nuestra organización con visión y dedicación al servicio comunitario."
+      },
+      "edithBoard": {
+        "name": "Edith Jennings",
+        "role": "Miembro de la Junta Secretaria",
+        "description": "Homeopatía y el Instituto Politécnico Nacional en México. Actualmente está cursando un título adicional en Western Carolina University para recibir su BSN. En México, fue Doctora Holística. Tiene 20 años de experiencia ayudando a la comunidad latina y creando conexiones entre las comunidades hispana y anglosajona. Ha trabajado como asistente administrativa para el Latino Outreach y Solidaridad Center. Fue intérprete voluntaria y maestra en la Iglesia Católica Saint Francis y embajadora de Latinos Aventureros en las Carolinas. Actualmente es Enfermera Peri Operativa en el Angel Medical Center en Franklin, NC. Fue miembro de la Junta de la Coalition of Latino Americans y miembro del Consejo de Padres en Macon Program for Progress. Ha sido miembro actual de la junta de Unidxs desde 2021. Edith estudió en la Escuela Nacional de Medicina y."
+      },
+      "valeria": {
+        "name": "Valeria Barrera",
+        "role": "Tesorera de la Junta",
+        "description": "Gestionando nuestros recursos financieros con integridad y transparencia."
+      },
+      "ricardo": {
+        "name": "Ricardo Bello Ball",
+        "role": "Director Ejecutivo",
+        "description": "Como fundador de Unidxs WNC en 2021, Ricardo ha trabajado incansablemente para apoyar a nuestra comunidad latina. Ricardo tiene 25 años de experiencia trabajando con la comunidad latina."
+      },
+      "paul": {
+        "name": "Paul Witty",
+        "role": "Trabajador de Salud Comunitaria",
+        "description": "Paul tiene su licenciatura en Terapia Ocupacional y tiene 20 años de experiencia trabajando para el Departamento de Salud de NC antes de asumir su rol de Trabajador de Salud Comunitaria con Unidxs. También está en el Comité Asesor de Terapia Ocupacional de Southwestern Community College."
+      },
+      "sarahWest": {
+        "name": "Sarah West",
+        "role": "Coordinadora de Educación Comunitaria",
+        "description": "En 2022, Sarah se graduó de Western Carolina University con una licenciatura en Español y Estudios Internacionales y especialidades en Negocios Globales y Filosofía. Actualmente está trabajando en su certificado de posgrado en TESOL. Después de graduarse, trabajó en Southwestern Community College como Coordinadora de Preparación Universitaria y Profesional supervisando los programas de Adquisición del Idioma Inglés y Equivalencia de Escuela Secundaria durante dos años antes de asumir su nuevo rol con Unidxs WNC."
+      },
+      "sarah": {
+        "name": "Sarah Hirsch",
+        "role": "Educadora en Inglés y Español",
+        "description": "Sarah Hirsch es una educadora experimentada en inglés y español. Tiene maestrías en ambos idiomas y está certificada en traducción e interpretación médica."
+      },
+      "cristela": {
+        "name": "Cristela Moreno",
+        "role": "Voluntaria",
+        "description": "Cristela tiene experiencia en Ingeniería Mecánica."
+      }
+    }
+  },
+
+  "about": {
+    "hero": {
+      "title": "Sobre Nosotros",
+      "subtitle": "Construyendo una sociedad más justa, solidaria e inclusiva"
+    },
+    "intro": {
+      "title": "Quiénes Somos",
+      "description": "UNIDXS es una organización local, intercultural y apolítica comprometida con servir a nuestra comunidad en los siete condados rurales del oeste de Carolina del Norte, especialmente dentro de la comunidad hispana. Trabajamos para promover la inclusión social, la igualdad y la solidaridad a través del desarrollo e implementación de proyectos educativos, sociales y culturales.",
+      "description2": "UNIDXS es una organización local, intercultural y políticamente independiente comprometida con servir a la comunidad. Nuestra misión es ayudar a personas o grupos afectados por desigualdades sociales, económicas, educativas y culturales."
+    },
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Nuestra misión es ayudar a las personas, especialmente aquellas que se encuentran en situaciones vulnerables sociales, económicas, educativas o culturales, para asegurar su inclusión en la comunidad y lograr una sociedad más justa y solidaria que les permita mejorar su calidad de vida."
+    },
+    "vision": {
+      "title": "Nuestra Visión",
+      "items": [
+        "Promover una mayor inclusión social, oportunidades educativas, conciencia cultural y aceptación.",
+        "Esforzarnos por mejorar continuamente los servicios que brindamos a nuestros beneficiarios, sin importar color, raza, sexo y etnia."
+      ]
+    },
+    "values": {
+      "title": "Nuestros Valores Fundamentales",
+      "description": "En UNIDXS, nuestros valores fundamentales guían cada acción que tomamos. Creemos en la fuerza que proviene de los vecinos trabajando juntos, la importancia de tratar a todos con dignidad y crear oportunidades para que cada voz sea escuchada. Al vivir estos valores, apoyamos a las personas, fortalecemos nuestra comunidad y construimos un lugar donde todas las familias puedan prosperar juntas.",
+      "unity": "Unidad",
+      "respect": "Respeto",
+      "opportunity": "Oportunidad"
+    },
+    "impact": {
+      "title": "Nuestro Impacto",
+      "subtitle": "Haciendo la diferencia en el oeste de Carolina del Norte",
+      "stats": {
+        "counties": "Condados Rurales Servidos",
+        "members": "Miembros de la Comunidad Ayudados",
+        "commitment": "Compromiso con la Inclusión"
+      }
+    },
+    "cta": {
+      "title": "Únete a Nosotros para Hacer la Diferencia",
+      "subtitle": "Juntos, podemos construir una comunidad más inclusiva y solidaria",
+      "button": "Involúcrate"
+    }
+  },
+
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Estamos aquí para ayudarte. Envíanos un mensaje y te responderemos pronto.",
+    "form": {
+      "name": "Nombre completo",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu@email.com",
+      "phone": "Teléfono",
+      "phonePlaceholder": "(123) 456-7890",
+      "subject": "Asunto",
+      "subjectPlaceholder": "¿En qué podemos ayudarte?",
+      "message": "Mensaje",
+      "messagePlaceholder": "Escribe tu mensaje aquí...",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando..."
+    },
+    "info": {
+      "title": "Información de Contacto",
+      "office": "Oficina UNIDXS",
+      "location": "Western North Carolina",
+      "hours": "Horario de Atención",
+      "hoursText": "Lunes - Viernes: 9:00 AM - 5:00 PM",
+      "generalInquiries": "Consultas Generales",
+      "health": "Salud - Paul Witty",
+      "education": "Educación - Sarah West"
+    },
+    "success": "¡Mensaje enviado exitosamente!",
+    "error": "Hubo un error al enviar el mensaje. Por favor inténtalo de nuevo."
+  }
+  ,
+  "services": {
+    "hero": {
+      "title": "Nuestros Servicios",
+      "description": "UNIDXS ofrece recursos impulsados por la comunidad diseñados para expandir el acceso, la oportunidad y la conexión para todos. Explora las formas en que apoyamos y celebramos nuestra diversa comunidad.",
+      "contact": "Contáctanos"
+    },
+    "mainServices": {
+      "title": "Nuestros Servicios",
+      "education": {
+        "title": "Acceso a la Educación",
+        "description": "Clases de GED y computación para mejorar habilidades."
+      },
+      "familySupport": {
+        "title": "Apoyo Familiar",
+        "description": "Acceso a recursos de salud, nutrición y asistencia legal."
+      }
+    },
+    "support": {
+      "title": "Servicios de Apoyo",
+      "getHelp": {
+        "title": "Obtén Ayuda",
+        "description": "En UNIDXS, ofrecemos apoyo para aquellos que lo necesitan dentro de nuestra comunidad. Nuestros recursos incluyen apoyo educativo, despensas de alimentos y servicios de traducción."
+      },
+      "clothing": {
+        "title": "Asistencia de Ropa",
+        "description": "La asistencia de ropa está disponible para personas y familias que lo necesiten."
+      },
+      "family": {
+        "title": "Apoyo Familiar",
+        "description": "Apoyamos a las familias a través de varios programas educativos y sociales."
+      },
+      "transportation": {
+        "title": "Ayuda de Transporte",
+        "description": "La ayuda de transporte está disponible caso por caso para citas necesarias."
+      }
+    },
+    "education": {
+      "title": "Empoderando a Través de la Educación",
+      "description": "Ofrecemos una variedad de clases destinadas a mejorar habilidades y proporcionar conocimientos vitales a la comunidad."
     }
   }
 }

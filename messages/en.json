@@ -4,6 +4,7 @@
     "team": "Team",
     "notice": "Notice",
     "contact": "Contact",
+    "services": "Services",
     "language": "Language"
   },
 
@@ -28,6 +29,175 @@
       "copyright": "© 2022 UNIDXS WNC. All rights reserved.",
       "privacy": "Privacy Policy",
       "terms": "Terms of Use"
+    }
+  },
+
+  "team": {
+    "title": "Our Team",
+    "subtitle": "Meet the people who make our mission possible",
+    "boardTitle": "Board of Directors",
+    "boardSubtitle": "Leadership guiding our vision and mission",
+    "teamTitle": "Our Team",
+    "teamSubtitle": "Dedicated professionals serving our community",
+    "volunteersTitle": "Volunteers",
+    "members": {
+      "victoria": {
+        "name": "Victoria Lyall",
+        "role": "Board Chairman",
+        "description": "Leading our organization with vision and dedication to community service."
+      },
+      "edithBoard": {
+        "name": "Edith Jennings",
+        "role": "Board Member Secretary",
+        "description": "Homeopathy and the National Polytechnic Institute in Mexico. She is currently pursuing an additional degree at Western Carolina University to receive her BSN. In Mexico, she was a Holistic Doctor. She has 20 years of experience helping the Latin community and making connections between the Hispanic and Anglo communities. She has worked as the administrative assistant for the Latino Outreach and Solidaridad Center. She was a volunteer interpreter and teacher at Saint Francis Catholic Church and ambassador for Latinos Aventureros in the Carolinas. She is currently a Peri Operative Nurse at the Angel Medical Center in Franklin, NC. She was a Board Member with the Coalition of Latino Americans and a Parent's Council Member at Macon Program for Progress. She has been a current board member with Unidxs since 2021. Edith studied at the National School of Medicine and."
+      },
+      "valeria": {
+        "name": "Valeria Barrera",
+        "role": "Board Treasurer",
+        "description": "Managing our financial resources with integrity and transparency."
+      },
+      "ricardo": {
+        "name": "Ricardo Bello Ball",
+        "role": "Executive Director",
+        "description": "As the founder of Unidxs WNC in 2021, Ricardo has since worked tirelessly to support our Latin community. Ricardo has 25 years of experience working with the Latin community."
+      },
+      "paul": {
+        "name": "Paul Witty",
+        "role": "Community Health Worker",
+        "description": "Paul has his BS in Occupational Therapy and has 20 years of experience working for the NC Department of Health before taking on his Community Health Worker role with Unidxs. He is also on the Southwestern Community College Advisory Committee for Occupational Therapy."
+      },
+      "sarahWest": {
+        "name": "Sarah West",
+        "role": "Community Education Coordinator",
+        "description": "In 2022, Sarah graduated from Western Carolina University with a BA in Spanish and International Studies and minors in Global Business and Philosophy. She is currently working on her graduate certificate in TESOL. After graduating, she worked at Southwestern Community College as a College and Career Readiness Coordinator overseeing the English Language Acquisition and High School Equivalency programs for two years before taking on her new role with Unidxs WNC."
+      },
+      "sarah": {
+        "name": "Sarah Hirsch",
+        "role": "Educator in English and Spanish",
+        "description": "Sarah Hirsch is a longtime educator in English and Spanish. She holds Masters degrees in both languages and is certified in translation and medical interpretation."
+      },
+      "cristela": {
+        "name": "Cristela Moreno",
+        "role": "Volunteer",
+        "description": "Cristela has a background in Mechanical Engineering."
+      }
+    }
+  },
+
+  "about": {
+    "hero": {
+      "title": "About Us",
+      "subtitle": "Building a more just, supportive, and inclusive society"
+    },
+    "intro": {
+      "title": "Who We Are",
+      "description": "UNIDXS is a local, intercultural, non-political organization committed to serving our community in the seven rural counties of Western NC, especially within the Hispanic Community. We work to promote social inclusion, equality, and solidarity through the development and implementation of educational, social and cultural projects.",
+      "description2": "UNIDXS is a local, intercultural, politically independent organization committed to serving the community. Our mission is to help people or groups impacted by social, economic, educational, and cultural inequities."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "Our mission is to help people, especially those who find themselves in vulnerable social, economic, educational, or cultural situations, to ensure inclusion in the community and achieve a fairer, more supportive society that allows them to improve their quality of life."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "items": [
+        "Promote greater social inclusion, educational opportunities, cultural awareness, and acceptance.",
+        "Strive to continuously improve the services we provide to our beneficiaries, regardless of color, race, sex, and ethnicity."
+      ]
+    },
+    "values": {
+      "title": "Our Core Values",
+      "description": "At UNIDXS, our core values guide every action we take. We believe in the strength that comes from neighbors working together, the importance of treating everyone with dignity, and creating opportunities so that every voice can be heard. By living these values, we support individuals, strengthen our community, and build a place where all families can flourish together.",
+      "unity": "Unity",
+      "respect": "Respect",
+      "opportunity": "Opportunity"
+    },
+    "impact": {
+      "title": "Our Impact",
+      "subtitle": "Making a difference in Western North Carolina",
+      "stats": {
+        "counties": "Rural Counties Served",
+        "members": "Community Members Helped",
+        "commitment": "Commitment to Inclusion"
+      }
+    },
+    "cta": {
+      "title": "Join Us in Making a Difference",
+      "subtitle": "Together, we can build a more inclusive and supportive community",
+      "button": "Get Involved"
+    }
+  },
+
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help. Send us a message and we'll respond soon.",
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "Your name",
+      "email": "Email address",
+      "emailPlaceholder": "you@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "(123) 456-7890",
+      "subject": "Subject",
+      "subjectPlaceholder": "How can we help you?",
+      "message": "Message",
+      "messagePlaceholder": "Write your message here...",
+      "submit": "Send Message",
+      "sending": "Sending..."
+    },
+    "info": {
+      "title": "Contact Information",
+      "office": "UNIDXS Office",
+      "location": "Western North Carolina",
+      "hours": "Office Hours",
+      "hoursText": "Monday - Friday: 9:00 AM - 5:00 PM",
+      "generalInquiries": "General Inquiries",
+      "health": "Health - Paul Witty",
+      "education": "Education - Sarah West"
+    },
+    "success": "Message sent successfully!",
+    "error": "There was an error sending the message. Please try again."
+  }
+  ,
+  "services": {
+    "hero": {
+      "title": "Our Services",
+      "description": "UNIDXS offers community-driven resources designed to expand access, opportunity, and connection for everyone. Explore the ways we support and celebrate our diverse community.",
+      "contact": "Contact Us"
+    },
+    "mainServices": {
+      "title": "Our Services",
+      "education": {
+        "title": "Education Access",
+        "description": "GED and computer classes to enhance skills."
+      },
+      "familySupport": {
+        "title": "Family Support",
+        "description": "Resource access for health, nutrition, and legal aid."
+      }
+    },
+    "support": {
+      "title": "Support Services",
+      "getHelp": {
+        "title": "Get Help",
+        "description": "At UNIDXS, we offer support for those in need within our community. Our resources include educational support, food pantries, and translation services."
+      },
+      "clothing": {
+        "title": "Clothing Assistance",
+        "description": "Clothing assistance is available for individuals and families in need."
+      },
+      "family": {
+        "title": "Family Support",
+        "description": "We support families through various educational and social programs."
+      },
+      "transportation": {
+        "title": "Transportation Aid",
+        "description": "Transportation aid is available on a case-by-case basis for necessary appointments."
+      }
+    },
+    "education": {
+      "title": "Empowering Through Education",
+      "description": "We offer a variety of classes aimed at enhancing skills and providing vital knowledge to the community."
     }
   }
 }

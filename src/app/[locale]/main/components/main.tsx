@@ -154,6 +154,65 @@ export default function MainPage() {
     </div>
   </section>
 
+  {/* Empower Together Section */}
+  <section className="relative py-32 px-4 overflow-hidden">
+    {/* Background Image */}
+    <div
+      className="absolute inset-0 bg-cover bg-center scale-105"
+      style={{
+        backgroundImage: "url('/Fondo1.webp')",
+      }}
+    />
+    <div className="absolute inset-0 bg-black/50" />
+
+    <div className="relative z-10 max-w-5xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="text-center"
+      >
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-6xl font-bold text-white mb-8 drop-shadow-2xl"
+        >
+          EMPOWER TOGETHER
+        </motion.h2>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 hover:bg-white/20 transition-all duration-500"
+        >
+          <p className="text-lg md:text-xl text-white/95 leading-relaxed">
+            Welcome to UNIDXS, where we are passionate about community improvement through our dedicated educational program and support services. Our goal is to see individuals thrive by providing them with resources they need to overcome challenges and grow. By joining forces with us, you become part of a movement that is committed to making a meaningful difference in people's lives. Let's work together to create a brighter future for our community.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-10"
+        >
+          <Link 
+            href="/contact"
+            className="inline-block bg-gradient-to-r from-purple-600 to-green-600 hover:from-purple-700 hover:to-green-700 text-white font-bold text-lg px-10 py-5 rounded-full transition-all duration-300 shadow-2xl hover:shadow-purple-500/50 transform hover:-translate-y-1 hover:scale-105"
+          >
+            Join Us Today
+          </Link>
+        </motion.div>
+      </motion.div>
+    </div>
+  </section>
+
   <footer className="bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 text-white py-16 relative overflow-hidden">
     {/* Decorative Background */}
     <div className="absolute inset-0 opacity-5">
