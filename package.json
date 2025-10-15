@@ -12,9 +12,11 @@
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.16",
     "@radix-ui/react-slot": "^1.2.3",
+    "@react-email/render": "^1.3.2",
     "@types/nodemailer": "^7.0.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dotenv": "^17.2.3",
     "framer-motion": "^12.23.22",
     "lucide-react": "^0.544.0",
     "motion": "^12.23.22",
@@ -24,6 +26,7 @@
     "nodemailer": "^7.0.9",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "resend": "^6.1.3",
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {

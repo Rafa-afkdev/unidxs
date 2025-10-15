@@ -135,35 +135,8 @@ export default function Contact() {
                   <h2 className="text-3xl font-bold text-white">Envíanos un mensaje</h2>
                 </div>
 
-                {/* Work in Progress Message */}
-                <div className="space-y-6">
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="bg-gradient-to-br from-purple-500/20 to-green-500/20 backdrop-blur-sm rounded-2xl border-2 border-purple-300/50 p-8 md:p-12 text-center"
-                  >
-                    <div className="mb-6">
-                      <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-500 to-green-500 rounded-full mb-4">
-                        <Mail className="w-10 h-10 text-white" />
-                      </div>
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                      Estamos Trabajando en Esta Funcionalidad
-                    </h3>
-                    <p className="text-lg text-white/90 mb-6 leading-relaxed">
-                      Actualmente estamos desarrollando nuestro sistema de contacto por correo electrónico para brindarte una mejor experiencia. Mientras tanto, puedes comunicarte con nosotros a través de los medios de contacto que aparecen a la derecha.
-                    </p>
-                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                      <p className="text-white font-semibold mb-2">📧 Contáctanos directamente:</p>
-                      <p className="text-purple-200 text-sm">Consulta la información de contacto en el panel lateral para comunicarte con el departamento que necesites.</p>
-                    </div>
-                  </motion.div>
-                </div>
-
-                {/* Commented out form for future use 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  Name and Email Row
+                  {/* Name and Email Row */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <motion.div
                       variants={itemVariants}
@@ -221,7 +194,6 @@ export default function Contact() {
                     </motion.div>
                   </div>
 
-                  Phone and Subject Row
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <motion.div
                       variants={itemVariants}
@@ -278,7 +250,6 @@ export default function Contact() {
                     </motion.div>
                   </div>
 
-                  Message
                   <motion.div
                     variants={itemVariants}
                     initial="hidden"
@@ -307,7 +278,6 @@ export default function Contact() {
                     </div>
                   </motion.div>
 
-                  Submit Button
                   <motion.div
                     variants={itemVariants}
                     initial="hidden"
@@ -333,7 +303,6 @@ export default function Contact() {
                     </button>
                   </motion.div>
 
-                  Status Messages
                   {status === 'success' && (
                     <motion.div
                       initial={{ opacity: 0, scale: 0.9, y: -10 }}
@@ -355,7 +324,7 @@ export default function Contact() {
                       <span className="font-semibold text-base">{t('error')}</span>
                     </motion.div>
                   )}
-                </form> */}
+                </form>
               </div>
             </motion.div>
 
