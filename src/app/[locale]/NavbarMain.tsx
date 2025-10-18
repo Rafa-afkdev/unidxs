@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, useRouter, usePathname } from '@/i18n/routing';
 import { motion } from 'framer-motion';
-import { Info, Mail, Menu, Newspaper, Users, X, Languages, Wrench } from 'lucide-react';
+import { Info, Mail, Menu, Newspaper, Users, X, Languages, Wrench, Heart } from 'lucide-react';
 import { LogoNavBar } from './LogoNavBar';
 
 // Función throttle para optimizar el scroll
@@ -32,6 +32,7 @@ export default function NavbarMain() {
     { href: '/about', label: t('about'), icon: Info, color: 'from-orange-500 to-amber-500' },
     { href: '/team', label: t('team'), icon: Users, color: 'from-cyan-500 to-blue-500' },
     { href: '/services', label: t('services'), icon: Wrench, color: 'from-purple-600 to-indigo-600' },
+    { href: '/donations', label: t('donations'), icon: Heart, color: 'from-pink-500 to-rose-500' },
     // { href: '/notice', label: t('notice'), icon: Newspaper, color: 'from-green-500 to-emerald-500' },
     { href: '/contact', label: t('contact'), icon: Mail, color: 'from-red-500 to-rose-500' },
   ];

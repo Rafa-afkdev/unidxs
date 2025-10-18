@@ -5,6 +5,7 @@
     "notice": "Notice",
     "contact": "Contact",
     "services": "Services",
+    "donations": "Donations",
     "language": "Language"
   },
 
@@ -199,5 +200,66 @@
       "title": "Empowering Through Education",
       "description": "We offer a variety of classes aimed at enhancing skills and providing vital knowledge to the community."
     }
+  },
+  "donations": {
+    "hero": {
+      "title": "Support Unidxs WNC",
+      "subtitle": "Together, we build communities where everyone belongs",
+      "donateButton": "Donate Now"
+    },
+    "whyGive": {
+      "title": "Why Give",
+      "description": "Every donation helps Unidxs WNC walk alongside our communities - every step of the way. Your gift supports local families with access to:",
+      "programs": {
+        "college": {
+          "title": "College and Career Exploration",
+          "description": "Bilingual workshops, FAFSA and RDS support, and pathways for first-generation students to pursue their dreams."
+        },
+        "health": {
+          "title": "Health and Wellness",
+          "description": "Free community health checkups, mental health referrals, and access to essential hygiene products."
+        },
+        "foodPantry": {
+          "title": "Food Pantry Assistance",
+          "description": "Nutritious food and emergency supplies for households facing hardship."
+        },
+        "leadership": {
+          "title": "Leadership Development",
+          "description": "Training youth, volunteers, and parents to serve as local leaders and advocates for equity."
+        },
+        "translation": {
+          "title": "Translation and Resource Navigation",
+          "description": "Helping families access vital information and appointments safely and confidently."
+        }
+      },
+      "localImpact": "Every dollar stays local - fueling programs that bring education, health, and opportunity to the heart of our region."
+    },
+    "waysToGive": {
+      "title": "Ways to Give",
+      "online": {
+        "title": "Donate Online",
+        "description": "Make a secure one-time or monthly contribution that sustains our programs year round.",
+        "button": "Coming Soon"
+      },
+      "volunteer": {
+        "title": "Donate Your Time",
+        "description": "Your time is valuable. Email Cristela to learn about volunteer opportunities.",
+        "button": "Email Cristela",
+        "email": "unidxswnc.org"
+      },
+      "foodPantry": {
+        "title": "Food Pantry Assistance",
+        "description": "Nutritious food and emergency supplies for households facing hardship."
+      },
+      "inKind": {
+        "title": "In-Kind Donations",
+        "description": "We welcome contributions of hygiene supplies, diapers, non-perishable foods, and school materials."
+      }
+    },
+    "impact": {
+      "title": "Your Support Matters",
+      "description": "Unidxs means \"all of us.\" When you give, you help create a Western North Carolina where every neighbor is seen, supported, and celebrated."
+    },
+    "developmentNotice": "Online donation functionality is currently under development. For now, please contact us directly to make a donation."
   }
 }

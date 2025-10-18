@@ -5,6 +5,7 @@
     "notice": "Avisos",
     "contact": "Contacto",
     "services": "Servicios",
+    "donations": "Donaciones",
     "language": "Idioma"
   },
 
@@ -199,5 +200,66 @@
       "title": "Empoderando a Través de la Educación",
       "description": "Ofrecemos una variedad de clases destinadas a mejorar habilidades y proporcionar conocimientos vitales a la comunidad."
     }
+  },
+  "donations": {
+    "hero": {
+      "title": "Apoya a Unidxs WNC",
+      "subtitle": "Juntos, construimos comunidades donde todos pertenecen",
+      "donateButton": "Donar Ahora"
+    },
+    "whyGive": {
+      "title": "Por Qué Donar",
+      "description": "Cada donación ayuda a Unidxs WNC a caminar junto a nuestras comunidades - en cada paso del camino. Tu donación apoya a las familias locales con acceso a:",
+      "programs": {
+        "college": {
+          "title": "Exploración Universitaria y Profesional",
+          "description": "Talleres bilingües, apoyo con FAFSA y RDS, y caminos para que estudiantes de primera generación persigan sus sueños."
+        },
+        "health": {
+          "title": "Salud y Bienestar",
+          "description": "Chequeos de salud comunitarios gratuitos, referencias de salud mental y acceso a productos de higiene esenciales."
+        },
+        "foodPantry": {
+          "title": "Asistencia de Despensa de Alimentos",
+          "description": "Alimentos nutritivos y suministros de emergencia para hogares que enfrentan dificultades."
+        },
+        "leadership": {
+          "title": "Desarrollo de Liderazgo",
+          "description": "Capacitación de jóvenes, voluntarios y padres para servir como líderes locales y defensores de la equidad."
+        },
+        "translation": {
+          "title": "Traducción y Navegación de Recursos",
+          "description": "Ayudando a las familias a acceder a información vital y citas de manera segura y con confianza."
+        }
+      },
+      "localImpact": "Cada dólar se queda local - impulsando programas que traen educación, salud y oportunidades al corazón de nuestra región."
+    },
+    "waysToGive": {
+      "title": "Formas de Donar",
+      "online": {
+        "title": "Donar en Línea",
+        "description": "Haz una contribución segura única o mensual que sustente nuestros programas durante todo el año.",
+        "button": "Próximamente"
+      },
+      "volunteer": {
+        "title": "Dona Tu Tiempo",
+        "description": "Tu tiempo es valioso. Envía un correo a Cristela para conocer las oportunidades de voluntariado.",
+        "button": "Enviar Correo a Cristela",
+        "email": "unidxswnc.org"
+      },
+      "foodPantry": {
+        "title": "Asistencia de Despensa de Alimentos",
+        "description": "Alimentos nutritivos y suministros de emergencia para hogares que enfrentan dificultades."
+      },
+      "inKind": {
+        "title": "Donaciones en Especie",
+        "description": "Aceptamos contribuciones de productos de higiene, pañales, alimentos no perecederos y materiales escolares."
+      }
+    },
+    "impact": {
+      "title": "Tu Apoyo Importa",
+      "description": "Unidxs significa \"todos nosotros\". Cuando donas, ayudas a crear un oeste de Carolina del Norte donde cada vecino es visto, apoyado y celebrado."
+    },
+    "developmentNotice": "La funcionalidad de donación en línea está actualmente en desarrollo. Por ahora, por favor contáctanos directamente para hacer una donación."
   }
 }
