@@ -82,7 +82,7 @@ export default function Donations() {
       title: t("waysToGive.volunteer.title"),
       description: t("waysToGive.volunteer.description"),
       buttonText: t("waysToGive.volunteer.button"),
-      action: "mailto:unidxswnc.org",
+      action: "mailto:Cristelamoreno@unidxswnc.org",
       color: "from-green-500 to-teal-500",
     },
     {
