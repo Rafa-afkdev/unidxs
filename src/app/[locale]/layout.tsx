@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -18,13 +18,25 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "UNIDXS WNC - Trabajamos por la comunidad",
-  description: "UNIDXS WNC - Construyendo una sociedad más justa, solidaria e inclusiva",
-  icons: {
-    icon: '/favicon.ico',
-  },
-};
+// Cambia de export const a export async function
+export async function generateMetadata({
+  params
+}: {
+  params: any;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  
+  // Obtiene las traducciones para los metadatos
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    icons: {
+      icon: '/favicon.ico',
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
