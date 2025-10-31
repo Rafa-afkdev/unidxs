@@ -6,6 +6,7 @@ import { routing } from "@/i18n/routing";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavbarMain from "./NavbarMain";
+import FooterMain from "./FooterMain";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,8 +42,9 @@ export default async function RootLayout({
   const messages = await getMessages(locale);
   
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body
+        suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
@@ -53,6 +55,7 @@ export default async function RootLayout({
           <main className="pt-20">
             {children}
           </main>
+          <FooterMain />
         </NextIntlClientProvider>
       </body>
     </html>

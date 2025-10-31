@@ -20,6 +20,11 @@
       "paragraph3": "The UNIDXS WNC Team thanks each and every person who joined us at our community events like UNIDXS for Life. We are here to serve you and build a better future together.",
       "button": "Learn More About Us"
     },
+    "empower": {
+      "title": "EMPOWER TOGETHER",
+      "paragraph": "Welcome to UNIDXS, where we are passionate about community improvement through our dedicated educational program and support services. Our goal is to see individuals thrive by providing them with the resources they need to overcome challenges and grow. By joining forces with us, you become part of a movement committed to making a meaningful difference in people's lives. Let's work together to create a brighter future for our community.",
+      "cta": "Join Us Today"
+    },
     "footer": {
       "generalContact": "General Inquiries",
       "office": "UNIDXS Office",
@@ -166,6 +171,12 @@
       "description": "UNIDXS offers community-driven resources designed to expand access, opportunity, and connection for everyone. Explore the ways we support and celebrate our diverse community.",
       "contact": "Contact Us"
     },
+
+     "cta": {
+      "title": "Join Us in Making a Difference",
+      "subtitle": "Together, we can build a more inclusive and supportive community",
+      "button": "Get Involved"
+    },
     "mainServices": {
       "title": "Our Services",
       "education": {
@@ -206,6 +217,11 @@
       "title": "Support Unidxs WNC",
       "subtitle": "Together, we build communities where everyone belongs",
       "donateButton": "Donate Now"
+    },
+     "cta": {
+      "title": "Join Us in Making a Difference",
+      "subtitle": "Together, we can build a more inclusive and supportive community",
+      "button": "Get Involved"
     },
     "whyGive": {
       "title": "Why Give",

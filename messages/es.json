@@ -20,6 +20,11 @@
       "paragraph3": "El Equipo de UNIDXS WNC agradece a cada una de las personas que nos acompañaron en nuestros eventos comunitarios como UNIDXS for Life. Estamos aquí para servirles y construir juntos un futuro mejor.",
       "button": "Conoce Más Sobre Nosotros"
     },
+    "empower": {
+      "title": "Empoderemos juntos",
+      "paragraph": "Bienvenido a UNIDXS, donde nos apasiona mejorar nuestra comunidad a través de nuestro programa educativo y servicios de apoyo. Nuestro objetivo es que cada persona prospere, brindándole los recursos que necesita para superar desafíos y crecer. Al unirte a nosotros, pasas a ser parte de un movimiento comprometido con generar un impacto significativo en la vida de las personas. Trabajemos juntos para crear un futuro más brillante para nuestra comunidad.",
+      "cta": "Únete hoy"
+    },
     "footer": {
       "generalContact": "Consultas Generales",
       "office": "Oficina UNIDXS",
@@ -41,6 +46,7 @@
     "teamTitle": "Nuestro Equipo",
     "teamSubtitle": "Profesionales dedicados sirviendo a nuestra comunidad",
     "volunteersTitle": "Voluntarios",
+    "volunteersDescription": "Nuestros voluntarios son el corazón de UNIDXS. Si quieres sumar tu energía y talento para apoyar actividades y proyectos comunitarios, te invitamos a unirte a nuestro equipo de voluntariado.",
     "members": {
       "victoria": {
         "name": "Victoria Lyall",
@@ -79,8 +85,8 @@
       },
       "cristela": {
         "name": "Cristela Moreno",
-        "role": "Voluntaria",
-        "description": "Cristela tiene experiencia en Ingeniería Mecánica."
+        "role": "Encargada de Voluntarios",
+        "description": "Cristela coordina el programa de voluntariado de UNIDXS WNC. Lidera la gestión y organización de voluntarios, facilitando su integración en actividades y proyectos comunitarios."
       }
     }
   },
@@ -166,6 +172,11 @@
       "description": "UNIDXS ofrece recursos impulsados por la comunidad diseñados para expandir el acceso, la oportunidad y la conexión para todos. Explora las formas en que apoyamos y celebramos nuestra diversa comunidad.",
       "contact": "Contáctanos"
     },
+      "cta": {
+      "title": "Únete a Nosotros para Hacer la Diferencia",
+      "subtitle": "Juntos, podemos construir una comunidad más inclusiva y solidaria",
+      "button": "Involúcrate"
+    },
     "mainServices": {
       "title": "Nuestros Servicios",
       "education": {
@@ -206,6 +217,11 @@
       "title": "Apoya a Unidxs WNC",
       "subtitle": "Juntos, construimos comunidades donde todos pertenecen",
       "donateButton": "Donar Ahora"
+    },
+      "cta": {
+      "title": "Únete a Nosotros para Hacer la Diferencia",
+      "subtitle": "Juntos, podemos construir una comunidad más inclusiva y solidaria",
+      "button": "Involúcrate"
     },
     "whyGive": {
       "title": "Por Qué Donar",

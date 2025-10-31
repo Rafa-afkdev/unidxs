@@ -7,6 +7,7 @@ import { Users, Briefcase, Heart } from 'lucide-react'
 
 export default function Team() {
   const t = useTranslations('team')
+  const tAbout = useTranslations('about')
 
   const boardMembers = [
     { id: 'victoria', hasImage: false },
@@ -21,9 +22,7 @@ export default function Team() {
     { id: 'sarah', image: '/Sarah.png', hasImage: true }
   ]
 
-  const volunteers = [
-    { id: 'cristela', hasImage: false }
-  ]
+  const volunteers: { id: string; hasImage?: boolean }[] = []
 
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
@@ -125,6 +124,22 @@ export default function Team() {
   }
 
   const VolunteerCard = ({ member }: { member: any }) => {
+    if (member.id === 'cristela') {
+      return (
+        <div className="max-w-3xl mx-auto mb-10 text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-2">
+            {t('members.cristela.name')}
+          </h3>
+          <p className="text-pink-600 font-medium mb-4">
+            {t('members.cristela.role')}
+          </p>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            {t('members.cristela.description')}
+          </p>
+        </div>
+      )
+    }
+
     const initials = t(`members.${member.id}.name`).split(' ').map((n: string) => n[0]).join('').slice(0, 2)
 
     return (
@@ -133,20 +148,25 @@ export default function Team() {
         whileInView="animate"
         viewport={{ once: true }}
         variants={fadeInUp}
-        className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group"
+        className={`rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group ${member.id === 'cristela' ? 'bg-gradient-to-br from-pink-50 to-orange-50 border-2 border-pink-200' : 'bg-white'}`}
       >
         <div className="flex flex-col items-center text-center">
           <div className="relative mb-4">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-pink-500 to-orange-500 flex items-center justify-center ring-4 ring-pink-200 group-hover:ring-pink-400 transition-all">
+            <div className={`w-32 h-32 rounded-full flex items-center justify-center ring-4 transition-all ${member.id === 'cristela' ? 'bg-gradient-to-br from-pink-600 to-orange-500 ring-pink-300 group-hover:ring-pink-400' : 'bg-gradient-to-br from-pink-500 to-orange-500 ring-pink-200 group-hover:ring-pink-400'}`}>
               <span className="text-4xl font-bold text-white">{initials}</span>
             </div>
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-2">
+          <h3 className="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-2">
             {t(`members.${member.id}.name`)}
+            {member.id === 'cristela' && (
+              <span className="text-xs font-semibold px-2 py-1 rounded-full bg-pink-100 text-pink-700 border border-pink-200">{t(`members.${member.id}.role`)}</span>
+            )}
           </h3>
-          <p className="text-sm font-semibold text-pink-600 uppercase tracking-wide mb-3">
-            {t(`members.${member.id}.role`)}
-          </p>
+          {member.id !== 'cristela' && (
+            <p className="text-sm font-semibold text-pink-600 uppercase tracking-wide mb-3">
+              {t(`members.${member.id}.role`)}
+            </p>
+          )}
           <p className="text-gray-600 text-sm leading-relaxed">
             {t(`members.${member.id}.description`)}
           </p>
@@ -273,6 +293,31 @@ export default function Team() {
               <VolunteerCard key={member.id} member={member} />
             ))}
           </div>
+
+          {/* Inline Volunteer CTA to expand the section */}
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            className="mt-12 max-w-4xl mx-auto text-center"
+          >
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              {tAbout('cta.title')}
+            </h3>
+            <p className="text-lg md:text-xl text-gray-700 mb-8">
+              {tAbout('cta.subtitle')}
+            </p>
+            <motion.a
+              target="_blank"
+              href="https://forms.office.com/Pages/ResponsePage.aspx?id=NBZCBZ5ElECAXHd-BjEgvM4bR7TIS7ZFgL9CnjYDPDNUNlJJMDhHVk1PVDIzT1A5RUFWU0MyMUpXTiQlQCN0PWcu"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
+            >
+              {tAbout('cta.button')}
+            </motion.a>
+          </motion.div>
         </div>
       </section>
 

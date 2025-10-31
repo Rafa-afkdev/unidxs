@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import {
   Heart,
@@ -19,6 +19,7 @@ import {
 
 export default function About() {
   const t = useTranslations("about");
+  const locale = useLocale();
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
@@ -359,7 +360,8 @@ export default function About() {
             {t("cta.subtitle")}
           </p>
           <motion.a
-            href="/contact"
+          target="_blank"
+            href="https://forms.office.com/Pages/ResponsePage.aspx?id=NBZCBZ5ElECAXHd-BjEgvM4bR7TIS7ZFgL9CnjYDPDNUNlJJMDhHVk1PVDIzT1A5RUFWU0MyMUpXTiQlQCN0PWcu"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"

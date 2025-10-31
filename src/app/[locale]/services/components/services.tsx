@@ -2,11 +2,13 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
 import { GraduationCap, Heart, HandHelping, Shirt, Users, Car, BookOpen } from "lucide-react";
 
 export default function Services() {
   const t = useTranslations("services");
+  const locale = useLocale();
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
@@ -101,13 +103,12 @@ export default function Services() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="flex flex-wrap gap-4"
             >
-              
-              <a
-                href="/contact"
+              <Link
+                href={`/${locale}/contact`}
                 className="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 border-2 border-white/30 hover:border-white/50"
               >
                 {t("hero.contact")}
-              </a>
+              </Link>
             </motion.div>
           </div>
         </div>
@@ -306,6 +307,32 @@ export default function Services() {
           </motion.div>
         </div>
       </section>
+
+            <section className="py-20 px-4 bg-gradient-to-br from-purple-100 via-pink-50 to-orange-50">
+              <motion.div
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+                variants={fadeInUp}
+                className="max-w-4xl mx-auto text-center"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  {t("cta.title")}
+                </h2>
+                <p className="text-xl text-gray-600 mb-8">
+                  {t("cta.subtitle")}
+                </p>
+                <motion.a
+                target="_blank"
+                  href="https://forms.office.com/Pages/ResponsePage.aspx?id=NBZCBZ5ElECAXHd-BjEgvM4bR7TIS7ZFgL9CnjYDPDNUNlJJMDhHVk1PVDIzT1A5RUFWU0MyMUpXTiQlQCN0PWcu"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
+                >
+                  {t("cta.button")}
+                </motion.a>
+              </motion.div>
+            </section>
     </main>
   );
 }

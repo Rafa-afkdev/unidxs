@@ -321,6 +321,32 @@ export default function Donations() {
         </div>
       </section>
 
+        <section className="py-20 px-4 bg-gradient-to-br from-purple-100 via-pink-50 to-orange-50">
+                    <motion.div
+                      initial="initial"
+                      whileInView="animate"
+                      viewport={{ once: true }}
+                      variants={fadeInUp}
+                      className="max-w-4xl mx-auto text-center"
+                    >
+                      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        {t("cta.title")}
+                      </h2>
+                      <p className="text-xl text-gray-600 mb-8">
+                        {t("cta.subtitle")}
+                      </p>
+                      <motion.a
+                      target="_blank"
+                        href="https://forms.office.com/Pages/ResponsePage.aspx?id=NBZCBZ5ElECAXHd-BjEgvM4bR7TIS7ZFgL9CnjYDPDNUNlJJMDhHVk1PVDIzT1A5RUFWU0MyMUpXTiQlQCN0PWcu"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
+                      >
+                        {t("cta.button")}
+                      </motion.a>
+                    </motion.div>
+                  </section>
+
       {/* Impact Section with Fondo3-Donation.webp */}
       <section className="relative py-32 px-4 overflow-hidden">
         <div
@@ -359,6 +385,8 @@ export default function Donations() {
           </motion.p>
         </motion.div>
       </section>
+
+      
 
     </div>
   );
