@@ -5,6 +5,9 @@
     "notice": "Avisos",
     "contact": "Contacto",
     "services": "Servicios",
+    "ourServices": "Nuestros Servicios",
+    "warehouse": "Bodega",
+    "education": "Educación",
     "donations": "Donaciones",
     "language": "Idioma"
   },
@@ -217,6 +220,18 @@
     "education": {
       "title": "Empoderando a Través de la Educación",
       "description": "Ofrecemos una variedad de clases destinadas a mejorar habilidades y proporcionar conocimientos vitales a la comunidad."
+    },
+    "simplifiedProcedures": {
+      "title": "¡Su Trámite, Simplificado!",
+      "subtitle": "¿Necesita ayuda con su Pasaporte de EE. UU.?",
+      "description": "Podemos ayudarle y a su familia en...",
+      "items": {
+        "review": "Reunir y revisar todos tus documentos.",
+        "steps": "Asegurarnos de que sigues los pasos correctos para su próxima cita.",
+        "avoid": "Evitar errores para que su solicitud no sea negada por el gobierno de EE. UU."
+      },
+      "contact": "Contacto (WhatsApp):",
+      "contactPerson": "Sarah West"
     }
   },
   "donations": {
@@ -284,5 +299,56 @@
       "description": "Unidxs significa \"todos nosotros\". Cuando donas, ayudas a crear un oeste de Carolina del Norte donde cada vecino es visto, apoyado y celebrado."
     },
     "developmentNotice": "La funcionalidad de donación en línea está actualmente en desarrollo. Por ahora, por favor contáctanos directamente para hacer una donación."
+  },
+  "warehouse": {
+    "hero": {
+      "title": "Despensa de Alimentos / Bodega",
+      "subtitle": "Brindando apoyo esencial a familias necesitadas"
+    },
+    "about": {
+      "title": "Sobre Nuestra Despensa de Alimentos",
+      "description": "Nuestra despensa de alimentos sirve a familias en el oeste de Carolina del Norte proporcionando alimentos nutritivos y suministros esenciales. Creemos que nadie debería pasar hambre, y trabajamos para asegurar que todos en nuestra comunidad tengan acceso a los recursos que necesitan."
+    },
+    "services": {
+      "title": "Lo Que Ofrecemos",
+      "openPantry": {
+        "title": "Despensa Abierta",
+        "description": "Servicio sin cita donde las familias pueden seleccionar los artículos que necesitan. No se requiere cita."
+      },
+      "foodBoxes": {
+        "title": "Cajas de Comida",
+        "description": "Cajas pre-empacadas con artículos de comida esenciales para familias. Perfecto para quienes tienen tiempo limitado."
+      },
+      "grabAndGo": {
+        "title": "Toma y Lleva",
+        "description": "Servicio de recogida rápida para familias en movimiento. Obtén lo que necesitas rápida y convenientemente."
+      }
+    },
+    "calendar": {
+      "title": "Horario de Noviembre 2025",
+      "subtitle": "Consulta nuestro calendario para horarios de apertura y eventos especiales",
+      "volunteersNeeded": "Voluntarios Necesitados / Volunteers Needed: contacto",
+      "whatsappChannel": "Canal de WhatsApp"
+    },
+    "howToHelp": {
+      "title": "Cómo Puedes Ayudar",
+      "volunteer": {
+        "title": "Voluntariado",
+        "description": "Únete a nuestro equipo de voluntarios y ayúdanos a servir a la comunidad. Contacta a Cristela para más información."
+      },
+      "donate": {
+        "title": "Donar Artículos",
+        "description": "Aceptamos alimentos no perecederos, productos de higiene, pañales y otros artículos esenciales."
+      },
+      "spread": {
+        "title": "Corre la Voz",
+        "description": "Ayúdanos a llegar a más familias compartiendo información sobre nuestros servicios de despensa de alimentos."
+      }
+    },
+    "cta": {
+      "title": "¿Necesitas Asistencia?",
+      "subtitle": "Nuestra despensa de alimentos está aquí para ayudar. Consulta nuestro calendario para horarios de apertura.",
+      "button": "Contáctanos"
+    }
   }
 }

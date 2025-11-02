@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
-import { GraduationCap, Heart, HandHelping, Shirt, Users, Car, BookOpen } from "lucide-react";
+import { GraduationCap, Heart, HandHelping, Shirt, Users, Car, BookOpen, FileCheck, CheckCircle2, Shield, MessageCircle } from "lucide-react";
 
 export default function Services() {
   const t = useTranslations("services");
@@ -289,21 +289,165 @@ export default function Services() {
                 {t("education.description")}
               </p>
             </div>
+          </motion.div>
+        </div>
+      </section>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-12"
-            >
-              {/* <a
-                href="/contact"
-                className="inline-block bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-bold text-lg px-10 py-5 rounded-full transition-all duration-300 shadow-2xl hover:shadow-orange-500/50 transform hover:-translate-y-1 hover:scale-105"
+      {/* Simplified Procedures Section */}
+      <section className="py-24 px-4 bg-gradient-to-br from-white via-blue-50 to-purple-50">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-white rounded-3xl shadow-2xl overflow-hidden"
+          >
+            {/* Header */}
+            <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-8 py-12 text-center">
+              <motion.h2
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="text-4xl md:text-5xl font-bold text-white mb-4"
               >
-                Get Started Today
-              </a> */}
-            </motion.div>
+                {t("simplifiedProcedures.title")}
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-xl text-white/90"
+              >
+                {t("simplifiedProcedures.subtitle")}
+              </motion.p>
+            </div>
+
+            {/* Content */}
+            <div className="p-8 md:p-12">
+              {/* Description */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="mb-8"
+              >
+                <div className="bg-blue-50 rounded-2xl p-6 border-2 border-blue-100">
+                  <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
+                    {t("simplifiedProcedures.description")}
+                  </h3>
+                  
+                  {/* Items List */}
+                  <div className="space-y-4">
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.4 }}
+                      className="flex items-start gap-4 bg-white p-4 rounded-xl shadow-sm"
+                    >
+                      <div className="flex-shrink-0">
+                        <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                          <CheckCircle2 className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                      <p className="text-gray-700 text-lg leading-relaxed pt-1">
+                        {t("simplifiedProcedures.items.review")}
+                      </p>
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.5 }}
+                      className="flex items-start gap-4 bg-white p-4 rounded-xl shadow-sm"
+                    >
+                      <div className="flex-shrink-0">
+                        <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                          <CheckCircle2 className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                      <p className="text-gray-700 text-lg leading-relaxed pt-1">
+                        {t("simplifiedProcedures.items.steps")}
+                      </p>
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.6 }}
+                      className="flex items-start gap-4 bg-white p-4 rounded-xl shadow-sm"
+                    >
+                      <div className="flex-shrink-0">
+                        <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                          <CheckCircle2 className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                      <p className="text-gray-700 text-lg leading-relaxed pt-1">
+                        {t("simplifiedProcedures.items.avoid")}
+                      </p>
+                    </motion.div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Contact Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+                className="flex flex-col md:flex-row items-center justify-between gap-6 bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-2xl border-2 border-green-100"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg">
+                    <MessageCircle className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-left">
+                    <p className="text-sm font-semibold text-gray-600 mb-1">
+                      {t("simplifiedProcedures.contact")}
+                    </p>
+                    <p className="text-2xl font-bold text-gray-900">
+                      {t("simplifiedProcedures.contactPerson")}
+                    </p>
+                  </div>
+                </div>
+                <a
+                  href="https://wa.me/18287368928"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  <span className="text-lg">828-736-8928</span>
+                </a>
+              </motion.div>
+
+              {/* UNIDXS Logo Section */}
+              {/* <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+                className="mt-8 pt-8 border-t-2 border-gray-100 flex justify-center"
+              >
+                <div className="text-center">
+                  <p className="text-sm text-gray-500 mb-2">Servicio proporcionado por</p>
+                  <div className="flex items-center gap-3">
+                    <img 
+                      src="/logo.webp" 
+                      alt="UNIDXS Logo" 
+                      className="h-12 w-auto"
+                    />
+                  </div>
+                </div>
+              </motion.div> */}
+            </div>
           </motion.div>
         </div>
       </section>

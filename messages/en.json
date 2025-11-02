@@ -5,6 +5,9 @@
     "notice": "Notice",
     "contact": "Contact",
     "services": "Services",
+    "ourServices": "Our Services",
+    "warehouse": "Warehouse",
+    "education": "Education",
     "donations": "Donations",
     "language": "Language"
   },
@@ -217,6 +220,18 @@
     "education": {
       "title": "Empowering Through Education",
       "description": "We offer a variety of classes aimed at enhancing skills and providing vital knowledge to the community."
+    },
+    "simplifiedProcedures": {
+      "title": "Your Process, Simplified!",
+      "subtitle": "Do you need help with your U.S. Passport?",
+      "description": "We can help you and your family with:",
+      "items": {
+        "review": "Gather and review all your documents.",
+        "steps": "Make sure you follow the correct steps for your next appointment.",
+        "avoid": "Avoid errors so that your application is not rejected by the U.S. government."
+      },
+      "contact": "Contact (WhatsApp):",
+      "contactPerson": "Sarah West"
     }
   },
   "donations": {
@@ -284,5 +299,56 @@
       "description": "Unidxs means \"all of us.\" When you give, you help create a Western North Carolina where every neighbor is seen, supported, and celebrated."
     },
     "developmentNotice": "Online donation functionality is currently under development. For now, please contact us directly to make a donation."
+  },
+  "warehouse": {
+    "hero": {
+      "title": "Food Pantry / Bodega",
+      "subtitle": "Providing essential support to families in need"
+    },
+    "about": {
+      "title": "About Our Food Pantry",
+      "description": "Our food pantry serves families in Western North Carolina by providing nutritious food and essential supplies. We believe that no one should go hungry, and we work to ensure that everyone in our community has access to the resources they need."
+    },
+    "services": {
+      "title": "What We Offer",
+      "openPantry": {
+        "title": "Open Pantry",
+        "description": "Walk-in service where families can select the items they need. No appointment necessary."
+      },
+      "foodBoxes": {
+        "title": "Food Boxes",
+        "description": "Pre-packed boxes with essential food items for families. Perfect for those with limited time."
+      },
+      "grabAndGo": {
+        "title": "Grab and Go",
+        "description": "Quick pickup service for families on the go. Get what you need quickly and conveniently."
+      }
+    },
+    "calendar": {
+      "title": "November 2025 Schedule",
+      "subtitle": "Check our calendar for open hours and special events",
+      "volunteersNeeded": "Volunteers Needed / Necesitamos voluntarios: contact",
+      "whatsappChannel": "WhatsApp Channel"
+    },
+    "howToHelp": {
+      "title": "How You Can Help",
+      "volunteer": {
+        "title": "Volunteer",
+        "description": "Join our team of volunteers and help us serve the community. Contact Cristela to learn more."
+      },
+      "donate": {
+        "title": "Donate Items",
+        "description": "We accept non-perishable foods, hygiene products, diapers, and other essential items."
+      },
+      "spread": {
+        "title": "Spread the Word",
+        "description": "Help us reach more families by sharing information about our food pantry services."
+      }
+    },
+    "cta": {
+      "title": "Need Assistance?",
+      "subtitle": "Our food pantry is here to help. Check our calendar for open hours.",
+      "button": "Contact Us"
+    }
   }
 }
