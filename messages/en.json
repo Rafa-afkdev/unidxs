@@ -19,6 +19,21 @@
   },
 
 
+  "dialog": {
+    "getInvolved": {
+      "title": "How do you want to get involved?",
+      "subtitle": "Choose the option that interests you most",
+      "joinUnidxs": {
+        "title": "Join UNIDXS",
+        "description": "Become part of our community"
+      },
+      "donate": {
+        "title": "Make a donation",
+        "description": "Support our cause"
+      }
+    }
+  },
+
   "main": {
     "Titulo": "UNIDXS",
     "SubTitulo": "We all work together for the betterment of our community",

@@ -3,12 +3,14 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import { motion } from "framer-motion";
 import Link from 'next/link';
-import { Instagram, Mail, MapPin, Phone, Youtube, Facebook } from 'lucide-react';
+import { Instagram, Mail, MapPin, Phone, Youtube, Facebook, Heart, Users } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
 
 export default function MainPage() {
   const [isVisible, setIsVisible] = useState(true);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const t = useTranslations('main');
+  const tDialog = useTranslations('dialog');
   const locale = useLocale();
 
   return (
@@ -203,18 +205,103 @@ export default function MainPage() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-10"
         >
-          <Link 
-          target='_blank'
-            href="https://forms.office.com/Pages/ResponsePage.aspx?id=NBZCBZ5ElECAXHd-BjEgvM4bR7TIS7ZFgL9CnjYDPDNUNlJJMDhHVk1PVDIzT1A5RUFWU0MyMUpXTiQlQCN0PWcu"
+          <button
+            onClick={() => setIsDialogOpen(true)}
             className="inline-block bg-gradient-to-r from-purple-600 to-green-600 hover:from-purple-700 hover:to-green-700 text-white font-bold text-lg px-10 py-5 rounded-full transition-all duration-300 shadow-2xl hover:shadow-purple-500/50 transform hover:-translate-y-1 hover:scale-105"
           >
             {t('empower.cta')}
-          </Link>
+          </button>
         </motion.div>
       </motion.div>
     </div>
   </section>
 
+      {/* Dialog Modal */}
+      {isDialogOpen && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+          onClick={() => setIsDialogOpen(false)}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            onClick={(e) => e.stopPropagation()}
+            className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative"
+          >
+            <button
+              onClick={() => setIsDialogOpen(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mb-4">
+                <Heart className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                {tDialog("getInvolved.title")}
+              </h3>
+              <p className="text-gray-600">
+                {tDialog("getInvolved.subtitle")}
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <a
+                href="https://forms.office.com/Pages/ResponsePage.aspx?id=NBZCBZ5ElECAXHd-BjEgvM4bR7TIS7ZFgL9CnjYDPDNUNlJJMDhHVk1PVDIzT1A5RUFWU0MyMUpXTiQlQCN0PWcu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-4 bg-gradient-to-r from-purple-50 to-pink-50 hover:from-purple-100 hover:to-pink-100 rounded-xl transition-all border-2 border-purple-200 hover:border-purple-400 group"
+              >
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg group-hover:scale-110 transition-transform">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex-1 text-left">
+                  <h4 className="font-semibold text-gray-900 mb-1">
+                    {tDialog("getInvolved.joinUnidxs.title")}
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    {tDialog("getInvolved.joinUnidxs.description")}
+                  </p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.zeffy.com/en-US/donation-form/donate-to-make-a-difference-19304"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-4 bg-gradient-to-r from-orange-50 to-pink-50 hover:from-orange-100 hover:to-pink-100 rounded-xl transition-all border-2 border-orange-200 hover:border-orange-400 group"
+              >
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-orange-500 to-pink-500 rounded-lg group-hover:scale-110 transition-transform">
+                  <Heart className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex-1 text-left">
+                  <h4 className="font-semibold text-gray-900 mb-1">
+                    {tDialog("getInvolved.donate.title")}
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    {tDialog("getInvolved.donate.description")}
+                  </p>
+                </div>
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      )}
 
   </main>
 
