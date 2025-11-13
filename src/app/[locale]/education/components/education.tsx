@@ -71,7 +71,7 @@ export default function EducationComponent() {
         <div
           className="absolute inset-0 bg-cover bg-center scale-105"
           style={{
-            backgroundImage: "url('/Fondo1.webp')",
+            backgroundImage: "url('/Educacion2.webp')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60" />
@@ -151,7 +151,7 @@ export default function EducationComponent() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/Fondo2.webp')",
+            backgroundImage: "url('/Educacion1.webp')",
           }}
         />
         <div className="absolute inset-0 bg-black/60" />
@@ -273,7 +273,7 @@ export default function EducationComponent() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/Fondo3.webp')",
+            backgroundImage: "url('/Educacion4.webp')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-green-900/80 via-emerald-900/80 to-teal-900/80" />
