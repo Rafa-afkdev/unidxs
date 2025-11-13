@@ -18,7 +18,6 @@
     "description": "UNIDXS WNC - Construyendo una sociedad más justa, solidaria e inclusiva"
   },
 
-
   "dialog": {
     "getInvolved": {
       "title": "¿Cómo quieres involucrarte?",
@@ -112,6 +111,11 @@
         "name": "Cristela Moreno",
         "role": "Encargada de Voluntarios",
         "description": "Cristela coordina el programa de voluntariado de UNIDXS WNC. Lidera la gestión y organización de voluntarios, facilitando su integración en actividades y proyectos comunitarios."
+      },
+      "nita": {
+        "name": "Nita Lipan",
+        "role": "Directora del Programa Educativo Regional",
+        "description": "Nita Lipan aporta más de 20 años de experiencia educativa a las comunidades rurales del oeste de Carolina del Norte. Con título interdisciplinario en Derecho y Psicología con especialización en Historia de la Universidad de Florida Central, aborda los desafíos educativos con una perspectiva única y multifacética. Conocida como 'La navaja suiza de la educación' por su versatilidad, ha dirigido el desarrollo curricular, gestionado equipos de enseñanza y fue reconocida con el premio Empleada del Año. En UNIDXS, desarrolla programas educativos que brindan recursos y oportunidades a estudiantes, incluyendo la creación de consejos para socios escolares, el club de lectura de herencia hispana 'Unidxs: Raíces y Futuros' y tutoría semanal. Certificaciones: Primeros auxilios en salud mental para jóvenes, PMQ, CTC, Lean Six Sigma, asesoramiento académico, educador certificado K-6."
       }
     }
   },
@@ -255,10 +259,24 @@
       "subtitle": "Juntos, construimos comunidades donde todos pertenecen",
       "donateButton": "Donar Ahora"
     },
-      "cta": {
+    "cta": {
       "title": "Únete a Nosotros para Hacer la Diferencia",
       "subtitle": "Juntos, podemos construir una comunidad más inclusiva y solidaria",
       "button": "Involúcrate"
+    },
+    "dialog": {
+      "getInvolved": {
+        "title": "¿Cómo quieres involucrarte?",
+        "subtitle": "Elige la opción que más te interese",
+        "joinUnidxs": {
+          "title": "Formar parte de UNIDXS",
+          "description": "Únete a nuestra comunidad"
+        },
+        "donate": {
+          "title": "Hacer una donación",
+          "description": "Apoya nuestra causa"
+        }
+      }
     },
     "whyGive": {
       "title": "Por Qué Donar",
@@ -292,7 +310,7 @@
       "online": {
         "title": "Donar en Línea",
         "description": "Haz una contribución segura única o mensual que sustente nuestros programas durante todo el año.",
-        "button": "Próximamente"
+        "button": "Donar Ahora"
       },
       "volunteer": {
         "title": "Dona Tu Tiempo",
@@ -364,6 +382,46 @@
       "title": "¿Necesitas Asistencia?",
       "subtitle": "Nuestra despensa de alimentos está aquí para ayudar. Consulta nuestro calendario para horarios de apertura.",
       "button": "Contáctanos"
+    }
+  },
+  "education": {
+    "hero": {
+      "title": "Programas Educativos",
+      "subtitle": "Enriquecimiento académico, celebración cultural y desarrollo profesional"
+    },
+    "about": {
+      "title": "Sobre Nuestros Programas",
+      "description": "El departamento de Programas Educativos de UNIDXS brinda enriquecimiento académico, celebración cultural y oportunidades de desarrollo profesional a estudiantes en la zona rural del oeste de Carolina del Norte. Los programas incluyen patrocinios de clubes escolares internos, programación de patrimonio cultural, mentoría comunitaria e iniciativas de preparación universitaria y profesional."
+    },
+    "currentProjects": {
+      "title": "Proyectos Estudiantiles Actuales",
+      "university": {
+        "title": "Visita Universitaria y Médica",
+        "description": "Visita a la universidad Western Carolina University y visita médica a MedCat para explorar oportunidades educativas y de salud."
+      },
+      "thanksgiving": {
+        "title": "Celebración Cultural de Acción de Gracias",
+        "description": "Pruebe alimentos de otras regiones y juegue juegos de todo el mundo en una celebración multicultural."
+      },
+      "yearlong": {
+        "title": "Proyecto de Arte Anual",
+        "description": "En asociación con Artsonia, nuestros clubes crean obras de arte, comparten una galería virtual y realizan una celebración de fin de año."
+      }
+    },
+    "serviceArea": {
+      "title": "Área de Servicio",
+      "description": "Los 7 condados del oeste de Carolina del Norte"
+    },
+    "partnerships": {
+      "title": "Asociaciones Actuales"
+    },
+    "whatsapp": {
+      "title": "Mantente Conectado",
+      "description": "Únase a nuestro canal de WhatsApp para mantenerse actualizado con los próximos eventos e historias de éxito de los estudiantes.",
+      "button": "Unirse al Canal de WhatsApp"
+    },
+    "impact": {
+      "description": "Empoderando a la próxima generación a través de la educación, la cultura y las oportunidades de crecimiento en el oeste de Carolina del Norte."
     }
   }
 }

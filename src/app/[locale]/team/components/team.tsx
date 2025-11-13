@@ -21,7 +21,8 @@ export default function Team() {
     { id: 'ricardo', image: '/Ricardo.png', hasImage: true },
     { id: 'paul', image: '/Paul.png', hasImage: true },
     { id: 'sarahWest', image: '/Sarah-West.png', hasImage: true },
-    { id: 'sarah', image: '/Sarah.png', hasImage: true }
+    { id: 'sarah', image: '/Sarah.png', hasImage: true },
+    { id: 'nita', image: '/Nita.webp', hasImage: true }
   ]
 
   const volunteers: { id: string; hasImage?: boolean }[] = []

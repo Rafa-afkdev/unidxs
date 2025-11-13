@@ -18,7 +18,6 @@
     "description": "UNIDXS WNC - Building a more just, supportive and inclusive society"
   },
 
-
   "dialog": {
     "getInvolved": {
       "title": "How do you want to get involved?",
@@ -111,6 +110,11 @@
         "name": "Cristela Moreno",
         "role": "Volunteer",
         "description": "Cristela has a background in Mechanical Engineering."
+      },
+      "nita": {
+        "name": "Nita Lipan",
+        "role": "Regional Education Program Director",
+        "description": "Nita Lipan brings over 20 years of educational experience to rural communities in Western North Carolina. With an interdisciplinary degree in Law and Psychology with a specialization in History from the University of Central Florida, Nita approaches educational challenges with a unique and multifaceted perspective. Known as 'The Swiss Army Knife of Education' for her versatility, she has led curriculum development, managed teaching teams, and was recognized with the Employee of the Year award. At UNIDXS, Nita develops educational programs that provide resources and opportunities to students, including creating advisory councils for school partners at Smoky Mountain High School and Blue Ridge Early College, the Hispanic heritage reading club 'Unidxs: Roots and Futures,' and weekly tutoring at Jackson Community School. Certifications: Youth Mental Health First Aid, PMQ, CTC, Lean Six Sigma White Belt, Academic Counseling, K-6 Certified Educator."
       }
     }
   },
@@ -255,10 +259,24 @@
       "subtitle": "Together, we build communities where everyone belongs",
       "donateButton": "Donate Now"
     },
-     "cta": {
+    "cta": {
       "title": "Join Us in Making a Difference",
       "subtitle": "Together, we can build a more inclusive and supportive community",
       "button": "Get Involved"
+    },
+    "dialog": {
+      "getInvolved": {
+        "title": "How do you want to get involved?",
+        "subtitle": "Choose the option that interests you most",
+        "joinUnidxs": {
+          "title": "Join UNIDXS",
+          "description": "Become part of our community"
+        },
+        "donate": {
+          "title": "Make a donation",
+          "description": "Support our cause"
+        }
+      }
     },
     "whyGive": {
       "title": "Why Give",
@@ -292,7 +310,7 @@
       "online": {
         "title": "Donate Online",
         "description": "Make a secure one-time or monthly contribution that sustains our programs year round.",
-        "button": "Coming Soon"
+        "button": "Donate Now"
       },
       "volunteer": {
         "title": "Donate Your Time",
@@ -364,6 +382,46 @@
       "title": "Need Assistance?",
       "subtitle": "Our food pantry is here to help. Check our calendar for open hours.",
       "button": "Contact Us"
+    }
+  },
+  "education": {
+    "hero": {
+      "title": "Educational Programs",
+      "subtitle": "Academic enrichment, cultural celebration, and career development"
+    },
+    "about": {
+      "title": "About Our Programs",
+      "description": "The UNIDXS Educational Programs department provides academic enrichment, cultural celebration, and career development opportunities to students in rural Western North Carolina. Programs include in-house school club sponsorships, cultural heritage programming, community mentorship, and college and career readiness initiatives."
+    },
+    "currentProjects": {
+      "title": "Current Student Projects",
+      "university": {
+        "title": "University and Medical Visit",
+        "description": "Visit to Western Carolina University and medical visit to MedCat to explore educational and health opportunities."
+      },
+      "thanksgiving": {
+        "title": "Thanksgiving Cultural Celebration",
+        "description": "Try foods from other regions and play games from around the world in a multicultural celebration."
+      },
+      "yearlong": {
+        "title": "Year-Long Art Project",
+        "description": "In partnership with Artsonia, our clubs create artwork, share a virtual art gallery, and hold an end-of-year celebration."
+      }
+    },
+    "serviceArea": {
+      "title": "Service Area",
+      "description": "The 7 counties of Western North Carolina"
+    },
+    "partnerships": {
+      "title": "Current Partnerships"
+    },
+    "whatsapp": {
+      "title": "Stay Connected",
+      "description": "Join our WhatsApp channel to stay updated with upcoming events and student success stories.",
+      "button": "Join WhatsApp Channel"
+    },
+    "impact": {
+      "description": "Empowering the next generation through education, culture, and opportunities for growth in Western North Carolina."
     }
   }
 }

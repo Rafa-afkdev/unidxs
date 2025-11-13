@@ -75,7 +75,7 @@ export default function Donations() {
       title: t("waysToGive.online.title"),
       description: t("waysToGive.online.description"),
       buttonText: t("waysToGive.online.button"),
-      action: "disabled",
+      action: "https://www.zeffy.com/en-US/donation-form/donate-to-make-a-difference-19304",
       color: "from-blue-500 to-purple-500",
     },
     {
@@ -161,9 +161,7 @@ export default function Donations() {
               <Heart className="w-5 h-5" />
               {t("hero.donateButton")}
             </a>
-            <p className="text-white/80 text-sm mt-4 max-w-md mx-auto">
-              {t("developmentNotice")}
-            </p>
+           
           </motion.div>
         </motion.div>
       </section>
@@ -301,7 +299,11 @@ export default function Donations() {
                     disabled={way.action === "disabled"}
                     onClick={() => {
                       if (way.action !== "disabled" && way.action) {
-                        window.location.href = way.action;
+                        if (way.action.startsWith("mailto:")) {
+                          window.location.href = way.action;
+                        } else {
+                          window.open(way.action, "_blank", "noopener,noreferrer");
+                        }
                       }
                     }}
                     className={`inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all ${
@@ -312,8 +314,10 @@ export default function Donations() {
                   >
                     {way.action === "disabled" ? (
                       <Clock className="w-5 h-5" />
-                    ) : (
+                    ) : way.action.startsWith("mailto:") ? (
                       <Mail className="w-5 h-5" />
+                    ) : (
+                      <Heart className="w-5 h-5" />
                     )}
                     {way.buttonText}
                   </button>

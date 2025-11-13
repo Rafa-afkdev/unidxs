@@ -41,7 +41,7 @@ export default function NavbarMain() {
   const servicesOptions = [
     { href: '/services', label: t('ourServices') , icon: Settings },
     { href: '/warehouse', label: t('warehouse') , icon: Package },
-    // { href: '/education', label: t('education') , icon: GraduationCap },
+    { href: '/education', label: t('education') , icon: GraduationCap },
   ];
 
   const languages = [
