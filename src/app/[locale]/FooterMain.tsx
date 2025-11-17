@@ -4,6 +4,8 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
+import PrivacyDialog from '@/components/PrivacyDialog'
+import TermsDialog from '@/components/TermsDialog'
 
 export default function FooterMain() {
 
@@ -156,18 +158,16 @@ const locale = useLocale();
             {t('footer.copyright')}
           </p>
           <div className="flex gap-6 text-sm">
-            <Link 
-              href={`/${locale}/privacidad`} 
-              className="hover:text-green-400 transition-colors text-purple-200"
-            >
-              {t('footer.privacy')}
-            </Link>
-            <Link 
-              href={`/${locale}/terminos`} 
-              className="hover:text-green-400 transition-colors text-purple-200"
-            >
-              {t('footer.terms')}
-            </Link>
+            <PrivacyDialog>
+              <button className="hover:text-green-400 transition-colors text-purple-200 cursor-pointer">
+                {t('footer.privacy')}
+              </button>
+            </PrivacyDialog>
+            <TermsDialog>
+              <button className="hover:text-green-400 transition-colors text-purple-200 cursor-pointer">
+                {t('footer.terms')}
+              </button>
+            </TermsDialog>
           </div>
         </div>
       </div>

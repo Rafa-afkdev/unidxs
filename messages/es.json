@@ -423,5 +423,59 @@
     "impact": {
       "description": "Empoderando a la próxima generación a través de la educación, la cultura y las oportunidades de crecimiento en el oeste de Carolina del Norte."
     }
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización: Noviembre 2025",
+    "intro": "En UNIDXS WNC, estamos comprometidos con la protección de su privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos su información personal.",
+    "sections": {
+      "collection": {
+        "title": "Información que Recopilamos",
+        "content": "Podemos recopilar información personal como su nombre, dirección de correo electrónico, número de teléfono y otros datos de contacto cuando interactúa con nuestros servicios, asiste a nuestros eventos o nos contacta para obtener apoyo."
+      },
+      "usage": {
+        "title": "Cómo Usamos su Información",
+        "content": "Utilizamos su información para proporcionar nuestros servicios, comunicarnos con usted sobre programas y eventos, responder a sus consultas y mejorar nuestras iniciativas de apoyo comunitario. No vendemos ni compartimos su información personal con terceros con fines de marketing."
+      },
+      "protection": {
+        "title": "Protección de Datos",
+        "content": "Implementamos medidas de seguridad apropiadas para proteger su información personal contra el acceso no autorizado, alteración, divulgación o destrucción. Sin embargo, ningún método de transmisión por internet es 100% seguro."
+      },
+      "rights": {
+        "title": "Sus Derechos",
+        "content": "Usted tiene derecho a acceder, corregir o eliminar su información personal. También puede optar por no recibir comunicaciones de nuestra parte en cualquier momento. Para ejercer estos derechos, contáctenos usando la información proporcionada a continuación."
+      },
+      "contact": {
+        "title": "Contáctenos",
+        "content": "Si tiene alguna pregunta sobre esta Política de Privacidad, contáctenos al (828) 242-7345 o visite nuestra oficina en el oeste de Carolina del Norte."
+      }
+    }
+  },
+  "terms": {
+    "title": "Términos de Uso",
+    "lastUpdated": "Última actualización: Noviembre 2025",
+    "intro": "Al acceder y utilizar los servicios de UNIDXS WNC, usted acepta cumplir con estos Términos de Uso. Por favor, léalos cuidadosamente.",
+    "sections": {
+      "services": {
+        "title": "Nuestros Servicios",
+        "content": "UNIDXS WNC proporciona programas educativos, apoyo de salud, servicios de despensa de alimentos y recursos comunitarios a los residentes del oeste de Carolina del Norte. Nuestros servicios se proporcionan de forma voluntaria y están sujetos a disponibilidad."
+      },
+      "conduct": {
+        "title": "Conducta del Usuario",
+        "content": "Usted acepta usar nuestros servicios de manera respetuosa y legal. No debe participar en ningún comportamiento que sea dañino, amenazante o disruptivo para nuestro personal, voluntarios u otros miembros de la comunidad."
+      },
+      "liability": {
+        "title": "Limitación de Responsabilidad",
+        "content": "UNIDXS WNC se esfuerza por proporcionar información precisa y servicios de calidad. Sin embargo, no ofrecemos garantías sobre la integridad, confiabilidad o precisión de nuestros servicios. No somos responsables de ningún daño que surja del uso de nuestros servicios."
+      },
+      "modifications": {
+        "title": "Modificaciones a los Términos",
+        "content": "Nos reservamos el derecho de modificar estos Términos de Uso en cualquier momento. Los cambios serán efectivos inmediatamente después de su publicación. Su uso continuado de nuestros servicios constituye la aceptación de los términos modificados."
+      },
+      "contact": {
+        "title": "Información de Contacto",
+        "content": "Para preguntas sobre estos Términos de Uso, contáctenos al (828) 242-7345 o visite nuestra oficina en el oeste de Carolina del Norte."
+      }
+    }
   }
 }
