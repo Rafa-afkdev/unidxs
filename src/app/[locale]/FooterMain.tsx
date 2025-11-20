@@ -52,7 +52,7 @@ const locale = useLocale();
         </div>
 
         {/* Health Contact */}
-        <div>
+        {/* <div>
           <h3 className="font-sans text-lg font-bold mb-4 text-purple-200 uppercase tracking-wide">{t('footer.health')}</h3>
           <div className="space-y-3">
             <p className="text-sm font-semibold text-white">Paul Witty</p>
@@ -75,7 +75,7 @@ const locale = useLocale();
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Education Contact */}
         <div>

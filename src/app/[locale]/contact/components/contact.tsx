@@ -395,7 +395,7 @@ export default function Contact() {
                   </motion.div>
 
                   {/* Health */}
-                  <motion.div 
+                  {/* <motion.div 
                     variants={itemVariants}
                     className="pt-6 border-t-2 border-gray-100"
                   >
@@ -414,7 +414,7 @@ export default function Contact() {
                         <span className="text-sm font-medium">(828) 506-1318</span>
                       </a>
                     </div>
-                  </motion.div>
+                  </motion.div> */}
 
                   {/* Education */}
                   <motion.div 
