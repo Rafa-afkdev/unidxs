@@ -189,7 +189,8 @@
       "hoursText": "Lunes - Viernes: 9:00 AM - 5:00 PM",
       "generalInquiries": "Consultas Generales",
       "health": "Salud - Paul Witty",
-      "education": "Educación - Sarah West"
+      "education": "Educación - Sarah West",
+      "educationNita": "Educación - Nita Lipan"
     },
     "success": "¡Mensaje enviado exitosamente!",
     "error": "Hubo un error al enviar el mensaje. Por favor inténtalo de nuevo."
@@ -392,6 +393,29 @@
     "about": {
       "title": "Sobre Nuestros Programas",
       "description": "El departamento de Programas Educativos de UNIDXS brinda enriquecimiento académico, celebración cultural y oportunidades de desarrollo profesional a estudiantes en la zona rural del oeste de Carolina del Norte. Los programas incluyen patrocinios de clubes escolares internos, programación de patrimonio cultural, mentoría comunitaria e iniciativas de preparación universitaria y profesional."
+    },
+    "contact": {
+      "title": "Contáctanos - Nita Lipan",
+      "subtitle": "¿Tienes preguntas sobre nuestros programas educativos? Envía un mensaje a Nita Lipan",
+      "form": {
+        "name": "Nombre completo",
+        "namePlaceholder": "Tu nombre",
+        "email": "Correo electrónico",
+        "emailPlaceholder": "tu@email.com",
+        "phone": "Teléfono",
+        "phonePlaceholder": "(123) 456-7890",
+        "subject": "Asunto",
+        "subjectPlaceholder": "¿En qué podemos ayudarte?",
+        "message": "Mensaje",
+        "messagePlaceholder": "Escribe tu mensaje aquí...",
+        "submit": "Enviar Mensaje",
+        "sending": "Enviando..."
+      },
+      "success": "¡Mensaje enviado exitosamente a Nita!",
+      "error": "Hubo un error al enviar el mensaje. Por favor inténtalo de nuevo.",
+      "contactInfo": "Información de Contacto",
+      "email": "Nlipan@unidxswnc.org",
+      "phone": "(828) 347-1234"
     },
     "currentProjects": {
       "title": "Proyectos Estudiantiles Actuales",

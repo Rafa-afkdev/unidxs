@@ -4,7 +4,7 @@ import { SendEmail } from '@/lib/resend';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, phone, subject, message, recipient } = body;
+    const { name, email, phone, subject, message } = body;
 
     // Validación básica
     if (!name || !email || !subject || !message) {
@@ -13,11 +13,6 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
-
-    // Determinar el destinatario basado en el campo recipient
-    const recipientEmail = recipient === 'nita' 
-      ? 'Nlipan@unidxswnc.org' 
-      : 'Rball@unidxSwnc.org';
 
     // Crear el contenido del email en HTML
     const emailBody = `
@@ -251,14 +246,14 @@ export async function POST(request: Request) {
               <div class="logo-container">
                 <img src="https://unidxswnc.org/_next/image?url=%2FLogo.png&w=256&q=75" alt="UNIDXS Logo" class="logo">
               </div>
-              <h1>✨ Nuevo Mensaje de Contacto</h1>
+              <h1>📚 Mensaje para Educación - Nita Lipan</h1>
               <p>Formulario Web - UNIDXS WNC</p>
             </div>
 
             <!-- Contenido principal -->
             <div class="content">
               <div class="greeting">
-                👋 ¡Hola! Has recibido un nuevo mensaje desde tu sitio web UNIDXS.
+                👋 ¡Hola Nita! Has recibido un nuevo mensaje relacionado con programas educativos.
               </div>
 
               <div class="info-card">
@@ -342,13 +337,13 @@ export async function POST(request: Request) {
             <!-- Footer -->
             <div class="footer">
               <img src="https://unidxswnc.org/_next/image?url=%2FLogo.png&w=256&q=75" alt="UNIDXS Logo" class="footer-logo">
-              <p><strong>UNIDXS WNC</strong></p>
-              <p>🤝 Trabajamos por la comunidad</p>
+              <p><strong>UNIDXS WNC - Departamento de Educación</strong></p>
+              <p>📚 Programas Educativos</p>
               <p style="margin-top: 15px;">
                 <a href="https://unidxswnc.org">🌐 unidxswnc.org</a>
               </p>
               <p style="font-size: 11px; margin-top: 15px; opacity: 0.7;">
-                Este correo fue generado automáticamente desde el formulario de contacto
+                Este correo fue generado automáticamente desde el formulario de contacto de educación
               </p>
             </div>
           </div>
@@ -356,15 +351,15 @@ export async function POST(request: Request) {
       </html>
     `;
 
-    // Enviar el email usando Resend
+    // Enviar el email usando Resend a Nita Lipan
     const result = await SendEmail({
-      sendTo: recipientEmail, // Enviar a Nita o Ricardo según el campo recipient
-      subject: `📩 Contacto Web: ${subject}`,
+      sendTo: 'Nlipan@unidxswnc.org',
+      subject: `📚 Educación - Contacto Web: ${subject}`,
       body: emailBody,
-      replyTo: email, // Para que puedas responder directamente al usuario
+      replyTo: email,
     });
 
-    console.log('Email sent successfully via Resend');
+    console.log('Email sent successfully to Nita Lipan via Resend');
 
     return NextResponse.json({ 
       success: true, 
@@ -374,7 +369,6 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error('Error sending email:', error);
     
-    // Proporcionar más detalles del error
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     const errorStack = error instanceof Error ? error.stack : undefined;
     

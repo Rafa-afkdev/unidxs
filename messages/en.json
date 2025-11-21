@@ -188,7 +188,8 @@
       "hoursText": "Monday - Friday: 9:00 AM - 5:00 PM",
       "generalInquiries": "General Inquiries",
       "health": "Health - Paul Witty",
-      "education": "Education - Sarah West"
+      "education": "Education - Sarah West",
+      "educationNita": "Education - Nita Lipan"
     },
     "success": "Message sent successfully!",
     "error": "There was an error sending the message. Please try again."
@@ -392,6 +393,29 @@
     "about": {
       "title": "About Our Programs",
       "description": "The UNIDXS Educational Programs department provides academic enrichment, cultural celebration, and career development opportunities to students in rural Western North Carolina. Programs include in-house school club sponsorships, cultural heritage programming, community mentorship, and college and career readiness initiatives."
+    },
+    "contact": {
+      "title": "Contact Us - Nita Lipan",
+      "subtitle": "Have questions about our educational programs? Send a message to Nita Lipan",
+      "form": {
+        "name": "Full name",
+        "namePlaceholder": "Your name",
+        "email": "Email address",
+        "emailPlaceholder": "you@email.com",
+        "phone": "Phone",
+        "phonePlaceholder": "(123) 456-7890",
+        "subject": "Subject",
+        "subjectPlaceholder": "How can we help you?",
+        "message": "Message",
+        "messagePlaceholder": "Write your message here...",
+        "submit": "Send Message",
+        "sending": "Sending..."
+      },
+      "success": "Message sent successfully to Nita!",
+      "error": "There was an error sending the message. Please try again.",
+      "contactInfo": "Contact Information",
+      "email": "Nlipan@unidxswnc.org",
+      "phone": "(828) 347-1234"
     },
     "currentProjects": {
       "title": "Current Student Projects",
