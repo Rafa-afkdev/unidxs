@@ -43,7 +43,7 @@ const locale = useLocale();
                 href="mailto:ricardo@unidxswnc.org" 
                 className="text-sm hover:text-green-400 transition-colors break-all"
               >
-                ricardo@unidxswnc.org
+                Rball@unidxswnc.org
               </a>
             </div>
             <div className="flex items-start space-x-2 mt-4">
