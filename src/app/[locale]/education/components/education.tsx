@@ -109,7 +109,7 @@ export default function EducationComponent() {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
@@ -505,6 +505,30 @@ export default function EducationComponent() {
                     </div>
                   </div>
 
+                  {/* Recipient Selector */}
+                  <div>
+                    <label htmlFor="recipient" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide">
+                      {t("contact.form.recipient")}
+                    </label>
+                    <select
+                      id="recipient"
+                      name="recipient"
+                      value={formData.recipient}
+                      onChange={handleChange}
+                      onFocus={() => setFocusedField('recipient')}
+                      onBlur={() => setFocusedField(null)}
+                      required
+                      className={`w-full px-5 py-4 rounded-xl border-2 transition-all duration-300 outline-none bg-gray-50 focus:bg-white text-gray-900 ${
+                        focusedField === 'recipient' 
+                          ? 'border-purple-500 shadow-lg shadow-purple-200 scale-[1.02]' 
+                          : 'border-gray-200 hover:border-gray-300'
+                      }`}
+                    >
+                      <option value="nita">Nita Lipan - {t("contact.form.nitaRole")}</option>
+                      <option value="sarah">Sarah West - {t("contact.form.sarahRole")}</option>
+                    </select>
+                  </div>
+
                   {/* Message */}
                   <div>
                     <label htmlFor="message" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide">
@@ -588,28 +612,56 @@ export default function EducationComponent() {
                   {t("contact.contactInfo")}
                 </h3>
 
-                <div className="space-y-4">
-                  {/* Email */}
-                  <a
-                    href="mailto:Nlipan@unidxswnc.org"
-                    className="flex items-center space-x-3 text-gray-700 hover:text-purple-600 transition-all duration-300 p-3 rounded-lg hover:bg-purple-50 group"
-                  >
-                    <div className="bg-purple-100 p-2 rounded-lg group-hover:bg-purple-200 transition-colors">
-                      <Mail className="w-5 h-5 text-purple-600" />
+                <div className="space-y-6">
+                  {/* Nita Lipan */}
+                  <div className="pb-4 border-b border-gray-200">
+                    <h4 className="font-bold text-gray-900 mb-3">Nita Lipan</h4>
+                    <div className="space-y-2">
+                      <a
+                        href="mailto:Nlipan@unidxswnc.org"
+                        className="flex items-center space-x-3 text-gray-700 hover:text-purple-600 transition-all duration-300 p-2 rounded-lg hover:bg-purple-50 group"
+                      >
+                        <div className="bg-purple-100 p-2 rounded-lg group-hover:bg-purple-200 transition-colors">
+                          <Mail className="w-4 h-4 text-purple-600" />
+                        </div>
+                        <span className="text-sm font-medium break-all">{t("contact.nitaEmail")}</span>
+                      </a>
+                      <a
+                        href="tel:+18283471234"
+                        className="flex items-center space-x-3 text-gray-700 hover:text-purple-600 transition-all duration-300 p-2 rounded-lg hover:bg-purple-50 group"
+                      >
+                        <div className="bg-purple-100 p-2 rounded-lg group-hover:bg-purple-200 transition-colors">
+                          <Phone className="w-4 h-4 text-purple-600" />
+                        </div>
+                        <span className="text-sm font-medium">{t("contact.nitaPhone")}</span>
+                      </a>
                     </div>
-                    <span className="text-sm font-medium break-all">{t("contact.email")}</span>
-                  </a>
+                  </div>
 
-                  {/* Phone */}
-                  <a
-                    href="tel:+18283471234"
-                    className="flex items-center space-x-3 text-gray-700 hover:text-purple-600 transition-all duration-300 p-3 rounded-lg hover:bg-purple-50 group"
-                  >
-                    <div className="bg-purple-100 p-2 rounded-lg group-hover:bg-purple-200 transition-colors">
-                      <Phone className="w-5 h-5 text-purple-600" />
+                  {/* Sarah West */}
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-3">Sarah West</h4>
+                    <div className="space-y-2">
+                      <a
+                        href="mailto:SarahWest@unidxswnc.org"
+                        className="flex items-center space-x-3 text-gray-700 hover:text-purple-600 transition-all duration-300 p-2 rounded-lg hover:bg-purple-50 group"
+                      >
+                        <div className="bg-purple-100 p-2 rounded-lg group-hover:bg-purple-200 transition-colors">
+                          <Mail className="w-4 h-4 text-purple-600" />
+                        </div>
+                        <span className="text-sm font-medium break-all">{t("contact.sarahEmail")}</span>
+                      </a>
+                      <a
+                        href="tel:+18283471234"
+                        className="flex items-center space-x-3 text-gray-700 hover:text-purple-600 transition-all duration-300 p-2 rounded-lg hover:bg-purple-50 group"
+                      >
+                        <div className="bg-purple-100 p-2 rounded-lg group-hover:bg-purple-200 transition-colors">
+                          <Phone className="w-4 h-4 text-purple-600" />
+                        </div>
+                        <span className="text-sm font-medium">{t("contact.sarahPhone")}</span>
+                      </a>
                     </div>
-                    <span className="text-sm font-medium">{t("contact.phone")}</span>
-                  </a>
+                  </div>
                 </div>
               </div>
 

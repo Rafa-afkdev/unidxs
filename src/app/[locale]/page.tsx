@@ -1,17 +1,26 @@
 "use client"
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from "framer-motion";
 import Link from 'next/link';
-import { Instagram, Mail, MapPin, Phone, Youtube, Facebook, Heart, Users } from 'lucide-react';
+import { Instagram, Mail, MapPin, Phone, Youtube, Facebook, Heart, Users, X } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
 
 export default function MainPage() {
   const [isVisible, setIsVisible] = useState(true);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isFlyerDialogOpen, setIsFlyerDialogOpen] = useState(false);
   const t = useTranslations('main');
   const tDialog = useTranslations('dialog');
   const locale = useLocale();
+
+  // Mostrar el diálogo del flyer automáticamente al cargar la página
+  useEffect(() => {
+    setIsFlyerDialogOpen(true);
+  }, []);
+
+  // Determinar qué flyer mostrar según el idioma
+  const flyerImage = locale === 'es' ? '/Flyer-Espanol.jpg' : '/Flyer-Ingles.jpg';
 
   return (
 
@@ -215,6 +224,42 @@ export default function MainPage() {
       </motion.div>
     </div>
   </section>
+
+      {/* Flyer Dialog Modal - Se muestra automáticamente */}
+      {isFlyerDialogOpen && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+          onClick={() => setIsFlyerDialogOpen(false)}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            onClick={(e) => e.stopPropagation()}
+            className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full relative overflow-hidden"
+          >
+            {/* Botón de cerrar */}
+            <button
+              onClick={() => setIsFlyerDialogOpen(false)}
+              className="absolute top-4 right-4 z-10 bg-white/90 hover:bg-white text-gray-700 hover:text-gray-900 rounded-full p-2 transition-all shadow-lg hover:shadow-xl"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            {/* Imagen del Flyer */}
+            <div className="relative w-full">
+              <Image
+                src={flyerImage}
+                alt={locale === 'es' ? 'Flyer en Español' : 'Flyer in English'}
+                width={1200}
+                height={1600}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
+          </motion.div>
+        </div>
+      )}
 
       {/* Dialog Modal */}
       {isDialogOpen && (

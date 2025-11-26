@@ -54,6 +54,8 @@
       "office": "UNIDXS Office",
       "health": "Health",
       "education": "Education",
+      "sarahDescription": "Adult education and lifelong learning",
+      "nitaDescription": "K-12 Student and Family Resources",
       "followUs": "Follow Us",
       "socialText": "Connect with us on social media",
       "copyright": "© 2022 UNIDXS WNC. All rights reserved.",
@@ -359,7 +361,7 @@
       }
     },
     "calendar": {
-      "title": "November 2025 Schedule",
+      "title": "December 2025 Schedule",
       "subtitle": "Check our calendar for open hours and special events",
       "volunteersNeeded": "Volunteers Needed / Necesitamos voluntarios: contact",
       "whatsappChannel": ""
@@ -395,8 +397,8 @@
       "description": "The UNIDXS Educational Programs department provides academic enrichment, cultural celebration, and career development opportunities to students in rural Western North Carolina. Programs include in-house school club sponsorships, cultural heritage programming, community mentorship, and college and career readiness initiatives."
     },
     "contact": {
-      "title": "Contact Us - Nita Lipan",
-      "subtitle": "Have questions about our educational programs? Send a message to Nita Lipan",
+      "title": "Contact Us",
+      "subtitle": "Have questions about our educational programs? Send us a message",
       "form": {
         "name": "Full name",
         "namePlaceholder": "Your name",
@@ -406,16 +408,21 @@
         "phonePlaceholder": "(123) 456-7890",
         "subject": "Subject",
         "subjectPlaceholder": "How can we help you?",
+        "recipient": "Send to",
+        "nitaRole": "Regional Education Program Director",
+        "sarahRole": "Community Education Coordinator",
         "message": "Message",
         "messagePlaceholder": "Write your message here...",
         "submit": "Send Message",
         "sending": "Sending..."
       },
-      "success": "Message sent successfully to Nita!",
+      "success": "Message sent successfully!",
       "error": "There was an error sending the message. Please try again.",
       "contactInfo": "Contact Information",
-      "email": "Nlipan@unidxswnc.org",
-      "phone": "(828) 347-1234"
+      "nitaEmail": "Nlipan@unidxswnc.org",
+      "nitaPhone": "(828) 347-1234",
+      "sarahEmail": "SarahWest@unidxswnc.org",
+      "sarahPhone": "(828) 347-1234"
     },
     "currentProjects": {
       "title": "Current Student Projects",

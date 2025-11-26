@@ -37,6 +37,15 @@ const locale = useLocale();
                 (828) 242-7345
               </a>
             </div>
+            <div className="flex items-center space-x-2">
+              <Mail className="w-4 h-4 text-green-400" />
+              <a 
+                href="mailto:ricardo@unidxswnc.org" 
+                className="text-sm hover:text-green-400 transition-colors break-all"
+              >
+                ricardo@unidxswnc.org
+              </a>
+            </div>
             <div className="flex items-start space-x-2 mt-4">
               <MapPin className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />
               <a 
@@ -82,6 +91,7 @@ const locale = useLocale();
           <h3 className="font-sans text-lg font-bold mb-4 text-purple-200 uppercase tracking-wide">{t('footer.education')}</h3>
           <div className="space-y-3">
             <p className="text-sm font-semibold text-white">Sarah West</p>
+            <p className="text-xs text-purple-300 italic">{t('footer.sarahDescription')}</p>
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4 text-green-400" />
               <a 
@@ -103,6 +113,7 @@ const locale = useLocale();
               </a>
             </div>
             <p className="text-sm font-semibold text-white mt-4">Nita Lipan</p>
+            <p className="text-xs text-purple-300 italic">{t('footer.nitaDescription')}</p>
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4 text-green-400" />
               <a 

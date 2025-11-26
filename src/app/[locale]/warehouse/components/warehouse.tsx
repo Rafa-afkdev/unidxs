@@ -124,8 +124,8 @@ export default function WarehouseComponent() {
         </motion.div>
       </section>
 
-      {/* Calendar Section - November 2025 */}
-      <section className="py-20 px-4 bg-white">
+      {/* Calendar Section - December 2025 */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial="initial"
@@ -161,12 +161,12 @@ export default function WarehouseComponent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-6xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-blue-500"
+            className="max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden"
           >
             {/* Calendar Header */}
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-6 text-center">
+            <div className="bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 p-8 text-center rounded-t-3xl">
               <h3 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                November 2025
+                December 2025
               </h3>
               <div className="flex items-center justify-center gap-4 text-white/90 text-sm">
                 <span>Bodega/ Food Pantry</span>
@@ -176,9 +176,9 @@ export default function WarehouseComponent() {
             </div>
 
             {/* Days of Week */}
-            <div className="grid grid-cols-7 bg-gray-100 border-b-2 border-gray-300">
+            <div className="grid grid-cols-7 bg-gradient-to-r from-gray-100 to-gray-50 border-b-2 border-gray-200">
               {["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"].map((day) => (
-                <div key={day} className="p-3 text-center font-bold text-gray-700 text-sm md:text-base border-r border-gray-300 last:border-r-0">
+                <div key={day} className="p-4 text-center font-bold text-gray-800 text-sm md:text-base border-r border-gray-200 last:border-r-0">
                   {day}
                 </div>
               ))}
@@ -186,142 +186,141 @@ export default function WarehouseComponent() {
 
             {/* Calendar Days */}
             <div className="grid grid-cols-7">
-              {/* Week 1 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-gray-50"></div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-gray-50"></div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-gray-50"></div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-gray-50"></div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-gray-50"></div>
+              {/* Week 1 - November spillover */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-gray-50"></div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">1</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">1</div>
+              </div>
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+                <div className="font-bold text-lg mb-1 text-gray-800">2</div>
+              </div>
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-green-50 hover:bg-green-100 transition-colors">
+                <div className="font-bold text-lg mb-1 text-gray-800">3</div>
+                <div className="text-xs md:text-sm text-green-700 font-semibold">
+                  Open Pantry / Despensa Abierta <span className="text-green-900 font-bold">12-6pm</span>
+                </div>
+              </div>
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-green-50 hover:bg-green-100 transition-colors">
+                <div className="font-bold text-lg mb-1 text-gray-800">4</div>
+                <div className="text-xs md:text-sm text-green-700 font-semibold">
+                  Open Pantry / Despensa Abierta <span className="text-green-900 font-bold">11-5pm</span>
+                </div>
+              </div>
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-orange-50 hover:bg-orange-100 transition-colors">
+                <div className="font-bold text-lg mb-1 text-gray-800">5</div>
+                <div className="text-xs md:text-sm text-orange-700 font-semibold">
+                  Grab and Go / Toma y lleva <span className="text-orange-900 font-bold">12-2pm</span>
+                </div>
+              </div>
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+                <div className="font-bold text-lg mb-1 text-gray-800">6</div>
               </div>
 
               {/* Week 2 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">2</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">7</div>
               </div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">3</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">8</div>
               </div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">4</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">9</div>
               </div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-green-50">
-                <div className="font-bold text-lg mb-1">5</div>
-                <div className="text-xs md:text-sm text-green-700 font-semibold">
-                  Open Pantry / Despensa Abierta <span className="text-green-900 font-bold">12-6pm</span>
-                </div>
-              </div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-green-50">
-                <div className="font-bold text-lg mb-1">6</div>
-                <div className="text-xs md:text-sm text-green-700 font-semibold">
-                  Open Pantry / Despensa Abierta <span className="text-green-900 font-bold">11-5pm</span>
-                </div>
-              </div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-orange-50">
-                <div className="font-bold text-lg mb-1">7</div>
-                <div className="text-xs md:text-sm text-orange-700 font-semibold">
-                  Grab and Go / Toma y lleva <span className="text-orange-900 font-bold">12-2pm</span>
-                </div>
-              </div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">8</div>
-              </div>
-
-              {/* Week 3 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">9</div>
-              </div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">10</div>
-              </div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">11</div>
-              </div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-blue-50">
-                <div className="font-bold text-lg mb-1">12</div>
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-blue-50 hover:bg-blue-100 transition-colors">
+                <div className="font-bold text-lg mb-1 text-gray-800">10</div>
                 <div className="text-xs md:text-sm text-blue-700 font-semibold">
                   Food Boxes / Cajas de comida <span className="text-blue-900 font-bold">12-6pm</span>
                 </div>
               </div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-blue-50">
-                <div className="font-bold text-lg mb-1">13</div>
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-blue-50 hover:bg-blue-100 transition-colors">
+                <div className="font-bold text-lg mb-1 text-gray-800">11</div>
                 <div className="text-xs md:text-sm text-blue-700 font-semibold">
                   Food Boxes / Cajas de comida <span className="text-blue-900 font-bold">11-5pm</span>
                 </div>
               </div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-orange-50">
-                <div className="font-bold text-lg mb-1">14</div>
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-orange-50 hover:bg-orange-100 transition-colors">
+                <div className="font-bold text-lg mb-1 text-gray-800">12</div>
                 <div className="text-xs md:text-sm text-orange-700 font-semibold">
                   Grab and Go / Toma y lleva <span className="text-orange-900 font-bold">12-2pm</span>
                 </div>
               </div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">15</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">13</div>
               </div>
 
-              {/* Week 4 */}
+              {/* Week 3 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">16</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">14</div>
               </div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">17</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">15</div>
               </div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">18</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">16</div>
               </div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-green-50">
-                <div className="font-bold text-lg mb-1">19</div>
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-green-50 hover:bg-green-100 transition-colors">
+                <div className="font-bold text-lg mb-1 text-gray-800">17</div>
                 <div className="text-xs md:text-sm text-green-700 font-semibold">
                   Open Pantry / Despensa Abierta <span className="text-green-900 font-bold">12-6pm</span>
                 </div>
               </div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-green-50">
-                <div className="font-bold text-lg mb-1">20</div>
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-green-50 hover:bg-green-100 transition-colors">
+                <div className="font-bold text-lg mb-1 text-gray-800">18</div>
                 <div className="text-xs md:text-sm text-green-700 font-semibold">
                   Open Pantry / Despensa Abierta <span className="text-green-900 font-bold">11-5pm</span>
                 </div>
               </div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-orange-50">
-                <div className="font-bold text-lg mb-1">21</div>
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-orange-50 hover:bg-orange-100 transition-colors">
+                <div className="font-bold text-lg mb-1 text-gray-800">19</div>
                 <div className="text-xs md:text-sm text-orange-700 font-semibold">
                   Grab and Go / Toma y lleva <span className="text-orange-900 font-bold">12-2pm</span>
                 </div>
               </div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">22</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">20</div>
+              </div>
+
+              {/* Week 4 */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+                <div className="font-bold text-lg mb-1 text-gray-800">21</div>
+              </div>
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-red-50 hover:bg-red-100 transition-colors">
+                <div className="font-bold text-lg mb-1 text-gray-800">22</div>
+                <div className="text-xs md:text-sm text-red-700 font-semibold">
+                  Food Boxes / Cajas de comida <span className="text-red-900 font-bold">4-7pm</span>
+                </div>
+              </div>
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+                <div className="font-bold text-lg mb-1 text-gray-800">23</div>
+              </div>
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+                <div className="font-bold text-lg mb-1 text-gray-800">24</div>
+              </div>
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+                <div className="font-bold text-lg mb-1 text-gray-800">25</div>
+              </div>
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-orange-50 hover:bg-orange-100 transition-colors">
+                <div className="font-bold text-lg mb-1 text-gray-800">26</div>
+                <div className="text-xs md:text-sm text-orange-700 font-semibold">
+                  Grab and Go / Toma y lleva <span className="text-orange-900 font-bold">12-2pm</span>
+                </div>
+              </div>
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+                <div className="font-bold text-lg mb-1 text-gray-800">27</div>
               </div>
 
               {/* Week 5 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">23</div>
-              </div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-purple-50">
-                <div className="font-bold text-lg mb-1">24</div>
-                <div className="text-xs md:text-sm text-purple-700 font-semibold">
-                  Food Boxes / Cajas de comida <span className="text-purple-900 font-bold">4-7pm</span>
-                </div>
+                <div className="font-bold text-lg mb-1 text-gray-800">28</div>
               </div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">25</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">29</div>
               </div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">26</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">30</div>
               </div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">27</div>
-              </div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">28</div>
-              </div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">29</div>
-              </div>
-
-              {/* Week 6 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1">30</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">31</div>
               </div>
             </div>
           </motion.div>
