@@ -363,8 +363,26 @@
     "calendar": {
       "title": "December 2025 Schedule",
       "subtitle": "Check our calendar for open hours and special events",
-      "volunteersNeeded": "Volunteers Needed / Necesitamos voluntarios: contact",
-      "whatsappChannel": ""
+      "volunteersNeeded": "Volunteers Needed: contact",
+      "whatsappChannel": "Bodega/ Food Pantry WhatsApp Channel",
+      "days": {
+        "sunday": "Sunday",
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday"
+      },
+      "events": {
+        "openPantry": "Open Pantry",
+        "foodBoxes": "Food boxes",
+        "smallBoxes": "Small boxes",
+        "healthClinic": "Health Clinic",
+        "christmasEvent": "Christmas Toys - Bring your children",
+        "christmasDate": "December 6th",
+        "address": "19 Smoky Mountain Dr, Franklin, NC 28734"
+      }
     },
     "howToHelp": {
       "title": "How You Can Help",

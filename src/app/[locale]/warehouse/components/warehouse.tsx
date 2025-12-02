@@ -166,10 +166,10 @@ export default function WarehouseComponent() {
             {/* Calendar Header */}
             <div className="bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 p-8 text-center rounded-t-3xl">
               <h3 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                December 2025
+                {t("calendar.title")}
               </h3>
               <div className="flex items-center justify-center gap-4 text-white/90 text-sm">
-                <span>Bodega/ Food Pantry</span>
+                <span>{t("hero.title")}</span>
                 <span>•</span>
                 <span>{t("calendar.whatsappChannel")}</span>
               </div>
@@ -177,9 +177,9 @@ export default function WarehouseComponent() {
 
             {/* Days of Week */}
             <div className="grid grid-cols-7 bg-gradient-to-r from-gray-100 to-gray-50 border-b-2 border-gray-200">
-              {["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"].map((day) => (
+              {["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"].map((day) => (
                 <div key={day} className="p-4 text-center font-bold text-gray-800 text-sm md:text-base border-r border-gray-200 last:border-r-0">
-                  {day}
+                  {t(`calendar.days.${day}`)}
                 </div>
               ))}
             </div>
@@ -197,23 +197,32 @@ export default function WarehouseComponent() {
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-green-50 hover:bg-green-100 transition-colors">
                 <div className="font-bold text-lg mb-1 text-gray-800">3</div>
                 <div className="text-xs md:text-sm text-green-700 font-semibold">
-                  Open Pantry / Despensa Abierta <span className="text-green-900 font-bold">12-6pm</span>
+                  {t("calendar.events.openPantry")} <span className="text-green-900 font-bold">2-6pm</span>
                 </div>
               </div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-green-50 hover:bg-green-100 transition-colors">
                 <div className="font-bold text-lg mb-1 text-gray-800">4</div>
                 <div className="text-xs md:text-sm text-green-700 font-semibold">
-                  Open Pantry / Despensa Abierta <span className="text-green-900 font-bold">11-5pm</span>
+                  {t("calendar.events.openPantry")} <span className="text-green-900 font-bold">1-4pm</span>
                 </div>
               </div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-orange-50 hover:bg-orange-100 transition-colors">
                 <div className="font-bold text-lg mb-1 text-gray-800">5</div>
                 <div className="text-xs md:text-sm text-orange-700 font-semibold">
-                  Grab and Go / Toma y lleva <span className="text-orange-900 font-bold">12-2pm</span>
+                  {t("calendar.events.smallBoxes")} <span className="text-orange-900 font-bold">12-1pm</span>
                 </div>
               </div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[120px] bg-red-50 hover:bg-red-100 transition-colors">
                 <div className="font-bold text-lg mb-1 text-gray-800">6</div>
+                <div className="text-xs md:text-sm text-red-700 font-semibold mb-1">
+                  {t("calendar.events.christmasDate")} <span className="text-red-900 font-bold">2-6pm</span>
+                </div>
+                <div className="text-xs text-red-600">
+                  {t("calendar.events.address")}
+                </div>
+                <div className="text-xs text-red-700 font-semibold">
+                  {t("calendar.events.christmasEvent")}
+                </div>
               </div>
 
               {/* Week 2 */}
@@ -229,19 +238,25 @@ export default function WarehouseComponent() {
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-blue-50 hover:bg-blue-100 transition-colors">
                 <div className="font-bold text-lg mb-1 text-gray-800">10</div>
                 <div className="text-xs md:text-sm text-blue-700 font-semibold">
-                  Food Boxes / Cajas de comida <span className="text-blue-900 font-bold">12-6pm</span>
+                  {t("calendar.events.foodBoxes")} <span className="text-blue-900 font-bold">2-6pm</span>
+                </div>
+                <div className="text-xs md:text-sm text-purple-700 font-semibold">
+                  {t("calendar.events.healthClinic")} <span className="text-purple-900 font-bold">2-6pm</span>
                 </div>
               </div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-blue-50 hover:bg-blue-100 transition-colors">
                 <div className="font-bold text-lg mb-1 text-gray-800">11</div>
                 <div className="text-xs md:text-sm text-blue-700 font-semibold">
-                  Food Boxes / Cajas de comida <span className="text-blue-900 font-bold">11-5pm</span>
+                  {t("calendar.events.foodBoxes")} <span className="text-blue-900 font-bold">1-4pm</span>
+                </div>
+                <div className="text-xs md:text-sm text-purple-700 font-semibold">
+                  {t("calendar.events.healthClinic")} <span className="text-purple-900 font-bold">1-4pm</span>
                 </div>
               </div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-orange-50 hover:bg-orange-100 transition-colors">
                 <div className="font-bold text-lg mb-1 text-gray-800">12</div>
                 <div className="text-xs md:text-sm text-orange-700 font-semibold">
-                  Grab and Go / Toma y lleva <span className="text-orange-900 font-bold">12-2pm</span>
+                  {t("calendar.events.smallBoxes")} <span className="text-orange-900 font-bold">12-1pm</span>
                 </div>
               </div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
@@ -261,19 +276,19 @@ export default function WarehouseComponent() {
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-green-50 hover:bg-green-100 transition-colors">
                 <div className="font-bold text-lg mb-1 text-gray-800">17</div>
                 <div className="text-xs md:text-sm text-green-700 font-semibold">
-                  Open Pantry / Despensa Abierta <span className="text-green-900 font-bold">12-6pm</span>
+                  {t("calendar.events.openPantry")} <span className="text-green-900 font-bold">2-6pm</span>
                 </div>
               </div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-green-50 hover:bg-green-100 transition-colors">
                 <div className="font-bold text-lg mb-1 text-gray-800">18</div>
                 <div className="text-xs md:text-sm text-green-700 font-semibold">
-                  Open Pantry / Despensa Abierta <span className="text-green-900 font-bold">11-5pm</span>
+                  {t("calendar.events.openPantry")} <span className="text-green-900 font-bold">1-4pm</span>
                 </div>
               </div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-orange-50 hover:bg-orange-100 transition-colors">
                 <div className="font-bold text-lg mb-1 text-gray-800">19</div>
                 <div className="text-xs md:text-sm text-orange-700 font-semibold">
-                  Grab and Go / Toma y lleva <span className="text-orange-900 font-bold">12-2pm</span>
+                  {t("calendar.events.smallBoxes")} <span className="text-orange-900 font-bold">12-1pm</span>
                 </div>
               </div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
@@ -284,10 +299,10 @@ export default function WarehouseComponent() {
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">21</div>
               </div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-red-50 hover:bg-red-100 transition-colors">
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-blue-50 hover:bg-blue-100 transition-colors">
                 <div className="font-bold text-lg mb-1 text-gray-800">22</div>
-                <div className="text-xs md:text-sm text-red-700 font-semibold">
-                  Food Boxes / Cajas de comida <span className="text-red-900 font-bold">4-7pm</span>
+                <div className="text-xs md:text-sm text-blue-700 font-semibold">
+                  {t("calendar.events.foodBoxes")} <span className="text-blue-900 font-bold">4-6pm</span>
                 </div>
               </div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
@@ -299,11 +314,8 @@ export default function WarehouseComponent() {
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">25</div>
               </div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-orange-50 hover:bg-orange-100 transition-colors">
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">26</div>
-                <div className="text-xs md:text-sm text-orange-700 font-semibold">
-                  Grab and Go / Toma y lleva <span className="text-orange-900 font-bold">12-2pm</span>
-                </div>
               </div>
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">27</div>

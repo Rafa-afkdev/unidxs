@@ -363,8 +363,26 @@
     "calendar": {
       "title": "Horario de Diciembre 2025",
       "subtitle": "Consulta nuestro calendario para horarios de apertura y eventos especiales",
-      "volunteersNeeded": "Voluntarios Necesitados / Volunteers Needed: contacto",
-      "whatsappChannel": ""
+      "volunteersNeeded": "Necesitamos voluntarios: contacto",
+      "whatsappChannel": "Canal de WhatsApp Bodega",
+      "days": {
+        "sunday": "Domingo",
+        "monday": "Lunes",
+        "tuesday": "Martes",
+        "wednesday": "Miércoles",
+        "thursday": "Jueves",
+        "friday": "Viernes",
+        "saturday": "Sábado"
+      },
+      "events": {
+        "openPantry": "Despensa Abierta",
+        "foodBoxes": "Cajas de comida",
+        "smallBoxes": "Cajitas de comida",
+        "healthClinic": "Clínica Médica",
+        "christmasEvent": "Juguetes de Navidad - Trae a tus hijos",
+        "christmasDate": "6 de Diciembre",
+        "address": "19 Smoky Mountain Dr, Franklin, NC 28734"
+      }
     },
     "howToHelp": {
       "title": "Cómo Puedes Ayudar",
