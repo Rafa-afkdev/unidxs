@@ -14,11 +14,6 @@ export default function MainPage() {
   const tDialog = useTranslations('dialog');
   const locale = useLocale();
 
-  // Mostrar el diálogo del flyer automáticamente al cargar la página
-  useEffect(() => {
-    setIsFlyerDialogOpen(true);
-  }, []);
-
   // Determinar qué flyer mostrar según el idioma
   const flyerImage = locale === 'es' ? '/Flyer-Espanol.jpg' : '/Flyer-Ingles.jpg';
 
