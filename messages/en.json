@@ -11,13 +11,10 @@
     "donations": "Donations",
     "language": "Language"
   },
-
-  
   "metadata": {
     "title": "UNIDXS WNC - Working for the community",
     "description": "UNIDXS WNC - Building a more just, supportive and inclusive society"
   },
-
   "dialog": {
     "getInvolved": {
       "title": "How do you want to get involved?",
@@ -32,7 +29,6 @@
       }
     }
   },
-
   "main": {
     "Titulo": "UNIDXS",
     "SubTitulo": "We all work together for the betterment of our community",
@@ -63,7 +59,6 @@
       "terms": "Terms of Use"
     }
   },
-
   "team": {
     "title": "Our Team",
     "subtitle": "Meet the people who make our mission possible",
@@ -117,10 +112,14 @@
         "name": "Nita Lipan",
         "role": "Regional Education Program Director",
         "description": "Nita Lipan brings over 20 years of educational experience to rural communities in Western North Carolina. With an interdisciplinary degree in Law and Psychology with a specialization in History from the University of Central Florida, Nita approaches educational challenges with a unique and multifaceted perspective. Known as 'The Swiss Army Knife of Education' for her versatility, she has led curriculum development, managed teaching teams, and was recognized with the Employee of the Year award. At UNIDXS, Nita develops educational programs that provide resources and opportunities to students, including creating advisory councils for school partners at Smoky Mountain High School and Blue Ridge Early College, the Hispanic heritage reading club 'Unidxs: Roots and Futures,' and weekly tutoring at Jackson Community School. Certifications: Youth Mental Health First Aid, PMQ, CTC, Lean Six Sigma White Belt, Academic Counseling, K-6 Certified Educator."
+      },
+      "esteban": {
+        "name": "Dr. Esteban Ramirez",
+        "role": "Development and Grants Lead",
+        "description": "Dr. Esteban Ramirez serves as the Development and Grants lead for Unidxs Western North Carolina. He guides fundraising and long term planning with a focus on uplifting rural immigrant communities through education, wellness and community resilience. Esteban is known for bringing clarity to complex initiatives, weaving together resources and people in ways that open new possibilities for families across the region. His work reflects a deep belief in dignity, opportunity and belonging for every person, and a commitment to building solutions that last."
       }
     }
   },
-
   "about": {
     "hero": {
       "title": "About Us",
@@ -164,7 +163,6 @@
       "button": "Get Involved"
     }
   },
-
   "contact": {
     "title": "Contact Us",
     "subtitle": "We're here to help. Send us a message and we'll respond soon.",
@@ -195,16 +193,14 @@
     },
     "success": "Message sent successfully!",
     "error": "There was an error sending the message. Please try again."
-  }
-  ,
+  },
   "services": {
     "hero": {
       "title": "Our Services",
       "description": "UNIDXS offers community-driven resources designed to expand access, opportunity, and connection for everyone. Explore the ways we support and celebrate our diverse community.",
       "contact": "Contact Us"
     },
-
-     "cta": {
+    "cta": {
       "title": "Join Us in Making a Difference",
       "subtitle": "Together, we can build a more inclusive and supportive community",
       "button": "Get Involved"

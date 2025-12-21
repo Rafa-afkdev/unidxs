@@ -22,7 +22,8 @@ export default function Team() {
     { id: 'paul', image: '/Paul.png', hasImage: true },
     { id: 'sarahWest', image: '/Sarah-West.png', hasImage: true },
     { id: 'sarah', image: '/Sarah.png', hasImage: true },
-    { id: 'nita', image: '/Nita.webp', hasImage: true }
+    { id: 'nita', image: '/Nita.webp', hasImage: true },
+    { id: 'esteban', image: '/JuanEs.webp', hasImage: true }
   ]
 
   const volunteers: { id: string; hasImage?: boolean }[] = []
@@ -351,7 +352,7 @@ export default function Team() {
 
       {/* Dialog Modal */}
       {isDialogOpen && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
           onClick={() => setIsDialogOpen(false)}
         >
