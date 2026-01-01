@@ -357,10 +357,11 @@
       }
     },
     "calendar": {
-      "title": "December 2025 Schedule",
+      "title": "January 2026 Schedule",
       "subtitle": "Check our calendar for open hours and special events",
-      "volunteersNeeded": "Volunteers Needed: contact",
-      "whatsappChannel": "Bodega/ Food Pantry WhatsApp Channel",
+      "volunteersNeeded": "Volunteers Needed / Necesitamos voluntarios: contact",
+      "whatsappChannel": "Scan and follow the WhatsApp Channel",
+      "stayTuned": "Stay tuned for changes",
       "days": {
         "sunday": "Sunday",
         "monday": "Monday",
@@ -371,13 +372,13 @@
         "saturday": "Saturday"
       },
       "events": {
-        "openPantry": "Open Pantry",
-        "foodBoxes": "Food boxes",
-        "smallBoxes": "Small boxes",
-        "healthClinic": "Health Clinic",
-        "christmasEvent": "Christmas Toys - Bring your children",
-        "christmasDate": "December 6th",
-        "address": "19 Smoky Mountain Dr, Franklin, NC 28734"
+        "openPantry": "Open Pantry / Dispensa Abierta",
+        "foodBoxes": "Food boxes / Cajas de comida",
+        "healthCheck": "Health check / Chequeo de Salud",
+        "communityTable": "Community Table, Open Pantry / Dispensa Abierta",
+        "closed": "Closed / cerrado",
+        "address": "503 Mill St., Sylva NC 28779",
+        "addressCommunityTable": "23 Central St, Sylva, NC 28779"
       }
     },
     "howToHelp": {
