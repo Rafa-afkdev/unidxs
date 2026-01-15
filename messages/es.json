@@ -1,0 +1,528 @@
+{
+  "navbar": {
+    "about": "Nosotros",
+    "team": "Equipo",
+    "notice": "Avisos",
+    "contact": "Contacto",
+    "services": "Servicios",
+    "ourServices": "Nuestros Servicios",
+    "warehouse": "Bodega",
+    "education": "Educación",
+    "donations": "Donaciones",
+    "language": "Idioma"
+  },
+  "metadata": {
+    "title": "UNIDXS WNC - Trabajamos por la comunidad",
+    "description": "UNIDXS WNC - Construyendo una sociedad más justa, solidaria e inclusiva"
+  },
+  "dialog": {
+    "getInvolved": {
+      "title": "¿Cómo quieres involucrarte?",
+      "subtitle": "Elige la opción que más te interese",
+      "joinUnidxs": {
+        "title": "Formar parte de UNIDXS",
+        "description": "Únete a nuestra comunidad"
+      },
+      "donate": {
+        "title": "Hacer una donación",
+        "description": "Apoya nuestra causa"
+      }
+    }
+  },
+  "main": {
+    "Titulo": "UNIDXS",
+    "SubTitulo": "Trabajamos juntxs por el bienestar de nuestra comunidad",
+    "Descripcion": "Estamos trabajando para mejorar nuestro sitio web y brindarte una mejor experiencia. Mientras tanto, pueden ir enterándose sobre nosotros en nuestras redes sociales. ¡Pronto tendremos más novedades para ti!",
+    "about": {
+      "title": "Nuestra Misión",
+      "paragraph1": "En UNIDXS luchamos para construir una sociedad más justa, solidaria e inclusiva. Creemos firmemente que cada persona merece las mismas oportunidades para alcanzar sus sueños y desarrollar todo su potencial.",
+      "paragraph2": "Estamos comprometidxs con las personas para que logren desarrollar sus proyectos de vida. Trabajamos día a día para eliminar las barreras que impiden el progreso y crear espacios donde todxs puedan prosperar.",
+      "paragraph3": "El Equipo de UNIDXS WNC agradece a cada una de las personas que nos acompañaron en nuestros eventos comunitarios como UNIDXS for Life. Estamos aquí para servirles y construir juntos un futuro mejor.",
+      "button": "Conoce Más Sobre Nosotros"
+    },
+    "empower": {
+      "title": "Empoderemos juntos",
+      "paragraph": "Bienvenido a UNIDXS, donde nos apasiona mejorar nuestra comunidad a través de nuestro programa educativo y servicios de apoyo. Nuestro objetivo es que cada persona prospere, brindándole los recursos que necesita para superar desafíos y crecer. Al unirte a nosotros, pasas a ser parte de un movimiento comprometido con generar un impacto significativo en la vida de las personas. Trabajemos juntos para crear un futuro más brillante para nuestra comunidad.",
+      "cta": "Únete hoy"
+    },
+    "footer": {
+      "generalContact": "Consultas Generales",
+      "office": "Oficina UNIDXS",
+      "health": "Salud",
+      "education": "Educación",
+      "sarahDescription": "Educación para adultos y aprendizaje continuo",
+      "nitaDescription": "Recursos para estudiantes K-12 y familias",
+      "followUs": "Síguenos",
+      "socialText": "Conéctate con nosotros en redes sociales",
+      "copyright": "© 2022 UNIDXS WNC. Todos los derechos reservados.",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Uso"
+    }
+  },
+  "team": {
+    "title": "Nuestro Equipo",
+    "subtitle": "Conoce a las personas que hacen posible nuestra misión",
+    "boardTitle": "Junta Directiva",
+    "boardSubtitle": "Liderazgo guiando nuestra visión y misión",
+    "teamTitle": "Nuestro Equipo",
+    "teamSubtitle": "Profesionales dedicados sirviendo a nuestra comunidad",
+    "volunteersTitle": "Voluntarios",
+    "volunteersDescription": "Nuestros voluntarios son el corazón de UNIDXS. Si quieres sumar tu energía y talento para apoyar actividades y proyectos comunitarios, te invitamos a unirte a nuestro equipo de voluntariado.",
+    "members": {
+      "victoria": {
+        "name": "Victoria Lyall",
+        "role": "Presidenta de la Junta",
+        "description": "Liderando nuestra organización con visión y dedicación al servicio comunitario."
+      },
+      "edithBoard": {
+        "name": "Edith Jennings",
+        "role": "Miembro de la Junta Secretaria",
+        "description": "Homeopatía y el Instituto Politécnico Nacional en México. Actualmente está cursando un título adicional en Western Carolina University para recibir su BSN. En México, fue Doctora Holística. Tiene 20 años de experiencia ayudando a la comunidad latina y creando conexiones entre las comunidades hispana y anglosajona. Ha trabajado como asistente administrativa para el Latino Outreach y Solidaridad Center. Fue intérprete voluntaria y maestra en la Iglesia Católica Saint Francis y embajadora de Latinos Aventureros en las Carolinas. Actualmente es Enfermera Peri Operativa en el Angel Medical Center en Franklin, NC. Fue miembro de la Junta de la Coalition of Latino Americans y miembro del Consejo de Padres en Macon Program for Progress. Ha sido miembro actual de la junta de Unidxs desde 2021. Edith estudió en la Escuela Nacional de Medicina y."
+      },
+      "valeria": {
+        "name": "Valeria Barrera",
+        "role": "Tesorera de la Junta",
+        "description": "Gestionando nuestros recursos financieros con integridad y transparencia."
+      },
+      "ricardo": {
+        "name": "Ricardo Bello Ball",
+        "role": "Director Ejecutivo",
+        "description": "Como fundador de Unidxs WNC en 2021, Ricardo ha trabajado incansablemente para apoyar a nuestra comunidad latina. Ricardo tiene 25 años de experiencia trabajando con la comunidad latina."
+      },
+      "paul": {
+        "name": "Paul Witty",
+        "role": "Trabajador de Salud Comunitaria",
+        "description": "Paul tiene su licenciatura en Terapia Ocupacional y tiene 20 años de experiencia trabajando para el Departamento de Salud de NC antes de asumir su rol de Trabajador de Salud Comunitaria con Unidxs. También está en el Comité Asesor de Terapia Ocupacional de Southwestern Community College."
+      },
+      "sarahWest": {
+        "name": "Sarah West",
+        "role": "Coordinadora de Educación Comunitaria",
+        "description": "En 2022, Sarah se graduó de Western Carolina University con una licenciatura en Español y Estudios Internacionales y especialidades en Negocios Globales y Filosofía. Actualmente está trabajando en su certificado de posgrado en TESOL. Después de graduarse, trabajó en Southwestern Community College como Coordinadora de Preparación Universitaria y Profesional supervisando los programas de Adquisición del Idioma Inglés y Equivalencia de Escuela Secundaria durante dos años antes de asumir su nuevo rol con Unidxs WNC."
+      },
+      "sarah": {
+        "name": "Sarah Hirsch",
+        "role": "Educadora en Inglés y Español",
+        "description": "Sarah Hirsch es una educadora experimentada en inglés y español. Tiene maestrías en ambos idiomas y está certificada en traducción e interpretación médica."
+      },
+      "cristela": {
+        "name": "Cristela Moreno",
+        "role": "Encargada de Voluntarios",
+        "description": "Cristela coordina el programa de voluntariado de UNIDXS WNC. Lidera la gestión y organización de voluntarios, facilitando su integración en actividades y proyectos comunitarios."
+      },
+      "nita": {
+        "name": "Nita Lipan",
+        "role": "Directora del Programa Educativo Regional",
+        "description": "Nita Lipan aporta más de 20 años de experiencia educativa a las comunidades rurales del oeste de Carolina del Norte. Con título interdisciplinario en Derecho y Psicología con especialización en Historia de la Universidad de Florida Central, aborda los desafíos educativos con una perspectiva única y multifacética. Conocida como 'La navaja suiza de la educación' por su versatilidad, ha dirigido el desarrollo curricular, gestionado equipos de enseñanza y fue reconocida con el premio Empleada del Año. En UNIDXS, desarrolla programas educativos que brindan recursos y oportunidades a estudiantes, incluyendo la creación de consejos para socios escolares, el club de lectura de herencia hispana 'Unidxs: Raíces y Futuros' y tutoría semanal. Certificaciones: Primeros auxilios en salud mental para jóvenes, PMQ, CTC, Lean Six Sigma, asesoramiento académico, educador certificado K-6."
+      },
+      "esteban": {
+        "name": "Dr. Esteban Ramirez",
+        "role": "Líder de Desarrollo y Subvenciones",
+        "description": "El Dr. Esteban Ramírez se desempeña como líder de Desarrollo y Subvenciones para Unidxs Western North Carolina. Guía la recaudación de fondos y la planificación a largo plazo con un enfoque en elevar a las comunidades inmigrantes rurales a través de la educación, el bienestar y la resiliencia comunitaria. Esteban es conocido por aportar claridad a iniciativas complejas, entrelazando recursos y personas de maneras que abren nuevas posibilidades para las familias en toda la región. Su trabajo refleja una profunda creencia en la dignidad, la oportunidad y la pertenencia para cada persona, y un compromiso con la construcción de soluciones duraderas."
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Sobre Nosotros",
+      "subtitle": "Construyendo una sociedad más justa, solidaria e inclusiva"
+    },
+    "intro": {
+      "title": "Quiénes Somos",
+      "description": "UNIDXS es una organización local, intercultural y apolítica comprometida con servir a nuestra comunidad en los siete condados rurales del oeste de Carolina del Norte, especialmente dentro de la comunidad hispana. Trabajamos para promover la inclusión social, la igualdad y la solidaridad a través del desarrollo e implementación de proyectos educativos, sociales y culturales.",
+      "description2": "UNIDXS es una organización local, intercultural y políticamente independiente comprometida con servir a la comunidad. Nuestra misión es ayudar a personas o grupos afectados por desigualdades sociales, económicas, educativas y culturales."
+    },
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Nuestra misión es ayudar a las personas, especialmente aquellas que se encuentran en situaciones vulnerables sociales, económicas, educativas o culturales, para asegurar su inclusión en la comunidad y lograr una sociedad más justa y solidaria que les permita mejorar su calidad de vida."
+    },
+    "vision": {
+      "title": "Nuestra Visión",
+      "items": [
+        "Promover una mayor inclusión social, oportunidades educativas, conciencia cultural y aceptación.",
+        "Esforzarnos por mejorar continuamente los servicios que brindamos a nuestros beneficiarios, sin importar color, raza, sexo y etnia."
+      ]
+    },
+    "values": {
+      "title": "Nuestros Valores Fundamentales",
+      "description": "En UNIDXS, nuestros valores fundamentales guían cada acción que tomamos. Creemos en la fuerza que proviene de los vecinos trabajando juntos, la importancia de tratar a todos con dignidad y crear oportunidades para que cada voz sea escuchada. Al vivir estos valores, apoyamos a las personas, fortalecemos nuestra comunidad y construimos un lugar donde todas las familias puedan prosperar juntas.",
+      "unity": "Unidad",
+      "respect": "Respeto",
+      "opportunity": "Oportunidad"
+    },
+    "impact": {
+      "title": "Nuestro Impacto",
+      "subtitle": "Haciendo la diferencia en el oeste de Carolina del Norte",
+      "stats": {
+        "counties": "Condados Rurales Servidos",
+        "members": "Miembros de la Comunidad Ayudados",
+        "commitment": "Compromiso con la Inclusión"
+      }
+    },
+    "cta": {
+      "title": "Únete a Nosotros para Hacer la Diferencia",
+      "subtitle": "Juntos, podemos construir una comunidad más inclusiva y solidaria",
+      "button": "Involúcrate"
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Estamos aquí para ayudarte. Envíanos un mensaje y te responderemos pronto.",
+    "form": {
+      "name": "Nombre completo",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu@email.com",
+      "phone": "Teléfono",
+      "phonePlaceholder": "(123) 456-7890",
+      "subject": "Asunto",
+      "subjectPlaceholder": "¿En qué podemos ayudarte?",
+      "message": "Mensaje",
+      "messagePlaceholder": "Escribe tu mensaje aquí...",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando..."
+    },
+    "info": {
+      "title": "Información de Contacto",
+      "office": "Oficina UNIDXS",
+      "location": "Western North Carolina",
+      "hours": "Horario de Atención",
+      "hoursText": "Lunes - Viernes: 9:00 AM - 5:00 PM",
+      "generalInquiries": "Consultas Generales",
+      "health": "Salud - Paul Witty",
+      "education": "Educación - Sarah West",
+      "educationNita": "Educación - Nita Lipan"
+    },
+    "success": "¡Mensaje enviado exitosamente!",
+    "error": "Hubo un error al enviar el mensaje. Por favor inténtalo de nuevo."
+  },
+  "services": {
+    "hero": {
+      "title": "Nuestros Servicios",
+      "description": "UNIDXS ofrece recursos impulsados por la comunidad diseñados para expandir el acceso, la oportunidad y la conexión para todos. Explora las formas en que apoyamos y celebramos nuestra diversa comunidad.",
+      "contact": "Contáctanos"
+    },
+    "cta": {
+      "title": "Únete a Nosotros para Hacer la Diferencia",
+      "subtitle": "Juntos, podemos construir una comunidad más inclusiva y solidaria",
+      "button": "Involúcrate"
+    },
+    "mainServices": {
+      "title": "Nuestros Servicios",
+      "education": {
+        "title": "Acceso a la Educación",
+        "description": "Clases de GED y computación para mejorar habilidades."
+      },
+      "familySupport": {
+        "title": "Apoyo Familiar",
+        "description": "Acceso a recursos de salud, nutrición y asistencia legal."
+      }
+    },
+    "support": {
+      "title": "Servicios de Apoyo",
+      "getHelp": {
+        "title": "Obtén Ayuda",
+        "description": "En UNIDXS, ofrecemos apoyo para aquellos que lo necesitan dentro de nuestra comunidad. Nuestros recursos incluyen apoyo educativo, despensas de alimentos y servicios de traducción."
+      },
+      "clothing": {
+        "title": "Asistencia de Ropa",
+        "description": "La asistencia de ropa está disponible para personas y familias que lo necesiten."
+      },
+      "family": {
+        "title": "Apoyo Familiar",
+        "description": "Apoyamos a las familias a través de varios programas educativos y sociales."
+      },
+      "transportation": {
+        "title": "Ayuda de Transporte",
+        "description": "La ayuda de transporte está disponible caso por caso para citas necesarias."
+      }
+    },
+    "education": {
+      "title": "Empoderando a Través de la Educación",
+      "description": "Ofrecemos una variedad de clases destinadas a mejorar habilidades y proporcionar conocimientos vitales a la comunidad."
+    },
+    "simplifiedProcedures": {
+      "title": "¡Su Trámite, Simplificado!",
+      "subtitle": "¿Necesita ayuda con su Pasaporte de EE. UU.?",
+      "description": "Podemos ayudarle y a su familia en...",
+      "items": {
+        "review": "Reunir y revisar todos tus documentos.",
+        "steps": "Asegurarnos de que sigues los pasos correctos para su próxima cita.",
+        "avoid": "Evitar errores para que su solicitud no sea negada por el gobierno de EE. UU."
+      },
+      "contact": "Contacto (WhatsApp):",
+      "contactPerson": "Sarah West"
+    }
+  },
+  "donations": {
+    "hero": {
+      "title": "Apoya a Unidxs WNC",
+      "subtitle": "Juntos, construimos comunidades donde todos pertenecen",
+      "donateButton": "Donar Ahora"
+    },
+    "cta": {
+      "title": "Únete a Nosotros para Hacer la Diferencia",
+      "subtitle": "Juntos, podemos construir una comunidad más inclusiva y solidaria",
+      "button": "Involúcrate"
+    },
+    "dialog": {
+      "getInvolved": {
+        "title": "¿Cómo quieres involucrarte?",
+        "subtitle": "Elige la opción que más te interese",
+        "joinUnidxs": {
+          "title": "Formar parte de UNIDXS",
+          "description": "Únete a nuestra comunidad"
+        },
+        "donate": {
+          "title": "Hacer una donación",
+          "description": "Apoya nuestra causa"
+        }
+      }
+    },
+    "whyGive": {
+      "title": "Por Qué Donar",
+      "description": "Cada donación ayuda a Unidxs WNC a caminar junto a nuestras comunidades - en cada paso del camino. Tu donación apoya a las familias locales con acceso a:",
+      "programs": {
+        "college": {
+          "title": "Exploración Universitaria y Profesional",
+          "description": "Talleres bilingües, apoyo con FAFSA y RDS, y caminos para que estudiantes de primera generación persigan sus sueños."
+        },
+        "health": {
+          "title": "Salud y Bienestar",
+          "description": "Chequeos de salud comunitarios gratuitos, referencias de salud mental y acceso a productos de higiene esenciales."
+        },
+        "foodPantry": {
+          "title": "Asistencia de Despensa de Alimentos",
+          "description": "Alimentos nutritivos y suministros de emergencia para hogares que enfrentan dificultades."
+        },
+        "leadership": {
+          "title": "Desarrollo de Liderazgo",
+          "description": "Capacitación de jóvenes, voluntarios y padres para servir como líderes locales y defensores de la equidad."
+        },
+        "translation": {
+          "title": "Traducción y Navegación de Recursos",
+          "description": "Ayudando a las familias a acceder a información vital y citas de manera segura y con confianza."
+        }
+      },
+      "localImpact": "Cada dólar se queda local - impulsando programas que traen educación, salud y oportunidades al corazón de nuestra región."
+    },
+    "waysToGive": {
+      "title": "Formas de Donar",
+      "online": {
+        "title": "Donar en Línea",
+        "description": "Haz una contribución segura única o mensual que sustente nuestros programas durante todo el año.",
+        "button": "Donar Ahora"
+      },
+      "volunteer": {
+        "title": "Dona Tu Tiempo",
+        "description": "Tu tiempo es valioso. Envía un correo a Cristela para conocer las oportunidades de voluntariado.",
+        "button": "Enviar Correo a Cristela",
+        "email": "Cristelamoreno@unidxswnc.org"
+      },
+      "foodPantry": {
+        "title": "Asistencia de Despensa de Alimentos",
+        "description": "Alimentos nutritivos y suministros de emergencia para hogares que enfrentan dificultades."
+      },
+      "inKind": {
+        "title": "Donaciones en Especie",
+        "description": "Aceptamos contribuciones de productos de higiene, pañales, alimentos no perecederos y materiales escolares."
+      }
+    },
+    "impact": {
+      "title": "Tu Apoyo Importa",
+      "description": "Unidxs significa \"todos nosotros\". Cuando donas, ayudas a crear un oeste de Carolina del Norte donde cada vecino es visto, apoyado y celebrado."
+    },
+    "developmentNotice": "La funcionalidad de donación en línea está actualmente en desarrollo. Por ahora, por favor contáctanos directamente para hacer una donación."
+  },
+  "warehouse": {
+    "hero": {
+      "title": "Despensa de Alimentos / Bodega",
+      "subtitle": "Brindando apoyo esencial a familias necesitadas"
+    },
+    "about": {
+      "title": "Sobre Nuestra Despensa de Alimentos",
+      "description": "Nuestra despensa de alimentos sirve a familias en el oeste de Carolina del Norte proporcionando alimentos nutritivos y suministros esenciales. Creemos que nadie debería pasar hambre, y trabajamos para asegurar que todos en nuestra comunidad tengan acceso a los recursos que necesitan."
+    },
+    "services": {
+      "title": "Lo Que Ofrecemos",
+      "openPantry": {
+        "title": "Despensa Abierta",
+        "description": "Servicio sin cita donde las familias pueden seleccionar los artículos que necesitan. No se requiere cita."
+      },
+      "foodBoxes": {
+        "title": "Cajas de Comida",
+        "description": "Cajas pre-empacadas con artículos de comida esenciales para familias. Perfecto para quienes tienen tiempo limitado."
+      },
+      "grabAndGo": {
+        "title": "Toma y Lleva",
+        "description": "Servicio de recogida rápida para familias en movimiento. Obtén lo que necesitas rápida y convenientemente."
+      }
+    },
+    "calendar": {
+      "title": "Horario de Enero 2026",
+      "subtitle": "Consulta nuestro calendario para horarios de apertura y eventos especiales",
+      "volunteersNeeded": "Volunteers Needed / Necesitamos voluntarios: contacto",
+      "whatsappChannel": "Escanee y siga el Canal de WhatsApp",
+      "stayTuned": "Permanece atento a los cambios",
+      "days": {
+        "sunday": "Domingo",
+        "monday": "Lunes",
+        "tuesday": "Martes",
+        "wednesday": "Miércoles",
+        "thursday": "Jueves",
+        "friday": "Viernes",
+        "saturday": "Sábado"
+      },
+      "events": {
+        "openPantry": "Open Pantry / Dispensa Abierta",
+        "foodBoxes": "Food boxes / Cajas de comida",
+        "healthCheck": "Health check / Chequeo de Salud",
+        "communityTable": "Community Table / Mesa Comunitaria, Dispensa Abierta",
+        "closed": "Closed / Cerrado",
+        "address": "503 Mill St., Sylva NC 28779",
+        "addressCommunityTable": "23 Central St, Sylva, NC 28779"
+      }
+    },
+    "howToHelp": {
+      "title": "Cómo Puedes Ayudar",
+      "volunteer": {
+        "title": "Voluntariado",
+        "description": "Únete a nuestro equipo de voluntarios y ayúdanos a servir a la comunidad. Contacta a Cristela para más información."
+      },
+      "donate": {
+        "title": "Donar Artículos",
+        "description": "Aceptamos alimentos no perecederos, productos de higiene, pañales y otros artículos esenciales."
+      },
+      "spread": {
+        "title": "Corre la Voz",
+        "description": "Ayúdanos a llegar a más familias compartiendo información sobre nuestros servicios de despensa de alimentos."
+      }
+    },
+    "cta": {
+      "title": "¿Necesitas Asistencia?",
+      "subtitle": "Nuestra despensa de alimentos está aquí para ayudar. Consulta nuestro calendario para horarios de apertura.",
+      "button": "Contáctanos"
+    }
+  },
+  "education": {
+    "hero": {
+      "title": "Programas Educativos",
+      "subtitle": "Enriquecimiento académico, celebración cultural y desarrollo profesional"
+    },
+    "about": {
+      "title": "Sobre Nuestros Programas",
+      "description": "El departamento de Programas Educativos de UNIDXS brinda enriquecimiento académico, celebración cultural y oportunidades de desarrollo profesional a estudiantes en la zona rural del oeste de Carolina del Norte. Los programas incluyen patrocinios de clubes escolares internos, programación de patrimonio cultural, mentoría comunitaria e iniciativas de preparación universitaria y profesional."
+    },
+    "contact": {
+      "title": "Contáctanos",
+      "subtitle": "¿Tienes preguntas sobre nuestros programas educativos? Envíanos un mensaje",
+      "form": {
+        "name": "Nombre completo",
+        "namePlaceholder": "Tu nombre",
+        "email": "Correo electrónico",
+        "emailPlaceholder": "tu@email.com",
+        "phone": "Teléfono",
+        "phonePlaceholder": "(123) 456-7890",
+        "subject": "Asunto",
+        "subjectPlaceholder": "¿En qué podemos ayudarte?",
+        "recipient": "Enviar a",
+        "nitaRole": "Directora del Programa Educativo",
+        "sarahRole": "Coordinadora de Educación Comunitaria",
+        "message": "Mensaje",
+        "messagePlaceholder": "Escribe tu mensaje aquí...",
+        "submit": "Enviar Mensaje",
+        "sending": "Enviando..."
+      },
+      "success": "¡Mensaje enviado exitosamente!",
+      "error": "Hubo un error al enviar el mensaje. Por favor inténtalo de nuevo.",
+      "contactInfo": "Información de Contacto",
+      "nitaEmail": "Nlipan@unidxswnc.org",
+      "nitaPhone": "(828) 347-1234",
+      "sarahEmail": "SarahWest@unidxswnc.org",
+      "sarahPhone": "(828) 347-1234"
+    },
+    "currentProjects": {
+      "title": "Proyectos Estudiantiles Actuales",
+      "university": {
+        "title": "Visita Universitaria y Médica",
+        "description": "Visita a la universidad Western Carolina University y visita médica a MedCat para explorar oportunidades educativas y de salud."
+      },
+      "thanksgiving": {
+        "title": "Celebración Cultural de Acción de Gracias",
+        "description": "Pruebe alimentos de otras regiones y juegue juegos de todo el mundo en una celebración multicultural."
+      },
+      "yearlong": {
+        "title": "Proyecto de Arte Anual",
+        "description": "En asociación con Artsonia, nuestros clubes crean obras de arte, comparten una galería virtual y realizan una celebración de fin de año."
+      }
+    },
+    "serviceArea": {
+      "title": "Área de Servicio",
+      "description": "Los 7 condados del oeste de Carolina del Norte"
+    },
+    "partnerships": {
+      "title": "Asociaciones Actuales"
+    },
+    "whatsapp": {
+      "title": "Mantente Conectado",
+      "description": "Únase a nuestro canal de WhatsApp para mantenerse actualizado con los próximos eventos e historias de éxito de los estudiantes.",
+      "button": "Unirse al Canal de WhatsApp"
+    },
+    "impact": {
+      "description": "Empoderando a la próxima generación a través de la educación, la cultura y las oportunidades de crecimiento en el oeste de Carolina del Norte."
+    }
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización: Noviembre 2025",
+    "intro": "En UNIDXS WNC, estamos comprometidos con la protección de su privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos su información personal.",
+    "sections": {
+      "collection": {
+        "title": "Información que Recopilamos",
+        "content": "Podemos recopilar información personal como su nombre, dirección de correo electrónico, número de teléfono y otros datos de contacto cuando interactúa con nuestros servicios, asiste a nuestros eventos o nos contacta para obtener apoyo."
+      },
+      "usage": {
+        "title": "Cómo Usamos su Información",
+        "content": "Utilizamos su información para proporcionar nuestros servicios, comunicarnos con usted sobre programas y eventos, responder a sus consultas y mejorar nuestras iniciativas de apoyo comunitario. No vendemos ni compartimos su información personal con terceros con fines de marketing."
+      },
+      "protection": {
+        "title": "Protección de Datos",
+        "content": "Implementamos medidas de seguridad apropiadas para proteger su información personal contra el acceso no autorizado, alteración, divulgación o destrucción. Sin embargo, ningún método de transmisión por internet es 100% seguro."
+      },
+      "rights": {
+        "title": "Sus Derechos",
+        "content": "Usted tiene derecho a acceder, corregir o eliminar su información personal. También puede optar por no recibir comunicaciones de nuestra parte en cualquier momento. Para ejercer estos derechos, contáctenos usando la información proporcionada a continuación."
+      },
+      "contact": {
+        "title": "Contáctenos",
+        "content": "Si tiene alguna pregunta sobre esta Política de Privacidad, contáctenos al (828) 242-7345 o visite nuestra oficina en el oeste de Carolina del Norte."
+      }
+    }
+  },
+  "terms": {
+    "title": "Términos de Uso",
+    "lastUpdated": "Última actualización: Noviembre 2025",
+    "intro": "Al acceder y utilizar los servicios de UNIDXS WNC, usted acepta cumplir con estos Términos de Uso. Por favor, léalos cuidadosamente.",
+    "sections": {
+      "services": {
+        "title": "Nuestros Servicios",
+        "content": "UNIDXS WNC proporciona programas educativos, apoyo de salud, servicios de despensa de alimentos y recursos comunitarios a los residentes del oeste de Carolina del Norte. Nuestros servicios se proporcionan de forma voluntaria y están sujetos a disponibilidad."
+      },
+      "conduct": {
+        "title": "Conducta del Usuario",
+        "content": "Usted acepta usar nuestros servicios de manera respetuosa y legal. No debe participar en ningún comportamiento que sea dañino, amenazante o disruptivo para nuestro personal, voluntarios u otros miembros de la comunidad."
+      },
+      "liability": {
+        "title": "Limitación de Responsabilidad",
+        "content": "UNIDXS WNC se esfuerza por proporcionar información precisa y servicios de calidad. Sin embargo, no ofrecemos garantías sobre la integridad, confiabilidad o precisión de nuestros servicios. No somos responsables de ningún daño que surja del uso de nuestros servicios."
+      },
+      "modifications": {
+        "title": "Modificaciones a los Términos",
+        "content": "Nos reservamos el derecho de modificar estos Términos de Uso en cualquier momento. Los cambios serán efectivos inmediatamente después de su publicación. Su uso continuado de nuestros servicios constituye la aceptación de los términos modificados."
+      },
+      "contact": {
+        "title": "Información de Contacto",
+        "content": "Para preguntas sobre estos Términos de Uso, contáctenos al (828) 242-7345 o visite nuestra oficina en el oeste de Carolina del Norte."
+      }
+    }
+  }
+}

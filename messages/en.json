@@ -1,0 +1,527 @@
+{
+  "navbar": {
+    "about": "About Us",
+    "team": "Team",
+    "notice": "Notice",
+    "contact": "Contact",
+    "services": "Services",
+    "ourServices": "Our Services",
+    "warehouse": "Warehouse",
+    "education": "Education",
+    "donations": "Donations",
+    "language": "Language"
+  },
+  "metadata": {
+    "title": "UNIDXS WNC - Working for the community",
+    "description": "UNIDXS WNC - Building a more just, supportive and inclusive society"
+  },
+  "dialog": {
+    "getInvolved": {
+      "title": "How do you want to get involved?",
+      "subtitle": "Choose the option that interests you most",
+      "joinUnidxs": {
+        "title": "Join UNIDXS",
+        "description": "Become part of our community"
+      },
+      "donate": {
+        "title": "Make a donation",
+        "description": "Support our cause"
+      }
+    }
+  },
+  "main": {
+    "Titulo": "UNIDXS",
+    "SubTitulo": "We all work together for the betterment of our community",
+    "Descripcion": "We are working to improve our website and provide you with a better experience. In the meantime, you can learn more about us on our social media. More updates coming soon!",
+    "about": {
+      "title": "Our Mission",
+      "paragraph1": "At UNIDXS, we fight to build a more just, supportive, and inclusive society. We firmly believe that every person deserves equal opportunities to achieve their dreams and develop their full potential.",
+      "paragraph2": "We are committed to helping people develop their life projects. We work every day to eliminate barriers that prevent progress and create spaces where everyone can thrive.",
+      "paragraph3": "The UNIDXS WNC Team thanks each and every person who joined us at our community events like UNIDXS for Life. We are here to serve you and build a better future together.",
+      "button": "Learn More About Us"
+    },
+    "empower": {
+      "title": "EMPOWER TOGETHER",
+      "paragraph": "Welcome to UNIDXS, where we are passionate about community improvement through our dedicated educational program and support services. Our goal is to see individuals thrive by providing them with the resources they need to overcome challenges and grow. By joining forces with us, you become part of a movement committed to making a meaningful difference in people's lives. Let's work together to create a brighter future for our community.",
+      "cta": "Join Us Today"
+    },
+    "footer": {
+      "generalContact": "General Inquiries",
+      "office": "UNIDXS Office",
+      "health": "Health",
+      "education": "Education",
+      "sarahDescription": "Adult education and lifelong learning",
+      "nitaDescription": "K-12 Student and Family Resources",
+      "followUs": "Follow Us",
+      "socialText": "Connect with us on social media",
+      "copyright": "© 2022 UNIDXS WNC. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use"
+    }
+  },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "Meet the people who make our mission possible",
+    "boardTitle": "Board of Directors",
+    "boardSubtitle": "Leadership guiding our vision and mission",
+    "teamTitle": "Our Team",
+    "teamSubtitle": "Dedicated professionals serving our community",
+    "volunteersTitle": "Volunteers",
+    "members": {
+      "victoria": {
+        "name": "Victoria Lyall",
+        "role": "Board Chairman",
+        "description": "Leading our organization with vision and dedication to community service."
+      },
+      "edithBoard": {
+        "name": "Edith Jennings",
+        "role": "Board Member Secretary",
+        "description": "Homeopathy and the National Polytechnic Institute in Mexico. She is currently pursuing an additional degree at Western Carolina University to receive her BSN. In Mexico, she was a Holistic Doctor. She has 20 years of experience helping the Latin community and making connections between the Hispanic and Anglo communities. She has worked as the administrative assistant for the Latino Outreach and Solidaridad Center. She was a volunteer interpreter and teacher at Saint Francis Catholic Church and ambassador for Latinos Aventureros in the Carolinas. She is currently a Peri Operative Nurse at the Angel Medical Center in Franklin, NC. She was a Board Member with the Coalition of Latino Americans and a Parent's Council Member at Macon Program for Progress. She has been a current board member with Unidxs since 2021. Edith studied at the National School of Medicine and."
+      },
+      "valeria": {
+        "name": "Valeria Barrera",
+        "role": "Board Treasurer",
+        "description": "Managing our financial resources with integrity and transparency."
+      },
+      "ricardo": {
+        "name": "Ricardo Bello Ball",
+        "role": "Executive Director",
+        "description": "As the founder of Unidxs WNC in 2021, Ricardo has since worked tirelessly to support our Latin community. Ricardo has 25 years of experience working with the Latin community."
+      },
+      "paul": {
+        "name": "Paul Witty",
+        "role": "Community Health Worker",
+        "description": "Paul has his BS in Occupational Therapy and has 20 years of experience working for the NC Department of Health before taking on his Community Health Worker role with Unidxs. He is also on the Southwestern Community College Advisory Committee for Occupational Therapy."
+      },
+      "sarahWest": {
+        "name": "Sarah West",
+        "role": "Community Education Coordinator",
+        "description": "In 2022, Sarah graduated from Western Carolina University with a BA in Spanish and International Studies and minors in Global Business and Philosophy. She is currently working on her graduate certificate in TESOL. After graduating, she worked at Southwestern Community College as a College and Career Readiness Coordinator overseeing the English Language Acquisition and High School Equivalency programs for two years before taking on her new role with Unidxs WNC."
+      },
+      "sarah": {
+        "name": "Sarah Hirsch",
+        "role": "Educator in English and Spanish",
+        "description": "Sarah Hirsch is a longtime educator in English and Spanish. She holds Masters degrees in both languages and is certified in translation and medical interpretation."
+      },
+      "cristela": {
+        "name": "Cristela Moreno",
+        "role": "Volunteer",
+        "description": "Cristela has a background in Mechanical Engineering."
+      },
+      "nita": {
+        "name": "Nita Lipan",
+        "role": "Regional Education Program Director",
+        "description": "Nita Lipan brings over 20 years of educational experience to rural communities in Western North Carolina. With an interdisciplinary degree in Law and Psychology with a specialization in History from the University of Central Florida, Nita approaches educational challenges with a unique and multifaceted perspective. Known as 'The Swiss Army Knife of Education' for her versatility, she has led curriculum development, managed teaching teams, and was recognized with the Employee of the Year award. At UNIDXS, Nita develops educational programs that provide resources and opportunities to students, including creating advisory councils for school partners at Smoky Mountain High School and Blue Ridge Early College, the Hispanic heritage reading club 'Unidxs: Roots and Futures,' and weekly tutoring at Jackson Community School. Certifications: Youth Mental Health First Aid, PMQ, CTC, Lean Six Sigma White Belt, Academic Counseling, K-6 Certified Educator."
+      },
+      "esteban": {
+        "name": "Dr. Esteban Ramirez",
+        "role": "Development and Grants Lead",
+        "description": "Dr. Esteban Ramirez serves as the Development and Grants lead for Unidxs Western North Carolina. He guides fundraising and long term planning with a focus on uplifting rural immigrant communities through education, wellness and community resilience. Esteban is known for bringing clarity to complex initiatives, weaving together resources and people in ways that open new possibilities for families across the region. His work reflects a deep belief in dignity, opportunity and belonging for every person, and a commitment to building solutions that last."
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Us",
+      "subtitle": "Building a more just, supportive, and inclusive society"
+    },
+    "intro": {
+      "title": "Who We Are",
+      "description": "UNIDXS is a local, intercultural, non-political organization committed to serving our community in the seven rural counties of Western NC, especially within the Hispanic Community. We work to promote social inclusion, equality, and solidarity through the development and implementation of educational, social and cultural projects.",
+      "description2": "UNIDXS is a local, intercultural, politically independent organization committed to serving the community. Our mission is to help people or groups impacted by social, economic, educational, and cultural inequities."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "Our mission is to help people, especially those who find themselves in vulnerable social, economic, educational, or cultural situations, to ensure inclusion in the community and achieve a fairer, more supportive society that allows them to improve their quality of life."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "items": [
+        "Promote greater social inclusion, educational opportunities, cultural awareness, and acceptance.",
+        "Strive to continuously improve the services we provide to our beneficiaries, regardless of color, race, sex, and ethnicity."
+      ]
+    },
+    "values": {
+      "title": "Our Core Values",
+      "description": "At UNIDXS, our core values guide every action we take. We believe in the strength that comes from neighbors working together, the importance of treating everyone with dignity, and creating opportunities so that every voice can be heard. By living these values, we support individuals, strengthen our community, and build a place where all families can flourish together.",
+      "unity": "Unity",
+      "respect": "Respect",
+      "opportunity": "Opportunity"
+    },
+    "impact": {
+      "title": "Our Impact",
+      "subtitle": "Making a difference in Western North Carolina",
+      "stats": {
+        "counties": "Rural Counties Served",
+        "members": "Community Members Helped",
+        "commitment": "Commitment to Inclusion"
+      }
+    },
+    "cta": {
+      "title": "Join Us in Making a Difference",
+      "subtitle": "Together, we can build a more inclusive and supportive community",
+      "button": "Get Involved"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help. Send us a message and we'll respond soon.",
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "Your name",
+      "email": "Email address",
+      "emailPlaceholder": "you@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "(123) 456-7890",
+      "subject": "Subject",
+      "subjectPlaceholder": "How can we help you?",
+      "message": "Message",
+      "messagePlaceholder": "Write your message here...",
+      "submit": "Send Message",
+      "sending": "Sending..."
+    },
+    "info": {
+      "title": "Contact Information",
+      "office": "UNIDXS Office",
+      "location": "Western North Carolina",
+      "hours": "Office Hours",
+      "hoursText": "Monday - Friday: 9:00 AM - 5:00 PM",
+      "generalInquiries": "General Inquiries",
+      "health": "Health - Paul Witty",
+      "education": "Education - Sarah West",
+      "educationNita": "Education - Nita Lipan"
+    },
+    "success": "Message sent successfully!",
+    "error": "There was an error sending the message. Please try again."
+  },
+  "services": {
+    "hero": {
+      "title": "Our Services",
+      "description": "UNIDXS offers community-driven resources designed to expand access, opportunity, and connection for everyone. Explore the ways we support and celebrate our diverse community.",
+      "contact": "Contact Us"
+    },
+    "cta": {
+      "title": "Join Us in Making a Difference",
+      "subtitle": "Together, we can build a more inclusive and supportive community",
+      "button": "Get Involved"
+    },
+    "mainServices": {
+      "title": "Our Services",
+      "education": {
+        "title": "Education Access",
+        "description": "GED and computer classes to enhance skills."
+      },
+      "familySupport": {
+        "title": "Family Support",
+        "description": "Resource access for health, nutrition, and legal aid."
+      }
+    },
+    "support": {
+      "title": "Support Services",
+      "getHelp": {
+        "title": "Get Help",
+        "description": "At UNIDXS, we offer support for those in need within our community. Our resources include educational support, food pantries, and translation services."
+      },
+      "clothing": {
+        "title": "Clothing Assistance",
+        "description": "Clothing assistance is available for individuals and families in need."
+      },
+      "family": {
+        "title": "Family Support",
+        "description": "We support families through various educational and social programs."
+      },
+      "transportation": {
+        "title": "Transportation Aid",
+        "description": "Transportation aid is available on a case-by-case basis for necessary appointments."
+      }
+    },
+    "education": {
+      "title": "Empowering Through Education",
+      "description": "We offer a variety of classes aimed at enhancing skills and providing vital knowledge to the community."
+    },
+    "simplifiedProcedures": {
+      "title": "Your Process, Simplified!",
+      "subtitle": "Do you need help with your U.S. Passport?",
+      "description": "We can help you and your family with:",
+      "items": {
+        "review": "Gather and review all your documents.",
+        "steps": "Make sure you follow the correct steps for your next appointment.",
+        "avoid": "Avoid errors so that your application is not rejected by the U.S. government."
+      },
+      "contact": "Contact (WhatsApp):",
+      "contactPerson": "Sarah West"
+    }
+  },
+  "donations": {
+    "hero": {
+      "title": "Support Unidxs WNC",
+      "subtitle": "Together, we build communities where everyone belongs",
+      "donateButton": "Donate Now"
+    },
+    "cta": {
+      "title": "Join Us in Making a Difference",
+      "subtitle": "Together, we can build a more inclusive and supportive community",
+      "button": "Get Involved"
+    },
+    "dialog": {
+      "getInvolved": {
+        "title": "How do you want to get involved?",
+        "subtitle": "Choose the option that interests you most",
+        "joinUnidxs": {
+          "title": "Join UNIDXS",
+          "description": "Become part of our community"
+        },
+        "donate": {
+          "title": "Make a donation",
+          "description": "Support our cause"
+        }
+      }
+    },
+    "whyGive": {
+      "title": "Why Give",
+      "description": "Every donation helps Unidxs WNC walk alongside our communities - every step of the way. Your gift supports local families with access to:",
+      "programs": {
+        "college": {
+          "title": "College and Career Exploration",
+          "description": "Bilingual workshops, FAFSA and RDS support, and pathways for first-generation students to pursue their dreams."
+        },
+        "health": {
+          "title": "Health and Wellness",
+          "description": "Free community health checkups, mental health referrals, and access to essential hygiene products."
+        },
+        "foodPantry": {
+          "title": "Food Pantry Assistance",
+          "description": "Nutritious food and emergency supplies for households facing hardship."
+        },
+        "leadership": {
+          "title": "Leadership Development",
+          "description": "Training youth, volunteers, and parents to serve as local leaders and advocates for equity."
+        },
+        "translation": {
+          "title": "Translation and Resource Navigation",
+          "description": "Helping families access vital information and appointments safely and confidently."
+        }
+      },
+      "localImpact": "Every dollar stays local - fueling programs that bring education, health, and opportunity to the heart of our region."
+    },
+    "waysToGive": {
+      "title": "Ways to Give",
+      "online": {
+        "title": "Donate Online",
+        "description": "Make a secure one-time or monthly contribution that sustains our programs year round.",
+        "button": "Donate Now"
+      },
+      "volunteer": {
+        "title": "Donate Your Time",
+        "description": "Your time is valuable. Email Cristela to learn about volunteer opportunities.",
+        "button": "Email Cristela",
+        "email": "Cristelamoreno@unidxswnc.org"
+      },
+      "foodPantry": {
+        "title": "Food Pantry Assistance",
+        "description": "Nutritious food and emergency supplies for households facing hardship."
+      },
+      "inKind": {
+        "title": "In-Kind Donations",
+        "description": "We welcome contributions of hygiene supplies, diapers, non-perishable foods, and school materials."
+      }
+    },
+    "impact": {
+      "title": "Your Support Matters",
+      "description": "Unidxs means \"all of us.\" When you give, you help create a Western North Carolina where every neighbor is seen, supported, and celebrated."
+    },
+    "developmentNotice": "Online donation functionality is currently under development. For now, please contact us directly to make a donation."
+  },
+  "warehouse": {
+    "hero": {
+      "title": "Food Pantry / Bodega",
+      "subtitle": "Providing essential support to families in need"
+    },
+    "about": {
+      "title": "About Our Food Pantry",
+      "description": "Our food pantry serves families in Western North Carolina by providing nutritious food and essential supplies. We believe that no one should go hungry, and we work to ensure that everyone in our community has access to the resources they need."
+    },
+    "services": {
+      "title": "What We Offer",
+      "openPantry": {
+        "title": "Open Pantry",
+        "description": "Walk-in service where families can select the items they need. No appointment necessary."
+      },
+      "foodBoxes": {
+        "title": "Food Boxes",
+        "description": "Pre-packed boxes with essential food items for families. Perfect for those with limited time."
+      },
+      "grabAndGo": {
+        "title": "Grab and Go",
+        "description": "Quick pickup service for families on the go. Get what you need quickly and conveniently."
+      }
+    },
+    "calendar": {
+      "title": "January 2026 Schedule",
+      "subtitle": "Check our calendar for open hours and special events",
+      "volunteersNeeded": "Volunteers Needed / Necesitamos voluntarios: contact",
+      "whatsappChannel": "Scan and follow the WhatsApp Channel",
+      "stayTuned": "Stay tuned for changes",
+      "days": {
+        "sunday": "Sunday",
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday"
+      },
+      "events": {
+        "openPantry": "Open Pantry / Dispensa Abierta",
+        "foodBoxes": "Food boxes / Cajas de comida",
+        "healthCheck": "Health check / Chequeo de Salud",
+        "communityTable": "Community Table, Open Pantry / Dispensa Abierta",
+        "closed": "Closed / cerrado",
+        "address": "503 Mill St., Sylva NC 28779",
+        "addressCommunityTable": "23 Central St, Sylva, NC 28779"
+      }
+    },
+    "howToHelp": {
+      "title": "How You Can Help",
+      "volunteer": {
+        "title": "Volunteer",
+        "description": "Join our team of volunteers and help us serve the community. Contact Cristela to learn more."
+      },
+      "donate": {
+        "title": "Donate Items",
+        "description": "We accept non-perishable foods, hygiene products, diapers, and other essential items."
+      },
+      "spread": {
+        "title": "Spread the Word",
+        "description": "Help us reach more families by sharing information about our food pantry services."
+      }
+    },
+    "cta": {
+      "title": "Need Assistance?",
+      "subtitle": "Our food pantry is here to help. Check our calendar for open hours.",
+      "button": "Contact Us"
+    }
+  },
+  "education": {
+    "hero": {
+      "title": "Educational Programs",
+      "subtitle": "Academic enrichment, cultural celebration, and career development"
+    },
+    "about": {
+      "title": "About Our Programs",
+      "description": "The UNIDXS Educational Programs department provides academic enrichment, cultural celebration, and career development opportunities to students in rural Western North Carolina. Programs include in-house school club sponsorships, cultural heritage programming, community mentorship, and college and career readiness initiatives."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "Have questions about our educational programs? Send us a message",
+      "form": {
+        "name": "Full name",
+        "namePlaceholder": "Your name",
+        "email": "Email address",
+        "emailPlaceholder": "you@email.com",
+        "phone": "Phone",
+        "phonePlaceholder": "(123) 456-7890",
+        "subject": "Subject",
+        "subjectPlaceholder": "How can we help you?",
+        "recipient": "Send to",
+        "nitaRole": "Regional Education Program Director",
+        "sarahRole": "Community Education Coordinator",
+        "message": "Message",
+        "messagePlaceholder": "Write your message here...",
+        "submit": "Send Message",
+        "sending": "Sending..."
+      },
+      "success": "Message sent successfully!",
+      "error": "There was an error sending the message. Please try again.",
+      "contactInfo": "Contact Information",
+      "nitaEmail": "Nlipan@unidxswnc.org",
+      "nitaPhone": "(828) 347-1234",
+      "sarahEmail": "SarahWest@unidxswnc.org",
+      "sarahPhone": "(828) 347-1234"
+    },
+    "currentProjects": {
+      "title": "Current Student Projects",
+      "university": {
+        "title": "University and Medical Visit",
+        "description": "Visit to Western Carolina University and medical visit to MedCat to explore educational and health opportunities."
+      },
+      "thanksgiving": {
+        "title": "Thanksgiving Cultural Celebration",
+        "description": "Try foods from other regions and play games from around the world in a multicultural celebration."
+      },
+      "yearlong": {
+        "title": "Year-Long Art Project",
+        "description": "In partnership with Artsonia, our clubs create artwork, share a virtual art gallery, and hold an end-of-year celebration."
+      }
+    },
+    "serviceArea": {
+      "title": "Service Area",
+      "description": "The 7 counties of Western North Carolina"
+    },
+    "partnerships": {
+      "title": "Current Partnerships"
+    },
+    "whatsapp": {
+      "title": "Stay Connected",
+      "description": "Join our WhatsApp channel to stay updated with upcoming events and student success stories.",
+      "button": "Join WhatsApp Channel"
+    },
+    "impact": {
+      "description": "Empowering the next generation through education, culture, and opportunities for growth in Western North Carolina."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated: November 2025",
+    "intro": "At UNIDXS WNC, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information.",
+    "sections": {
+      "collection": {
+        "title": "Information We Collect",
+        "content": "We may collect personal information such as your name, email address, phone number, and other contact details when you interact with our services, attend our events, or contact us for support."
+      },
+      "usage": {
+        "title": "How We Use Your Information",
+        "content": "We use your information to provide our services, communicate with you about programs and events, respond to your inquiries, and improve our community support initiatives. We do not sell or share your personal information with third parties for marketing purposes."
+      },
+      "protection": {
+        "title": "Data Protection",
+        "content": "We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure."
+      },
+      "rights": {
+        "title": "Your Rights",
+        "content": "You have the right to access, correct, or delete your personal information. You may also opt out of receiving communications from us at any time. To exercise these rights, please contact us using the information provided below."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "content": "If you have any questions about this Privacy Policy, please contact us at (828) 242-7345 or visit our office in Western North Carolina."
+      }
+    }
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "lastUpdated": "Last Updated: November 2025",
+    "intro": "By accessing and using UNIDXS WNC services, you agree to comply with these Terms of Use. Please read them carefully.",
+    "sections": {
+      "services": {
+        "title": "Our Services",
+        "content": "UNIDXS WNC provides educational programs, health support, food pantry services, and community resources to residents of Western North Carolina. Our services are provided on a voluntary basis and are subject to availability."
+      },
+      "conduct": {
+        "title": "User Conduct",
+        "content": "You agree to use our services respectfully and lawfully. You must not engage in any behavior that is harmful, threatening, or disruptive to our staff, volunteers, or other community members."
+      },
+      "liability": {
+        "title": "Limitation of Liability",
+        "content": "UNIDXS WNC strives to provide accurate information and quality services. However, we make no warranties or guarantees about the completeness, reliability, or accuracy of our services. We are not liable for any damages arising from your use of our services."
+      },
+      "modifications": {
+        "title": "Modifications to Terms",
+        "content": "We reserve the right to modify these Terms of Use at any time. Changes will be effective immediately upon posting. Your continued use of our services constitutes acceptance of the modified terms."
+      },
+      "contact": {
+        "title": "Contact Information",
+        "content": "For questions about these Terms of Use, please contact us at (828) 242-7345 or visit our office in Western North Carolina."
+      }
+    }
+  }
+}
