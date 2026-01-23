@@ -9,7 +9,6 @@ import { useState } from 'react';
 export default function MainPage() {
   const [isVisible, setIsVisible] = useState(true);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [isImageDialogOpen, setIsImageDialogOpen] = useState(true);
 
   const t = useTranslations('main');
   const tDialog = useTranslations('dialog');
@@ -307,46 +306,6 @@ export default function MainPage() {
                 </div>
               </a>
             </div>
-          </motion.div>
-        </div>
-      )}
-
-      {/* Image Dialog Modal */}
-      {isImageDialogOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
-          onClick={() => setIsImageDialogOpen(false)}
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            onClick={(e) => e.stopPropagation()}
-            className="relative w-[90%] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
-          >
-            <button
-              onClick={() => setIsImageDialogOpen(false)}
-              className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
-            >
-              <svg
-                className="w-8 h-8"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-            <img
-              src={locale === 'es' ? '/spanish.webp' : '/english.webp'}
-              alt={locale === 'es' ? 'Imagen en español' : 'English image'}
-              className="w-full h-auto rounded-lg shadow-2xl"
-            />
           </motion.div>
         </div>
       )}
