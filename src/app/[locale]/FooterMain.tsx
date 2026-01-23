@@ -40,7 +40,7 @@ const locale = useLocale();
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4 text-green-400" />
               <a 
-                href="mailto:ricardo@unidxswnc.org" 
+                href="mailto:Rball@unidxswnc.org" 
                 className="text-sm hover:text-green-400 transition-colors break-all"
               >
                 Rball@unidxswnc.org
