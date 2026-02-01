@@ -1,8 +1,8 @@
 "use client"
-import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import { AlertCircle, CheckCircle, Clock, Mail, MapPin, MessageSquare, Phone, Send } from 'lucide-react'
 import { useTranslations } from 'next-intl'
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react'
+import React, { useState } from 'react'
 
 export default function Contact() {
   const t = useTranslations('contact')

@@ -1,20 +1,19 @@
 "use client";
 
-import React from "react";
-import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
 import { Link } from "@/i18n/routing";
+import { motion } from "framer-motion";
 import {
-  ShoppingBag,
-  Package,
   Calendar,
-  Users,
-  Heart,
-  Sparkles,
   Clock,
+  Heart,
   Mail,
+  Package,
   Share2,
+  ShoppingBag,
+  Sparkles,
+  Users,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function WarehouseComponent() {
   const t = useTranslations("warehouse");
@@ -210,184 +209,165 @@ export default function WarehouseComponent() {
               </div>
             </div>
 
-            {/* Calendar Days - January 2026 */}
+            {/* Calendar Days - February 2026 */}
             <div className="grid grid-cols-7">
-              {/* Week 1 - January starts on Thursday */}
-              {/* Empty cells for Sunday through Wednesday */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-gray-50"></div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-gray-50"></div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-gray-50"></div>
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-gray-50"></div>
-
-              {/* Thursday - Jan 1 */}
+              {/* Week 1 - February starts on Sunday */}
+              {/* Sunday - Feb 1 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">1</div>
               </div>
 
-              {/* Friday - Jan 2 */}
+              {/* Monday - Feb 2 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">2</div>
               </div>
 
-              {/* Saturday - Jan 3 */}
+              {/* Tuesday - Feb 3 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">3</div>
               </div>
 
-              {/* Week 2 */}
-              {/* Sunday - Jan 4 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+              {/* Wednesday - Feb 4 - Food boxes + Health check */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[120px] bg-blue-50 hover:bg-blue-100 transition-colors">
                 <div className="font-bold text-lg mb-1 text-gray-800">4</div>
+                <div className="text-xs md:text-sm text-blue-700 font-semibold">
+                  {t("calendar.events.foodBoxes")}
+                </div>
+                <div className="text-xs md:text-sm text-purple-700 font-semibold">
+                  {t("calendar.events.healthCheck")}
+                </div>
+                <div className="text-xs text-blue-900 font-bold">2-6pm</div>
               </div>
-              {/* Monday - Jan 5 */}
+
+              {/* Thursday - Feb 5 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">5</div>
               </div>
-              {/* Tuesday - Jan 6 */}
+
+              {/* Friday - Feb 6 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">6</div>
               </div>
-              {/* Wednesday - Jan 7 - Food boxes + Health check */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[120px] bg-blue-50 hover:bg-blue-100 transition-colors">
+
+              {/* Saturday - Feb 7 */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">7</div>
-                <div className="text-xs md:text-sm text-blue-700 font-semibold">
-                  {t("calendar.events.foodBoxes")}
-                </div>
-                <div className="text-xs md:text-sm text-purple-700 font-semibold">
-                  {t("calendar.events.healthCheck")}
-                </div>
-                <div className="text-xs text-blue-900 font-bold">2-6pm</div>
               </div>
-              {/* Thursday - Jan 8 */}
+
+              {/* Week 2 */}
+              {/* Sunday - Feb 8 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">8</div>
               </div>
-              {/* Friday - Jan 9 */}
+              {/* Monday - Feb 9 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">9</div>
               </div>
-              {/* Saturday - Jan 10 */}
+              {/* Tuesday - Feb 10 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">10</div>
               </div>
-
-              {/* Week 3 */}
-              {/* Sunday - Jan 11 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+              {/* Wednesday - Feb 11 - Open Pantry + Health check */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[120px] bg-green-50 hover:bg-green-100 transition-colors">
                 <div className="font-bold text-lg mb-1 text-gray-800">11</div>
+                <div className="text-xs md:text-sm text-green-700 font-semibold">
+                  {t("calendar.events.openPantry")}
+                </div>
+                <div className="text-xs md:text-sm text-purple-700 font-semibold">
+                  {t("calendar.events.healthCheck")}
+                </div>
+                <div className="text-xs text-green-900 font-bold">2-6pm</div>
               </div>
-              {/* Monday - Jan 12 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+              {/* Thursday - Feb 12 - Open Pantry */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-green-50 hover:bg-green-100 transition-colors">
                 <div className="font-bold text-lg mb-1 text-gray-800">12</div>
+                <div className="text-xs md:text-sm text-green-700 font-semibold">
+                  {t("calendar.events.openPantry")}
+                </div>
+                <div className="text-xs text-green-900 font-bold">1-4pm</div>
               </div>
-              {/* Tuesday - Jan 13 */}
+              {/* Friday - Feb 13 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">13</div>
               </div>
-              {/* Wednesday - Jan 14 - Food boxes + Health check */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[120px] bg-blue-50 hover:bg-blue-100 transition-colors">
+              {/* Saturday - Feb 14 */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">14</div>
-                <div className="text-xs md:text-sm text-blue-700 font-semibold">
-                  {t("calendar.events.foodBoxes")}
-                </div>
-                <div className="text-xs md:text-sm text-purple-700 font-semibold">
-                  {t("calendar.events.healthCheck")}
-                </div>
-                <div className="text-xs text-blue-900 font-bold">2-6pm</div>
               </div>
-              {/* Thursday - Jan 15 - Open Pantry */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-green-50 hover:bg-green-100 transition-colors">
+
+              {/* Week 3 */}
+              {/* Sunday - Feb 15 */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">15</div>
-                <div className="text-xs md:text-sm text-green-700 font-semibold">
-                  {t("calendar.events.openPantry")}
-                </div>
-                <div className="text-xs text-green-900 font-bold">1-4pm</div>
               </div>
-              {/* Friday - Jan 16 */}
+              {/* Monday - Feb 16 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">16</div>
               </div>
-              {/* Saturday - Jan 17 */}
+              {/* Tuesday - Feb 17 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">17</div>
               </div>
-
-              {/* Week 4 */}
-              {/* Sunday - Jan 18 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+              {/* Wednesday - Feb 18 - Food boxes + Health check */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[120px] bg-blue-50 hover:bg-blue-100 transition-colors">
                 <div className="font-bold text-lg mb-1 text-gray-800">18</div>
+                <div className="text-xs md:text-sm text-blue-700 font-semibold">
+                  {t("calendar.events.foodBoxes")}
+                </div>
+                <div className="text-xs md:text-sm text-purple-700 font-semibold">
+                  {t("calendar.events.healthCheck")}
+                </div>
+                <div className="text-xs text-blue-900 font-bold">2-6pm</div>
               </div>
-              {/* Monday - Jan 19 */}
+              {/* Thursday - Feb 19 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">19</div>
               </div>
-              {/* Tuesday - Jan 20 */}
+              {/* Friday - Feb 20 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">20</div>
               </div>
-              {/* Wednesday - Jan 21 - Food boxes + Health check */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[120px] bg-blue-50 hover:bg-blue-100 transition-colors">
+              {/* Saturday - Feb 21 */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">21</div>
-                <div className="text-xs md:text-sm text-blue-700 font-semibold">
-                  {t("calendar.events.foodBoxes")}
-                </div>
-                <div className="text-xs md:text-sm text-purple-700 font-semibold">
-                  {t("calendar.events.healthCheck")}
-                </div>
-                <div className="text-xs text-blue-900 font-bold">2-6pm</div>
               </div>
-              {/* Thursday - Jan 22 */}
+
+              {/* Week 4 */}
+              {/* Sunday - Feb 22 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">22</div>
               </div>
-              {/* Friday - Jan 23 */}
+              {/* Monday - Feb 23 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">23</div>
               </div>
-              {/* Saturday - Jan 24 */}
+              {/* Tuesday - Feb 24 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">24</div>
               </div>
-
-              {/* Week 5 */}
-              {/* Sunday - Jan 25 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+              {/* Wednesday - Feb 25 - Open Pantry */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[120px] bg-green-50 hover:bg-green-100 transition-colors">
                 <div className="font-bold text-lg mb-1 text-gray-800">25</div>
-              </div>
-              {/* Monday - Jan 26 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1 text-gray-800">26</div>
-              </div>
-              {/* Tuesday - Jan 27 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1 text-gray-800">27</div>
-              </div>
-              {/* Wednesday - Jan 28 - Food boxes + Health check */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[120px] bg-blue-50 hover:bg-blue-100 transition-colors">
-                <div className="font-bold text-lg mb-1 text-gray-800">28</div>
-                <div className="text-xs md:text-sm text-blue-700 font-semibold">
-                  {t("calendar.events.foodBoxes")}
+                <div className="text-xs md:text-sm text-green-700 font-semibold">
+                  {t("calendar.events.openPantry")}
                 </div>
-                <div className="text-xs md:text-sm text-purple-700 font-semibold">
-                  {t("calendar.events.healthCheck")}
-                </div>
-                <div className="text-xs text-blue-900 font-bold">2-6pm</div>
+                <div className="text-xs text-green-900 font-bold">2-6pm</div>
               </div>
-              {/* Thursday - Jan 29 - Open Pantry */}
+              {/* Thursday - Feb 26 - Open Pantry */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-green-50 hover:bg-green-100 transition-colors">
-                <div className="font-bold text-lg mb-1 text-gray-800">29</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">26</div>
                 <div className="text-xs md:text-sm text-green-700 font-semibold">
                   {t("calendar.events.openPantry")}
                 </div>
                 <div className="text-xs text-green-900 font-bold">1-4pm</div>
               </div>
-              {/* Friday - Jan 30 */}
+              {/* Friday - Feb 27 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1 text-gray-800">30</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">27</div>
               </div>
-              {/* Saturday - Jan 31 */}
+              {/* Saturday - Feb 28 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1 text-gray-800">31</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">28</div>
               </div>
             </div>
           </motion.div>
