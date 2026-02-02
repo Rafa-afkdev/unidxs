@@ -4,11 +4,17 @@ import { motion } from "framer-motion";
 import { Heart, Users } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function MainPage() {
   const [isVisible, setIsVisible] = useState(true);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
+
+  // Automatically open calendar dialog on page load
+  useEffect(() => {
+    setIsCalendarOpen(true);
+  }, []);
 
   const t = useTranslations('main');
   const tDialog = useTranslations('dialog');
@@ -305,6 +311,49 @@ export default function MainPage() {
                   </p>
                 </div>
               </a>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+      {/* Calendar Dialog - Auto opens on page load */}
+      {isCalendarOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+          onClick={() => setIsCalendarOpen(false)}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            onClick={(e) => e.stopPropagation()}
+            className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full p-4 relative"
+          >
+            <button
+              onClick={() => setIsCalendarOpen(false)}
+              className="absolute top-2 right-2 z-10 bg-white/90 hover:bg-white text-gray-600 hover:text-gray-900 transition-colors rounded-full p-2 shadow-lg"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            <div className="w-full">
+              <img
+                src="/calendar-feb-2026.png"
+                alt="February 2026 Calendar - UNIDXS"
+                className="w-full h-auto rounded-lg"
+              />
             </div>
           </motion.div>
         </div>
