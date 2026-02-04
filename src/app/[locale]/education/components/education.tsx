@@ -1,30 +1,35 @@
 "use client";
 
-import React, { useState } from "react";
-import { useTranslations } from "next-intl";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { motion } from "framer-motion";
 import {
-  GraduationCap,
-  BookOpen,
-  Users,
-  Heart,
-  Sparkles,
-  MapPin,
-  School,
-  Calendar,
-  Trophy,
-  Globe,
-  Palette,
-  MessageCircle,
-  Send,
-  CheckCircle,
   AlertCircle,
+  BookOpen,
+  Calendar,
+  CheckCircle,
+  Globe,
+  GraduationCap,
   Mail,
+  MapPin,
+  MessageCircle,
+  Palette,
   Phone,
+  School,
+  Send,
+  Sparkles,
+  Users,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
+import React, { useEffect, useState } from "react";
 
 export default function EducationComponent() {
   const t = useTranslations("education");
+  const [isFlyerDialogOpen, setIsFlyerDialogOpen] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -115,6 +120,11 @@ export default function EducationComponent() {
       [e.target.name]: e.target.value
     }));
   };
+
+  // Abrir el dialog automáticamente cuando se carga la página
+  useEffect(() => {
+    setIsFlyerDialogOpen(true);
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -700,6 +710,23 @@ export default function EducationComponent() {
           </div>
         </motion.div>
       </section>
+
+      {/* Flyer Dialog - Popup */}
+      <Dialog open={isFlyerDialogOpen} onOpenChange={setIsFlyerDialogOpen}>
+        <DialogContent className="max-w-4xl w-full p-0 overflow-hidden">
+          <DialogTitle className="sr-only">Información Educativa</DialogTitle>
+          <DialogDescription className="sr-only">
+            Flyer con información sobre nuestros programas educativos
+          </DialogDescription>
+          <div className="relative">
+            <img
+              src="/flyer.jpeg"
+              alt="Flyer Educativo"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
