@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogTitle,
-} from "@/components/ui/dialog";
+
 import { motion } from "framer-motion";
 import {
   AlertCircle,
@@ -25,12 +20,11 @@ import {
   Users,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 export default function EducationComponent() {
   const t = useTranslations("education");
-  const [isFlyerDialogOpen, setIsFlyerDialogOpen] = useState(false);
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -121,10 +115,7 @@ export default function EducationComponent() {
     }));
   };
 
-  // Abrir el dialog automáticamente cuando se carga la página
-  useEffect(() => {
-    setIsFlyerDialogOpen(true);
-  }, []);
+
 
   return (
     <div className="min-h-screen bg-white">
@@ -712,21 +703,7 @@ export default function EducationComponent() {
       </section>
 
       {/* Flyer Dialog - Popup */}
-      <Dialog open={isFlyerDialogOpen} onOpenChange={setIsFlyerDialogOpen}>
-        <DialogContent className="max-w-4xl w-full p-0 overflow-hidden">
-          <DialogTitle className="sr-only">Información Educativa</DialogTitle>
-          <DialogDescription className="sr-only">
-            Flyer con información sobre nuestros programas educativos
-          </DialogDescription>
-          <div className="relative">
-            <img
-              src="/flyer.jpeg"
-              alt="Flyer Educativo"
-              className="w-full h-auto object-contain"
-            />
-          </div>
-        </DialogContent>
-      </Dialog>
+
     </div>
   );
 }
