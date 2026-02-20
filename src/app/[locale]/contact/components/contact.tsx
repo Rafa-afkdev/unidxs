@@ -101,7 +101,7 @@ export default function Contact() {
               className="inline-block mb-6"
             >
               <div className="bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full border border-white/20">
-                <p className="text-purple-200 text-sm font-medium">Estamos aquí para ayudarte</p>
+                <p className="text-purple-200 text-sm font-medium">{t('badge')}</p>
               </div>
             </motion.div>
             
@@ -132,7 +132,7 @@ export default function Contact() {
                   <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-3 rounded-xl">
                     <MessageSquare className="w-6 h-6 text-white" />
                   </div>
-                  <h2 className="text-3xl font-bold text-white">Envíanos un mensaje</h2>
+                  <h2 className="text-3xl font-bold text-white">{t('formTitle')}</h2>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -429,11 +429,11 @@ export default function Contact() {
                         </div>
                         <span className="text-sm font-medium break-all">swest@unidxswnc.org</span>
                       </a>
-                      <a href="https://wa.me/19196248266" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-white/90 hover:text-green-300 transition-all duration-300 p-3 rounded-lg hover:bg-white/10 group">
+                      <a href="https://wa.me/18287368928" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-white/90 hover:text-green-300 transition-all duration-300 p-3 rounded-lg hover:bg-white/10 group">
                         <div className="bg-white/20 p-2 rounded-lg group-hover:bg-white/30 transition-colors">
                           <Phone className="w-5 h-5 text-white" />
                         </div>
-                        <span className="text-sm font-medium">(919) 624-8266 (WhatsApp)</span>
+                        <span className="text-sm font-medium">(828) 736-8928 (WhatsApp)</span>
                       </a>
                     </div>
                   </motion.div>
@@ -451,10 +451,10 @@ export default function Contact() {
                 
                 <div className="relative z-10">
                   <p className="text-xl font-bold text-center leading-relaxed">
-                    Juntos construimos un futuro mejor
+                    {t('futureTitle')}
                   </p>
                   <p className="text-center text-purple-100 mt-3 text-base">
-                    Together we build a better future
+                    {t('futureSubtitle')}
                   </p>
                 </div>
               </motion.div>

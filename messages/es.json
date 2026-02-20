@@ -168,6 +168,10 @@
   "contact": {
     "title": "Contáctanos",
     "subtitle": "Estamos aquí para ayudarte. Envíanos un mensaje y te responderemos pronto.",
+    "badge": "Estamos aquí para ayudarte",
+    "formTitle": "Envíanos un mensaje",
+    "futureTitle": "Juntos construimos un futuro mejor",
+    "futureSubtitle": "Together we build a better future",
     "form": {
       "name": "Nombre completo",
       "namePlaceholder": "Tu nombre",
@@ -187,7 +191,7 @@
       "office": "Oficina UNIDXS",
       "location": "Western North Carolina",
       "hours": "Horario de Atención",
-      "hoursText": "Lunes - Viernes: 9:00 AM - 5:00 PM",
+      "hoursText": "Lunes - Viernes: 10:00 AM - 4:00 PM",
       "generalInquiries": "Consultas Generales",
       "health": "Salud - Paul Witty",
       "education": "Educación - Sarah West",
@@ -439,7 +443,7 @@
       "nitaEmail": "Nlipan@unidxswnc.org",
       "nitaPhone": "(828) 347-1234",
       "sarahEmail": "SarahWest@unidxswnc.org",
-      "sarahPhone": "(828) 347-1234"
+      "sarahPhone": "(828) 736-8928"
     },
     "currentProjects": {
       "title": "Proyectos Estudiantiles Actuales",

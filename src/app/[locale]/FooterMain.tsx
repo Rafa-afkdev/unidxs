@@ -1,11 +1,10 @@
 "use client"
-import { Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react'
-import React from 'react'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import { useTranslations, useLocale } from 'next-intl'
 import PrivacyDialog from '@/components/PrivacyDialog'
 import TermsDialog from '@/components/TermsDialog'
+import { motion } from 'framer-motion'
+import { Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react'
+import { useLocale, useTranslations } from 'next-intl'
+import Link from 'next/link'
 
 export default function FooterMain() {
 
@@ -104,12 +103,12 @@ const locale = useLocale();
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4 text-green-400" />
               <a 
-                href="https://wa.me/19196248266" 
+                href="https://wa.me/18287368928" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm hover:text-green-400 transition-colors"
               >
-                (919) 624-8266 (WhatsApp)
+                (828) 736-8928 (WhatsApp)
               </a>
             </div>
             <p className="text-sm font-semibold text-white mt-4">Nita Lipan</p>
