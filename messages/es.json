@@ -363,7 +363,7 @@
       }
     },
     "calendar": {
-      "title": "Horario de Febrero 2026",
+      "title": "Horario de Marzo 2026",
       "subtitle": "Consulta nuestro calendario para horarios de apertura y eventos especiales",
       "volunteersNeeded": "Volunteers Needed / Necesitamos voluntarios: contacto",
       "whatsappChannel": "Escanee y siga el Canal de WhatsApp",
@@ -380,6 +380,7 @@
       "events": {
         "openPantry": "Open Pantry / Dispensa Abierta",
         "foodBoxes": "Food boxes / Cajas de comida",
+        "miniMarket": "Mini Market / Mercado Pequeño",
         "healthCheck": "Health check / Chequeo de Salud",
         "communityTable": "Community Table / Mesa Comunitaria, Dispensa Abierta",
         "closed": "Closed / Cerrado",
