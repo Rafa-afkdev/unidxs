@@ -111,26 +111,7 @@ const locale = useLocale();
                 (828) 736-8928 (WhatsApp)
               </a>
             </div>
-            <p className="text-sm font-semibold text-white mt-4">Nita Lipan</p>
-            <p className="text-xs text-purple-300 italic">{t('footer.nitaDescription')}</p>
-            <div className="flex items-center space-x-2">
-              <Mail className="w-4 h-4 text-green-400" />
-              <a 
-                href="mailto:Nlipan@unidxswnc.org" 
-                className="text-sm hover:text-green-400 transition-colors break-all"
-              >
-                Nlipan@unidxswnc.org
-              </a>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Phone className="w-4 h-4 text-green-400" />
-              <a 
-                href="tel:+18283471234" 
-                className="text-sm hover:text-green-400 transition-colors"
-              >
-                (828) 347-1234
-              </a>
-            </div>
+
           </div>
         </div>
 

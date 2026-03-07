@@ -31,7 +31,7 @@ export default function EducationComponent() {
     phone: '',
     subject: '',
     message: '',
-    recipient: 'nita' // Para identificar que va a Nita
+    recipient: 'sarah' // Default to Sarah
   });
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [focusedField, setFocusedField] = useState<string | null>(null);
@@ -99,7 +99,7 @@ export default function EducationComponent() {
       }
 
       setStatus('success');
-      setFormData({ name: '', email: '', phone: '', subject: '', message: '', recipient: 'nita' });
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '', recipient: 'sarah' });
       setTimeout(() => setStatus('idle'), 5000);
     } catch (error) {
       console.error('Error sending email:', error);
@@ -124,7 +124,7 @@ export default function EducationComponent() {
         <div
           className="absolute inset-0 bg-cover bg-center scale-105"
           style={{
-            backgroundImage: "url('/Educacion2.webp')",
+            backgroundImage: "url('/Fondo1.webp')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60" />
@@ -204,7 +204,7 @@ export default function EducationComponent() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/Educacion1.webp')",
+            backgroundImage: "url('/Fondo4.webp')",
           }}
         />
         <div className="absolute inset-0 bg-black/60" />
@@ -326,7 +326,7 @@ export default function EducationComponent() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/Educacion4.webp')",
+            backgroundImage: "url('/Fondo3.webp')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-green-900/80 via-emerald-900/80 to-teal-900/80" />
@@ -525,7 +525,6 @@ export default function EducationComponent() {
                           : 'border-gray-200 hover:border-gray-300'
                       }`}
                     >
-                      <option value="nita">Nita Lipan - {t("contact.form.nitaRole")}</option>
                       <option value="sarah">Sarah West - {t("contact.form.sarahRole")}</option>
                     </select>
                   </div>
@@ -614,31 +613,6 @@ export default function EducationComponent() {
                 </h3>
 
                 <div className="space-y-6">
-                  {/* Nita Lipan */}
-                  <div className="pb-4 border-b border-gray-200">
-                    <h4 className="font-bold text-gray-900 mb-3">Nita Lipan</h4>
-                    <div className="space-y-2">
-                      <a
-                        href="mailto:Nlipan@unidxswnc.org"
-                        className="flex items-center space-x-3 text-gray-700 hover:text-purple-600 transition-all duration-300 p-2 rounded-lg hover:bg-purple-50 group"
-                      >
-                        <div className="bg-purple-100 p-2 rounded-lg group-hover:bg-purple-200 transition-colors">
-                          <Mail className="w-4 h-4 text-purple-600" />
-                        </div>
-                        <span className="text-sm font-medium break-all">{t("contact.nitaEmail")}</span>
-                      </a>
-                      <a
-                        href="tel:+18283471234"
-                        className="flex items-center space-x-3 text-gray-700 hover:text-purple-600 transition-all duration-300 p-2 rounded-lg hover:bg-purple-50 group"
-                      >
-                        <div className="bg-purple-100 p-2 rounded-lg group-hover:bg-purple-200 transition-colors">
-                          <Phone className="w-4 h-4 text-purple-600" />
-                        </div>
-                        <span className="text-sm font-medium">{t("contact.nitaPhone")}</span>
-                      </a>
-                    </div>
-                  </div>
-
                   {/* Sarah West */}
                   <div>
                     <h4 className="font-bold text-gray-900 mb-3">Sarah West</h4>

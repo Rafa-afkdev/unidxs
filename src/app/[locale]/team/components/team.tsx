@@ -1,9 +1,9 @@
 "use client"
-import React, { useState } from 'react'
-import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { Briefcase, Heart, Users } from 'lucide-react'
 import { useTranslations } from 'next-intl'
-import { Users, Briefcase, Heart } from 'lucide-react'
+import Image from 'next/image'
+import { useState } from 'react'
 
 export default function Team() {
   const t = useTranslations('team')
@@ -22,7 +22,6 @@ export default function Team() {
     { id: 'paul', image: '/Paul.png', hasImage: true },
     { id: 'sarahWest', image: '/Sarah-West.png', hasImage: true },
     { id: 'sarah', image: '/Sarah.png', hasImage: true },
-    { id: 'nita', image: '/Nita.webp', hasImage: true },
     { id: 'esteban', image: '/JuanEs.webp', hasImage: true }
   ]
 

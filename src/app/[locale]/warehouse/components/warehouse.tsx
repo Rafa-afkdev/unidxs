@@ -447,7 +447,7 @@ export default function WarehouseComponent() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/Fondo2-Donation.webp')",
+            backgroundImage: "url('/Fondo2.webp')",
           }}
         />
         <div className="absolute inset-0 bg-black/60" />
@@ -559,7 +559,7 @@ export default function WarehouseComponent() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/Fondo3-Donation.webp')",
+            backgroundImage: "url('/Fondo4.webp')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-green-900/80 via-emerald-900/80 to-teal-900/80" />
