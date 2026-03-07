@@ -1,22 +1,22 @@
 "use client";
 
-import React, { useState } from "react";
-import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
-  Heart,
-  GraduationCap,
-  Stethoscope,
-  ShoppingBag,
-  Users,
-  Languages,
-  DollarSign,
   Clock,
-  Package,
-  Mail,
+  DollarSign,
+  GraduationCap,
   HandHeart,
+  Heart,
+  Languages,
+  Mail,
+  Package,
+  ShoppingBag,
   Sparkles,
+  Stethoscope,
+  Users,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { useState } from "react";
 
 export default function Donations() {
   const t = useTranslations("donations");
@@ -355,13 +355,7 @@ export default function Donations() {
 
       {/* Impact Section with Fondo3-Donation.webp */}
       <section className="relative py-32 px-4 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/Fondo3-Donation.webp')",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 via-pink-900/80 to-orange-900/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-pink-900 to-orange-900" />
 
         <motion.div
           initial="initial"
