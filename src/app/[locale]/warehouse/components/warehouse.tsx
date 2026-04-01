@@ -209,180 +209,193 @@ export default function WarehouseComponent() {
               </div>
             </div>
 
-            {/* Calendar Days - March 2026 */}
+            {/* Calendar Days - April 2026 */}
             <div className="grid grid-cols-7">
-              {/* Week 1 - March starts on Sunday */}
-              {/* Sunday - Mar 1 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+              {/* Week 1 - April starts on Wednesday */}
+              {/* Empty - Sunday */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-gray-50" />
+              {/* Empty - Monday */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-gray-50" />
+              {/* Empty - Tuesday */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-gray-50" />
+
+              {/* Wednesday - Apr 1 - Mini Market + Health Check */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[120px] bg-blue-50 hover:bg-blue-100 transition-colors">
                 <div className="font-bold text-lg mb-1 text-gray-800">1</div>
+                <div className="text-xs md:text-sm text-blue-700 font-semibold">
+                  {t("calendar.events.miniMarket")}
+                </div>
+                <div className="text-xs md:text-sm text-purple-700 font-semibold">
+                  {t("calendar.events.healthCheck")}
+                </div>
+                <div className="text-xs text-blue-900 font-bold">2-6pm</div>
               </div>
 
-              {/* Monday - Mar 2 */}
+              {/* Thursday - Apr 2 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">2</div>
               </div>
 
-              {/* Tuesday - Mar 3 */}
+              {/* Friday - Apr 3 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">3</div>
               </div>
 
-              {/* Wednesday - Mar 4 - Mini Market */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[120px] bg-blue-50 hover:bg-blue-100 transition-colors">
+              {/* Saturday - Apr 4 */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">4</div>
-                <div className="text-xs md:text-sm text-blue-700 font-semibold">
-                  {t("calendar.events.miniMarket")}
-                </div>
-                <div className="text-xs text-blue-900 font-bold">2-6pm</div>
-              </div>
-
-              {/* Thursday - Mar 5 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1 text-gray-800">5</div>
-              </div>
-
-              {/* Friday - Mar 6 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1 text-gray-800">6</div>
-              </div>
-
-              {/* Saturday - Mar 7 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1 text-gray-800">7</div>
               </div>
 
               {/* Week 2 */}
-              {/* Sunday - Mar 8 */}
+              {/* Sunday - Apr 5 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+                <div className="font-bold text-lg mb-1 text-gray-800">5</div>
+              </div>
+              {/* Monday - Apr 6 */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+                <div className="font-bold text-lg mb-1 text-gray-800">6</div>
+              </div>
+              {/* Tuesday - Apr 7 */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+                <div className="font-bold text-lg mb-1 text-gray-800">7</div>
+              </div>
+              {/* Wednesday - Apr 8 - Open Pantry + Health Check */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[120px] bg-green-50 hover:bg-green-100 transition-colors">
                 <div className="font-bold text-lg mb-1 text-gray-800">8</div>
+                <div className="text-xs md:text-sm text-green-700 font-semibold">
+                  {t("calendar.events.openPantry")}
+                </div>
+                <div className="text-xs md:text-sm text-purple-700 font-semibold">
+                  {t("calendar.events.healthCheck")}
+                </div>
+                <div className="text-xs text-green-900 font-bold">2-6pm</div>
               </div>
-              {/* Monday - Mar 9 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+              {/* Thursday - Apr 9 - Open Pantry */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-green-50 hover:bg-green-100 transition-colors">
                 <div className="font-bold text-lg mb-1 text-gray-800">9</div>
+                <div className="text-xs md:text-sm text-green-700 font-semibold">
+                  {t("calendar.events.openPantry")}
+                </div>
+                <div className="text-xs text-green-900 font-bold">1-4pm</div>
               </div>
-              {/* Tuesday - Mar 10 */}
+              {/* Friday - Apr 10 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">10</div>
               </div>
-              {/* Wednesday - Mar 11 - Open Pantry + Health check */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[120px] bg-green-50 hover:bg-green-100 transition-colors">
+              {/* Saturday - Apr 11 */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">11</div>
-                <div className="text-xs md:text-sm text-green-700 font-semibold">
-                  {t("calendar.events.openPantry")}
-                </div>
-                <div className="text-xs md:text-sm text-purple-700 font-semibold">
-                  {t("calendar.events.healthCheck")}
-                </div>
-                <div className="text-xs text-green-900 font-bold">2-6pm</div>
               </div>
-              {/* Thursday - Mar 12 - Open Pantry */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-green-50 hover:bg-green-100 transition-colors">
+
+              {/* Week 3 - Closed week */}
+              {/* Sunday - Apr 12 */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">12</div>
-                <div className="text-xs md:text-sm text-green-700 font-semibold">
-                  {t("calendar.events.openPantry")}
-                </div>
-                <div className="text-xs text-green-900 font-bold">1-4pm</div>
               </div>
-              {/* Friday - Mar 13 */}
+              {/* Monday - Apr 13 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">13</div>
               </div>
-              {/* Saturday - Mar 14 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+              {/* Tuesday - Apr 14 - Closed */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-red-50">
                 <div className="font-bold text-lg mb-1 text-gray-800">14</div>
+                <div className="text-xs md:text-sm text-red-600 font-semibold">
+                  {t("calendar.events.closed")}
+                </div>
               </div>
-
-              {/* Week 3 */}
-              {/* Sunday - Mar 15 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+              {/* Wednesday - Apr 15 - Closed */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-red-50">
                 <div className="font-bold text-lg mb-1 text-gray-800">15</div>
+                <div className="text-xs md:text-sm text-red-600 font-semibold">
+                  {t("calendar.events.closed")}
+                </div>
               </div>
-              {/* Monday - Mar 16 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+              {/* Thursday - Apr 16 - Closed */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-red-50">
                 <div className="font-bold text-lg mb-1 text-gray-800">16</div>
+                <div className="text-xs md:text-sm text-red-600 font-semibold">
+                  {t("calendar.events.closed")}
+                </div>
               </div>
-              {/* Tuesday - Mar 17 */}
+              {/* Friday - Apr 17 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">17</div>
               </div>
-              {/* Wednesday - Mar 18 - Mini Market */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[120px] bg-blue-50 hover:bg-blue-100 transition-colors">
+              {/* Saturday - Apr 18 */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">18</div>
-                <div className="text-xs md:text-sm text-blue-700 font-semibold">
-                  {t("calendar.events.miniMarket")}
-                </div>
-                <div className="text-xs text-blue-900 font-bold">2-6pm</div>
-              </div>
-              {/* Thursday - Mar 19 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1 text-gray-800">19</div>
-              </div>
-              {/* Friday - Mar 20 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1 text-gray-800">20</div>
-              </div>
-              {/* Saturday - Mar 21 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1 text-gray-800">21</div>
               </div>
 
               {/* Week 4 */}
-              {/* Sunday - Mar 22 */}
+              {/* Sunday - Apr 19 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1 text-gray-800">22</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">19</div>
               </div>
-              {/* Monday - Mar 23 */}
+              {/* Monday - Apr 20 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1 text-gray-800">23</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">20</div>
               </div>
-              {/* Tuesday - Mar 24 */}
+              {/* Tuesday - Apr 21 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1 text-gray-800">24</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">21</div>
               </div>
-              {/* Wednesday - Mar 25 - Open Pantry */}
+              {/* Wednesday - Apr 22 - Open Pantry + Health Check */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[120px] bg-green-50 hover:bg-green-100 transition-colors">
-                <div className="font-bold text-lg mb-1 text-gray-800">25</div>
-                <div className="text-xs md:text-sm text-green-700 font-semibold">
-                  {t("calendar.events.openPantry")}
-                </div>
-                <div className="text-xs text-green-900 font-bold">2-6pm</div>
-              </div>
-              {/* Thursday - Mar 26 - Open Pantry + Health Check */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-green-50 hover:bg-green-100 transition-colors">
-                <div className="font-bold text-lg mb-1 text-gray-800">26</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">22</div>
                 <div className="text-xs md:text-sm text-green-700 font-semibold">
                   {t("calendar.events.openPantry")}
                 </div>
                 <div className="text-xs md:text-sm text-purple-700 font-semibold">
                   {t("calendar.events.healthCheck")}
                 </div>
+                <div className="text-xs text-green-900 font-bold">2-6pm</div>
+              </div>
+              {/* Thursday - Apr 23 - Open Pantry */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-green-50 hover:bg-green-100 transition-colors">
+                <div className="font-bold text-lg mb-1 text-gray-800">23</div>
+                <div className="text-xs md:text-sm text-green-700 font-semibold">
+                  {t("calendar.events.openPantry")}
+                </div>
                 <div className="text-xs text-green-900 font-bold">1-4pm</div>
               </div>
-              {/* Friday - Mar 27 */}
+              {/* Friday - Apr 24 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1 text-gray-800">27</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">24</div>
               </div>
-              {/* Saturday - Mar 28 */}
+              {/* Saturday - Apr 25 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1 text-gray-800">28</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">25</div>
               </div>
 
               {/* Week 5 */}
-              {/* Sunday - Mar 29 */}
+              {/* Sunday - Apr 26 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1 text-gray-800">29</div>
+                <div className="font-bold text-lg mb-1 text-gray-800">26</div>
               </div>
-              {/* Monday - Mar 30 */}
+              {/* Monday - Apr 27 */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+                <div className="font-bold text-lg mb-1 text-gray-800">27</div>
+              </div>
+              {/* Tuesday - Apr 28 */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
+                <div className="font-bold text-lg mb-1 text-gray-800">28</div>
+              </div>
+              {/* Wednesday - Apr 29 - Mini Market + Health Check */}
+              <div className="border border-gray-200 p-2 md:p-4 min-h-[120px] bg-blue-50 hover:bg-blue-100 transition-colors">
+                <div className="font-bold text-lg mb-1 text-gray-800">29</div>
+                <div className="text-xs md:text-sm text-blue-700 font-semibold">
+                  {t("calendar.events.miniMarket")}
+                </div>
+                <div className="text-xs md:text-sm text-purple-700 font-semibold">
+                  {t("calendar.events.healthCheck")}
+                </div>
+                <div className="text-xs text-blue-900 font-bold">2-6pm</div>
+              </div>
+              {/* Thursday - Apr 30 */}
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
                 <div className="font-bold text-lg mb-1 text-gray-800">30</div>
               </div>
-              {/* Tuesday - Mar 31 */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-white">
-                <div className="font-bold text-lg mb-1 text-gray-800">31</div>
-              </div>
               {/* Empty cells to complete the last row */}
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-gray-50" />
-              <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-gray-50" />
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-gray-50" />
               <div className="border border-gray-200 p-2 md:p-4 min-h-[100px] bg-gray-50" />
             </div>

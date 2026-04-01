@@ -350,8 +350,8 @@ export default function MainPage() {
 
             <div className="w-full">
               <img
-                src="/March%202026_page-0001.jpg"
-                alt="March 2026 Calendar - UNIDXS"
+                src="/April.jpg"
+                alt="April 2026 Calendar - UNIDXS"
                 className="w-full h-auto rounded-lg"
               />
             </div>
