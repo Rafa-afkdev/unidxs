@@ -1,0 +1,18 @@
+====================================
+INSTALACIÓN RÁPIDA - NODEMAILER
+====================================
+
+Copia y pega este comando en tu terminal:
+
+npm install nodemailer @types/nodemailer
+
+====================================
+
+Después de instalar, crea el archivo .env.local con:
+
+SMTP_HOST=smtpout.secureserver.net
+SMTP_PORT=465
+SMTP_USER=Rball@unidxSwnc.org
+SMTP_PASS=TU_CONTRASEÑA_AQUI
+
+====================================
