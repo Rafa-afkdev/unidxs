@@ -358,6 +358,7 @@ export default function MainPage() {
           </motion.div>
         </div>
       )}
+      {/*  */}
 
     </main>
 
