@@ -384,7 +384,7 @@
         "healthCheck": "Health check / Chequeo de Salud",
         "communityTable": "Community Table / Mesa Comunitaria, Dispensa Abierta",
         "closed": "Closed / Cerrado",
-        "address": "503/505 Mill Street, Sylva NC 28779",
+        "address": "La Bodega: 503 Mill Street, Sylva NC 28779",
         "addressCommunityTable": "23 Central St, Sylva, NC 28779"
       }
     },
@@ -402,6 +402,11 @@
         "title": "Corre la Voz",
         "description": "Ayúdanos a llegar a más familias compartiendo información sobre nuestros servicios de despensa de alimentos."
       }
+    },
+    "location": {
+      "title": "Encuéntranos",
+      "subtitle": "Visítanos en 503 Mill Street, Sylva, NC 28779",
+      "openInMaps": "Abrir en Google Maps"
     },
     "cta": {
       "title": "¿Necesitas Asistencia?",

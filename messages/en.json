@@ -383,7 +383,7 @@
         "healthCheck": "Health check / Chequeo de Salud",
         "communityTable": "Community Table, Open Pantry / Dispensa Abierta",
         "closed": "Closed / cerrado",
-        "address": "503/505 Mill Street, Sylva NC 28779",
+        "address": "La Bodega: 503 Mill Street, Sylva NC 28779",
         "addressCommunityTable": "23 Central St, Sylva, NC 28779"
       }
     },
@@ -401,6 +401,11 @@
         "title": "Spread the Word",
         "description": "Help us reach more families by sharing information about our food pantry services."
       }
+    },
+    "location": {
+      "title": "Find Us",
+      "subtitle": "Visit us at 503 Mill Street, Sylva, NC 28779",
+      "openInMaps": "Open in Google Maps"
     },
     "cta": {
       "title": "Need Assistance?",

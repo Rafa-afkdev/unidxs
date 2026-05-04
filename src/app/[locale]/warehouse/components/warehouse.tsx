@@ -7,6 +7,7 @@ import {
   Clock,
   Heart,
   Mail,
+  MapPin,
   Package,
   Share2,
   ShoppingBag,
@@ -569,6 +570,82 @@ export default function WarehouseComponent() {
                 </p>
               </motion.div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+
+      {/* Map / Location Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="text-center mb-16"
+          >
+            <motion.div variants={fadeInUp} className="inline-block mb-4">
+              <div className="flex items-center justify-center w-16 h-16 mx-auto bg-gradient-to-br from-teal-500 to-cyan-500 rounded-2xl shadow-lg">
+                <MapPin className="w-8 h-8 text-white" />
+              </div>
+            </motion.div>
+
+            <motion.h2
+              variants={fadeInUp}
+              className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+            >
+              {t("location.title")}
+            </motion.h2>
+
+            <motion.p
+              variants={fadeInUp}
+              className="text-lg md:text-xl text-gray-700 mb-8"
+            >
+              {t("location.subtitle")}
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="rounded-3xl overflow-hidden shadow-2xl border border-white/60"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.1234567890!2d-83.2218064!3d35.3737867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885915004dd228f7%3A0x53b4262b6ea76d6d!2sUnidxs%20of%20WNC!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+              width="100%"
+              height="480"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Unidxs of WNC Location"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-8 text-center"
+          >
+            <a
+              href="https://www.google.com/maps/place/Unidxs+of+WNC/@35.3737867,-83.2218064,17z"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 text-white text-lg font-semibold rounded-full shadow-2xl hover:shadow-xl transition-all cursor-pointer"
+              >
+                <MapPin className="w-5 h-5" />
+                {t("location.openInMaps")}
+              </motion.div>
+            </a>
           </motion.div>
         </div>
       </section>
