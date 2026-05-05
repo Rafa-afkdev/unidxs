@@ -48,7 +48,7 @@ const locale = useLocale();
             <div className="flex items-start space-x-2 mt-4">
               <MapPin className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />
               <a 
-                href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x885915004dd228f7:0x53b4262b6ea76d6d?sa=X&ved=1t:8290&ictx=111" 
+                href="https://maps.app.goo.gl/SPtZzFCwgQAGfHGr7?g_st=awb" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-sm hover:text-green-400 transition-colors"
