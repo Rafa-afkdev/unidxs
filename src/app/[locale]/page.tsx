@@ -7,7 +7,6 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 export default function MainPage() {
-  const [isVisible, setIsVisible] = useState(true);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
 
@@ -105,6 +104,7 @@ export default function MainPage() {
             >
               <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <title>Community Icon</title>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
@@ -123,6 +123,7 @@ export default function MainPage() {
             >
               <div className="w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <title>Success Icon</title>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -141,6 +142,7 @@ export default function MainPage() {
             >
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <title>Heart Icon</title>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
@@ -217,6 +219,7 @@ export default function MainPage() {
               className="mt-10"
             >
               <button
+                type="button"
                 onClick={() => setIsDialogOpen(true)}
                 className="inline-block bg-gradient-to-r from-purple-600 to-green-600 hover:from-purple-700 hover:to-green-700 text-white font-bold text-lg px-10 py-5 rounded-full transition-all duration-300 shadow-2xl hover:shadow-purple-500/50 transform hover:-translate-y-1 hover:scale-105"
               >
@@ -231,18 +234,21 @@ export default function MainPage() {
 
       {/* Dialog Modal */}
       {isDialogOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
-          onClick={() => setIsDialogOpen(false)}
-        >
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <button
+            type="button"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm w-full h-full cursor-default border-none outline-none"
+            onClick={() => setIsDialogOpen(false)}
+            aria-label="Close dialog"
+          />
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
-            onClick={(e) => e.stopPropagation()}
-            className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative"
+            className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative z-10"
           >
             <button
+              type="button"
               onClick={() => setIsDialogOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
             >
@@ -252,6 +258,7 @@ export default function MainPage() {
                 stroke="currentColor"
                 viewBox="0 0 24 24"
               >
+                <title>Close Dialog</title>
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -318,18 +325,21 @@ export default function MainPage() {
 
       {/* Calendar Dialog - Auto opens on page load */}
       {isCalendarOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
-          onClick={() => setIsCalendarOpen(false)}
-        >
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <button
+            type="button"
+            className="fixed inset-0 bg-black/70 backdrop-blur-sm w-full h-full cursor-default border-none outline-none"
+            onClick={() => setIsCalendarOpen(false)}
+            aria-label="Close calendar"
+          />
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
-            onClick={(e) => e.stopPropagation()}
-            className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full p-4 relative"
+            className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full p-4 relative z-10"
           >
             <button
+              type="button"
               onClick={() => setIsCalendarOpen(false)}
               className="absolute top-2 right-2 z-10 bg-white/90 hover:bg-white text-gray-600 hover:text-gray-900 transition-colors rounded-full p-2 shadow-lg"
             >
@@ -339,6 +349,7 @@ export default function MainPage() {
                 stroke="currentColor"
                 viewBox="0 0 24 24"
               >
+                <title>Close Calendar</title>
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -350,7 +361,7 @@ export default function MainPage() {
 
             <div className="w-full">
               <img
-                src="/May.jpg"
+                src="/Juny.jpg"
                 alt="May 2026 Calendar - UNIDXS"
                 className="w-full h-auto rounded-lg"
               />
