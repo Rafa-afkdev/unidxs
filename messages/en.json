@@ -9,7 +9,8 @@
     "warehouse": "Warehouse",
     "education": "Education",
     "donations": "Donations",
-    "language": "Language"
+    "language": "Language",
+    "appointments": "Book Appointment"
   },
   "metadata": {
     "title": "UNIDXS WNC - Working for the community",
@@ -199,6 +200,45 @@
     "success": "Message sent successfully!",
     "error": "There was an error sending the message. Please try again."
   },
+  "appointments": {
+    "title": "Book Appointment",
+    "subtitle": "Please, enter your personal details and choose a time slot to meet with us on Zoom.",
+    "schedulesTitle": "Our Available Hours",
+    "schedulesSubtitle": "You can book an appointment in any of the following weekly time blocks:",
+    "days": {
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "sunday": "Sunday"
+    },
+    "hours": {
+      "tuesday": "10:00 AM - 12:00 PM",
+      "wednesday": "8:00 PM - 10:00 PM",
+      "thursday": "10:00 AM - 12:00 PM",
+      "friday": "10:00 AM - 12:00 PM & 8:00 PM - 10:00 PM",
+      "sunday": "10:00 AM - 12:00 PM"
+    },
+    "form": {
+      "title": "Personal Information",
+      "name": "Full Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "you@email.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "(123) 456-7890",
+      "message": "Subject / Additional Note",
+      "messagePlaceholder": "How can we help you?",
+      "submit": "Continue to Calendly",
+      "loading": "Loading calendar..."
+    },
+    "validation": {
+      "name": "Name is required",
+      "email": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "phone": "Phone number is required"
+    }
+  },
   "services": {
     "hero": {
       "title": "Our Services",
@@ -362,7 +402,7 @@
       }
     },
     "calendar": {
-      "title": "May 2026 Schedule",
+      "title": "June 2026 Schedule",
       "subtitle": "Check our calendar for open hours and special events",
       "volunteersNeeded": "Volunteers Needed / Necesitamos voluntarios: contact",
       "whatsappChannel": "Scan and follow the WhatsApp Channel",
@@ -384,6 +424,7 @@
         "healthCheck": "Health check / Chequeo de Salud",
         "communityTable": "Community Table, Open Pantry / Dispensa Abierta",
         "closed": "Closed / cerrado",
+        "cookingClasses": "Cooking Classes / Clases de Cocina",
         "address": "La Bodega: 503 Mill Street, Sylva NC 28779",
         "addressCommunityTable": "23 Central St, Sylva, NC 28779"
       }

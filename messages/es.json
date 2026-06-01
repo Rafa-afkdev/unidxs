@@ -9,7 +9,8 @@
     "warehouse": "Bodega",
     "education": "Educación",
     "donations": "Donaciones",
-    "language": "Idioma"
+    "language": "Idioma",
+    "appointments": "Agendar Cita"
   },
   "metadata": {
     "title": "UNIDXS WNC - Trabajamos por la comunidad",
@@ -200,6 +201,45 @@
     "success": "¡Mensaje enviado exitosamente!",
     "error": "Hubo un error al enviar el mensaje. Por favor inténtalo de nuevo."
   },
+  "appointments": {
+    "title": "Agendar Cita",
+    "subtitle": "Por favor, ingresa tus datos personales y selecciona un horario para reunirnos por Zoom.",
+    "schedulesTitle": "Nuestros Horarios de Atención",
+    "schedulesSubtitle": "Puedes agendar una cita en cualquiera de los siguientes bloques horarios:",
+    "days": {
+      "tuesday": "Martes",
+      "wednesday": "Miércoles",
+      "thursday": "Jueves",
+      "friday": "Viernes",
+      "sunday": "Domingo"
+    },
+    "hours": {
+      "tuesday": "10:00 AM - 12:00 PM",
+      "wednesday": "8:00 PM - 10:00 PM",
+      "thursday": "10:00 AM - 12:00 PM",
+      "friday": "10:00 AM - 12:00 PM y 8:00 PM - 10:00 PM",
+      "sunday": "10:00 AM - 12:00 PM"
+    },
+    "form": {
+      "title": "Datos Personales",
+      "name": "Nombre Completo",
+      "namePlaceholder": "Tu nombre completo",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "tu@email.com",
+      "phone": "Teléfono",
+      "phonePlaceholder": "(123) 456-7890",
+      "message": "Asunto / Nota adicional",
+      "messagePlaceholder": "¿Cómo te podemos ayudar?",
+      "submit": "Continuar a Calendly",
+      "loading": "Cargando calendario..."
+    },
+    "validation": {
+      "name": "El nombre es requerido",
+      "email": "El correo es requerido",
+      "emailInvalid": "El correo no es válido",
+      "phone": "El teléfono es requerido"
+    }
+  },
   "services": {
     "hero": {
       "title": "Nuestros Servicios",
@@ -363,7 +403,7 @@
       }
     },
     "calendar": {
-      "title": "Horario de Mayo 2026",
+      "title": "Horario de Junio 2026",
       "subtitle": "Consulta nuestro calendario para horarios de apertura y eventos especiales",
       "volunteersNeeded": "Volunteers Needed / Necesitamos voluntarios: contacto",
       "whatsappChannel": "Escanee y siga el Canal de WhatsApp",
@@ -385,6 +425,7 @@
         "healthCheck": "Health check / Chequeo de Salud",
         "communityTable": "Community Table / Mesa Comunitaria, Dispensa Abierta",
         "closed": "Closed / Cerrado",
+        "cookingClasses": "Cooking Classes / Clases de Cocina",
         "address": "La Bodega: 503 Mill Street, Sylva NC 28779",
         "addressCommunityTable": "23 Central St, Sylva, NC 28779"
       }
