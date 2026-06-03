@@ -1,6 +1,5 @@
 "use client";
 
-
 import { motion } from "framer-motion";
 import {
   AlertCircle,
@@ -20,20 +19,23 @@ import {
   Users,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import React, { useState } from "react";
+import type React from "react";
+import { useState } from "react";
 
 export default function EducationComponent() {
   const t = useTranslations("education");
 
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-    recipient: 'sarah' // Default to Sarah
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+    recipient: "sarah", // Default to Sarah
   });
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
   const [focusedField, setFocusedField] = useState<string | null>(null);
 
   const fadeInUp = {
@@ -80,13 +82,13 @@ export default function EducationComponent() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('sending');
-    
+    setStatus("sending");
+
     try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
+      const response = await fetch("/api/send-email", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
@@ -94,28 +96,37 @@ export default function EducationComponent() {
       const data = await response.json();
 
       if (!response.ok) {
-        console.error('Error response:', data);
-        throw new Error(data.error || 'Failed to send email');
+        console.error("Error response:", data);
+        throw new Error(data.error || "Failed to send email");
       }
 
-      setStatus('success');
-      setFormData({ name: '', email: '', phone: '', subject: '', message: '', recipient: 'sarah' });
-      setTimeout(() => setStatus('idle'), 5000);
+      setStatus("success");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+        recipient: "sarah",
+      });
+      setTimeout(() => setStatus("idle"), 5000);
     } catch (error) {
-      console.error('Error sending email:', error);
-      setStatus('error');
-      setTimeout(() => setStatus('idle'), 5000);
+      console.error("Error sending email:", error);
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 5000);
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData(prev => ({
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
+    setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
-
-
 
   return (
     <div className="min-h-screen bg-white">
@@ -411,14 +422,19 @@ export default function EducationComponent() {
                   <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-3 rounded-xl">
                     <MessageCircle className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-3xl font-bold text-gray-900">{t("contact.title")}</h3>
+                  <h3 className="text-3xl font-bold text-gray-900">
+                    {t("contact.title")}
+                  </h3>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name and Email Row */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide">
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide"
+                      >
                         {t("contact.form.name")}
                       </label>
                       <input
@@ -427,19 +443,22 @@ export default function EducationComponent() {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        onFocus={() => setFocusedField('name')}
+                        onFocus={() => setFocusedField("name")}
                         onBlur={() => setFocusedField(null)}
                         required
                         placeholder={t("contact.form.namePlaceholder")}
                         className={`w-full px-5 py-4 rounded-xl border-2 transition-all duration-300 outline-none bg-gray-50 focus:bg-white text-gray-900 placeholder:text-gray-400 ${
-                          focusedField === 'name' 
-                            ? 'border-purple-500 shadow-lg shadow-purple-200 scale-[1.02]' 
-                            : 'border-gray-200 hover:border-gray-300'
+                          focusedField === "name"
+                            ? "border-purple-500 shadow-lg shadow-purple-200 scale-[1.02]"
+                            : "border-gray-200 hover:border-gray-300"
                         }`}
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide"
+                      >
                         {t("contact.form.email")}
                       </label>
                       <input
@@ -448,14 +467,14 @@ export default function EducationComponent() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        onFocus={() => setFocusedField('email')}
+                        onFocus={() => setFocusedField("email")}
                         onBlur={() => setFocusedField(null)}
                         required
                         placeholder={t("contact.form.emailPlaceholder")}
                         className={`w-full px-5 py-4 rounded-xl border-2 transition-all duration-300 outline-none bg-gray-50 focus:bg-white text-gray-900 placeholder:text-gray-400 ${
-                          focusedField === 'email' 
-                            ? 'border-purple-500 shadow-lg shadow-purple-200 scale-[1.02]' 
-                            : 'border-gray-200 hover:border-gray-300'
+                          focusedField === "email"
+                            ? "border-purple-500 shadow-lg shadow-purple-200 scale-[1.02]"
+                            : "border-gray-200 hover:border-gray-300"
                         }`}
                       />
                     </div>
@@ -464,7 +483,10 @@ export default function EducationComponent() {
                   {/* Phone and Subject Row */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide">
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide"
+                      >
                         {t("contact.form.phone")}
                       </label>
                       <input
@@ -473,18 +495,21 @@ export default function EducationComponent() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        onFocus={() => setFocusedField('phone')}
+                        onFocus={() => setFocusedField("phone")}
                         onBlur={() => setFocusedField(null)}
                         placeholder={t("contact.form.phonePlaceholder")}
                         className={`w-full px-5 py-4 rounded-xl border-2 transition-all duration-300 outline-none bg-gray-50 focus:bg-white text-gray-900 placeholder:text-gray-400 ${
-                          focusedField === 'phone' 
-                            ? 'border-purple-500 shadow-lg shadow-purple-200 scale-[1.02]' 
-                            : 'border-gray-200 hover:border-gray-300'
+                          focusedField === "phone"
+                            ? "border-purple-500 shadow-lg shadow-purple-200 scale-[1.02]"
+                            : "border-gray-200 hover:border-gray-300"
                         }`}
                       />
                     </div>
                     <div>
-                      <label htmlFor="subject" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide">
+                      <label
+                        htmlFor="subject"
+                        className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide"
+                      >
                         {t("contact.form.subject")}
                       </label>
                       <input
@@ -493,14 +518,14 @@ export default function EducationComponent() {
                         name="subject"
                         value={formData.subject}
                         onChange={handleChange}
-                        onFocus={() => setFocusedField('subject')}
+                        onFocus={() => setFocusedField("subject")}
                         onBlur={() => setFocusedField(null)}
                         required
                         placeholder={t("contact.form.subjectPlaceholder")}
                         className={`w-full px-5 py-4 rounded-xl border-2 transition-all duration-300 outline-none bg-gray-50 focus:bg-white text-gray-900 placeholder:text-gray-400 ${
-                          focusedField === 'subject' 
-                            ? 'border-purple-500 shadow-lg shadow-purple-200 scale-[1.02]' 
-                            : 'border-gray-200 hover:border-gray-300'
+                          focusedField === "subject"
+                            ? "border-purple-500 shadow-lg shadow-purple-200 scale-[1.02]"
+                            : "border-gray-200 hover:border-gray-300"
                         }`}
                       />
                     </div>
@@ -508,7 +533,10 @@ export default function EducationComponent() {
 
                   {/* Recipient Selector */}
                   <div>
-                    <label htmlFor="recipient" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide">
+                    <label
+                      htmlFor="recipient"
+                      className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide"
+                    >
                       {t("contact.form.recipient")}
                     </label>
                     <select
@@ -516,22 +544,27 @@ export default function EducationComponent() {
                       name="recipient"
                       value={formData.recipient}
                       onChange={handleChange}
-                      onFocus={() => setFocusedField('recipient')}
+                      onFocus={() => setFocusedField("recipient")}
                       onBlur={() => setFocusedField(null)}
                       required
                       className={`w-full px-5 py-4 rounded-xl border-2 transition-all duration-300 outline-none bg-gray-50 focus:bg-white text-gray-900 ${
-                        focusedField === 'recipient' 
-                          ? 'border-purple-500 shadow-lg shadow-purple-200 scale-[1.02]' 
-                          : 'border-gray-200 hover:border-gray-300'
+                        focusedField === "recipient"
+                          ? "border-purple-500 shadow-lg shadow-purple-200 scale-[1.02]"
+                          : "border-gray-200 hover:border-gray-300"
                       }`}
                     >
-                      <option value="sarah">Sarah West - {t("contact.form.sarahRole")}</option>
+                      <option value="sarah">
+                        Sarah West - {t("contact.form.sarahRole")}
+                      </option>
                     </select>
                   </div>
 
                   {/* Message */}
                   <div>
-                    <label htmlFor="message" className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide"
+                    >
                       {t("contact.form.message")}
                     </label>
                     <textarea
@@ -539,15 +572,15 @@ export default function EducationComponent() {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      onFocus={() => setFocusedField('message')}
+                      onFocus={() => setFocusedField("message")}
                       onBlur={() => setFocusedField(null)}
                       required
                       rows={6}
                       placeholder={t("contact.form.messagePlaceholder")}
                       className={`w-full px-5 py-4 rounded-xl border-2 transition-all duration-300 outline-none resize-none bg-gray-50 focus:bg-white text-gray-900 placeholder:text-gray-400 ${
-                        focusedField === 'message' 
-                          ? 'border-purple-500 shadow-lg shadow-purple-200 scale-[1.02]' 
-                          : 'border-gray-200 hover:border-gray-300'
+                        focusedField === "message"
+                          ? "border-purple-500 shadow-lg shadow-purple-200 scale-[1.02]"
+                          : "border-gray-200 hover:border-gray-300"
                       }`}
                     />
                   </div>
@@ -555,44 +588,52 @@ export default function EducationComponent() {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    disabled={status === 'sending'}
+                    disabled={status === "sending"}
                     className="group relative w-full bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 hover:from-purple-700 hover:via-purple-600 hover:to-pink-600 text-white font-bold py-5 px-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-3 overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                    {status === 'sending' ? (
+                    {status === "sending" ? (
                       <>
                         <div className="w-6 h-6 border-3 border-white border-t-transparent rounded-full animate-spin"></div>
-                        <span className="text-lg">{t("contact.form.sending")}</span>
+                        <span className="text-lg">
+                          {t("contact.form.sending")}
+                        </span>
                       </>
                     ) : (
                       <>
                         <Send className="w-6 h-6 group-hover:rotate-45 transition-transform duration-300" />
-                        <span className="text-lg">{t("contact.form.submit")}</span>
+                        <span className="text-lg">
+                          {t("contact.form.submit")}
+                        </span>
                       </>
                     )}
                   </button>
 
                   {/* Success Message */}
-                  {status === 'success' && (
+                  {status === "success" && (
                     <motion.div
                       initial={{ opacity: 0, scale: 0.9, y: -10 }}
                       animate={{ opacity: 1, scale: 1, y: 0 }}
                       className="flex items-center space-x-3 text-green-700 bg-gradient-to-r from-green-50 to-green-100 p-5 rounded-xl border-2 border-green-200 shadow-lg"
                     >
                       <CheckCircle className="w-6 h-6 flex-shrink-0" />
-                      <span className="font-semibold text-base">{t("contact.success")}</span>
+                      <span className="font-semibold text-base">
+                        {t("contact.success")}
+                      </span>
                     </motion.div>
                   )}
 
                   {/* Error Message */}
-                  {status === 'error' && (
+                  {status === "error" && (
                     <motion.div
                       initial={{ opacity: 0, scale: 0.9, y: -10 }}
                       animate={{ opacity: 1, scale: 1, y: 0 }}
                       className="flex items-center space-x-3 text-red-700 bg-gradient-to-r from-red-50 to-red-100 p-5 rounded-xl border-2 border-red-200 shadow-lg"
                     >
                       <AlertCircle className="w-6 h-6 flex-shrink-0" />
-                      <span className="font-semibold text-base">{t("contact.error")}</span>
+                      <span className="font-semibold text-base">
+                        {t("contact.error")}
+                      </span>
                     </motion.div>
                   )}
                 </form>
@@ -624,7 +665,9 @@ export default function EducationComponent() {
                         <div className="bg-purple-100 p-2 rounded-lg group-hover:bg-purple-200 transition-colors">
                           <Mail className="w-4 h-4 text-purple-600" />
                         </div>
-                        <span className="text-sm font-medium break-all">{t("contact.sarahEmail")}</span>
+                        <span className="text-sm font-medium break-all">
+                          {t("contact.sarahEmail")}
+                        </span>
                       </a>
                       <a
                         href="tel:+18283471234"
@@ -633,7 +676,9 @@ export default function EducationComponent() {
                         <div className="bg-purple-100 p-2 rounded-lg group-hover:bg-purple-200 transition-colors">
                           <Phone className="w-4 h-4 text-purple-600" />
                         </div>
-                        <span className="text-sm font-medium">{t("contact.sarahPhone")}</span>
+                        <span className="text-sm font-medium">
+                          {t("contact.sarahPhone")}
+                        </span>
                       </a>
                     </div>
                   </div>
@@ -645,7 +690,7 @@ export default function EducationComponent() {
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500"></div>
                 <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
                 <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
-                
+
                 <div className="relative z-10">
                   <GraduationCap className="w-12 h-12 text-white mb-4" />
                   <p className="text-lg font-bold leading-relaxed">
@@ -677,7 +722,6 @@ export default function EducationComponent() {
       </section>
 
       {/* Flyer Dialog - Popup */}
-
     </div>
   );
 }

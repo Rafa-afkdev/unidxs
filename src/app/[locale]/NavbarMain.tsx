@@ -1,10 +1,24 @@
-'use client';
-import { useEffect, useRef, useState } from 'react';
-import { useTranslations, useLocale } from 'next-intl';
-import { Link, useRouter, usePathname } from '@/i18n/routing';
-import { motion } from 'framer-motion';
-import { Info, Mail, Menu, Newspaper, Users, X, Languages,  Heart, ChevronDown, Package, GraduationCap, HeartHandshake } from 'lucide-react';
-import { LogoNavBar } from './LogoNavBar';
+"use client";
+import { motion } from "framer-motion";
+import {
+  Bell,
+  Calendar,
+  ChevronDown,
+  GraduationCap,
+  Heart,
+  HeartHandshake,
+  Info,
+  Languages,
+  Mail,
+  Menu,
+  Package,
+  Users,
+  X,
+} from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
+import { type ReactNode, useEffect, useRef, useState } from "react";
+import { Link, usePathname, useRouter } from "@/i18n/routing";
+import { LogoNavBar } from "./LogoNavBar";
 
 // Función throttle para optimizar el scroll
 function throttle(func: (...args: unknown[]) => void, limit: number) {
@@ -13,13 +27,15 @@ function throttle(func: (...args: unknown[]) => void, limit: number) {
     if (!inThrottle) {
       func.apply(this, args);
       inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
+      setTimeout(() => {
+        inThrottle = false;
+      }, limit);
     }
   };
 }
 
 export default function NavbarMain() {
-  const t = useTranslations('navbar');
+  const t = useTranslations("navbar");
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -28,29 +44,115 @@ export default function NavbarMain() {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const lastScrollY = useRef(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Subdomain routing helper component
+  interface NavLinkProps {
+    href: string;
+    className?: string;
+    onClick?: () => void;
+    children: ReactNode;
+  }
+
+  function NavLink({ href, className, onClick, children }: NavLinkProps) {
+    const isClient = mounted && typeof window !== "undefined";
+    const host = isClient ? window.location.host : "";
+    const isNoticesSubdomain = host.startsWith("notices.");
+
+    const mainHost =
+      isClient && window.location.hostname.includes("localhost")
+        ? "http://localhost:3000"
+        : "https://unidxswnc.org";
+
+    const noticesHost =
+      isClient && window.location.hostname.includes("localhost")
+        ? "http://notices.localhost:3000"
+        : "https://notices.unidxswnc.org";
+
+    if (href === "/notice") {
+      return (
+        <a
+          href={`${noticesHost}/${locale}`}
+          className={className}
+          onClick={onClick}
+        >
+          {children}
+        </a>
+      );
+    }
+
+    if (isNoticesSubdomain) {
+      const targetUrl = `${mainHost}/${locale}${href === "/" ? "" : href}`;
+      return (
+        <a href={targetUrl} className={className} onClick={onClick}>
+          {children}
+        </a>
+      );
+    }
+
+    return (
+      <Link href={href} className={className} onClick={onClick}>
+        {children}
+      </Link>
+    );
+  }
 
   const navLinks = [
-    { href: '/about', label: t('about'), icon: Info, color: 'from-orange-500 to-amber-500' },
-    { href: '/team', label: t('team'), icon: Users, color: 'from-cyan-500 to-blue-500' },
+    {
+      href: "/about",
+      label: t("about"),
+      icon: Info,
+      color: "from-orange-500 to-amber-500",
+    },
+    {
+      href: "/team",
+      label: t("team"),
+      icon: Users,
+      color: "from-cyan-500 to-blue-500",
+    },
     // Servicios dropdown va aquí (se renderiza por separado)
-    { href: '/donations', label: t('donations'), icon: Heart, color: 'from-pink-500 to-rose-500' },
-    // { href: '/notice', label: t('notice'), icon: Newspaper, color: 'from-green-500 to-emerald-500' },
-    { href: '/contact', label: t('contact'), icon: Mail, color: 'from-red-500 to-rose-500' },
+    {
+      href: "/notice",
+      label: t("notice"),
+      icon: Bell,
+      color: "from-green-500 to-emerald-500",
+    },
+    {
+      href: "/donations",
+      label: t("donations"),
+      icon: Heart,
+      color: "from-pink-500 to-rose-500",
+    },
+    {
+      href: "/contact",
+      label: t("contact"),
+      icon: Mail,
+      color: "from-red-500 to-rose-500",
+    },
   ];
 
   const servicesOptions = [
-    { href: '/services', label: t('ourServices') , icon: HeartHandshake },
-    { href: '/warehouse', label: t('warehouse') , icon: Package },
-    { href: '/education', label: t('education') , icon: GraduationCap },
+    { href: "/services", label: t("ourServices"), icon: HeartHandshake },
+    {
+      href: "/services/appointments",
+      label: t("appointments"),
+      icon: Calendar,
+    },
+    { href: "/warehouse", label: t("warehouse"), icon: Package },
+    { href: "/education", label: t("education"), icon: GraduationCap },
   ];
 
   const languages = [
-    { code: 'en', label: 'English', flag: '🇺🇸' },
-    { code: 'es', label: 'Español', flag: '🇪🇸' },
+    { code: "en", label: "English", flag: "🇺🇸" },
+    { code: "es", label: "Español", flag: "🇪🇸" },
   ];
 
   // Función para cambiar el idioma manteniendo la ruta actual
-  const switchLanguage = (newLocale: 'en' | 'es') => {
+  const switchLanguage = (newLocale: "en" | "es") => {
     router.replace(pathname, { locale: newLocale });
     setIsLangOpen(false);
   };
@@ -58,7 +160,7 @@ export default function NavbarMain() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       if (currentScrollY === 0) {
         setIsVisible(true);
         return;
@@ -69,43 +171,43 @@ export default function NavbarMain() {
     };
 
     const throttledHandleScroll = throttle(handleScroll, 100);
-    window.addEventListener('scroll', throttledHandleScroll);
-    return () => window.removeEventListener('scroll', throttledHandleScroll);
+    window.addEventListener("scroll", throttledHandleScroll);
+    return () => window.removeEventListener("scroll", throttledHandleScroll);
   }, []);
 
   // Cerrar dropdowns al hacer clic fuera
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
-      if (isLangOpen && !target.closest('.language-dropdown')) {
+      if (isLangOpen && !target.closest(".language-dropdown")) {
         setIsLangOpen(false);
       }
-      if (isServicesOpen && !target.closest('.services-dropdown')) {
+      if (isServicesOpen && !target.closest(".services-dropdown")) {
         setIsServicesOpen(false);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isLangOpen, isServicesOpen]);
 
-  return (  
+  return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: isVisible ? 0 : -100 }}
       className="w-full fixed top-0 left-0 z-50 bg-white border-b-2 border-purple-200/50 shadow-md"
-    > 
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <motion.span 
+          <NavLink href="/" className="flex items-center">
+            <motion.span
               whileHover={{ scale: 1.02 }}
               className="text-xl font-sans font-medium text-purple-900 tracking-wide"
             >
-              <LogoNavBar/>
+              <LogoNavBar />
             </motion.span>
-          </Link>
+          </NavLink>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-2">
@@ -117,13 +219,13 @@ export default function NavbarMain() {
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Link
+                  <NavLink
                     href={link.href}
                     className={`font-sans text-xs bg-gradient-to-br ${link.color} hover:shadow-lg hover:shadow-purple-500/30 px-4 py-2 rounded-xl text-white font-medium transition-all duration-300 tracking-wide flex items-center gap-2 border border-white/10`}
                   >
                     <Icon className="w-4 h-4" />
                     {link.label}
-                  </Link>
+                  </NavLink>
                 </motion.div>
               );
             })}
@@ -137,8 +239,10 @@ export default function NavbarMain() {
                 className="font-sans text-xs bg-gradient-to-br from-purple-600 to-indigo-600 hover:shadow-lg hover:shadow-purple-500/30 px-4 py-2 rounded-xl text-white font-medium transition-all duration-300 tracking-wide flex items-center gap-2 border border-white/10"
               >
                 <HeartHandshake className="w-4 h-4" />
-                {t('services')}
-                <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
+                {t("services")}
+                <ChevronDown
+                  className={`w-3 h-3 transition-transform duration-300 ${isServicesOpen ? "rotate-180" : ""}`}
+                />
               </motion.button>
 
               {/* Services Dropdown Menu */}
@@ -151,15 +255,17 @@ export default function NavbarMain() {
                   {servicesOptions.map((service) => {
                     const ServiceIcon = service.icon;
                     return (
-                      <Link
+                      <NavLink
                         key={service.href}
                         href={service.href}
                         onClick={() => setIsServicesOpen(false)}
                         className="w-full flex items-center gap-3 px-4 py-3 hover:bg-purple-50 transition-colors text-purple-900"
                       >
                         <ServiceIcon className="w-4 h-4" />
-                        <span className="text-sm font-medium">{service.label}</span>
-                      </Link>
+                        <span className="text-sm font-medium">
+                          {service.label}
+                        </span>
+                      </NavLink>
                     );
                   })}
                 </motion.div>
@@ -174,13 +280,13 @@ export default function NavbarMain() {
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Link
+                  <NavLink
                     href={link.href}
                     className={`font-sans text-xs bg-gradient-to-br ${link.color} hover:shadow-lg hover:shadow-purple-500/30 px-4 py-2 rounded-xl text-white font-medium transition-all duration-300 tracking-wide flex items-center gap-2 border border-white/10`}
                   >
                     <Icon className="w-4 h-4" />
                     {link.label}
-                  </Link>
+                  </NavLink>
                 </motion.div>
               );
             })}
@@ -194,7 +300,7 @@ export default function NavbarMain() {
                 className="font-sans text-xs bg-gradient-to-br from-purple-600 to-indigo-600 hover:shadow-lg hover:shadow-purple-500/30 px-4 py-2 rounded-xl text-white font-medium transition-all duration-300 tracking-wide flex items-center gap-2 border border-white/10"
               >
                 <Languages className="w-4 h-4" />
-                {languages.find(lang => lang.code === locale)?.flag}
+                {languages.find((lang) => lang.code === locale)?.flag}
               </motion.button>
 
               {/* Language Dropdown */}
@@ -207,13 +313,18 @@ export default function NavbarMain() {
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
-                      onClick={() => switchLanguage(lang.code as 'en' | 'es')}
+                      type="button"
+                      onClick={() => switchLanguage(lang.code as "en" | "es")}
                       className={`w-full flex items-center gap-2 px-4 py-3 hover:bg-purple-50 transition-colors ${
-                        locale === lang.code ? 'bg-purple-100 font-semibold' : ''
+                        locale === lang.code
+                          ? "bg-purple-100 font-semibold"
+                          : ""
                       }`}
                     >
                       <span className="text-xl">{lang.flag}</span>
-                      <span className="text-sm text-purple-900">{lang.label}</span>
+                      <span className="text-sm text-purple-900">
+                        {lang.label}
+                      </span>
                     </button>
                   ))}
                 </motion.div>
@@ -244,7 +355,7 @@ export default function NavbarMain() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : -20 }}
         transition={{ duration: 0.3 }}
-        className={`md:hidden ${isOpen ? 'block' : 'hidden'} fixed w-full bg-white border-b-2 border-purple-200/50 shadow-md`} 
+        className={`md:hidden ${isOpen ? "block" : "hidden"} fixed w-full bg-white border-b-2 border-purple-200/50 shadow-md`}
       >
         <div className="px-4 pt-2 pb-6 space-y-3">
           {navLinks.slice(0, 2).map((link) => {
@@ -255,25 +366,27 @@ export default function NavbarMain() {
                 whileHover={{ x: 4 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <Link
+                <NavLink
                   href={link.href}
                   className={`flex items-center gap-3 py-3 px-5 font-sans text-sm bg-gradient-to-r ${link.color} text-white hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300 tracking-wide rounded-xl border border-white/10 font-medium`}
                   onClick={() => setIsOpen(false)}
                 >
                   <Icon className="w-4 h-4" />
                   {link.label}
-                </Link>
+                </NavLink>
               </motion.div>
             );
           })}
 
           {/* Services Section Mobile */}
           <div className="pt-2 border-t-2 border-purple-200/50">
-            <p className="text-xs text-purple-900 font-semibold mb-2 px-2">{t('services')}</p>
+            <p className="text-xs text-purple-900 font-semibold mb-2 px-2">
+              {t("services")}
+            </p>
             {servicesOptions.map((service) => {
               const ServiceIcon = service.icon;
               return (
-                <Link
+                <NavLink
                   key={service.href}
                   href={service.href}
                   onClick={() => setIsOpen(false)}
@@ -281,7 +394,7 @@ export default function NavbarMain() {
                 >
                   <ServiceIcon className="w-4 h-4" />
                   {service.label}
-                </Link>
+                </NavLink>
               );
             })}
           </div>
@@ -294,32 +407,35 @@ export default function NavbarMain() {
                 whileHover={{ x: 4 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <Link
+                <NavLink
                   href={link.href}
                   className={`flex items-center gap-3 py-3 px-5 font-sans text-sm bg-gradient-to-r ${link.color} text-white hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300 tracking-wide rounded-xl border border-white/10 font-medium`}
                   onClick={() => setIsOpen(false)}
                 >
                   <Icon className="w-4 h-4" />
                   {link.label}
-                </Link>
+                </NavLink>
               </motion.div>
             );
           })}
 
           {/* Language Selector Mobile */}
           <div className="pt-2 border-t-2 border-purple-200/50">
-            <p className="text-xs text-purple-900 font-semibold mb-2 px-2">{t('language')}</p>
+            <p className="text-xs text-purple-900 font-semibold mb-2 px-2">
+              {t("language")}
+            </p>
             {languages.map((lang) => (
               <button
                 key={lang.code}
+                type="button"
                 onClick={() => {
-                  switchLanguage(lang.code as 'en' | 'es');
+                  switchLanguage(lang.code as "en" | "es");
                   setIsOpen(false);
                 }}
                 className={`w-full flex items-center gap-3 py-3 px-5 font-sans text-sm transition-all duration-300 tracking-wide rounded-xl font-medium ${
-                  locale === lang.code 
-                    ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg' 
-                    : 'bg-purple-50 text-purple-900 hover:bg-purple-100'
+                  locale === lang.code
+                    ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg"
+                    : "bg-purple-50 text-purple-900 hover:bg-purple-100"
                 }`}
               >
                 <span className="text-xl">{lang.flag}</span>

@@ -577,5 +577,48 @@
         "content": "Para preguntas sobre estos Términos de Uso, contáctenos al (828) 242-7345 o visite nuestra oficina en el oeste de Carolina del Norte."
       }
     }
+  },
+  "notices": {
+    "title": "Tablón de Avisos",
+    "subtitle": "Mantente informado sobre las últimas novedades, eventos y avisos importantes de nuestra comunidad.",
+    "backToMain": "Volver al sitio principal",
+    "whatsappChannel": "Únete a nuestro Canal de WhatsApp",
+    "whatsappDesc": "Recibe notificaciones inmediatas y mantente al día con eventos en tiempo real.",
+    "whatsappBtn": "Unirse al Canal",
+    "searchPlaceholder": "Buscar avisos...",
+    "noResults": "No se encontraron avisos que coincidan con tu búsqueda.",
+    "categories": {
+      "all": "Todos",
+      "pantry": "Despensa",
+      "education": "Educación",
+      "events": "Eventos",
+      "general": "General"
+    },
+    "items": {
+      "notice1": {
+        "title": "Cambio de Horario Despensa Abierta",
+        "description": "A partir de la próxima semana, la Despensa Abierta los miércoles comenzará a las 2:00 PM y terminará a las 6:00 PM. Por favor, toma nota de este cambio para planificar tu visita.",
+        "date": "29 de Mayo, 2026",
+        "category": "pantry"
+      },
+      "notice2": {
+        "title": "Clases de Cocina Saludable de Junio",
+        "description": "¡Ya están abiertas las inscripciones para las clases de cocina de Junio! Aprende a preparar platillos nutritivos y deliciosos. Consulta las fechas en el calendario de la bodega.",
+        "date": "25 de Mayo, 2026",
+        "category": "events"
+      },
+      "notice3": {
+        "title": "Buscamos Voluntarios para el Verano",
+        "description": "Necesitamos manos voluntarias para apoyar en la clasificación de alimentos y atención en la bodega. Si tienes unas horas libres a la semana, ¡escríbenos a bodega@unidxswnc.org!",
+        "date": "20 de Mayo, 2026",
+        "category": "general"
+      },
+      "notice4": {
+        "title": "Líderes Latinos Analizan en Washington Retos de sus Comunidades",
+        "description": "Más de 150 líderes comunitarios, activistas y directivos de organizaciones hispanas de todo el país, incluyendo a la delegación de Acción Hispana y Qué Pasa, participan en el Encuentro Nacional de la Hispanic Federation en Washington. Los asistentes se reúnen con legisladores federales, incluyendo a los senadores de Carolina del Norte Thom Tillis y Ted Budd, para discutir prioridades clave como inmigración, educación, salud, derechos civiles y desarrollo económico, buscando impulsar políticas públicas equitativas para las familias latinas.",
+        "date": "2 de Junio, 2026",
+        "category": "general"
+      }
+    }
   }
 }

@@ -1,5 +1,5 @@
-import { SendEmail } from '@/lib/resend';
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
+import { SendEmail } from "@/lib/resend";
 
 export async function POST(request: Request) {
   try {
@@ -9,15 +9,14 @@ export async function POST(request: Request) {
     // Validación básica
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
-        { error: 'Missing required fields' },
-        { status: 400 }
+        { error: "Missing required fields" },
+        { status: 400 },
       );
     }
 
     // Determinar el destinatario basado en el campo recipient
-    const recipientEmail = recipient === 'nita' 
-      ? 'Nlipan@unidxswnc.org' 
-      : 'Rball@unidxSwnc.org';
+    const recipientEmail =
+      recipient === "nita" ? "Nlipan@unidxswnc.org" : "Rball@unidxSwnc.org";
 
     // Crear el contenido del email en HTML
     const emailBody = `
@@ -288,7 +287,9 @@ export async function POST(request: Request) {
                   </div>
                 </div>
 
-                ${phone ? `
+                ${
+                  phone
+                    ? `
                 <!-- Teléfono -->
                 <div class="info-row">
                   <div class="icon">
@@ -301,7 +302,9 @@ export async function POST(request: Request) {
                     <div class="value">${phone}</div>
                   </div>
                 </div>
-                ` : ''}
+                `
+                    : ""
+                }
 
                 <!-- Asunto -->
                 <div class="info-row">
@@ -327,7 +330,7 @@ export async function POST(request: Request) {
                   </div>
                   <div class="info-content">
                     <div class="label">Mensaje</div>
-                    <div class="message-box">${message.replace(/\n/g, '<br>')}</div>
+                    <div class="message-box">${message.replace(/\n/g, "<br>")}</div>
                   </div>
                 </div>
               </div>
@@ -364,32 +367,32 @@ export async function POST(request: Request) {
       replyTo: email, // Para que puedas responder directamente al usuario
     });
 
-    console.log('Email sent successfully via Resend');
+    console.log("Email sent successfully via Resend");
 
-    return NextResponse.json({ 
-      success: true, 
-      data: result.data 
+    return NextResponse.json({
+      success: true,
+      data: result.data,
     });
-
   } catch (error) {
-    console.error('Error sending email:', error);
-    
+    console.error("Error sending email:", error);
+
     // Proporcionar más detalles del error
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    const errorMessage =
+      error instanceof Error ? error.message : "Unknown error";
     const errorStack = error instanceof Error ? error.stack : undefined;
-    
-    console.error('Error details:', {
+
+    console.error("Error details:", {
       message: errorMessage,
       stack: errorStack,
-      error: error
+      error: error,
     });
-    
+
     return NextResponse.json(
-      { 
-        error: 'Failed to send email',
-        details: errorMessage 
+      {
+        error: "Failed to send email",
+        details: errorMessage,
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

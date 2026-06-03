@@ -1,21 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
-import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import {
-  Heart,
-  Users,
-  Target,
-  Eye,
-  Sparkles,
-  HandHeart,
-  Scale,
-  UserCheck,
   Award,
-  Zap,
+  Eye,
+  HandHeart,
+  Heart,
   Lightbulb,
+  Scale,
+  Sparkles,
+  Target,
+  UserCheck,
+  Users,
+  Zap,
 } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
+import React, { useState } from "react";
 
 export default function About() {
   const t = useTranslations("about");
@@ -358,9 +358,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             {t("cta.title")}
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            {t("cta.subtitle")}
-          </p>
+          <p className="text-xl text-gray-600 mb-8">{t("cta.subtitle")}</p>
           <motion.button
             onClick={() => setIsDialogOpen(true)}
             whileHover={{ scale: 1.05 }}
@@ -374,7 +372,7 @@ export default function About() {
 
       {/* Dialog Modal */}
       {isDialogOpen && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
           onClick={() => setIsDialogOpen(false)}
         >
@@ -411,9 +409,7 @@ export default function About() {
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
                 {tDialog("getInvolved.title")}
               </h3>
-              <p className="text-gray-600">
-                {tDialog("getInvolved.subtitle")}
-              </p>
+              <p className="text-gray-600">{tDialog("getInvolved.subtitle")}</p>
             </div>
 
             <div className="space-y-4">

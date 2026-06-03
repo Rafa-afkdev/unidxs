@@ -1,10 +1,22 @@
 "use client";
 
-import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { useTranslations, useLocale } from "next-intl";
+import {
+  BookOpen,
+  Car,
+  CheckCircle2,
+  FileCheck,
+  GraduationCap,
+  HandHelping,
+  Heart,
+  MessageCircle,
+  Shield,
+  Shirt,
+  Users,
+} from "lucide-react";
 import Link from "next/link";
-import { GraduationCap, Heart, HandHelping, Shirt, Users, Car, BookOpen, FileCheck, CheckCircle2, Shield, MessageCircle } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
+import React, { useState } from "react";
 
 export default function Services() {
   const t = useTranslations("services");
@@ -231,7 +243,11 @@ export default function Services() {
                 <motion.div
                   key={index}
                   variants={fadeInUp}
-                  whileHover={{ y: -8, scale: 1.02, transition: { duration: 0.3 } }}
+                  whileHover={{
+                    y: -8,
+                    scale: 1.02,
+                    transition: { duration: 0.3 },
+                  }}
                   className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all group border-t-4 border-transparent hover:border-purple-500"
                 >
                   <div
@@ -281,11 +297,11 @@ export default function Services() {
                 <BookOpen className="w-12 h-12 text-white" />
               </div>
             </motion.div>
-            
+
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 drop-shadow-2xl">
               {t("education.title")}
             </h2>
-            
+
             <div className="bg-white/10 backdrop-blur-md border-2 border-white/30 rounded-3xl p-10 md:p-16 hover:bg-white/20 transition-all duration-500 shadow-2xl">
               <p className="text-xl md:text-2xl text-white/95 leading-relaxed font-light">
                 {t("education.description")}
@@ -341,7 +357,7 @@ export default function Services() {
                   <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
                     {t("simplifiedProcedures.description")}
                   </h3>
-                  
+
                   {/* Items List */}
                   <div className="space-y-4">
                     <motion.div
@@ -454,34 +470,32 @@ export default function Services() {
         </div>
       </section>
 
-            <section className="py-20 px-4 bg-gradient-to-br from-purple-100 via-pink-50 to-orange-50">
-              <motion.div
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                variants={fadeInUp}
-                className="max-w-4xl mx-auto text-center"
-              >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  {t("cta.title")}
-                </h2>
-                <p className="text-xl text-gray-600 mb-8">
-                  {t("cta.subtitle")}
-                </p>
-                <motion.button
-                  onClick={() => setIsDialogOpen(true)}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
-                >
-                  {t("cta.button")}
-                </motion.button>
-              </motion.div>
-            </section>
+      <section className="py-20 px-4 bg-gradient-to-br from-purple-100 via-pink-50 to-orange-50">
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="max-w-4xl mx-auto text-center"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            {t("cta.title")}
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">{t("cta.subtitle")}</p>
+          <motion.button
+            onClick={() => setIsDialogOpen(true)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
+          >
+            {t("cta.button")}
+          </motion.button>
+        </motion.div>
+      </section>
 
       {/* Dialog Modal */}
       {isDialogOpen && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
           onClick={() => setIsDialogOpen(false)}
         >
@@ -518,9 +532,7 @@ export default function Services() {
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
                 {tDialog("getInvolved.title")}
               </h3>
-              <p className="text-gray-600">
-                {tDialog("getInvolved.subtitle")}
-              </p>
+              <p className="text-gray-600">{tDialog("getInvolved.subtitle")}</p>
             </div>
 
             <div className="space-y-4">

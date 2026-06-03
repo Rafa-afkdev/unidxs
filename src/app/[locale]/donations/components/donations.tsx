@@ -75,7 +75,8 @@ export default function Donations() {
       title: t("waysToGive.online.title"),
       description: t("waysToGive.online.description"),
       buttonText: t("waysToGive.online.button"),
-      action: "https://www.zeffy.com/en-US/donation-form/donate-to-make-a-difference-19304",
+      action:
+        "https://www.zeffy.com/en-US/donation-form/donate-to-make-a-difference-19304",
       color: "from-blue-500 to-purple-500",
     },
     {
@@ -161,7 +162,6 @@ export default function Donations() {
               <Heart className="w-5 h-5" />
               {t("hero.donateButton")}
             </a>
-           
           </motion.div>
         </motion.div>
       </section>
@@ -302,7 +302,11 @@ export default function Donations() {
                         if (way.action.startsWith("mailto:")) {
                           window.location.href = way.action;
                         } else {
-                          window.open(way.action, "_blank", "noopener,noreferrer");
+                          window.open(
+                            way.action,
+                            "_blank",
+                            "noopener,noreferrer",
+                          );
                         }
                       }
                     }}
@@ -328,30 +332,28 @@ export default function Donations() {
         </div>
       </section>
 
-        <section className="py-20 px-4 bg-gradient-to-br from-purple-100 via-pink-50 to-orange-50">
-                    <motion.div
-                      initial="initial"
-                      whileInView="animate"
-                      viewport={{ once: true }}
-                      variants={fadeInUp}
-                      className="max-w-4xl mx-auto text-center"
-                    >
-                      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                        {t("cta.title")}
-                      </h2>
-                      <p className="text-xl text-gray-600 mb-8">
-                        {t("cta.subtitle")}
-                      </p>
-                      <motion.button
-                        onClick={() => setIsDialogOpen(true)}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
-                      >
-                        {t("cta.button")}
-                      </motion.button>
-                    </motion.div>
-                  </section>
+      <section className="py-20 px-4 bg-gradient-to-br from-purple-100 via-pink-50 to-orange-50">
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="max-w-4xl mx-auto text-center"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            {t("cta.title")}
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">{t("cta.subtitle")}</p>
+          <motion.button
+            onClick={() => setIsDialogOpen(true)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
+          >
+            {t("cta.button")}
+          </motion.button>
+        </motion.div>
+      </section>
 
       {/* Impact Section with Fondo3-Donation.webp */}
       <section className="relative py-32 px-4 overflow-hidden">
@@ -388,7 +390,7 @@ export default function Donations() {
 
       {/* Dialog Modal */}
       {isDialogOpen && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
           onClick={() => setIsDialogOpen(false)}
         >
@@ -472,7 +474,6 @@ export default function Donations() {
           </motion.div>
         </div>
       )}
-
     </div>
   );
 }

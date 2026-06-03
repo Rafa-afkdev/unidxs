@@ -576,5 +576,48 @@
         "content": "For questions about these Terms of Use, please contact us at (828) 242-7345 or visit our office in Western North Carolina."
       }
     }
+  },
+  "notices": {
+    "title": "Notice Board",
+    "subtitle": "Stay informed about the latest news, events, and important announcements for our community.",
+    "backToMain": "Back to main site",
+    "whatsappChannel": "Join our WhatsApp Channel",
+    "whatsappDesc": "Get instant notifications and stay updated with real-time events.",
+    "whatsappBtn": "Join Channel",
+    "searchPlaceholder": "Search notices...",
+    "noResults": "No notices found matching your search.",
+    "categories": {
+      "all": "All",
+      "pantry": "Pantry",
+      "education": "Education",
+      "events": "Events",
+      "general": "General"
+    },
+    "items": {
+      "notice1": {
+        "title": "Open Pantry Hours Change",
+        "description": "Starting next week, the Open Pantry on Wednesdays will begin at 2:00 PM and end at 6:00 PM. Please make note of this change to plan your visit.",
+        "date": "May 29, 2026",
+        "category": "pantry"
+      },
+      "notice2": {
+        "title": "June Healthy Cooking Classes",
+        "description": "Registrations for June cooking classes are now open! Learn to prepare nutritious and delicious dishes. Check the calendar in the warehouse for exact dates.",
+        "date": "May 25, 2026",
+        "category": "events"
+      },
+      "notice3": {
+        "title": "Volunteers Needed for Summer",
+        "description": "We need volunteer hands to help sort food and assist in the warehouse. If you have a few free hours a week, write to us at bodega@unidxswnc.org!",
+        "date": "May 20, 2026",
+        "category": "general"
+      },
+      "notice4": {
+        "title": "Latino Leaders Analyze Community Challenges in Washington",
+        "description": "More than 150 community leaders, activists, and directors of Hispanic organizations from across the country, including the delegation of Acción Hispana and Qué Pasa, are participating in the Hispanic Federation National Summit in Washington D.C. Attendees are meeting with federal lawmakers, including North Carolina Senators Thom Tillis and Ted Budd, to discuss key priorities such as immigration, education, healthcare, civil rights, and economic development to promote equitable public policies for Latino families.",
+        "date": "June 2, 2026",
+        "category": "general"
+      }
+    }
   }
 }

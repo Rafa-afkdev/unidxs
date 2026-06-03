@@ -7,7 +7,12 @@ interface SendEmailOptions {
   replyTo?: string;
 }
 
-export async function SendEmail({ sendTo, subject, body, replyTo }: SendEmailOptions) {
+export async function SendEmail({
+  sendTo,
+  subject,
+  body,
+  replyTo,
+}: SendEmailOptions) {
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -22,7 +27,7 @@ export async function SendEmail({ sendTo, subject, body, replyTo }: SendEmailOpt
       html: body,
       replyTo: replyTo,
     });
-    
+
     if (error) {
       console.error("Error sending email with Resend:", error);
       throw new Error(error.message || "Failed to send email");

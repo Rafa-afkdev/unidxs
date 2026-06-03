@@ -19,7 +19,7 @@
 //     const authRoutes = ["/", "/auth", "/forgot-password"];
 //     const isInAuthRoute = authRoutes.includes(routeWithoutLocale);
 //     const isProtectedRoute = routeWithoutLocale.startsWith("/dashboard");
-    
+
 //     return { routeWithoutLocale, isInAuthRoute, isProtectedRoute };
 //   }, [pathName]);
 

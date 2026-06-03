@@ -1,6 +1,5 @@
 "use client";
 
-import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
 import {
   Calendar,
@@ -15,6 +14,7 @@ import {
   Users,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export default function WarehouseComponent() {
   const t = useTranslations("warehouse");
@@ -174,7 +174,9 @@ export default function WarehouseComponent() {
                     {t("calendar.title")}
                   </h3>
                   <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 text-white/90 text-sm mb-4">
-                    <span className="font-semibold">{t("calendar.stayTuned")}</span>
+                    <span className="font-semibold">
+                      {t("calendar.stayTuned")}
+                    </span>
                     <span className="opacity-60">•</span>
                     <a
                       href="https://whatsapp.com/channel/0029Vb6kmSUFy72JtZoyDf3O"
@@ -229,8 +231,19 @@ export default function WarehouseComponent() {
 
             {/* Days of Week - Translucent Styling */}
             <div className="grid grid-cols-7 bg-slate-100/80 backdrop-blur-sm rounded-xl py-3 mb-4 shadow-sm px-2 gap-2">
-              {["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"].map((day) => (
-                <div key={day} className="text-center font-extrabold text-slate-700 text-[10px] md:text-xs uppercase tracking-wide">
+              {[
+                "sunday",
+                "monday",
+                "tuesday",
+                "wednesday",
+                "thursday",
+                "friday",
+                "saturday",
+              ].map((day) => (
+                <div
+                  key={day}
+                  className="text-center font-extrabold text-slate-700 text-[10px] md:text-xs uppercase tracking-wide"
+                >
                   {t(`calendar.days.${day}`)}
                 </div>
               ))}
@@ -239,11 +252,15 @@ export default function WarehouseComponent() {
             {/* Location Info Header Bar */}
             <div className="bg-gradient-to-r from-indigo-50/50 via-purple-50/30 to-indigo-50/50 px-6 py-3.5 rounded-xl border border-indigo-100/50 flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-6 shadow-sm">
               <div className="flex items-center gap-2 text-indigo-950 font-semibold text-xs md:text-sm">
-                <span className="flex items-center justify-center w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 text-xs">📍</span>
+                <span className="flex items-center justify-center w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 text-xs">
+                  📍
+                </span>
                 <span>{t("calendar.events.address")}</span>
               </div>
               <div className="flex items-center gap-2 text-indigo-950 font-semibold text-xs md:text-sm">
-                <span className="flex items-center justify-center w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 text-xs">📞</span>
+                <span className="flex items-center justify-center w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 text-xs">
+                  📞
+                </span>
                 <span>(828) 242-7345</span>
               </div>
             </div>
@@ -254,13 +271,19 @@ export default function WarehouseComponent() {
               {/* Sunday May 31 - Location Card in Grid */}
               <div className="bg-gradient-to-br from-slate-50 to-indigo-50/30 border border-slate-100 rounded-2xl p-3 flex flex-col justify-center items-center text-center min-h-[110px] shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <MapPin className="w-5 h-5 text-indigo-600 mb-1" />
-                <span className="text-[10px] md:text-xs font-bold leading-tight text-slate-800">503 Mill St.,</span>
-                <span className="text-[9px] md:text-[10px] text-slate-500 leading-tight">Sylva NC 28779</span>
+                <span className="text-[10px] md:text-xs font-bold leading-tight text-slate-800">
+                  503 Mill St.,
+                </span>
+                <span className="text-[9px] md:text-[10px] text-slate-500 leading-tight">
+                  Sylva NC 28779
+                </span>
               </div>
 
               {/* Monday - June 1 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-indigo-100 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] group">
-                <div className="font-extrabold text-base md:text-lg text-slate-700 group-hover:text-indigo-600 transition-colors">1</div>
+                <div className="font-extrabold text-base md:text-lg text-slate-700 group-hover:text-indigo-600 transition-colors">
+                  1
+                </div>
                 <div className="text-[9px] md:text-[10px] text-indigo-600/80 font-bold mt-auto flex items-center gap-1 bg-indigo-50/60 py-1 px-1.5 rounded-lg border border-indigo-100/30">
                   <span>📞</span>
                   <span className="truncate">(828) 242-7345</span>
@@ -269,13 +292,17 @@ export default function WarehouseComponent() {
 
               {/* Tuesday - June 2 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">2</div>
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  2
+                </div>
               </div>
 
               {/* Wednesday - June 3 - Open Pantry + Cooking Class */}
               <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">3</div>
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    3
+                  </div>
                   <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
                 </div>
                 <div className="space-y-1.5 mt-2">
@@ -283,13 +310,17 @@ export default function WarehouseComponent() {
                     <span className="text-[9px] md:text-[10px] text-emerald-800 font-extrabold leading-tight">
                       {t("calendar.events.openPantry")}
                     </span>
-                    <span className="text-[8px] md:text-[9px] text-emerald-600 font-bold">2-6pm</span>
+                    <span className="text-[8px] md:text-[9px] text-emerald-600 font-bold">
+                      2-6pm
+                    </span>
                   </div>
                   <div className="flex flex-col bg-purple-500/10 rounded-lg p-1 border border-purple-500/20">
                     <span className="text-[9px] md:text-[10px] text-purple-800 font-extrabold leading-tight">
                       {t("calendar.events.cookingClasses")}
                     </span>
-                    <span className="text-[8px] md:text-[9px] text-purple-600 font-bold">11am-12:30pm</span>
+                    <span className="text-[8px] md:text-[9px] text-purple-600 font-bold">
+                      11am-12:30pm
+                    </span>
                   </div>
                 </div>
               </div>
@@ -297,62 +328,86 @@ export default function WarehouseComponent() {
               {/* Thursday - June 4 - Open Pantry */}
               <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">4</div>
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    4
+                  </div>
                   <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
                 </div>
                 <div className="mt-2 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
                   <span className="text-[9px] md:text-[10px] text-emerald-800 font-extrabold leading-tight">
                     {t("calendar.events.openPantry")}
                   </span>
-                  <span className="text-[8px] md:text-[9px] text-emerald-600 font-bold">1-4pm</span>
+                  <span className="text-[8px] md:text-[9px] text-emerald-600 font-bold">
+                    1-4pm
+                  </span>
                 </div>
               </div>
 
               {/* Friday - June 5 - Cooking Class */}
               <div className="bg-gradient-to-br from-purple-50/60 to-white rounded-2xl border border-purple-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-purple-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">5</div>
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    5
+                  </div>
                   <span className="flex h-2 w-2 rounded-full bg-purple-500 shadow-md shadow-purple-200" />
                 </div>
                 <div className="mt-2 flex flex-col bg-purple-500/10 rounded-lg p-1.5 border border-purple-500/20">
                   <span className="text-[9px] md:text-[10px] text-purple-800 font-extrabold leading-tight">
                     {t("calendar.events.cookingClasses")}
                   </span>
-                  <span className="text-[8px] md:text-[9px] text-purple-600 font-bold">4-5:30pm</span>
+                  <span className="text-[8px] md:text-[9px] text-purple-600 font-bold">
+                    4-5:30pm
+                  </span>
                 </div>
               </div>
 
               {/* Saturday - June 6 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">6</div>
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  6
+                </div>
               </div>
 
               {/* Week 2 */}
               {/* Sunday - June 7 - Social Media */}
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50/30 border border-blue-100 rounded-2xl p-3 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] text-center">
                 <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">7</div>
-                  <span className="text-[8px] font-bold text-blue-600 bg-blue-100/50 px-1.5 py-0.5 rounded-full">Social</span>
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    7
+                  </div>
+                  <span className="text-[8px] font-bold text-blue-600 bg-blue-100/50 px-1.5 py-0.5 rounded-full">
+                    Social
+                  </span>
                 </div>
                 <div className="mt-2 space-y-1">
                   <div className="flex justify-center gap-1.5 text-[9px] font-bold text-blue-600/90">
                     <span className="bg-blue-100/30 px-1 rounded">FB</span>
-                    <span className="bg-pink-100/30 px-1 rounded text-pink-600">IG</span>
-                    <span className="bg-green-100/30 px-1 rounded text-green-600">WA</span>
+                    <span className="bg-pink-100/30 px-1 rounded text-pink-600">
+                      IG
+                    </span>
+                    <span className="bg-green-100/30 px-1 rounded text-green-600">
+                      WA
+                    </span>
                   </div>
-                  <div className="text-[9px] md:text-[10px] text-indigo-900 font-black tracking-tight">@unidxswnc</div>
+                  <div className="text-[9px] md:text-[10px] text-indigo-900 font-black tracking-tight">
+                    @unidxswnc
+                  </div>
                 </div>
               </div>
 
               {/* Monday - June 8 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">8</div>
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  8
+                </div>
               </div>
 
               {/* Tuesday - June 9 - Closed */}
               <div className="bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">9</div>
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    9
+                  </div>
                   <span className="text-[9px] font-bold text-red-600 bg-red-100 px-1.5 py-0.5 rounded-full">
                     Closed
                   </span>
@@ -365,7 +420,9 @@ export default function WarehouseComponent() {
               {/* Wednesday - June 10 - Closed + Cooking Class */}
               <div className="bg-gradient-to-br from-red-50/40 via-white to-purple-50/40 rounded-2xl border border-purple-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-purple-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">10</div>
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    10
+                  </div>
                   <span className="text-[9px] font-bold text-red-600 bg-red-100 px-1.5 py-0.5 rounded-full">
                     Closed
                   </span>
@@ -378,7 +435,9 @@ export default function WarehouseComponent() {
                     <span className="text-[8px] md:text-[9px] text-purple-800 font-extrabold leading-tight">
                       {t("calendar.events.cookingClasses")}
                     </span>
-                    <span className="text-[7px] md:text-[8px] text-purple-600 font-bold">11am-12:30pm</span>
+                    <span className="text-[7px] md:text-[8px] text-purple-600 font-bold">
+                      11am-12:30pm
+                    </span>
                   </div>
                 </div>
               </div>
@@ -386,7 +445,9 @@ export default function WarehouseComponent() {
               {/* Thursday - June 11 - Closed */}
               <div className="bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">11</div>
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    11
+                  </div>
                   <span className="text-[9px] font-bold text-red-600 bg-red-100 px-1.5 py-0.5 rounded-full">
                     Closed
                   </span>
@@ -399,87 +460,118 @@ export default function WarehouseComponent() {
               {/* Friday - June 12 - Cooking Class */}
               <div className="bg-gradient-to-br from-purple-50/60 to-white rounded-2xl border border-purple-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-purple-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">12</div>
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    12
+                  </div>
                   <span className="flex h-2 w-2 rounded-full bg-purple-500 shadow-md shadow-purple-200" />
                 </div>
                 <div className="mt-2 flex flex-col bg-purple-500/10 rounded-lg p-1.5 border border-purple-500/20">
                   <span className="text-[9px] md:text-[10px] text-purple-800 font-extrabold leading-tight">
                     {t("calendar.events.cookingClasses")}
                   </span>
-                  <span className="text-[8px] md:text-[9px] text-purple-600 font-bold">4-5:30pm</span>
+                  <span className="text-[8px] md:text-[9px] text-purple-600 font-bold">
+                    4-5:30pm
+                  </span>
                 </div>
               </div>
 
               {/* Saturday - June 13 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">13</div>
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  13
+                </div>
               </div>
 
               {/* Week 3 */}
               {/* Sunday - June 14 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">14</div>
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  14
+                </div>
               </div>
 
               {/* Monday - June 15 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">15</div>
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  15
+                </div>
               </div>
 
               {/* Tuesday - June 16 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">16</div>
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  16
+                </div>
               </div>
 
               {/* Wednesday - June 17 - Open Pantry */}
               <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">17</div>
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    17
+                  </div>
                   <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
                 </div>
                 <div className="mt-2 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
                   <span className="text-[9px] md:text-[10px] text-emerald-800 font-extrabold leading-tight">
                     {t("calendar.events.openPantry")}
                   </span>
-                  <span className="text-[8px] md:text-[9px] text-emerald-600 font-bold">2-6pm</span>
+                  <span className="text-[8px] md:text-[9px] text-emerald-600 font-bold">
+                    2-6pm
+                  </span>
                 </div>
               </div>
 
               {/* Thursday - June 18 - Open Pantry */}
               <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">18</div>
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    18
+                  </div>
                   <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
                 </div>
                 <div className="mt-2 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
                   <span className="text-[9px] md:text-[10px] text-emerald-800 font-extrabold leading-tight">
                     {t("calendar.events.openPantry")}
                   </span>
-                  <span className="text-[8px] md:text-[9px] text-emerald-600 font-bold">1-4pm</span>
+                  <span className="text-[8px] md:text-[9px] text-emerald-600 font-bold">
+                    1-4pm
+                  </span>
                 </div>
               </div>
 
               {/* Friday - June 19 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">19</div>
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  19
+                </div>
               </div>
 
               {/* Saturday - June 20 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">20</div>
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  20
+                </div>
               </div>
 
               {/* Week 4 */}
               {/* Sunday - June 21 - MANNA Foodbank */}
               <div className="bg-gradient-to-br from-amber-50 to-orange-50/30 border border-amber-100 rounded-2xl p-3 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-amber-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] text-left">
                 <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">21</div>
-                  <span className="text-[8px] font-bold text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded-full">MANNA</span>
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    21
+                  </div>
+                  <span className="text-[8px] font-bold text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded-full">
+                    MANNA
+                  </span>
                 </div>
                 <div className="mt-1.5 space-y-1">
-                  <div className="text-[9px] font-extrabold text-amber-800 leading-tight">MANNA FOODBANK</div>
+                  <div className="text-[9px] font-extrabold text-amber-800 leading-tight">
+                    MANNA FOODBANK
+                  </div>
                   <div className="text-[8px] text-amber-900/90 leading-tight">
-                    Helpline: <span className="font-bold text-[9px]">(828) 290-9749</span>
+                    Helpline:{" "}
+                    <span className="font-bold text-[9px]">(828) 290-9749</span>
                   </div>
                   <a
                     href="https://mannafoodbank.org/find-food/"
@@ -494,13 +586,17 @@ export default function WarehouseComponent() {
 
               {/* Monday - June 22 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">22</div>
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  22
+                </div>
               </div>
 
               {/* Tuesday - June 23 - Closed */}
               <div className="bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">23</div>
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    23
+                  </div>
                   <span className="text-[9px] font-bold text-red-600 bg-red-100 px-1.5 py-0.5 rounded-full">
                     Closed
                   </span>
@@ -513,7 +609,9 @@ export default function WarehouseComponent() {
               {/* Wednesday - June 24 - Closed */}
               <div className="bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">24</div>
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    24
+                  </div>
                   <span className="text-[9px] font-bold text-red-600 bg-red-100 px-1.5 py-0.5 rounded-full">
                     Closed
                   </span>
@@ -526,7 +624,9 @@ export default function WarehouseComponent() {
               {/* Thursday - June 25 - Closed */}
               <div className="bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">25</div>
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    25
+                  </div>
                   <span className="text-[9px] font-bold text-red-600 bg-red-100 px-1.5 py-0.5 rounded-full">
                     Closed
                   </span>
@@ -538,28 +638,38 @@ export default function WarehouseComponent() {
 
               {/* Friday - June 26 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">26</div>
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  26
+                </div>
               </div>
 
               {/* Saturday - June 27 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">27</div>
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  27
+                </div>
               </div>
 
               {/* Week 5 */}
               {/* Sunday - June 28 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">28</div>
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  28
+                </div>
               </div>
 
               {/* Monday - June 29 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">29</div>
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  29
+                </div>
               </div>
 
               {/* Tuesday - June 30 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">30</div>
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  30
+                </div>
               </div>
 
               {/* Cooking Classes Summary Spanning Last 4 Columns */}
@@ -759,7 +869,6 @@ export default function WarehouseComponent() {
           </motion.div>
         </div>
       </section>
-
 
       {/* Map / Location Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50">

@@ -1,41 +1,51 @@
-"use client"
-import { motion } from 'framer-motion'
-import { Briefcase, Heart, Users } from 'lucide-react'
-import { useTranslations } from 'next-intl'
-import Image from 'next/image'
-import { useState } from 'react'
+"use client";
+import { motion } from "framer-motion";
+import { Briefcase, Heart, Users } from "lucide-react";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { useState } from "react";
 
 export default function Team() {
-  const t = useTranslations('team')
-  const tAbout = useTranslations('about')
-  const tDialog = useTranslations('dialog')
-  const [isDialogOpen, setIsDialogOpen] = useState(false)
+  const t = useTranslations("team");
+  const tAbout = useTranslations("about");
+  const tDialog = useTranslations("dialog");
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const boardMembers = [
-    { id: 'victoria', hasImage: false },
-    { id: 'edithBoard', hasImage: false },
-    { id: 'valeria', hasImage: false }
-  ]
+    { id: "victoria", hasImage: false },
+    { id: "edithBoard", hasImage: false },
+    { id: "valeria", hasImage: false },
+  ];
 
   const teamMembers = [
-    { id: 'ricardo', image: '/Ricardo.png', hasImage: true },
-    { id: 'paul', image: '/Paul.png', hasImage: true },
-    { id: 'sarahWest', image: '/Sarah-West.png', hasImage: true },
-    { id: 'sarah', image: '/Sarah.png', hasImage: true },
-    { id: 'esteban', image: '/JuanEs.webp', hasImage: true }
-  ]
+    { id: "ricardo", image: "/Ricardo.png", hasImage: true },
+    { id: "paul", image: "/Paul.png", hasImage: true },
+    { id: "sarahWest", image: "/Sarah-West.png", hasImage: true },
+    { id: "sarah", image: "/Sarah.png", hasImage: true },
+    { id: "esteban", image: "/JuanEs.webp", hasImage: true },
+  ];
 
-  const volunteers: { id: string; hasImage?: boolean }[] = []
+  const volunteers: { id: string; hasImage?: boolean }[] = [];
 
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  }
+    transition: { duration: 0.6 },
+  };
 
-  const BoardMemberCard = ({ member, index }: { member: any, index: number }) => {
-    const initials = t(`members.${member.id}.name`).split(' ').map((n: string) => n[0]).join('').slice(0, 2)
-    const isEven = index % 2 === 0
+  const BoardMemberCard = ({
+    member,
+    index,
+  }: {
+    member: any;
+    index: number;
+  }) => {
+    const initials = t(`members.${member.id}.name`)
+      .split(" ")
+      .map((n: string) => n[0])
+      .join("")
+      .slice(0, 2);
+    const isEven = index % 2 === 0;
 
     return (
       <motion.div
@@ -46,21 +56,27 @@ export default function Team() {
         className="group"
       >
         <div className="bg-white rounded-2xl p-5 lg:p-6 shadow-lg hover:shadow-xl transition-all duration-500">
-          <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-5 lg:gap-6`}>
+          <div
+            className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} items-center gap-5 lg:gap-6`}
+          >
             {/* Avatar */}
             <div className="relative flex-shrink-0">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full blur-sm opacity-60 group-hover:opacity-90 transition-opacity"></div>
               <div className="relative bg-gradient-to-br from-purple-500 to-pink-500 p-0.5 rounded-full">
                 <div className="bg-white p-0.5 rounded-full">
                   <div className="w-32 h-32 lg:w-40 lg:h-40 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center ring-2 ring-white">
-                    <span className="text-4xl lg:text-5xl font-bold text-white">{initials}</span>
+                    <span className="text-4xl lg:text-5xl font-bold text-white">
+                      {initials}
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Info */}
-            <div className={`flex-1 space-y-2 ${isEven ? 'lg:text-left' : 'lg:text-right'} text-center`}>
+            <div
+              className={`flex-1 space-y-2 ${isEven ? "lg:text-left" : "lg:text-right"} text-center`}
+            >
               <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors">
                 {t(`members.${member.id}.name`)}
               </h3>
@@ -74,11 +90,17 @@ export default function Team() {
           </div>
         </div>
       </motion.div>
-    )
-  }
+    );
+  };
 
-  const TeamMemberCard = ({ member, index }: { member: any, index: number }) => {
-    const isEven = index % 2 === 0
+  const TeamMemberCard = ({
+    member,
+    index,
+  }: {
+    member: any;
+    index: number;
+  }) => {
+    const isEven = index % 2 === 0;
 
     return (
       <motion.div
@@ -89,7 +111,9 @@ export default function Team() {
         className="group"
       >
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 lg:p-6 hover:bg-white/20 transition-all duration-500">
-          <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-5 lg:gap-6`}>
+          <div
+            className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} items-center gap-5 lg:gap-6`}
+          >
             {/* Image */}
             <div className="relative flex-shrink-0">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-purple-500 to-green-500 rounded-full blur-sm opacity-60 group-hover:opacity-90 transition-opacity"></div>
@@ -109,7 +133,9 @@ export default function Team() {
             </div>
 
             {/* Info */}
-            <div className={`flex-1 space-y-2 ${isEven ? 'lg:text-left' : 'lg:text-right'} text-center`}>
+            <div
+              className={`flex-1 space-y-2 ${isEven ? "lg:text-left" : "lg:text-right"} text-center`}
+            >
               <h3 className="text-2xl lg:text-3xl font-bold text-white group-hover:text-purple-300 transition-colors">
                 {t(`members.${member.id}.name`)}
               </h3>
@@ -123,27 +149,31 @@ export default function Team() {
           </div>
         </div>
       </motion.div>
-    )
-  }
+    );
+  };
 
   const VolunteerCard = ({ member }: { member: any }) => {
-    if (member.id === 'cristela') {
+    if (member.id === "cristela") {
       return (
         <div className="max-w-3xl mx-auto mb-10 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-2">
-            {t('members.cristela.name')}
+            {t("members.cristela.name")}
           </h3>
           <p className="text-pink-600 font-medium mb-4">
-            {t('members.cristela.role')}
+            {t("members.cristela.role")}
           </p>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            {t('members.cristela.description')}
+            {t("members.cristela.description")}
           </p>
         </div>
-      )
+      );
     }
 
-    const initials = t(`members.${member.id}.name`).split(' ').map((n: string) => n[0]).join('').slice(0, 2)
+    const initials = t(`members.${member.id}.name`)
+      .split(" ")
+      .map((n: string) => n[0])
+      .join("")
+      .slice(0, 2);
 
     return (
       <motion.div
@@ -151,21 +181,25 @@ export default function Team() {
         whileInView="animate"
         viewport={{ once: true }}
         variants={fadeInUp}
-        className={`rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group ${member.id === 'cristela' ? 'bg-gradient-to-br from-pink-50 to-orange-50 border-2 border-pink-200' : 'bg-white'}`}
+        className={`rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group ${member.id === "cristela" ? "bg-gradient-to-br from-pink-50 to-orange-50 border-2 border-pink-200" : "bg-white"}`}
       >
         <div className="flex flex-col items-center text-center">
           <div className="relative mb-4">
-            <div className={`w-32 h-32 rounded-full flex items-center justify-center ring-4 transition-all ${member.id === 'cristela' ? 'bg-gradient-to-br from-pink-600 to-orange-500 ring-pink-300 group-hover:ring-pink-400' : 'bg-gradient-to-br from-pink-500 to-orange-500 ring-pink-200 group-hover:ring-pink-400'}`}>
+            <div
+              className={`w-32 h-32 rounded-full flex items-center justify-center ring-4 transition-all ${member.id === "cristela" ? "bg-gradient-to-br from-pink-600 to-orange-500 ring-pink-300 group-hover:ring-pink-400" : "bg-gradient-to-br from-pink-500 to-orange-500 ring-pink-200 group-hover:ring-pink-400"}`}
+            >
               <span className="text-4xl font-bold text-white">{initials}</span>
             </div>
           </div>
           <h3 className="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-2">
             {t(`members.${member.id}.name`)}
-            {member.id === 'cristela' && (
-              <span className="text-xs font-semibold px-2 py-1 rounded-full bg-pink-100 text-pink-700 border border-pink-200">{t(`members.${member.id}.role`)}</span>
+            {member.id === "cristela" && (
+              <span className="text-xs font-semibold px-2 py-1 rounded-full bg-pink-100 text-pink-700 border border-pink-200">
+                {t(`members.${member.id}.role`)}
+              </span>
             )}
           </h3>
-          {member.id !== 'cristela' && (
+          {member.id !== "cristela" && (
             <p className="text-sm font-semibold text-pink-600 uppercase tracking-wide mb-3">
               {t(`members.${member.id}.role`)}
             </p>
@@ -175,8 +209,8 @@ export default function Team() {
           </p>
         </div>
       </motion.div>
-    )
-  }
+    );
+  };
 
   return (
     <main className="min-h-screen bg-white">
@@ -197,10 +231,10 @@ export default function Team() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
-              {t('title')}
+              {t("title")}
             </h1>
             <p className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto drop-shadow-lg">
-              {t('subtitle')}
+              {t("subtitle")}
             </p>
           </motion.div>
         </div>
@@ -220,10 +254,10 @@ export default function Team() {
               <Briefcase className="w-8 h-8 text-white" />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              {t('boardTitle')}
+              {t("boardTitle")}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {t('boardSubtitle')}
+              {t("boardSubtitle")}
             </p>
           </motion.div>
 
@@ -258,10 +292,10 @@ export default function Team() {
               <Users className="w-8 h-8 text-white" />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-2xl">
-              {t('teamTitle')}
+              {t("teamTitle")}
             </h2>
             <p className="text-xl text-white/95 max-w-2xl mx-auto drop-shadow-lg">
-              {t('teamSubtitle')}
+              {t("teamSubtitle")}
             </p>
           </motion.div>
 
@@ -287,7 +321,7 @@ export default function Team() {
               <Heart className="w-8 h-8 text-white" />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              {t('volunteersTitle')}
+              {t("volunteersTitle")}
             </h2>
           </motion.div>
 
@@ -306,10 +340,10 @@ export default function Team() {
             className="mt-12 max-w-4xl mx-auto text-center"
           >
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {tAbout('cta.title')}
+              {tAbout("cta.title")}
             </h3>
             <p className="text-lg md:text-xl text-gray-700 mb-8">
-              {tAbout('cta.subtitle')}
+              {tAbout("cta.subtitle")}
             </p>
             <motion.button
               onClick={() => setIsDialogOpen(true)}
@@ -317,7 +351,7 @@ export default function Team() {
               whileTap={{ scale: 0.95 }}
               className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
             >
-              {tAbout('cta.button')}
+              {tAbout("cta.button")}
             </motion.button>
           </motion.div>
         </div>
@@ -343,7 +377,8 @@ export default function Team() {
         >
           <div className="bg-white/10 backdrop-blur-md border border-white/20 px-10 py-8 rounded-3xl hover:bg-white/20 transition-all">
             <p className="text-2xl md:text-3xl font-bold text-white drop-shadow-lg">
-              Juntos construimos un futuro mejor • Together we build a better future
+              Juntos construimos un futuro mejor • Together we build a better
+              future
             </p>
           </div>
         </motion.div>
@@ -388,9 +423,7 @@ export default function Team() {
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
                 {tDialog("getInvolved.title")}
               </h3>
-              <p className="text-gray-600">
-                {tDialog("getInvolved.subtitle")}
-              </p>
+              <p className="text-gray-600">{tDialog("getInvolved.subtitle")}</p>
             </div>
 
             <div className="space-y-4">
@@ -436,5 +469,5 @@ export default function Team() {
         </div>
       )}
     </main>
-  )
+  );
 }

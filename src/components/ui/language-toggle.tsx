@@ -1,49 +1,48 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { Languages } from "lucide-react"
-import { useRouter, usePathname } from "@/i18n/routing"
-import { useParams } from "next/navigation"
-
-import { Button } from "@/components/ui/button"
+import { Languages } from "lucide-react";
+import { useParams } from "next/navigation";
+import * as React from "react";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
+import { usePathname, useRouter } from "@/i18n/routing";
 
 export function LanguageToggle() {
-  const router = useRouter()
-  const pathname = usePathname()
-  const params = useParams()
-  const currentLocale = params.locale as string
+  const router = useRouter();
+  const pathname = usePathname();
+  const params = useParams();
+  const currentLocale = params.locale as string;
 
   const switchLanguage = (locale: string) => {
-    router.replace(pathname, { locale })
-  }
+    router.replace(pathname, { locale });
+  };
 
   const getLanguageLabel = (locale: string) => {
     switch (locale) {
-      case 'en':
-        return 'English'
-      case 'es':
-        return 'Español'
+      case "en":
+        return "English";
+      case "es":
+        return "Español";
       default:
-        return locale.toUpperCase()
+        return locale.toUpperCase();
     }
-  }
+  };
 
   const getLanguageFlag = (locale: string) => {
     switch (locale) {
-      case 'en':
-        return '🇺🇸'
-      case 'es':
-        return '🇪🇸'
+      case "en":
+        return "🇺🇸";
+      case "es":
+        return "🇪🇸";
       default:
-        return '🌍'
+        return "🌍";
     }
-  }
+  };
 
   return (
     <DropdownMenu>
@@ -54,14 +53,14 @@ export function LanguageToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem 
+        <DropdownMenuItem
           onClick={() => switchLanguage("en")}
           className={currentLocale === "en" ? "bg-accent" : ""}
         >
           <span className="mr-2">🇺🇸</span>
           English
         </DropdownMenuItem>
-        <DropdownMenuItem 
+        <DropdownMenuItem
           onClick={() => switchLanguage("es")}
           className={currentLocale === "es" ? "bg-accent" : ""}
         >
@@ -70,5 +69,5 @@ export function LanguageToggle() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }
