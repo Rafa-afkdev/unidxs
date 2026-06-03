@@ -4,9 +4,9 @@
     "team": "Equipo",
     "notice": "Avisos",
     "contact": "Contacto",
-    "services": "Servicios",
+    "services": "Qué Hacemos",
     "ourServices": "Nuestros Servicios",
-    "warehouse": "Bodega",
+    "warehouse": "Banco de Comida",
     "education": "Educación",
     "donations": "Donaciones",
     "language": "Idioma",
@@ -192,8 +192,8 @@
       "title": "Información de Contacto",
       "office": "Oficina UNIDXS",
       "location": "Western North Carolina",
-      "hours": "Horario de Atención",
-      "hoursText": "Lunes - Viernes: 10:00 AM - 4:00 PM",
+      "hours": "Citas",
+      "hoursText": "Llamar para una cita: (828) 242-7345",
       "generalInquiries": "Consultas Generales",
       "health": "Salud - Paul Witty",
       "education": "Educación - Sarah West",
@@ -381,7 +381,7 @@
   },
   "warehouse": {
     "hero": {
-      "title": "Despensa de Alimentos / Bodega",
+      "title": "Banco de Comida",
       "subtitle": "Brindando apoyo esencial a familias necesitadas"
     },
     "about": {
@@ -427,7 +427,7 @@
         "communityTable": "Community Table / Mesa Comunitaria, Dispensa Abierta",
         "closed": "Closed / Cerrado",
         "cookingClasses": "Cooking Classes / Clases de Cocina",
-        "address": "La Bodega: 503 Mill Street, Sylva NC 28779",
+        "address": "Banco de Comida: 503 Mill Street, Sylva NC 28779",
         "addressCommunityTable": "23 Central St, Sylva, NC 28779"
       }
     },
@@ -515,11 +515,6 @@
     },
     "partnerships": {
       "title": "Asociaciones Actuales"
-    },
-    "whatsapp": {
-      "title": "Mantente Conectado",
-      "description": "Únase a nuestro canal de WhatsApp para mantenerse actualizado con los próximos eventos e historias de éxito de los estudiantes.",
-      "button": "Unirse al Canal de WhatsApp"
     },
     "impact": {
       "description": "Empoderando a la próxima generación a través de la educación, la cultura y las oportunidades de crecimiento en el oeste de Carolina del Norte."
@@ -615,13 +610,13 @@
       },
       "notice2": {
         "title": "Clases de Cocina Saludable de Junio",
-        "description": "¡Ya están abiertas las inscripciones para las clases de cocina de Junio! Aprende a preparar platillos nutritivos y deliciosos. Consulta las fechas en el calendario de la bodega.",
+        "description": "¡Ya están abiertas las inscripciones para las clases de cocina de Junio! Aprende a preparar platillos nutritivos y deliciosos. Consulta las fechas en el calendario del Banco de Comida.",
         "date": "25 de Mayo, 2026",
         "category": "events"
       },
       "notice3": {
         "title": "Buscamos Voluntarios para el Verano",
-        "description": "Necesitamos manos voluntarias para apoyar en la clasificación de alimentos y atención en la bodega. Si tienes unas horas libres a la semana, ¡escríbenos a bodega@unidxswnc.org!",
+        "description": "Necesitamos manos voluntarias para apoyar en la clasificación de alimentos y atención en el Banco de Comida. Si tienes unas horas libres a la semana, ¡escríbenos a bodega@unidxswnc.org!",
         "date": "20 de Mayo, 2026",
         "category": "general"
       },
@@ -634,8 +629,8 @@
     },
     "quickItems": {
       "q1": {
-        "title": "Bodega cerrada por feriado",
-        "desc": "La bodega estará cerrada el 19 de junio en conmemoración de Juneteenth.",
+        "title": "Banco de Comida cerrado por feriado",
+        "desc": "El Banco de Comida estará cerrado el 19 de junio en conmemoración de Juneteenth.",
         "date": "1 de Junio"
       },
       "q2": {

@@ -103,12 +103,12 @@ export default function Donations() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section with Fondo1-Donation.webp */}
+      {/* Hero Section with Fondo-Bodega1.png */}
       <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center scale-105"
           style={{
-            backgroundImage: "url('/Fondo1-Donation.webp')",
+            backgroundImage: "url('/Fondo-Bodega1.png')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60" />

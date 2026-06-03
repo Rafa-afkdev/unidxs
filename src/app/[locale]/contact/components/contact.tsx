@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import {
   AlertCircle,
   CheckCircle,
-  Clock,
   Mail,
   MapPin,
   MessageSquare,
@@ -91,7 +90,7 @@ export default function Contact() {
       {/* Background Image with Enhanced Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/Fondo1.webp"
+          src="/Fondo5.jpeg"
           alt="Background"
           className="w-full h-full object-cover"
         />
@@ -405,23 +404,24 @@ export default function Contact() {
                     </div>
                   </motion.div>
 
-                  {/* Hours */}
-                  <motion.div
+                  {/* Appointments - Call Ricardo */}
+                  <motion.a
+                    href="tel:+18282427345"
                     variants={itemVariants}
-                    className="flex items-start space-x-4 p-4 rounded-xl hover:bg-green-50 transition-colors duration-300 group cursor-pointer"
+                    className="flex items-start space-x-4 p-4 rounded-xl hover:bg-white/10 transition-colors duration-300 group no-underline"
                   >
                     <div className="bg-gradient-to-br from-green-500 to-green-600 p-3.5 rounded-xl shadow-lg group-hover:shadow-green-300 group-hover:scale-110 transition-all duration-300">
-                      <Clock className="w-6 h-6 text-white" />
+                      <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <p className="font-bold text-white text-base">
                         {t("info.hours")}
                       </p>
-                      <p className="text-white/90 text-sm mt-1 leading-relaxed">
+                      <p className="text-white/90 text-sm mt-1 leading-relaxed group-hover:text-green-300 transition-colors">
                         {t("info.hoursText")}
                       </p>
                     </div>
-                  </motion.div>
+                  </motion.a>
 
                   {/* General Inquiries */}
                   <motion.div

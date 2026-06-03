@@ -332,58 +332,6 @@ export default function EducationComponent() {
         </div>
       </section>
 
-      {/* WhatsApp CTA Section */}
-      <section className="relative py-32 px-4 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/Fondo3.webp')",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-green-900/80 via-emerald-900/80 to-teal-900/80" />
-
-        <motion.div
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-          variants={staggerContainer}
-          className="relative z-10 max-w-5xl mx-auto text-center"
-        >
-          <motion.div variants={fadeInUp} className="inline-block mb-6">
-            <div className="flex items-center justify-center w-20 h-20 mx-auto bg-white/20 backdrop-blur-md rounded-full shadow-2xl">
-              <MessageCircle className="w-10 h-10 text-white" />
-            </div>
-          </motion.div>
-
-          <motion.h2
-            variants={fadeInUp}
-            className="text-4xl md:text-6xl font-bold text-white mb-8 drop-shadow-2xl"
-          >
-            {t("whatsapp.title")}
-          </motion.h2>
-
-          <motion.p
-            variants={fadeInUp}
-            className="text-xl md:text-2xl text-white/95 leading-relaxed font-light mb-8"
-          >
-            {t("whatsapp.description")}
-          </motion.p>
-
-          <motion.a
-            variants={fadeInUp}
-            href="https://whatsapp.com/channel/0029VbAst3v8F2pFAZJMbz0T"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-lg font-semibold rounded-full shadow-2xl hover:shadow-xl transition-all"
-          >
-            <MessageCircle className="w-6 h-6" />
-            {t("whatsapp.button")}
-          </motion.a>
-        </motion.div>
-      </section>
-
       {/* Contact Form Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto">

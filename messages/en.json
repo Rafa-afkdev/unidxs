@@ -4,9 +4,9 @@
     "team": "Team",
     "notice": "Notice",
     "contact": "Contact",
-    "services": "Services",
+    "services": "What We Do",
     "ourServices": "Our Services",
-    "warehouse": "Warehouse",
+    "warehouse": "Food Pantry",
     "education": "Education",
     "donations": "Donations",
     "language": "Language",
@@ -191,8 +191,8 @@
       "title": "Contact Information",
       "office": "UNIDXS Office",
       "location": "Western North Carolina",
-      "hours": "Office Hours",
-      "hoursText": "Monday - Friday: 10:00 AM - 4:00 PM",
+      "hours": "Appointments",
+      "hoursText": "Call for an appointment: (828) 242-7345",
       "generalInquiries": "General Inquiries",
       "health": "Health - Paul Witty",
       "education": "Education - Sarah West",
@@ -380,7 +380,7 @@
   },
   "warehouse": {
     "hero": {
-      "title": "Food Pantry / Bodega",
+      "title": "Food Pantry",
       "subtitle": "Providing essential support to families in need"
     },
     "about": {
@@ -426,7 +426,7 @@
         "communityTable": "Community Table, Open Pantry / Dispensa Abierta",
         "closed": "Closed / cerrado",
         "cookingClasses": "Cooking Classes / Clases de Cocina",
-        "address": "La Bodega: 503 Mill Street, Sylva NC 28779",
+        "address": "Food Pantry: 503 Mill Street, Sylva NC 28779",
         "addressCommunityTable": "23 Central St, Sylva, NC 28779"
       }
     },
@@ -514,11 +514,6 @@
     },
     "partnerships": {
       "title": "Current Partnerships"
-    },
-    "whatsapp": {
-      "title": "Stay Connected",
-      "description": "Join our WhatsApp channel to stay updated with upcoming events and student success stories.",
-      "button": "Join WhatsApp Channel"
     },
     "impact": {
       "description": "Empowering the next generation through education, culture, and opportunities for growth in Western North Carolina."
@@ -614,13 +609,13 @@
       },
       "notice2": {
         "title": "June Healthy Cooking Classes",
-        "description": "Registrations for June cooking classes are now open! Learn to prepare nutritious and delicious dishes. Check the calendar in the warehouse for exact dates.",
+        "description": "Registrations for June cooking classes are now open! Learn to prepare nutritious and delicious dishes. Check the calendar in the Food Pantry for exact dates.",
         "date": "May 25, 2026",
         "category": "events"
       },
       "notice3": {
         "title": "Volunteers Needed for Summer",
-        "description": "We need volunteer hands to help sort food and assist in the warehouse. If you have a few free hours a week, write to us at bodega@unidxswnc.org!",
+        "description": "We need volunteer hands to help sort food and assist in the Food Pantry. If you have a few free hours a week, write to us at bodega@unidxswnc.org!",
         "date": "May 20, 2026",
         "category": "general"
       },
@@ -633,8 +628,8 @@
     },
     "quickItems": {
       "q1": {
-        "title": "Warehouse Closed for Holiday",
-        "desc": "The food pantry will be closed on June 19 in observance of Juneteenth.",
+        "title": "Food Pantry Closed for Holiday",
+        "desc": "The Food Pantry will be closed on June 19 in observance of Juneteenth.",
         "date": "June 1"
       },
       "q2": {
