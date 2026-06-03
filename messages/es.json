@@ -582,11 +582,22 @@
     "title": "Tablón de Avisos",
     "subtitle": "Mantente informado sobre las últimas novedades, eventos y avisos importantes de nuestra comunidad.",
     "backToMain": "Volver al sitio principal",
-    "whatsappChannel": "Únete a nuestro Canal de WhatsApp",
+    "whatsappChannel": "Canal de WhatsApp",
     "whatsappDesc": "Recibe notificaciones inmediatas y mantente al día con eventos en tiempo real.",
     "whatsappBtn": "Unirse al Canal",
     "searchPlaceholder": "Buscar avisos...",
     "noResults": "No se encontraron avisos que coincidan con tu búsqueda.",
+    "featured": "Noticia Destacada",
+    "readMore": "Leer artículo completo",
+    "latestNews": "Más Noticias",
+    "by": "Por",
+    "edition": "Edición de Hoy",
+    "free": "Gratuito",
+    "quickAlerts": "Boletines Rápidos",
+    "quickAlertsDesc": "Actualizaciones de última hora directamente de nuestro equipo.",
+    "shareWhatsApp": "Compartir por WhatsApp",
+    "close": "Cerrar",
+    "locationText": "Oeste de Carolina del Norte",
     "categories": {
       "all": "Todos",
       "pantry": "Despensa",
@@ -618,6 +629,23 @@
         "description": "Más de 150 líderes comunitarios, activistas y directivos de organizaciones hispanas de todo el país, incluyendo a la delegación de Acción Hispana y Qué Pasa, participan en el Encuentro Nacional de la Hispanic Federation en Washington. Los asistentes se reúnen con legisladores federales, incluyendo a los senadores de Carolina del Norte Thom Tillis y Ted Budd, para discutir prioridades clave como inmigración, educación, salud, derechos civiles y desarrollo económico, buscando impulsar políticas públicas equitativas para las familias latinas.",
         "date": "2 de Junio, 2026",
         "category": "general"
+      }
+    },
+    "quickItems": {
+      "q1": {
+        "title": "Bodega cerrada por feriado",
+        "desc": "La bodega estará cerrada el 19 de junio en conmemoración de Juneteenth.",
+        "date": "1 de Junio"
+      },
+      "q2": {
+        "title": "Tutoría de Nita Lipan",
+        "desc": "Las tutorías semanales K-12 continúan de forma virtual cada jueves de 4 a 6 PM.",
+        "date": "28 de Mayo"
+      },
+      "q3": {
+        "title": "Paul Witty: Consulta de salud",
+        "desc": "Contáctanos si necesitas apoyo con citas médicas o transporte de salud.",
+        "date": "24 de Mayo"
       }
     }
   }

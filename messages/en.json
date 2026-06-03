@@ -581,11 +581,22 @@
     "title": "Notice Board",
     "subtitle": "Stay informed about the latest news, events, and important announcements for our community.",
     "backToMain": "Back to main site",
-    "whatsappChannel": "Join our WhatsApp Channel",
+    "whatsappChannel": "WhatsApp Channel",
     "whatsappDesc": "Get instant notifications and stay updated with real-time events.",
     "whatsappBtn": "Join Channel",
     "searchPlaceholder": "Search notices...",
     "noResults": "No notices found matching your search.",
+    "featured": "Featured Story",
+    "readMore": "Read full article",
+    "latestNews": "More Stories",
+    "by": "By",
+    "edition": "Today's Edition",
+    "free": "Free of Charge",
+    "quickAlerts": "Quick Bulletins",
+    "quickAlertsDesc": "Last-minute updates directly from our office.",
+    "shareWhatsApp": "Share on WhatsApp",
+    "close": "Close",
+    "locationText": "Western North Carolina",
     "categories": {
       "all": "All",
       "pantry": "Pantry",
@@ -617,6 +628,23 @@
         "description": "More than 150 community leaders, activists, and directors of Hispanic organizations from across the country, including the delegation of Acción Hispana and Qué Pasa, are participating in the Hispanic Federation National Summit in Washington D.C. Attendees are meeting with federal lawmakers, including North Carolina Senators Thom Tillis and Ted Budd, to discuss key priorities such as immigration, education, healthcare, civil rights, and economic development to promote equitable public policies for Latino families.",
         "date": "June 2, 2026",
         "category": "general"
+      }
+    },
+    "quickItems": {
+      "q1": {
+        "title": "Warehouse Closed for Holiday",
+        "desc": "The food pantry will be closed on June 19 in observance of Juneteenth.",
+        "date": "June 1"
+      },
+      "q2": {
+        "title": "Nita Lipan's Tutoring",
+        "desc": "Weekly K-12 tutoring continues virtually every Thursday from 4 to 6 PM.",
+        "date": "May 28"
+      },
+      "q3": {
+        "title": "Paul Witty: Health Inquiry",
+        "desc": "Contact us if you need help with medical appointments or health transportation.",
+        "date": "May 24"
       }
     }
   }
