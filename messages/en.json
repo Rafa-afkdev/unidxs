@@ -162,7 +162,8 @@
     "cta": {
       "title": "Join Us in Making a Difference",
       "subtitle": "Together, we can build a more inclusive and supportive community",
-      "button": "Get Involved"
+      "button": "Get Involved",
+      "noticesButton": "View Notice Board"
     }
   },
   "contact": {
@@ -624,7 +625,7 @@
         "category": "general"
       },
       "notice4": {
-        "title": "Latino Leaders Analyze Community Challenges in Washington",
+        "title": "Over 150 Latino Leaders Analyze Community Challenges in Washington",
         "description": "More than 150 community leaders, activists, and directors of Hispanic organizations from across the country, including the delegation of Acción Hispana and Qué Pasa, are participating in the Hispanic Federation National Summit in Washington D.C. Attendees are meeting with federal lawmakers, including North Carolina Senators Thom Tillis and Ted Budd, to discuss key priorities such as immigration, education, healthcare, civil rights, and economic development to promote equitable public policies for Latino families.",
         "date": "June 2, 2026",
         "category": "general"

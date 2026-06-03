@@ -163,7 +163,8 @@
     "cta": {
       "title": "Únete a Nosotros para Hacer la Diferencia",
       "subtitle": "Juntos, podemos construir una comunidad más inclusiva y solidaria",
-      "button": "Involúcrate"
+      "button": "Involúcrate",
+      "noticesButton": "Ver Tablón de Avisos"
     }
   },
   "contact": {
@@ -625,7 +626,7 @@
         "category": "general"
       },
       "notice4": {
-        "title": "Líderes Latinos Analizan en Washington Retos de sus Comunidades",
+        "title": "Más de 150 líderes latinos analizan en Washington los retos de sus comunidades",
         "description": "Más de 150 líderes comunitarios, activistas y directivos de organizaciones hispanas de todo el país, incluyendo a la delegación de Acción Hispana y Qué Pasa, participan en el Encuentro Nacional de la Hispanic Federation en Washington. Los asistentes se reúnen con legisladores federales, incluyendo a los senadores de Carolina del Norte Thom Tillis y Ted Budd, para discutir prioridades clave como inmigración, educación, salud, derechos civiles y desarrollo económico, buscando impulsar políticas públicas equitativas para las familias latinas.",
         "date": "2 de Junio, 2026",
         "category": "general"

@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import {
-  Bell,
   Calendar,
   ChevronDown,
   GraduationCap,
@@ -115,12 +114,6 @@ export default function NavbarMain() {
       color: "from-cyan-500 to-blue-500",
     },
     // Servicios dropdown va aquí (se renderiza por separado)
-    {
-      href: "/notice",
-      label: t("notice"),
-      icon: Bell,
-      color: "from-green-500 to-emerald-500",
-    },
     {
       href: "/donations",
       label: t("donations"),

@@ -7,6 +7,7 @@ import {
   HandHeart,
   Heart,
   Lightbulb,
+  Newspaper,
   Scale,
   Sparkles,
   Target,
@@ -15,7 +16,7 @@ import {
   Zap,
 } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function About() {
   const t = useTranslations("about");
@@ -37,7 +38,7 @@ export default function About() {
     },
   };
 
-  const valueIcons = [
+  const _valueIcons = [
     { icon: Users, color: "from-purple-500 to-purple-600" },
     { icon: HandHeart, color: "from-orange-500 to-orange-600" },
     { icon: Scale, color: "from-blue-500 to-blue-600" },
@@ -359,14 +360,28 @@ export default function About() {
             {t("cta.title")}
           </h2>
           <p className="text-xl text-gray-600 mb-8">{t("cta.subtitle")}</p>
-          <motion.button
-            onClick={() => setIsDialogOpen(true)}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
-          >
-            {t("cta.button")}
-          </motion.button>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
+            <motion.button
+              onClick={() => setIsDialogOpen(true)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-base font-semibold rounded-full shadow-lg hover:shadow-xl transition-all cursor-pointer w-full sm:w-auto text-center"
+            >
+              {t("cta.button")}
+            </motion.button>
+
+            <motion.a
+              href={`https://notices.unidxswnc.org/${locale}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-white border-2 border-purple-600 text-purple-700 text-base font-semibold rounded-full shadow-md hover:shadow-lg hover:bg-purple-50 transition-all w-full sm:w-auto text-center flex items-center justify-center gap-2 cursor-pointer no-underline"
+            >
+              <Newspaper className="w-5 h-5 text-purple-600" />
+              <span>{t("cta.noticesButton")}</span>
+            </motion.a>
+          </div>
         </motion.div>
       </section>
 

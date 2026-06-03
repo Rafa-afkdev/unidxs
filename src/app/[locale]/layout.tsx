@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
@@ -95,6 +96,11 @@ export default async function RootLayout({
 }>) {
   const { locale } = await params;
 
+  // Check if request is on notices subdomain to hide global navbar
+  const headerList = await headers();
+  const host = headerList.get("host") || "";
+  const isNoticesSubdomain = host.startsWith("notices.");
+
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
@@ -142,11 +148,11 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
-          {/* Navbar fijo en todas las páginas con selector de idioma integrado */}
-          <NavbarMain />
+          {/* Navbar fijo en todas las páginas con selector de idioma integrado (oculto en subdominio de avisos) */}
+          {!isNoticesSubdomain && <NavbarMain />}
 
-          {/* Contenido principal con padding-top para el navbar */}
-          <main className="pt-20">{children}</main>
+          {/* Contenido principal con padding-top para el navbar (sin padding en subdominio) */}
+          <main className={isNoticesSubdomain ? "" : "pt-20"}>{children}</main>
           <FooterMain />
         </NextIntlClientProvider>
       </body>
