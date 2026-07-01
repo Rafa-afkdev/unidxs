@@ -2,12 +2,14 @@
 
 import { motion } from "framer-motion";
 import {
+  ArrowUpRight,
   Calendar,
   Clock,
   Heart,
   Mail,
   MapPin,
   Package,
+  QrCode,
   Share2,
   ShoppingBag,
   Sparkles,
@@ -122,6 +124,80 @@ export default function WarehouseComponent() {
             {t("hero.subtitle")}
           </motion.p>
         </motion.div>
+      </section>
+
+      {/* Volunteer Registration Section */}
+      <section className="py-24 px-4 bg-gradient-to-br from-violet-50 via-indigo-50/50 to-purple-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Text & Link Column */}
+            <motion.div
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              variants={staggerContainer}
+              className="space-y-6 text-center md:text-left"
+            >
+              <motion.div variants={fadeInUp} className="inline-block">
+                <div className="flex items-center justify-center w-16 h-16 mx-auto md:mx-0 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl shadow-lg">
+                  <QrCode className="w-8 h-8 text-white" />
+                </div>
+              </motion.div>
+
+              <motion.h2
+                variants={fadeInUp}
+                className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight"
+              >
+                {t("volunteerRegistration.title")}
+              </motion.h2>
+
+              <motion.p
+                variants={fadeInUp}
+                className="text-lg text-gray-700 leading-relaxed max-w-xl"
+              >
+                {t("volunteerRegistration.subtitle")}
+              </motion.p>
+
+              <motion.div variants={fadeInUp} className="pt-4">
+                <a
+                  href="https://www.signupgenius.com/go/10C054AADAF28A5FBC07-64619027-july"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl hover:scale-[1.03] active:scale-[0.98] transition-all cursor-pointer"
+                >
+                  {t("volunteerRegistration.button")}
+                  <ArrowUpRight className="w-5 h-5" />
+                </a>
+              </motion.div>
+            </motion.div>
+
+            {/* QR Code Column */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col items-center justify-center"
+            >
+              <div className="relative group w-full max-w-sm">
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
+                <div className="relative bg-white/60 backdrop-blur-md p-8 rounded-3xl border border-white/80 shadow-2xl flex flex-col items-center text-center">
+                  <div className="bg-white p-4 rounded-2xl shadow-inner border border-gray-100 mb-4">
+                    {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
+                    <img
+                      src="/qr-bodega.png"
+                      alt={t("volunteerRegistration.scanQR")}
+                      className="w-48 h-48 md:w-56 md:h-56 rounded-lg object-contain"
+                    />
+                  </div>
+                  <p className="text-sm font-semibold text-indigo-900/80">
+                    {t("volunteerRegistration.scanQR")}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
       </section>
 
       {/* Calendar Section - May 2026 */}
@@ -869,7 +945,6 @@ export default function WarehouseComponent() {
           </motion.div>
         </div>
       </section>
-
       {/* Map / Location Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50">
         <div className="max-w-7xl mx-auto">

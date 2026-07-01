@@ -454,6 +454,13 @@
       "title": "Need Assistance?",
       "subtitle": "Our food pantry is here to help. Check our calendar for open hours.",
       "button": "Contact Us"
+    },
+    "volunteerRegistration": {
+      "title": "Register as a Volunteer",
+      "subtitle": "Help us make a difference in our community by signing up for volunteer shifts. You can scan the QR code with your phone or click the button below to sign up directly.",
+      "scanQR": "Scan QR to Register",
+      "button": "Sign Up on SignUpGenius",
+      "or": "or"
     }
   },
   "education": {

@@ -455,6 +455,13 @@
       "title": "¿Necesitas Asistencia?",
       "subtitle": "Nuestra despensa de alimentos está aquí para ayudar. Consulta nuestro calendario para horarios de apertura.",
       "button": "Contáctanos"
+    },
+    "volunteerRegistration": {
+      "title": "Regístrate como Voluntario",
+      "subtitle": "Ayúdanos a marcar la diferencia en nuestra comunidad registrándote para turnos de voluntariado. Puedes escanear el código QR con tu teléfono o hacer clic en el botón de abajo para registrarte directamente.",
+      "scanQR": "Escanea el QR para Registrarte",
+      "button": "Registrarse en SignUpGenius",
+      "or": "o"
     }
   },
   "education": {
