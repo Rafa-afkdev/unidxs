@@ -378,7 +378,7 @@ export default function MainPage() {
 
             <div className="w-full">
               <img
-                src="/Juny.jpg"
+                src="/July.jpg"
                 alt="May 2026 Calendar - UNIDXS"
                 className="w-full h-auto rounded-lg"
               />
