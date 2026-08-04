@@ -462,6 +462,24 @@
       "scanQR": "Escanea el QR para Registrarte",
       "button": "Registrarse en SignUpGenius",
       "or": "o"
+    },
+    "augustNotice": {
+      "badge": "Aviso Comunitario",
+      "title": "Suspensión del Banco de Comida en Agosto",
+      "subtitle": "Información importante sobre el servicio de despensa para el mes de agosto",
+      "message": "Informamos a nuestra comunidad que, lastimosamente, durante el mes de agosto no habrá servicio de Banco de Comida por falta de suministros.",
+      "supportBadge": "Apoyo Comunitario",
+      "supportHeading": "¿Deseas realizar una donación?",
+      "donationCallout": "Si deseas apoyar y realizar una donación para ayudarnos a restablecer los suministros de la bodega, puedes comunicarte por nuestros medios de contacto o acudir directamente a nuestra dirección.",
+      "contactTitle": "Comunicarse para Donar",
+      "contactDesc": "Contáctanos por teléfono o correo electrónico para coordinar tu donación.",
+      "phone": "(828) 242-7345",
+      "email": "Rball@unidxswnc.org",
+      "addressTitle": "Dirección de la Bodega",
+      "addressDesc": "Visítanos o entrega tu donación directamente en nuestras instalaciones.",
+      "address": "503 Mill Street, Sylva, NC 28779",
+      "btnContact": "Contactar por Mensaje",
+      "btnMaps": "Ver Dirección en Google Maps"
     }
   },
   "education": {

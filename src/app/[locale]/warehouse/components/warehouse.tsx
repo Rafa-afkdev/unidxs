@@ -2,13 +2,17 @@
 
 import { motion } from "framer-motion";
 import {
+  AlertTriangle,
   ArrowUpRight,
   Calendar,
   Clock,
   Heart,
+  HeartHandshake,
   Mail,
   MapPin,
   Package,
+  PackageX,
+  Phone,
   QrCode,
   Share2,
   ShoppingBag,
@@ -126,120 +130,248 @@ export default function WarehouseComponent() {
         </motion.div>
       </section>
 
-      {/* Volunteer Registration Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-violet-50 via-indigo-50/50 to-purple-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Text & Link Column */}
-            <motion.div
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-              className="space-y-6 text-center md:text-left"
-            >
-              <motion.div variants={fadeInUp} className="inline-block">
-                <div className="flex items-center justify-center w-16 h-16 mx-auto md:mx-0 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl shadow-lg">
-                  <QrCode className="w-8 h-8 text-white" />
-                </div>
-              </motion.div>
-
-              <motion.h2
-                variants={fadeInUp}
-                className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight"
+      {/* 2nd Section: Volunteer Registration Section (Commented out for now) */}
+      {false && (
+        <section className="py-24 px-4 bg-gradient-to-br from-violet-50 via-indigo-50/50 to-purple-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+                variants={staggerContainer}
+                className="space-y-6 text-center md:text-left"
               >
-                {t("volunteerRegistration.title")}
-              </motion.h2>
-
-              <motion.p
-                variants={fadeInUp}
-                className="text-lg text-gray-700 leading-relaxed max-w-xl"
-              >
-                {t("volunteerRegistration.subtitle")}
-              </motion.p>
-
-              <motion.div variants={fadeInUp} className="pt-4">
-                <a
-                  href="https://www.signupgenius.com/go/10C054AADAF28A5FBC07-64619027-july"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl hover:scale-[1.03] active:scale-[0.98] transition-all cursor-pointer"
-                >
-                  {t("volunteerRegistration.button")}
-                  <ArrowUpRight className="w-5 h-5" />
-                </a>
-              </motion.div>
-            </motion.div>
-
-            {/* QR Code Column */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col items-center justify-center"
-            >
-              <div className="relative group w-full max-w-sm">
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
-                <div className="relative bg-white/60 backdrop-blur-md p-8 rounded-3xl border border-white/80 shadow-2xl flex flex-col items-center text-center">
-                  <div className="bg-white p-4 rounded-2xl shadow-inner border border-gray-100 mb-4">
-                    {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
-                    <img
-                      src="/qr-bodega.png"
-                      alt={t("volunteerRegistration.scanQR")}
-                      className="w-48 h-48 md:w-56 md:h-56 rounded-lg object-contain"
-                    />
+                <motion.div variants={fadeInUp} className="inline-block">
+                  <div className="flex items-center justify-center w-16 h-16 mx-auto md:mx-0 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl shadow-lg">
+                    <QrCode className="w-8 h-8 text-white" />
                   </div>
-                  <p className="text-sm font-semibold text-indigo-900/80">
-                    {t("volunteerRegistration.scanQR")}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+                </motion.div>
 
-      {/* Calendar Section - July 2026 */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+                <motion.h2
+                  variants={fadeInUp}
+                  className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight"
+                >
+                  {t("volunteerRegistration.title")}
+                </motion.h2>
+
+                <motion.p
+                  variants={fadeInUp}
+                  className="text-lg text-gray-700 leading-relaxed max-w-xl"
+                >
+                  {t("volunteerRegistration.subtitle")}
+                </motion.p>
+
+                <motion.div variants={fadeInUp} className="pt-4">
+                  <a
+                    href="https://www.signupgenius.com/go/10C054AADAF28A5FBC07-64619027-july"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2.5 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl hover:scale-[1.03] active:scale-[0.98] transition-all cursor-pointer"
+                  >
+                    {t("volunteerRegistration.button")}
+                    <ArrowUpRight className="w-5 h-5" />
+                  </a>
+                </motion.div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="flex flex-col items-center justify-center"
+              >
+                <div className="relative group w-full max-w-sm">
+                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
+                  <div className="relative bg-white/60 backdrop-blur-md p-8 rounded-3xl border border-white/80 shadow-2xl flex flex-col items-center text-center">
+                    <div className="bg-white p-4 rounded-2xl shadow-inner border border-gray-100 mb-4">
+                      {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
+                      <img
+                        src="/qr-bodega.png"
+                        alt={t("volunteerRegistration.scanQR")}
+                        className="w-48 h-48 md:w-56 md:h-56 rounded-lg object-contain"
+                      />
+                    </div>
+                    <p className="text-sm font-semibold text-indigo-900/80">
+                      {t("volunteerRegistration.scanQR")}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* 3rd Section: August Community Notice Section (Food Bank Interruption & Donation Info) */}
+      <section className="py-20 px-4 bg-gradient-to-br from-amber-50/80 via-orange-50/60 to-rose-50/70">
         <div className="max-w-7xl mx-auto">
+          {/* Active August Notice Block */}
           <motion.div
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="text-center mb-12"
+            className="max-w-5xl mx-auto"
           >
-            <motion.div variants={fadeInUp} className="inline-block mb-4">
-              <div className="flex items-center justify-center w-16 h-16 mx-auto bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl shadow-lg">
-                <Calendar className="w-8 h-8 text-white" />
+            {/* Header Badge & Title */}
+            <div className="text-center mb-10">
+              <motion.div variants={fadeInUp} className="inline-block mb-4">
+                <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-500/15 border border-amber-500/30 text-amber-900 text-xs font-bold rounded-full uppercase tracking-wider shadow-sm">
+                  <AlertTriangle className="w-4 h-4 text-amber-600" />
+                  {t("augustNotice.badge")}
+                </span>
+              </motion.div>
+
+              <motion.h2
+                variants={fadeInUp}
+                className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight"
+              >
+                {t("augustNotice.title")}
+              </motion.h2>
+
+              <motion.p
+                variants={fadeInUp}
+                className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto"
+              >
+                {t("augustNotice.subtitle")}
+              </motion.p>
+            </div>
+
+            {/* Alert Message Card */}
+            <motion.div
+              variants={fadeInUp}
+              className="bg-white/90 backdrop-blur-md rounded-3xl p-8 md:p-10 shadow-2xl border-t-8 border-amber-500 border-x border-b border-amber-100 mb-10 relative overflow-hidden"
+            >
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg text-white">
+                  <PackageX className="w-9 h-9" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    {t("augustNotice.title")}
+                  </h3>
+                  <p className="text-lg text-gray-700 leading-relaxed font-medium">
+                    {t("augustNotice.message")}
+                  </p>
+                </div>
               </div>
             </motion.div>
 
-            <motion.h2
+            {/* Donation & Support Callout */}
+            <motion.div
               variants={fadeInUp}
-              className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+              className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white rounded-3xl p-8 md:p-10 shadow-2xl mb-10 relative overflow-hidden"
             >
-              {t("calendar.title")}
-            </motion.h2>
+              <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div className="space-y-3 text-center md:text-left flex-1">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-xs font-semibold text-purple-200 border border-white/10">
+                    <HeartHandshake className="w-4 h-4 text-pink-300" />
+                    {t("augustNotice.supportBadge")}
+                  </div>
+                  <h4 className="text-2xl md:text-3xl font-bold">
+                    {t("augustNotice.supportHeading")}
+                  </h4>
+                  <p className="text-white/90 text-base md:text-lg leading-relaxed max-w-2xl font-light">
+                    {t("augustNotice.donationCallout")}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
 
-            <motion.p
-              variants={fadeInUp}
-              className="text-lg md:text-xl text-gray-700 mb-8"
-            >
-              {t("calendar.subtitle")}
-            </motion.p>
+            {/* Contact & Location Cards Grid */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Card 1: Contact via Phone / Email */}
+              <motion.div
+                variants={fadeInUp}
+                className="bg-white rounded-3xl p-8 shadow-xl border border-slate-100 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <div>
+                  <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-md">
+                    <Phone className="w-7 h-7" />
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900 mb-2">
+                    {t("augustNotice.contactTitle")}
+                  </h4>
+                  <p className="text-gray-600 mb-6 text-base leading-relaxed">
+                    {t("augustNotice.contactDesc")}
+                  </p>
+
+                  <div className="space-y-3 mb-8 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                    <div className="flex items-center gap-3 text-gray-800 font-semibold">
+                      <Phone className="w-5 h-5 text-indigo-600 flex-shrink-0" />
+                      <a href={`tel:${t("augustNotice.phone").replace(/[^0-9]/g, "")}`} className="hover:text-indigo-600 transition-colors">
+                        {t("augustNotice.phone")}
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-3 text-gray-800 font-semibold">
+                      <Mail className="w-5 h-5 text-indigo-600 flex-shrink-0" />
+                      <a href={`mailto:${t("augustNotice.email")}`} className="hover:text-indigo-600 transition-colors">
+                        {t("augustNotice.email")}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <Link href="/contact" className="w-full">
+                  <div className="inline-flex items-center justify-center gap-2.5 w-full py-4 px-6 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                    <Mail className="w-5 h-5" />
+                    {t("augustNotice.btnContact")}
+                  </div>
+                </Link>
+              </motion.div>
+
+              {/* Card 2: Visit Warehouse Address */}
+              <motion.div
+                variants={fadeInUp}
+                className="bg-white rounded-3xl p-8 shadow-xl border border-slate-100 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <div>
+                  <div className="w-14 h-14 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-md">
+                    <MapPin className="w-7 h-7" />
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900 mb-2">
+                    {t("augustNotice.addressTitle")}
+                  </h4>
+                  <p className="text-gray-600 mb-6 text-base leading-relaxed">
+                    {t("augustNotice.addressDesc")}
+                  </p>
+
+                  <div className="mb-8 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                    <div className="flex items-start gap-3 text-gray-800 font-semibold">
+                      <MapPin className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                      <span>{t("augustNotice.address")}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <a
+                  href="https://www.google.com/maps/place/Unidxs+of+WNC/@35.3737867,-83.2218064,17z"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <div className="inline-flex items-center justify-center gap-2.5 w-full py-4 px-6 bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                    <MapPin className="w-5 h-5" />
+                    {t("augustNotice.btnMaps")}
+                    <ArrowUpRight className="w-4 h-4 ml-1" />
+                  </div>
+                </a>
+              </motion.div>
+            </div>
           </motion.div>
 
-          {/* Calendar Grid */}
-          <motion.div
+          {/* Calendar Schedule Grid (Commented out for August notice) */}
+          {false && (
+            <>
+              <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="max-w-6xl mx-auto bg-slate-50/50 backdrop-blur-md rounded-3xl shadow-2xl border border-slate-100/80 overflow-hidden p-4 md:p-6"
           >
-            {/* Calendar Header with QR Code */}
             <div className="bg-gradient-to-tr from-purple-800 via-indigo-700 to-blue-600 p-6 md:p-8 rounded-2xl shadow-lg mb-6">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                 <div className="text-center md:text-left flex-1">
@@ -249,95 +381,7 @@ export default function WarehouseComponent() {
                   <h3 className="text-3xl md:text-5xl font-extrabold text-white mb-3 tracking-tight">
                     {t("calendar.title")}
                   </h3>
-                  <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 text-white/90 text-sm mb-4">
-                    <span className="font-semibold">
-                      {t("calendar.stayTuned")}
-                    </span>
-                    <span className="opacity-60">•</span>
-                    <a
-                      href="https://whatsapp.com/channel/0029Vb6kmSUFy72JtZoyDf3O"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-white hover:underline transition-colors font-medium flex items-center gap-1.5"
-                    >
-                      <span className="h-1.5 w-1.5 rounded-full bg-green-400 animate-pulse" />
-                      {t("calendar.whatsappChannel")}
-                    </a>
-                  </div>
-                  <a
-                    href="https://whatsapp.com/channel/0029Vb6kmSUFy72JtZoyDf3O"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-white text-indigo-700 hover:bg-indigo-50 font-bold rounded-full shadow-lg transition-all hover:scale-[1.03] active:scale-95 text-sm md:text-base cursor-pointer"
-                  >
-                    <svg
-                      className="w-5 h-5 text-green-500"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <title>WhatsApp Icon</title>
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-                    </svg>
-                    {t("calendar.joinGroup")}
-                  </a>
                 </div>
-                {/* QR Code with Premium Glowing Glassmorphism Wrapper */}
-                <div className="relative group self-center">
-                  <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 rounded-2xl blur-md opacity-40 group-hover:opacity-70 transition-opacity" />
-                  <a
-                    href="https://whatsapp.com/channel/0029Vb6kmSUFy72JtZoyDf3O"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="relative flex flex-col items-center p-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl hover:bg-white/15 transition-all"
-                  >
-                    {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
-                    <img
-                      src="/qr group.png"
-                      alt="WhatsApp QR Code"
-                      className="w-24 h-24 md:w-28 md:h-28 rounded-xl bg-white p-1.5 shadow-md"
-                    />
-                    <span className="text-white/95 text-[11px] font-bold mt-2.5 px-2 py-0.5 bg-black/20 rounded-full border border-white/10">
-                      {t("calendar.whatsappChannel")}
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Days of Week - Translucent Styling */}
-            <div className="grid grid-cols-7 bg-slate-100/80 backdrop-blur-sm rounded-xl py-3 mb-4 shadow-sm px-2 gap-2">
-              {[
-                "sunday",
-                "monday",
-                "tuesday",
-                "wednesday",
-                "thursday",
-                "friday",
-                "saturday",
-              ].map((day) => (
-                <div
-                  key={day}
-                  className="text-center font-extrabold text-slate-700 text-[10px] md:text-xs uppercase tracking-wide"
-                >
-                  {t(`calendar.days.${day}`)}
-                </div>
-              ))}
-            </div>
-
-            {/* Location Info Header Bar */}
-            <div className="bg-gradient-to-r from-indigo-50/50 via-purple-50/30 to-indigo-50/50 px-6 py-3.5 rounded-xl border border-indigo-100/50 flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-6 shadow-sm">
-              <div className="flex items-center gap-2 text-indigo-950 font-semibold text-xs md:text-sm">
-                <span className="flex items-center justify-center w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 text-xs">
-                  📍
-                </span>
-                <span>{t("calendar.events.address")}</span>
-              </div>
-              <div className="flex items-center gap-2 text-indigo-950 font-semibold text-xs md:text-sm">
-                <span className="flex items-center justify-center w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 text-xs">
-                  📞
-                </span>
-                <span>(828) 242-7345</span>
               </div>
             </div>
 
@@ -747,6 +791,8 @@ export default function WarehouseComponent() {
               </a>
             </p>
           </motion.div>
+            </>
+          )}
         </div>
       </section>
 

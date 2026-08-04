@@ -461,6 +461,24 @@
       "scanQR": "Scan QR to Register",
       "button": "Sign Up on SignUpGenius",
       "or": "or"
+    },
+    "augustNotice": {
+      "badge": "Community Notice",
+      "title": "Food Pantry Suspension in August",
+      "subtitle": "Important information regarding food pantry services for the month of August",
+      "message": "We regret to inform our community that during the month of August there will be no Food Pantry service due to a lack of supplies.",
+      "supportBadge": "Community Support",
+      "supportHeading": "Would you like to make a donation?",
+      "donationCallout": "If you wish to support and make a donation to help us restock the warehouse, you can get in touch with us through our contact options or visit our location directly.",
+      "contactTitle": "Contact to Donate",
+      "contactDesc": "Contact us by phone or email to coordinate your donation.",
+      "phone": "(828) 242-7345",
+      "email": "Rball@unidxswnc.org",
+      "addressTitle": "Warehouse Address",
+      "addressDesc": "Visit us or deliver your donation directly to our facility.",
+      "address": "503 Mill Street, Sylva, NC 28779",
+      "btnContact": "Send a Message",
+      "btnMaps": "View Address in Google Maps"
     }
   },
   "education": {
