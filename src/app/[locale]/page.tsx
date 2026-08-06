@@ -4,20 +4,23 @@ import { motion } from "framer-motion";
 import { Heart, Users } from "lucide-react";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function MainPage() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  // const [isCalendarOpen, setIsCalendarOpen] = useState(false);
+  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
 
-  // Automatically open calendar dialog on page load
-  // useEffect(() => {
-  //   setIsCalendarOpen(true);
-  // }, []);
+  // Automatically open dialog on page load
+  useEffect(() => {
+    setIsCalendarOpen(true);
+  }, []);
 
   const t = useTranslations("main");
   const tDialog = useTranslations("dialog");
   const locale = useLocale();
+
+  const calendarImgSrc =
+    locale === "es" ? "/image-spanish.png" : "/image-english.png";
 
   return (
     <main>
@@ -340,52 +343,52 @@ export default function MainPage() {
         </div>
       )}
 
-      {/* Calendar Dialog - Auto opens on page load (Commented out for now) */}
-      {/* {isCalendarOpen && (
+      {/* Announcement Dialog - Auto opens on page load */}
+      {isCalendarOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <button
             type="button"
             className="fixed inset-0 bg-black/70 backdrop-blur-sm w-full h-full cursor-default border-none outline-none"
             onClick={() => setIsCalendarOpen(false)}
-            aria-label="Close calendar"
+            aria-label="Close dialog"
           />
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
-            className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full p-4 relative z-10"
+            className="bg-white rounded-3xl shadow-2xl max-w-md sm:max-w-lg w-full p-2 relative z-10 overflow-hidden border border-white/40"
           >
             <button
               type="button"
               onClick={() => setIsCalendarOpen(false)}
-              className="absolute top-2 right-2 z-10 bg-white/90 hover:bg-white text-gray-600 hover:text-gray-900 transition-colors rounded-full p-2 shadow-lg"
+              className="absolute top-4 right-4 z-20 bg-black/50 hover:bg-black/80 text-white transition-all rounded-full p-2 shadow-xl backdrop-blur-md hover:scale-110 active:scale-95"
             >
               <svg
-                className="w-6 h-6"
+                className="w-5 h-5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <title>Close Calendar</title>
+                <title>Close Dialog</title>
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
+                  strokeWidth={2.5}
                   d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
             </button>
 
-            <div className="w-full">
+            <div className="w-full flex justify-center rounded-2xl overflow-hidden">
               <img
-                src="/July.jpg"
-                alt="May 2026 Calendar - UNIDXS"
-                className="w-full h-auto rounded-lg"
+                src={calendarImgSrc}
+                alt={locale === "es" ? "Aviso UNIDXS" : "UNIDXS Announcement"}
+                className="w-full h-auto max-h-[82vh] rounded-2xl object-contain shadow-sm"
               />
             </div>
           </motion.div>
         </div>
-      )} */}
+      )}
       {/*  */}
     </main>
 
