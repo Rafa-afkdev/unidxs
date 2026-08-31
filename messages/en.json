@@ -403,7 +403,7 @@
       }
     },
     "calendar": {
-      "title": "July 2026 Schedule",
+      "title": "September 2026 Schedule",
       "subtitle": "Check our calendar for open hours and special events",
       "volunteersNeeded": "Volunteers Needed / Necesitamos voluntarios: contact",
       "whatsappChannel": "Scan and follow the WhatsApp Channel",
@@ -419,15 +419,17 @@
         "saturday": "Saturday"
       },
       "events": {
-        "openPantry": "Open Pantry / Dispensa Abierta",
-        "foodBoxes": "Food boxes / Cajas de comida",
-        "miniMarket": "Mini Market / Mercado Pequeño",
-        "healthCheck": "Health check / Chequeo de Salud",
-        "communityTable": "Community Table, Open Pantry / Dispensa Abierta",
-        "closed": "Closed / cerrado",
-        "cookingClasses": "Cooking Classes / Clases de Cocina",
-        "address": "Food Pantry: 503 Mill Street, Sylva NC 28779",
-        "addressCommunityTable": "23 Central St, Sylva, NC 28779"
+        "openPantry": "Open Pantry",
+        "households5": "Households 5+",
+        "elderlySmallKids": "Elderly & Households with Small Children",
+        "openToAll": "Open to All",
+        "closed": "Closed",
+        "subjectToChange": "Subject to change without notice !!!",
+        "mannaHelp": "If you need help finding food:",
+        "mannaHelpline": "MANNA Food Helpline (828) 290-9749",
+        "foodBoxes": "Food boxes",
+        "miniMarket": "Mini Market",
+        "address": "503 Mill St., Sylva NC 28779"
       }
     },
     "howToHelp": {

@@ -10,7 +10,7 @@ export default function MainPage() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
 
-  // Automatically open dialog on page load
+  // Automatically open calendar dialog on page load
   useEffect(() => {
     setIsCalendarOpen(true);
   }, []);
@@ -20,7 +20,9 @@ export default function MainPage() {
   const locale = useLocale();
 
   const calendarImgSrc =
-    locale === "es" ? "/image-spanish.png" : "/image-english.png";
+    locale === "es"
+      ? "/calendario septiembre-español.jpg"
+      : "/calendario septiembre-english.jpg";
 
   return (
     <main>
@@ -343,7 +345,7 @@ export default function MainPage() {
         </div>
       )}
 
-      {/* Announcement Dialog - Auto opens on page load */}
+      {/* Calendar Dialog - Auto opens on page load */}
       {isCalendarOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <button
@@ -356,12 +358,12 @@ export default function MainPage() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
-            className="bg-white rounded-3xl shadow-2xl max-w-md sm:max-w-lg w-full p-2 relative z-10 overflow-hidden border border-white/40"
+            className="bg-white rounded-3xl shadow-2xl max-w-4xl lg:max-w-5xl w-full p-2 sm:p-3 relative z-10 overflow-hidden border border-white/40"
           >
             <button
               type="button"
               onClick={() => setIsCalendarOpen(false)}
-              className="absolute top-4 right-4 z-20 bg-black/50 hover:bg-black/80 text-white transition-all rounded-full p-2 shadow-xl backdrop-blur-md hover:scale-110 active:scale-95"
+              className="absolute top-4 right-4 z-20 bg-black/60 hover:bg-black/80 text-white transition-all rounded-full p-2 shadow-xl backdrop-blur-md hover:scale-110 active:scale-95"
             >
               <svg
                 className="w-5 h-5"
@@ -380,16 +382,20 @@ export default function MainPage() {
             </button>
 
             <div className="w-full flex justify-center rounded-2xl overflow-hidden">
+              {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
               <img
                 src={calendarImgSrc}
-                alt={locale === "es" ? "Aviso UNIDXS" : "UNIDXS Announcement"}
-                className="w-full h-auto max-h-[82vh] rounded-2xl object-contain shadow-sm"
+                alt={
+                  locale === "es"
+                    ? "Calendario Septiembre 2026 - UNIDXS"
+                    : "September 2026 Calendar - UNIDXS"
+                }
+                className="w-full h-auto max-h-[85vh] rounded-2xl object-contain shadow-sm"
               />
             </div>
           </motion.div>
         </div>
       )}
-      {/*  */}
     </main>
 
     //     <div className="absolute inset-0 z-0">

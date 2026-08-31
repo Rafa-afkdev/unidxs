@@ -2,28 +2,25 @@
 
 import { motion } from "framer-motion";
 import {
-  AlertTriangle,
   ArrowUpRight,
   Calendar,
   Clock,
   Heart,
-  HeartHandshake,
   Mail,
   MapPin,
   Package,
-  PackageX,
-  Phone,
   QrCode,
   Share2,
   ShoppingBag,
   Sparkles,
   Users,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
 export default function WarehouseComponent() {
   const t = useTranslations("warehouse");
+  const locale = useLocale();
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
@@ -130,266 +127,166 @@ export default function WarehouseComponent() {
         </motion.div>
       </section>
 
-      {/* 2nd Section: Volunteer Registration Section (Commented out for now) */}
-      {false && (
-        <section className="py-24 px-4 bg-gradient-to-br from-violet-50 via-indigo-50/50 to-purple-50">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                variants={staggerContainer}
-                className="space-y-6 text-center md:text-left"
-              >
-                <motion.div variants={fadeInUp} className="inline-block">
-                  <div className="flex items-center justify-center w-16 h-16 mx-auto md:mx-0 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl shadow-lg">
-                    <QrCode className="w-8 h-8 text-white" />
-                  </div>
-                </motion.div>
-
-                <motion.h2
-                  variants={fadeInUp}
-                  className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight"
-                >
-                  {t("volunteerRegistration.title")}
-                </motion.h2>
-
-                <motion.p
-                  variants={fadeInUp}
-                  className="text-lg text-gray-700 leading-relaxed max-w-xl"
-                >
-                  {t("volunteerRegistration.subtitle")}
-                </motion.p>
-
-                <motion.div variants={fadeInUp} className="pt-4">
-                  <a
-                    href="https://www.signupgenius.com/go/10C054AADAF28A5FBC07-64619027-july"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2.5 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl hover:scale-[1.03] active:scale-[0.98] transition-all cursor-pointer"
-                  >
-                    {t("volunteerRegistration.button")}
-                    <ArrowUpRight className="w-5 h-5" />
-                  </a>
-                </motion.div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="flex flex-col items-center justify-center"
-              >
-                <div className="relative group w-full max-w-sm">
-                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
-                  <div className="relative bg-white/60 backdrop-blur-md p-8 rounded-3xl border border-white/80 shadow-2xl flex flex-col items-center text-center">
-                    <div className="bg-white p-4 rounded-2xl shadow-inner border border-gray-100 mb-4">
-                      {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
-                      <img
-                        src="/qr-bodega.png"
-                        alt={t("volunteerRegistration.scanQR")}
-                        className="w-48 h-48 md:w-56 md:h-56 rounded-lg object-contain"
-                      />
-                    </div>
-                    <p className="text-sm font-semibold text-indigo-900/80">
-                      {t("volunteerRegistration.scanQR")}
-                    </p>
-                  </div>
+      {/* 2nd Section: Volunteer Registration Section */}
+      <section className="py-24 px-4 bg-gradient-to-br from-violet-50 via-indigo-50/50 to-purple-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              variants={staggerContainer}
+              className="space-y-6 text-center md:text-left"
+            >
+              <motion.div variants={fadeInUp} className="inline-block">
+                <div className="flex items-center justify-center w-16 h-16 mx-auto md:mx-0 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl shadow-lg">
+                  <QrCode className="w-8 h-8 text-white" />
                 </div>
               </motion.div>
-            </div>
-          </div>
-        </section>
-      )}
 
-      {/* 3rd Section: August Community Notice Section (Food Bank Interruption & Donation Info) */}
-      <section className="py-20 px-4 bg-gradient-to-br from-amber-50/80 via-orange-50/60 to-rose-50/70">
+              <motion.h2
+                variants={fadeInUp}
+                className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight"
+              >
+                {t("volunteerRegistration.title")}
+              </motion.h2>
+
+              <motion.p
+                variants={fadeInUp}
+                className="text-lg text-gray-700 leading-relaxed max-w-xl"
+              >
+                {t("volunteerRegistration.subtitle")}
+              </motion.p>
+
+              <motion.div variants={fadeInUp} className="pt-4">
+                <a
+                  href="https://www.signupgenius.com/go/10C054AADAF28A5FBC07-64619027-july"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl hover:scale-[1.03] active:scale-[0.98] transition-all cursor-pointer"
+                >
+                  {t("volunteerRegistration.button")}
+                  <ArrowUpRight className="w-5 h-5" />
+                </a>
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col items-center justify-center"
+            >
+              <div className="relative group w-full max-w-sm">
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
+                <div className="relative bg-white/60 backdrop-blur-md p-8 rounded-3xl border border-white/80 shadow-2xl flex flex-col items-center text-center">
+                  <div className="bg-white p-4 rounded-2xl shadow-inner border border-gray-100 mb-4">
+                    {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
+                    <img
+                      src="/qr-bodega.png"
+                      alt={t("volunteerRegistration.scanQR")}
+                      className="w-48 h-48 md:w-56 md:h-56 rounded-lg object-contain"
+                    />
+                  </div>
+                  <p className="text-sm font-semibold text-indigo-900/80">
+                    {t("volunteerRegistration.scanQR")}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3rd Section: September 2026 Calendar Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50/70 via-indigo-50/50 to-purple-50/70">
         <div className="max-w-7xl mx-auto">
-          {/* Active August Notice Block */}
           <motion.div
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="max-w-5xl mx-auto"
+            className="text-center mb-12"
           >
-            {/* Header Badge & Title */}
-            <div className="text-center mb-10">
-              <motion.div variants={fadeInUp} className="inline-block mb-4">
-                <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-500/15 border border-amber-500/30 text-amber-900 text-xs font-bold rounded-full uppercase tracking-wider shadow-sm">
-                  <AlertTriangle className="w-4 h-4 text-amber-600" />
-                  {t("augustNotice.badge")}
-                </span>
-              </motion.div>
-
-              <motion.h2
-                variants={fadeInUp}
-                className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight"
-              >
-                {t("augustNotice.title")}
-              </motion.h2>
-
-              <motion.p
-                variants={fadeInUp}
-                className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto"
-              >
-                {t("augustNotice.subtitle")}
-              </motion.p>
-            </div>
-
-            {/* Alert Message Card */}
-            <motion.div
-              variants={fadeInUp}
-              className="bg-white/90 backdrop-blur-md rounded-3xl p-8 md:p-10 shadow-2xl border-t-8 border-amber-500 border-x border-b border-amber-100 mb-10 relative overflow-hidden"
-            >
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg text-white">
-                  <PackageX className="w-9 h-9" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    {t("augustNotice.title")}
-                  </h3>
-                  <p className="text-lg text-gray-700 leading-relaxed font-medium">
-                    {t("augustNotice.message")}
-                  </p>
-                </div>
+            <motion.div variants={fadeInUp} className="inline-block mb-4">
+              <div className="flex items-center justify-center w-16 h-16 mx-auto bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl shadow-lg">
+                <Calendar className="w-8 h-8 text-white" />
               </div>
             </motion.div>
 
-            {/* Donation & Support Callout */}
-            <motion.div
+            <motion.h2
               variants={fadeInUp}
-              className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white rounded-3xl p-8 md:p-10 shadow-2xl mb-10 relative overflow-hidden"
+              className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
             >
-              <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-                <div className="space-y-3 text-center md:text-left flex-1">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-xs font-semibold text-purple-200 border border-white/10">
-                    <HeartHandshake className="w-4 h-4 text-pink-300" />
-                    {t("augustNotice.supportBadge")}
-                  </div>
-                  <h4 className="text-2xl md:text-3xl font-bold">
-                    {t("augustNotice.supportHeading")}
-                  </h4>
-                  <p className="text-white/90 text-base md:text-lg leading-relaxed max-w-2xl font-light">
-                    {t("augustNotice.donationCallout")}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+              {t("calendar.title")}
+            </motion.h2>
 
-            {/* Contact & Location Cards Grid */}
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Card 1: Contact via Phone / Email */}
-              <motion.div
-                variants={fadeInUp}
-                className="bg-white rounded-3xl p-8 shadow-xl border border-slate-100 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <div>
-                  <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-md">
-                    <Phone className="w-7 h-7" />
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-2">
-                    {t("augustNotice.contactTitle")}
-                  </h4>
-                  <p className="text-gray-600 mb-6 text-base leading-relaxed">
-                    {t("augustNotice.contactDesc")}
-                  </p>
-
-                  <div className="space-y-3 mb-8 bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                    <div className="flex items-center gap-3 text-gray-800 font-semibold">
-                      <Phone className="w-5 h-5 text-indigo-600 flex-shrink-0" />
-                      <a href={`tel:${t("augustNotice.phone").replace(/[^0-9]/g, "")}`} className="hover:text-indigo-600 transition-colors">
-                        {t("augustNotice.phone")}
-                      </a>
-                    </div>
-                    <div className="flex items-center gap-3 text-gray-800 font-semibold">
-                      <Mail className="w-5 h-5 text-indigo-600 flex-shrink-0" />
-                      <a href={`mailto:${t("augustNotice.email")}`} className="hover:text-indigo-600 transition-colors">
-                        {t("augustNotice.email")}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <Link href="/contact" className="w-full">
-                  <div className="inline-flex items-center justify-center gap-2.5 w-full py-4 px-6 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer">
-                    <Mail className="w-5 h-5" />
-                    {t("augustNotice.btnContact")}
-                  </div>
-                </Link>
-              </motion.div>
-
-              {/* Card 2: Visit Warehouse Address */}
-              <motion.div
-                variants={fadeInUp}
-                className="bg-white rounded-3xl p-8 shadow-xl border border-slate-100 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <div>
-                  <div className="w-14 h-14 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-md">
-                    <MapPin className="w-7 h-7" />
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-2">
-                    {t("augustNotice.addressTitle")}
-                  </h4>
-                  <p className="text-gray-600 mb-6 text-base leading-relaxed">
-                    {t("augustNotice.addressDesc")}
-                  </p>
-
-                  <div className="mb-8 bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                    <div className="flex items-start gap-3 text-gray-800 font-semibold">
-                      <MapPin className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                      <span>{t("augustNotice.address")}</span>
-                    </div>
-                  </div>
-                </div>
-
-                <a
-                  href="https://www.google.com/maps/place/Unidxs+of+WNC/@35.3737867,-83.2218064,17z"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full"
-                >
-                  <div className="inline-flex items-center justify-center gap-2.5 w-full py-4 px-6 bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer">
-                    <MapPin className="w-5 h-5" />
-                    {t("augustNotice.btnMaps")}
-                    <ArrowUpRight className="w-4 h-4 ml-1" />
-                  </div>
-                </a>
-              </motion.div>
-            </div>
+            <motion.p
+              variants={fadeInUp}
+              className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto"
+            >
+              {t("calendar.subtitle")}
+            </motion.p>
           </motion.div>
 
-          {/* Calendar Schedule Grid (Commented out for August notice) */}
-          {false && (
-            <>
-              <motion.div
+          {/* Calendar Schedule Grid */}
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-6xl mx-auto bg-slate-50/50 backdrop-blur-md rounded-3xl shadow-2xl border border-slate-100/80 overflow-hidden p-4 md:p-6"
+            className="max-w-6xl mx-auto bg-slate-50/60 backdrop-blur-md rounded-3xl shadow-2xl border border-slate-100/80 overflow-hidden p-4 md:p-6"
           >
+            {/* Calendar Banner Header */}
             <div className="bg-gradient-to-tr from-purple-800 via-indigo-700 to-blue-600 p-6 md:p-8 rounded-2xl shadow-lg mb-6">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                 <div className="text-center md:text-left flex-1">
                   <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-md text-white/95 text-xs font-bold rounded-full border border-white/20 mb-3 tracking-wider uppercase">
                     {t("hero.title")}
                   </span>
-                  <h3 className="text-3xl md:text-5xl font-extrabold text-white mb-3 tracking-tight">
+                  <h3 className="text-3xl md:text-5xl font-extrabold text-white mb-2 tracking-tight">
                     {t("calendar.title")}
                   </h3>
+                </div>
+
+                {/* WhatsApp Channel Card */}
+                <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 flex items-center gap-4 text-white shadow-inner">
+                  <div className="bg-white p-2 rounded-xl shadow-md flex-shrink-0">
+                    <img
+                      src="/qr group.png"
+                      alt="WhatsApp Channel QR"
+                      className="w-14 h-14 object-contain"
+                    />
+                  </div>
+                  <div className="text-left text-xs space-y-1">
+                    <p className="font-bold text-white/95 text-sm leading-tight">
+                      {t("calendar.whatsappChannel")}
+                    </p>
+                    <p className="text-purple-200 text-xs font-semibold">
+                      {t("calendar.stayTuned")}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Calendar Days - July 2026 Floating Cards */}
-            <div className="grid grid-cols-7 gap-3 md:gap-4 p-1">
-              {/* Week 1 - July starts on Wednesday */}
-              {/* Sunday June 28 - Location Card in Grid */}
-              <div className="bg-gradient-to-br from-slate-50 to-indigo-50/30 border border-slate-100 rounded-2xl p-3 flex flex-col justify-center items-center text-center min-h-[110px] shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+            {/* Days of Week Header */}
+            <div className="grid grid-cols-7 gap-2 md:gap-3 mb-3 text-center font-bold text-slate-700 text-xs md:text-sm uppercase tracking-wider">
+              <div>{t("calendar.days.sunday")}</div>
+              <div>{t("calendar.days.monday")}</div>
+              <div>{t("calendar.days.tuesday")}</div>
+              <div>{t("calendar.days.wednesday")}</div>
+              <div>{t("calendar.days.thursday")}</div>
+              <div>{t("calendar.days.friday")}</div>
+              <div>{t("calendar.days.saturday")}</div>
+            </div>
+
+            {/* Calendar Days Grid */}
+            <div className="grid grid-cols-7 gap-2 md:gap-3 p-1">
+              {/* Row 1 */}
+              {/* Sunday - Location Card */}
+              <div className="bg-gradient-to-br from-slate-50 to-indigo-50/30 border border-slate-100 rounded-2xl p-2.5 flex flex-col justify-center items-center text-center min-h-[110px] shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <MapPin className="w-5 h-5 text-indigo-600 mb-1" />
                 <span className="text-[10px] md:text-xs font-bold leading-tight text-slate-800">
                   503 Mill St.,
@@ -399,266 +296,20 @@ export default function WarehouseComponent() {
                 </span>
               </div>
 
-              {/* Monday June 29 - Phone Card in Grid */}
-              <div className="bg-gradient-to-br from-slate-50 to-indigo-50/30 border border-slate-100 rounded-2xl p-3 flex flex-col justify-center items-center text-center min-h-[110px] shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+              {/* Monday - Phone Card */}
+              <div className="bg-gradient-to-br from-slate-50 to-indigo-50/30 border border-slate-100 rounded-2xl p-2.5 flex flex-col justify-center items-center text-center min-h-[110px] shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <span className="text-xl mb-1">📞</span>
                 <span className="text-[10px] md:text-xs font-bold leading-tight text-slate-800">
                   (828) 242-7345
                 </span>
               </div>
 
-              {/* Tuesday June 30 - Empty */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-300">
-                  {/* Empty */}
-                </div>
-              </div>
-
-              {/* Wednesday - July 1 - Open Pantry */}
-              <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">
-                    1
-                  </div>
-                  <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
-                </div>
-                <div className="mt-2 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
-                  <span className="text-[9px] md:text-[10px] text-emerald-800 font-extrabold leading-tight">
-                    {t("calendar.events.openPantry")}
-                  </span>
-                  <span className="text-[8px] md:text-[9px] text-emerald-600 font-bold">
-                    2-6pm
-                  </span>
-                </div>
-              </div>
-
-              {/* Thursday - July 2 - Open Pantry */}
-              <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">
-                    2
-                  </div>
-                  <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
-                </div>
-                <div className="mt-2 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
-                  <span className="text-[9px] md:text-[10px] text-emerald-800 font-extrabold leading-tight">
-                    {t("calendar.events.openPantry")}
-                  </span>
-                  <span className="text-[8px] md:text-[9px] text-emerald-600 font-bold">
-                    1-4pm
-                  </span>
-                </div>
-              </div>
-
-              {/* Friday - July 3 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  3
-                </div>
-              </div>
-
-              {/* Saturday - July 4 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  4
-                </div>
-              </div>
-
-              {/* Week 2 */}
-              {/* Sunday - July 5 - Social Media */}
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50/30 border border-blue-100 rounded-2xl p-3 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] text-center">
-                <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">
-                    5
-                  </div>
-                  <span className="text-[8px] font-bold text-blue-600 bg-blue-100/50 px-1.5 py-0.5 rounded-full">
-                    Social
-                  </span>
-                </div>
-                <div className="mt-2 space-y-1">
-                  <div className="flex justify-center gap-1.5 text-[9px] font-bold text-blue-600/90">
-                    <span className="bg-blue-100/30 px-1 rounded">FB</span>
-                    <span className="bg-pink-100/30 px-1 rounded text-pink-600">
-                      IG
-                    </span>
-                    <span className="bg-green-100/30 px-1 rounded text-green-600">
-                      WA
-                    </span>
-                  </div>
-                  <div className="text-[9px] md:text-[10px] text-indigo-900 font-black tracking-tight">
-                    @unidxswnc
-                  </div>
-                </div>
-              </div>
-
-              {/* Monday - July 6 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  6
-                </div>
-              </div>
-
-              {/* Tuesday - July 7 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  7
-                </div>
-              </div>
-
-              {/* Wednesday - July 8 - Mini Market */}
-              <div className="bg-gradient-to-br from-indigo-50/60 to-white rounded-2xl border border-indigo-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-indigo-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">
-                    8
-                  </div>
-                  <span className="flex h-2 w-2 rounded-full bg-indigo-500 shadow-md shadow-indigo-200" />
-                </div>
-                <div className="mt-2 flex flex-col bg-indigo-500/10 rounded-lg p-1.5 border border-indigo-500/20">
-                  <span className="text-[9px] md:text-[10px] text-indigo-800 font-extrabold leading-tight">
-                    {t("calendar.events.miniMarket")}
-                  </span>
-                  <span className="text-[8px] md:text-[9px] text-indigo-600 font-bold">
-                    2-6pm
-                  </span>
-                </div>
-              </div>
-
-              {/* Thursday - July 9 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  9
-                </div>
-              </div>
-
-              {/* Friday - July 10 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  10
-                </div>
-              </div>
-
-              {/* Saturday - July 11 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  11
-                </div>
-              </div>
-
-              {/* Week 3 */}
-              {/* Sunday - July 12 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  12
-                </div>
-              </div>
-
-              {/* Monday - July 13 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  13
-                </div>
-              </div>
-
-              {/* Tuesday - July 14 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  14
-                </div>
-              </div>
-
-              {/* Wednesday - July 15 - Open Pantry */}
-              <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">
-                    15
-                  </div>
-                  <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
-                </div>
-                <div className="mt-2 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
-                  <span className="text-[9px] md:text-[10px] text-emerald-800 font-extrabold leading-tight">
-                    {t("calendar.events.openPantry")}
-                  </span>
-                  <span className="text-[8px] md:text-[9px] text-emerald-600 font-bold">
-                    2-6pm
-                  </span>
-                </div>
-              </div>
-
-              {/* Thursday - July 16 - Open Pantry */}
-              <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">
-                    16
-                  </div>
-                  <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
-                </div>
-                <div className="mt-2 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
-                  <span className="text-[9px] md:text-[10px] text-emerald-800 font-extrabold leading-tight">
-                    {t("calendar.events.openPantry")}
-                  </span>
-                  <span className="text-[8px] md:text-[9px] text-emerald-600 font-bold">
-                    1-4pm
-                  </span>
-                </div>
-              </div>
-
-              {/* Friday - July 17 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  17
-                </div>
-              </div>
-
-              {/* Saturday - July 18 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  18
-                </div>
-              </div>
-
-              {/* Week 4 */}
-              {/* Sunday - July 19 - MANNA Foodbank */}
-              <div className="bg-gradient-to-br from-amber-50 to-orange-50/30 border border-amber-100 rounded-2xl p-3 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-amber-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] text-left">
-                <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">
-                    19
-                  </div>
-                  <span className="text-[8px] font-bold text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded-full">
-                    MANNA
-                  </span>
-                </div>
-                <div className="mt-1.5 space-y-1">
-                  <div className="text-[9px] font-extrabold text-amber-800 leading-tight">
-                    MANNA FOODBANK
-                  </div>
-                  <div className="text-[8px] text-amber-900/90 leading-tight">
-                    Helpline:{" "}
-                    <span className="font-bold text-[9px]">(828) 290-9749</span>
-                  </div>
-                  <a
-                    href="https://mannafoodbank.org/find-food/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[8px] text-amber-700 underline block font-semibold hover:text-amber-800 transition-colors"
-                  >
-                    mannafoodbank.org
-                  </a>
-                </div>
-              </div>
-
-              {/* Monday - July 20 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  20
-                </div>
-              </div>
-
-              {/* Tuesday 21, Wednesday 22, Thursday 23 - Closed/Cerrado (Spanning 3 columns) */}
+              {/* Tuesday 1, Wednesday 2, Thursday 3 - Closed (Spanning 3 columns) */}
               <div className="col-span-3 bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
                 <div className="flex justify-between items-center text-slate-400 font-medium text-xs md:text-sm">
-                  <span>21</span>
-                  <span>22</span>
-                  <span>23</span>
+                  <span>1</span>
+                  <span>2</span>
+                  <span>3</span>
                 </div>
                 <div className="text-[10px] md:text-xs text-red-600 font-extrabold tracking-wide uppercase bg-red-50/50 p-2 rounded-lg border border-red-100/30 text-center flex items-center justify-center gap-2">
                   <span>&larr;</span>
@@ -667,113 +318,329 @@ export default function WarehouseComponent() {
                 </div>
               </div>
 
-              {/* Friday - July 24 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  24
+              {/* Friday 4 & Saturday 5 - Subject to change (Spanning 2 columns) */}
+              <div className="col-span-2 bg-gradient-to-br from-amber-50/60 to-orange-50/30 border border-amber-200/80 rounded-2xl p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-amber-300 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
+                <div className="flex justify-between items-center text-slate-400 font-medium text-xs md:text-sm">
+                  <span>4</span>
+                  <span>5</span>
+                </div>
+                <div className="text-[10px] md:text-xs text-amber-900 font-black tracking-tight text-center bg-amber-100/70 py-2 px-1 rounded-lg border border-amber-200/60 leading-tight">
+                  {t("calendar.events.subjectToChange")}
                 </div>
               </div>
 
-              {/* Saturday - July 25 */}
+              {/* Row 2 */}
+              {/* Sunday 6 - Social Media */}
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50/30 border border-blue-100 rounded-2xl p-2.5 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] text-center">
+                <div className="flex justify-between items-start">
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    6
+                  </div>
+                  <span className="text-[8px] font-bold text-blue-600 bg-blue-100/50 px-1.5 py-0.5 rounded-full">
+                    Social
+                  </span>
+                </div>
+                <div className="mt-2 space-y-1">
+                  <div className="flex justify-center gap-1.5 text-[9px] font-bold text-blue-600/90">
+                    <span className="bg-blue-100/30 px-1 rounded">FB</span>
+                    <span className="bg-pink-100/30 px-1 rounded text-pink-600">IG</span>
+                    <span className="bg-green-100/30 px-1 rounded text-green-600">WA</span>
+                  </div>
+                  <div className="text-[9px] md:text-[10px] text-indigo-900 font-black tracking-tight">
+                    @unidxswnc
+                  </div>
+                </div>
+              </div>
+
+              {/* Monday 7 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  7
+                </div>
+              </div>
+
+              {/* Tuesday 8 - Open Pantry (Households 5+) */}
+              <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="flex justify-between items-start">
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    8
+                  </div>
+                  <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
+                </div>
+                <div className="mt-1 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
+                  <span className="text-[8.5px] md:text-[9.5px] text-slate-800 font-bold leading-tight">
+                    {t("calendar.events.openPantry")}
+                  </span>
+                  <span className="text-[9px] md:text-[10px] text-emerald-700 font-black leading-tight">
+                    {t("calendar.events.households5")}
+                  </span>
+                  <span className="text-[8px] md:text-[9px] text-slate-600 font-bold underline mt-0.5">
+                    2:30-4:30pm
+                  </span>
+                </div>
+              </div>
+
+              {/* Wednesday 9 - Open Pantry (Elderly & Small Children) */}
+              <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="flex justify-between items-start">
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    9
+                  </div>
+                  <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
+                </div>
+                <div className="mt-1 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
+                  <span className="text-[8.5px] md:text-[9.5px] text-slate-800 font-bold leading-tight">
+                    {t("calendar.events.openPantry")}
+                  </span>
+                  <span className="text-[8px] md:text-[9px] text-emerald-700 font-black leading-tight">
+                    {t("calendar.events.elderlySmallKids")}
+                  </span>
+                  <span className="text-[8px] md:text-[9px] text-slate-600 font-bold underline mt-0.5">
+                    10:30am-12:30pm
+                  </span>
+                </div>
+              </div>
+
+              {/* Thursday 10 - Open Pantry (Open to All) */}
+              <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="flex justify-between items-start">
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    10
+                  </div>
+                  <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
+                </div>
+                <div className="mt-1 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
+                  <span className="text-[8.5px] md:text-[9.5px] text-slate-800 font-bold leading-tight">
+                    {t("calendar.events.openPantry")}
+                  </span>
+                  <span className="text-[9px] md:text-[10px] text-emerald-700 font-black leading-tight">
+                    {t("calendar.events.openToAll")}
+                  </span>
+                  <span className="text-[8px] md:text-[9px] text-slate-600 font-bold underline mt-0.5">
+                    4:30-6:30pm
+                  </span>
+                </div>
+              </div>
+
+              {/* Friday 11 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  11
+                </div>
+              </div>
+
+              {/* Saturday 12 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  12
+                </div>
+              </div>
+
+              {/* Row 3 */}
+              {/* Sunday 13 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  13
+                </div>
+              </div>
+
+              {/* Monday 14 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  14
+                </div>
+              </div>
+
+              {/* Tuesday 15, Wednesday 16, Thursday 17 - Closed (Spanning 3 columns) */}
+              <div className="col-span-3 bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
+                <div className="flex justify-between items-center text-slate-400 font-medium text-xs md:text-sm">
+                  <span>15</span>
+                  <span>16</span>
+                  <span>17</span>
+                </div>
+                <div className="text-[10px] md:text-xs text-red-600 font-extrabold tracking-wide uppercase bg-red-50/50 p-2 rounded-lg border border-red-100/30 text-center flex items-center justify-center gap-2">
+                  <span>&larr;</span>
+                  <span>{t("calendar.events.closed")}</span>
+                  <span>&rarr;</span>
+                </div>
+              </div>
+
+              {/* Friday 18 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  18
+                </div>
+              </div>
+
+              {/* Saturday 19 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  19
+                </div>
+              </div>
+
+              {/* Row 4 */}
+              {/* Sunday 20 - MANNA Foodbank Box */}
+              <div className="bg-gradient-to-br from-amber-50 to-yellow-100/50 border-2 border-yellow-400 rounded-2xl p-2.5 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left">
+                <div className="flex items-center gap-1.5">
+                  <span className="text-[10px] md:text-xs font-black text-amber-800 uppercase tracking-tight">
+                    MANNA FOODBANK
+                  </span>
+                </div>
+                <div className="space-y-1">
+                  <div className="text-[8.5px] md:text-[9.5px] font-bold text-amber-900 leading-snug">
+                    {t("calendar.events.mannaHelp")}
+                  </div>
+                  <a
+                    href="https://mannafoodbank.org/find-food/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[8px] md:text-[8.5px] text-amber-700 underline block font-semibold hover:text-amber-800 transition-colors break-all"
+                  >
+                    mannafoodbank.org/find-food
+                  </a>
+                  <div className="text-[8px] md:text-[8.5px] text-amber-900 font-medium">
+                    {t("calendar.events.mannaHelpline")}
+                  </div>
+                </div>
+              </div>
+
+              {/* Monday 21 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  21
+                </div>
+              </div>
+
+              {/* Tuesday 22 - Open Pantry (Households 5+) */}
+              <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="flex justify-between items-start">
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    22
+                  </div>
+                  <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
+                </div>
+                <div className="mt-1 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
+                  <span className="text-[8.5px] md:text-[9.5px] text-slate-800 font-bold leading-tight">
+                    {t("calendar.events.openPantry")}
+                  </span>
+                  <span className="text-[9px] md:text-[10px] text-emerald-700 font-black leading-tight">
+                    {t("calendar.events.households5")}
+                  </span>
+                  <span className="text-[8px] md:text-[9px] text-slate-600 font-bold underline mt-0.5">
+                    2:30-4:30pm
+                  </span>
+                </div>
+              </div>
+
+              {/* Wednesday 23 - Open Pantry (Elderly & Small Children) */}
+              <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="flex justify-between items-start">
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    23
+                  </div>
+                  <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
+                </div>
+                <div className="mt-1 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
+                  <span className="text-[8.5px] md:text-[9.5px] text-slate-800 font-bold leading-tight">
+                    {t("calendar.events.openPantry")}
+                  </span>
+                  <span className="text-[8px] md:text-[9px] text-emerald-700 font-black leading-tight">
+                    {t("calendar.events.elderlySmallKids")}
+                  </span>
+                  <span className="text-[8px] md:text-[9px] text-slate-600 font-bold underline mt-0.5">
+                    10:30am-12:30pm
+                  </span>
+                </div>
+              </div>
+
+              {/* Thursday 24 - Open Pantry (Open to All) */}
+              <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="flex justify-between items-start">
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    24
+                  </div>
+                  <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
+                </div>
+                <div className="mt-1 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
+                  <span className="text-[8.5px] md:text-[9.5px] text-slate-800 font-bold leading-tight">
+                    {t("calendar.events.openPantry")}
+                  </span>
+                  <span className="text-[9px] md:text-[10px] text-emerald-700 font-black leading-tight">
+                    {t("calendar.events.openToAll")}
+                  </span>
+                  <span className="text-[8px] md:text-[9px] text-slate-600 font-bold underline mt-0.5">
+                    4:30-6:30pm
+                  </span>
+                </div>
+              </div>
+
+              {/* Friday 25 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="font-bold text-base md:text-lg text-slate-500">
                   25
                 </div>
               </div>
 
-              {/* Week 5 */}
-              {/* Sunday 26 & Monday 27 - MANNA Foodbank Info Yellow Box (Spanning 2 columns) */}
-              <div className="col-span-2 bg-gradient-to-br from-amber-50 to-yellow-100/50 border border-amber-200 rounded-2xl p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] text-left">
-                <div className="flex justify-between items-start">
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-base">ℹ️</span>
-                    <span className="text-[10px] font-bold text-amber-700 bg-amber-100/50 px-1.5 py-0.5 rounded-full">
-                      Help / Ayuda
-                    </span>
-                  </div>
-                  <div className="font-extrabold text-[10px] text-slate-400">
-                    26 - 27
-                  </div>
-                </div>
-                <div className="mt-2 space-y-1">
-                  <div className="text-[10px] font-extrabold text-amber-800 leading-snug">
-                    If you need help finding food / Si necesita ayuda para encontrar comida:
-                  </div>
-                  <a
-                    href="https://mannafoodbank.org/find-food/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[9px] text-amber-700 underline block font-semibold hover:text-amber-800 transition-colors"
-                  >
-                    mannafoodbank.org/find-food
-                  </a>
-                  <div className="text-[9px] text-amber-900/90 leading-tight">
-                    MANNA Food Helpline:{" "}
-                    <span className="font-bold text-[10px]">(828) 290-9749</span>
-                  </div>
+              {/* Saturday 26 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  26
                 </div>
               </div>
 
-              {/* Tuesday - July 28 */}
+              {/* Row 5 */}
+              {/* Sunday 27 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  27
+                </div>
+              </div>
+
+              {/* Monday 28 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="font-bold text-base md:text-lg text-slate-500">
                   28
                 </div>
               </div>
 
-              {/* Wednesday - July 29 - Open Pantry */}
-              <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">
-                    29
-                  </div>
-                  <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
+              {/* Tuesday 29 & Wednesday 30 - Closed (Spanning 2 columns) */}
+              <div className="col-span-2 bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
+                <div className="flex justify-between items-center text-slate-400 font-medium text-xs md:text-sm">
+                  <span>29</span>
+                  <span>30</span>
                 </div>
-                <div className="mt-2 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
-                  <span className="text-[9px] md:text-[10px] text-emerald-800 font-extrabold leading-tight">
-                    {t("calendar.events.openPantry")}
-                  </span>
-                  <span className="text-[8px] md:text-[9px] text-emerald-600 font-bold">
-                    2-6pm
-                  </span>
+                <div className="text-[10px] md:text-xs text-red-600 font-extrabold tracking-wide uppercase bg-red-50/50 p-2 rounded-lg border border-red-100/30 text-center flex items-center justify-center gap-2">
+                  <span>&larr;</span>
+                  <span>{t("calendar.events.closed")}</span>
+                  <span>&rarr;</span>
                 </div>
               </div>
 
-              {/* Thursday - July 30 - Open Pantry */}
-              <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="flex justify-between items-start">
-                  <div className="font-extrabold text-base md:text-lg text-slate-800">
-                    30
-                  </div>
-                  <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
-                </div>
-                <div className="mt-2 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
-                  <span className="text-[9px] md:text-[10px] text-emerald-800 font-extrabold leading-tight">
-                    {t("calendar.events.openPantry")}
-                  </span>
-                  <span className="text-[8px] md:text-[9px] text-emerald-600 font-bold">
-                    1-4pm
-                  </span>
-                </div>
-              </div>
-
-              {/* Friday - July 31 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  31
-                </div>
-              </div>
-
-              {/* Saturday - Aug 1 (Empty grid placeholder) */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+              {/* Thursday Oct 1 (Placeholder) */}
+              <div className="bg-slate-50/40 rounded-2xl border border-slate-100/50 p-3 md:p-4 min-h-[110px] flex flex-col justify-between opacity-40">
                 <div className="font-bold text-base md:text-lg text-slate-300">
-                  {/* Empty */}
+                  1
+                </div>
+              </div>
+
+              {/* Friday Oct 2 (Placeholder) */}
+              <div className="bg-slate-50/40 rounded-2xl border border-slate-100/50 p-3 md:p-4 min-h-[110px] flex flex-col justify-between opacity-40">
+                <div className="font-bold text-base md:text-lg text-slate-300">
+                  2
+                </div>
+              </div>
+
+              {/* Saturday Oct 3 (Placeholder) */}
+              <div className="bg-slate-50/40 rounded-2xl border border-slate-100/50 p-3 md:p-4 min-h-[110px] flex flex-col justify-between opacity-40">
+                <div className="font-bold text-base md:text-lg text-slate-300">
+                  3
                 </div>
               </div>
             </div>
           </motion.div>
 
-          {/* Calendar Info */}
+          {/* Calendar Info / Contact */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -784,15 +651,13 @@ export default function WarehouseComponent() {
             <p className="text-lg text-gray-700 mb-4">
               *{t("calendar.volunteersNeeded")}{" "}
               <a
-                href="mailto:bodega@unidxswnc.org"
+                href="mailto:Rball@unidxswnc.org"
                 className="text-blue-600 hover:text-blue-700 font-semibold underline"
               >
-                bodega@unidxswnc.org
+                Rball@unidxswnc.org
               </a>
             </p>
           </motion.div>
-            </>
-          )}
         </div>
       </section>
 
