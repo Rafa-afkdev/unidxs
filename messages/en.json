@@ -421,8 +421,10 @@
       "events": {
         "openPantry": "Open Pantry",
         "households5": "Households 5+",
-        "elderlySmallKids": "Elderly & Households with Small Children",
+        "elderlySmallKids": "Seniors 60+ & Households with Small Children",
+        "byAppointment": "*By appointment:",
         "openToAll": "Open to All",
+        "openToAllEvening": "Open to All 4:30-6:30pm",
         "closed": "Closed",
         "subjectToChange": "Subject to change without notice !!!",
         "mannaHelp": "If you need help finding food:",

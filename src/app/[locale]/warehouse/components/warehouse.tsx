@@ -15,12 +15,11 @@ import {
   Sparkles,
   Users,
 } from "lucide-react";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
 export default function WarehouseComponent() {
   const t = useTranslations("warehouse");
-  const locale = useLocale();
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
@@ -199,469 +198,422 @@ export default function WarehouseComponent() {
         </div>
       </section>
 
-      {/* 3rd Section: September 2026 Calendar Section (Temporarily commented out) */}
-      {false && (
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50/70 via-indigo-50/50 to-purple-50/70">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-              className="text-center mb-12"
-            >
-              <motion.div variants={fadeInUp} className="inline-block mb-4">
-                <div className="flex items-center justify-center w-16 h-16 mx-auto bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl shadow-lg">
-                  <Calendar className="w-8 h-8 text-white" />
-                </div>
-              </motion.div>
-
-              <motion.h2
-                variants={fadeInUp}
-                className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
-              >
-                {t("calendar.title")}
-              </motion.h2>
-
-              <motion.p
-                variants={fadeInUp}
-                className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto"
-              >
-                {t("calendar.subtitle")}
-              </motion.p>
+      {/* 3rd Section: September 2026 Calendar Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50/70 via-indigo-50/50 to-purple-50/70">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="text-center mb-12"
+          >
+            <motion.div variants={fadeInUp} className="inline-block mb-4">
+              <div className="flex items-center justify-center w-16 h-16 mx-auto bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl shadow-lg">
+                <Calendar className="w-8 h-8 text-white" />
+              </div>
             </motion.div>
 
-            {/* Calendar Schedule Grid */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="max-w-6xl mx-auto bg-slate-50/60 backdrop-blur-md rounded-3xl shadow-2xl border border-slate-100/80 overflow-hidden p-4 md:p-6"
+            <motion.h2
+              variants={fadeInUp}
+              className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
             >
-              {/* Calendar Banner Header */}
-              <div className="bg-gradient-to-tr from-purple-800 via-indigo-700 to-blue-600 p-6 md:p-8 rounded-2xl shadow-lg mb-6">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                  <div className="text-center md:text-left flex-1">
-                    <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-md text-white/95 text-xs font-bold rounded-full border border-white/20 mb-3 tracking-wider uppercase">
-                      {t("hero.title")}
-                    </span>
-                    <h3 className="text-3xl md:text-5xl font-extrabold text-white mb-2 tracking-tight">
-                      {t("calendar.title")}
-                    </h3>
-                  </div>
+              {t("calendar.title")}
+            </motion.h2>
 
-                  {/* WhatsApp Channel Card */}
-                  <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 flex items-center gap-4 text-white shadow-inner">
-                    <div className="bg-white p-2 rounded-xl shadow-md flex-shrink-0">
-                      <img
-                        src="/qr group.png"
-                        alt="WhatsApp Channel QR"
-                        className="w-14 h-14 object-contain"
-                      />
-                    </div>
-                    <div className="text-left text-xs space-y-1">
-                      <p className="font-bold text-white/95 text-sm leading-tight">
-                        {t("calendar.whatsappChannel")}
-                      </p>
-                      <p className="text-purple-200 text-xs font-semibold">
-                        {t("calendar.stayTuned")}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <motion.p
+              variants={fadeInUp}
+              className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto"
+            >
+              {t("calendar.subtitle")}
+            </motion.p>
+          </motion.div>
 
-              {/* Days of Week Header */}
-              <div className="grid grid-cols-7 gap-2 md:gap-3 mb-3 text-center font-bold text-slate-700 text-xs md:text-sm uppercase tracking-wider">
-                <div>{t("calendar.days.sunday")}</div>
-                <div>{t("calendar.days.monday")}</div>
-                <div>{t("calendar.days.tuesday")}</div>
-                <div>{t("calendar.days.wednesday")}</div>
-                <div>{t("calendar.days.thursday")}</div>
-                <div>{t("calendar.days.friday")}</div>
-                <div>{t("calendar.days.saturday")}</div>
-              </div>
-
-              {/* Calendar Days Grid */}
-              <div className="grid grid-cols-7 gap-2 md:gap-3 p-1">
-                {/* Row 1 */}
-                {/* Sunday - Location Card */}
-                <div className="bg-gradient-to-br from-slate-50 to-indigo-50/30 border border-slate-100 rounded-2xl p-2.5 flex flex-col justify-center items-center text-center min-h-[110px] shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <MapPin className="w-5 h-5 text-indigo-600 mb-1" />
-                  <span className="text-[10px] md:text-xs font-bold leading-tight text-slate-800">
-                    503 Mill St.,
+          {/* Calendar Schedule Grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-6xl mx-auto bg-slate-50/60 backdrop-blur-md rounded-3xl shadow-2xl border border-slate-100/80 overflow-hidden p-4 md:p-6"
+          >
+            {/* Calendar Banner Header */}
+            <div className="bg-gradient-to-tr from-purple-800 via-indigo-700 to-blue-600 p-6 md:p-8 rounded-2xl shadow-lg mb-6">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div className="text-center md:text-left flex-1">
+                  <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-md text-white/95 text-xs font-bold rounded-full border border-white/20 mb-3 tracking-wider uppercase">
+                    {t("hero.title")}
                   </span>
-                  <span className="text-[9px] md:text-[10px] text-slate-500 leading-tight">
-                    Sylva NC 28779
-                  </span>
-                </div>
-
-                {/* Monday - Phone Card */}
-                <div className="bg-gradient-to-br from-slate-50 to-indigo-50/30 border border-slate-100 rounded-2xl p-2.5 flex flex-col justify-center items-center text-center min-h-[110px] shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <span className="text-xl mb-1">📞</span>
-                  <span className="text-[10px] md:text-xs font-bold leading-tight text-slate-800">
-                    (828) 242-7345
-                  </span>
-                </div>
-
-                {/* Tuesday 1, Wednesday 2, Thursday 3 - Closed (Spanning 3 columns) */}
-                <div className="col-span-3 bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
-                  <div className="flex justify-between items-center text-slate-400 font-medium text-xs md:text-sm">
-                    <span>1</span>
-                    <span>2</span>
-                    <span>3</span>
-                  </div>
-                  <div className="text-[10px] md:text-xs text-red-600 font-extrabold tracking-wide uppercase bg-red-50/50 p-2 rounded-lg border border-red-100/30 text-center flex items-center justify-center gap-2">
-                    <span>&larr;</span>
-                    <span>{t("calendar.events.closed")}</span>
-                    <span>&rarr;</span>
-                  </div>
-                </div>
-
-                {/* Friday 4 & Saturday 5 - Subject to change (Spanning 2 columns) */}
-                <div className="col-span-2 bg-gradient-to-br from-amber-50/60 to-orange-50/30 border border-amber-200/80 rounded-2xl p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-amber-300 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
-                  <div className="flex justify-between items-center text-slate-400 font-medium text-xs md:text-sm">
-                    <span>4</span>
-                    <span>5</span>
-                  </div>
-                  <div className="text-[10px] md:text-xs text-amber-900 font-black tracking-tight text-center bg-amber-100/70 py-2 px-1 rounded-lg border border-amber-200/60 leading-tight">
-                    {t("calendar.events.subjectToChange")}
-                  </div>
-                </div>
-
-                {/* Row 2 */}
-                {/* Sunday 6 - Social Media */}
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50/30 border border-blue-100 rounded-2xl p-2.5 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] text-center">
-                  <div className="flex justify-between items-start">
-                    <div className="font-extrabold text-base md:text-lg text-slate-800">
-                      6
-                    </div>
-                    <span className="text-[8px] font-bold text-blue-600 bg-blue-100/50 px-1.5 py-0.5 rounded-full">
-                      Social
-                    </span>
-                  </div>
-                  <div className="mt-2 space-y-1">
-                    <div className="flex justify-center gap-1.5 text-[9px] font-bold text-blue-600/90">
-                      <span className="bg-blue-100/30 px-1 rounded">FB</span>
-                      <span className="bg-pink-100/30 px-1 rounded text-pink-600">IG</span>
-                      <span className="bg-green-100/30 px-1 rounded text-green-600">WA</span>
-                    </div>
-                    <div className="text-[9px] md:text-[10px] text-indigo-900 font-black tracking-tight">
-                      @unidxswnc
-                    </div>
-                  </div>
-                </div>
-
-                {/* Monday 7 */}
-                <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <div className="font-bold text-base md:text-lg text-slate-500">
-                    7
-                  </div>
-                </div>
-
-                {/* Tuesday 8 - Open Pantry (Households 5+) */}
-                <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <div className="flex justify-between items-start">
-                    <div className="font-extrabold text-base md:text-lg text-slate-800">
-                      8
-                    </div>
-                    <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
-                  </div>
-                  <div className="mt-1 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
-                    <span className="text-[8.5px] md:text-[9.5px] text-slate-800 font-bold leading-tight">
-                      {t("calendar.events.openPantry")}
-                    </span>
-                    <span className="text-[9px] md:text-[10px] text-emerald-700 font-black leading-tight">
-                      {t("calendar.events.households5")}
-                    </span>
-                    <span className="text-[8px] md:text-[9px] text-slate-600 font-bold underline mt-0.5">
-                      2:30-4:30pm
-                    </span>
-                  </div>
-                </div>
-
-                {/* Wednesday 9 - Open Pantry (Elderly & Small Children) */}
-                <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <div className="flex justify-between items-start">
-                    <div className="font-extrabold text-base md:text-lg text-slate-800">
-                      9
-                    </div>
-                    <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
-                  </div>
-                  <div className="mt-1 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
-                    <span className="text-[8.5px] md:text-[9.5px] text-slate-800 font-bold leading-tight">
-                      {t("calendar.events.openPantry")}
-                    </span>
-                    <span className="text-[8px] md:text-[9px] text-emerald-700 font-black leading-tight">
-                      {t("calendar.events.elderlySmallKids")}
-                    </span>
-                    <span className="text-[8px] md:text-[9px] text-slate-600 font-bold underline mt-0.5">
-                      10:30am-12:30pm
-                    </span>
-                  </div>
-                </div>
-
-                {/* Thursday 10 - Open Pantry (Open to All) */}
-                <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <div className="flex justify-between items-start">
-                    <div className="font-extrabold text-base md:text-lg text-slate-800">
-                      10
-                    </div>
-                    <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
-                  </div>
-                  <div className="mt-1 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
-                    <span className="text-[8.5px] md:text-[9.5px] text-slate-800 font-bold leading-tight">
-                      {t("calendar.events.openPantry")}
-                    </span>
-                    <span className="text-[9px] md:text-[10px] text-emerald-700 font-black leading-tight">
-                      {t("calendar.events.openToAll")}
-                    </span>
-                    <span className="text-[8px] md:text-[9px] text-slate-600 font-bold underline mt-0.5">
-                      4:30-6:30pm
-                    </span>
-                  </div>
-                </div>
-
-                {/* Friday 11 */}
-                <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <div className="font-bold text-base md:text-lg text-slate-500">
-                    11
-                  </div>
-                </div>
-
-                {/* Saturday 12 */}
-                <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <div className="font-bold text-base md:text-lg text-slate-500">
-                    12
-                  </div>
-                </div>
-
-                {/* Row 3 */}
-                {/* Sunday 13 */}
-                <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <div className="font-bold text-base md:text-lg text-slate-500">
-                    13
-                  </div>
-                </div>
-
-                {/* Monday 14 */}
-                <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <div className="font-bold text-base md:text-lg text-slate-500">
-                    14
-                  </div>
-                </div>
-
-                {/* Tuesday 15, Wednesday 16, Thursday 17 - Closed (Spanning 3 columns) */}
-                <div className="col-span-3 bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
-                  <div className="flex justify-between items-center text-slate-400 font-medium text-xs md:text-sm">
-                    <span>15</span>
-                    <span>16</span>
-                    <span>17</span>
-                  </div>
-                  <div className="text-[10px] md:text-xs text-red-600 font-extrabold tracking-wide uppercase bg-red-50/50 p-2 rounded-lg border border-red-100/30 text-center flex items-center justify-center gap-2">
-                    <span>&larr;</span>
-                    <span>{t("calendar.events.closed")}</span>
-                    <span>&rarr;</span>
-                  </div>
-                </div>
-
-                {/* Friday 18 */}
-                <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <div className="font-bold text-base md:text-lg text-slate-500">
-                    18
-                  </div>
-                </div>
-
-                {/* Saturday 19 */}
-                <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <div className="font-bold text-base md:text-lg text-slate-500">
-                    19
-                  </div>
-                </div>
-
-                {/* Row 4 */}
-                {/* Sunday 20 - MANNA Foodbank Box */}
-                <div className="bg-gradient-to-br from-amber-50 to-yellow-100/50 border-2 border-yellow-400 rounded-2xl p-2.5 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left">
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-[10px] md:text-xs font-black text-amber-800 uppercase tracking-tight">
-                      MANNA FOODBANK
-                    </span>
-                  </div>
-                  <div className="space-y-1">
-                    <div className="text-[8.5px] md:text-[9.5px] font-bold text-amber-900 leading-snug">
-                      {t("calendar.events.mannaHelp")}
-                    </div>
+                  <h3 className="text-3xl md:text-5xl font-extrabold text-white mb-2 tracking-tight">
+                    {t("calendar.title")}
+                  </h3>
+                  <p className="text-purple-200 text-xs md:text-sm font-medium">
+                    *{t("calendar.volunteersNeeded")}{" "}
                     <a
-                      href="https://mannafoodbank.org/find-food/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[8px] md:text-[8.5px] text-amber-700 underline block font-semibold hover:text-amber-800 transition-colors break-all"
+                      href="mailto:bodega@unidxswnc.org"
+                      className="text-white underline hover:text-purple-100 font-semibold"
                     >
-                      mannafoodbank.org/find-food
+                      bodega@unidxswnc.org
                     </a>
-                    <div className="text-[8px] md:text-[8.5px] text-amber-900 font-medium">
-                      {t("calendar.events.mannaHelpline")}
-                    </div>
-                  </div>
+                  </p>
                 </div>
 
-                {/* Monday 21 */}
-                <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <div className="font-bold text-base md:text-lg text-slate-500">
-                    21
+                {/* WhatsApp Channel Card */}
+                <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 flex items-center gap-4 text-white shadow-inner">
+                  <div className="bg-white p-2 rounded-xl shadow-md flex-shrink-0">
+                    <img
+                      src="/qr group.png"
+                      alt="WhatsApp Channel QR"
+                      className="w-14 h-14 object-contain"
+                    />
                   </div>
-                </div>
-
-                {/* Tuesday 22 - Open Pantry (Households 5+) */}
-                <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <div className="flex justify-between items-start">
-                    <div className="font-extrabold text-base md:text-lg text-slate-800">
-                      22
-                    </div>
-                    <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
-                  </div>
-                  <div className="mt-1 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
-                    <span className="text-[8.5px] md:text-[9.5px] text-slate-800 font-bold leading-tight">
-                      {t("calendar.events.openPantry")}
-                    </span>
-                    <span className="text-[9px] md:text-[10px] text-emerald-700 font-black leading-tight">
-                      {t("calendar.events.households5")}
-                    </span>
-                    <span className="text-[8px] md:text-[9px] text-slate-600 font-bold underline mt-0.5">
-                      2:30-4:30pm
-                    </span>
-                  </div>
-                </div>
-
-                {/* Wednesday 23 - Open Pantry (Elderly & Small Children) */}
-                <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <div className="flex justify-between items-start">
-                    <div className="font-extrabold text-base md:text-lg text-slate-800">
-                      23
-                    </div>
-                    <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
-                  </div>
-                  <div className="mt-1 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
-                    <span className="text-[8.5px] md:text-[9.5px] text-slate-800 font-bold leading-tight">
-                      {t("calendar.events.openPantry")}
-                    </span>
-                    <span className="text-[8px] md:text-[9px] text-emerald-700 font-black leading-tight">
-                      {t("calendar.events.elderlySmallKids")}
-                    </span>
-                    <span className="text-[8px] md:text-[9px] text-slate-600 font-bold underline mt-0.5">
-                      10:30am-12:30pm
-                    </span>
-                  </div>
-                </div>
-
-                {/* Thursday 24 - Open Pantry (Open to All) */}
-                <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <div className="flex justify-between items-start">
-                    <div className="font-extrabold text-base md:text-lg text-slate-800">
-                      24
-                    </div>
-                    <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
-                  </div>
-                  <div className="mt-1 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
-                    <span className="text-[8.5px] md:text-[9.5px] text-slate-800 font-bold leading-tight">
-                      {t("calendar.events.openPantry")}
-                    </span>
-                    <span className="text-[9px] md:text-[10px] text-emerald-700 font-black leading-tight">
-                      {t("calendar.events.openToAll")}
-                    </span>
-                    <span className="text-[8px] md:text-[9px] text-slate-600 font-bold underline mt-0.5">
-                      4:30-6:30pm
-                    </span>
-                  </div>
-                </div>
-
-                {/* Friday 25 */}
-                <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <div className="font-bold text-base md:text-lg text-slate-500">
-                    25
-                  </div>
-                </div>
-
-                {/* Saturday 26 */}
-                <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <div className="font-bold text-base md:text-lg text-slate-500">
-                    26
-                  </div>
-                </div>
-
-                {/* Row 5 */}
-                {/* Sunday 27 */}
-                <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <div className="font-bold text-base md:text-lg text-slate-500">
-                    27
-                  </div>
-                </div>
-
-                {/* Monday 28 */}
-                <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                  <div className="font-bold text-base md:text-lg text-slate-500">
-                    28
-                  </div>
-                </div>
-
-                {/* Tuesday 29 & Wednesday 30 - Closed (Spanning 2 columns) */}
-                <div className="col-span-2 bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[110px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
-                  <div className="flex justify-between items-center text-slate-400 font-medium text-xs md:text-sm">
-                    <span>29</span>
-                    <span>30</span>
-                  </div>
-                  <div className="text-[10px] md:text-xs text-red-600 font-extrabold tracking-wide uppercase bg-red-50/50 p-2 rounded-lg border border-red-100/30 text-center flex items-center justify-center gap-2">
-                    <span>&larr;</span>
-                    <span>{t("calendar.events.closed")}</span>
-                    <span>&rarr;</span>
-                  </div>
-                </div>
-
-                {/* Thursday Oct 1 (Placeholder) */}
-                <div className="bg-slate-50/40 rounded-2xl border border-slate-100/50 p-3 md:p-4 min-h-[110px] flex flex-col justify-between opacity-40">
-                  <div className="font-bold text-base md:text-lg text-slate-300">
-                    1
-                  </div>
-                </div>
-
-                {/* Friday Oct 2 (Placeholder) */}
-                <div className="bg-slate-50/40 rounded-2xl border border-slate-100/50 p-3 md:p-4 min-h-[110px] flex flex-col justify-between opacity-40">
-                  <div className="font-bold text-base md:text-lg text-slate-300">
-                    2
-                  </div>
-                </div>
-
-                {/* Saturday Oct 3 (Placeholder) */}
-                <div className="bg-slate-50/40 rounded-2xl border border-slate-100/50 p-3 md:p-4 min-h-[110px] flex flex-col justify-between opacity-40">
-                  <div className="font-bold text-base md:text-lg text-slate-300">
-                    3
+                  <div className="text-left text-xs space-y-1">
+                    <p className="font-bold text-white/95 text-sm leading-tight">
+                      {t("calendar.whatsappChannel")}
+                    </p>
+                    <p className="text-purple-200 text-xs font-semibold">
+                      {t("calendar.stayTuned")}
+                    </p>
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            {/* Calendar Info / Contact */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-8 text-center"
-            >
-              <p className="text-lg text-gray-700 mb-4">
-                *{t("calendar.volunteersNeeded")}{" "}
-                <a
-                  href="mailto:Rball@unidxswnc.org"
-                  className="text-blue-600 hover:text-blue-700 font-semibold underline"
-                >
-                  Rball@unidxswnc.org
-                </a>
-              </p>
-            </motion.div>
-          </div>
-        </section>
-      )}
+            {/* Days of Week Header (5 Columns: Mon - Fri) */}
+            <div className="grid grid-cols-5 gap-2 md:gap-3 mb-3 text-center font-bold text-slate-700 text-xs md:text-sm uppercase tracking-wider">
+              <div>{t("calendar.days.monday")}</div>
+              <div>{t("calendar.days.tuesday")}</div>
+              <div>{t("calendar.days.wednesday")}</div>
+              <div>{t("calendar.days.thursday")}</div>
+              <div>{t("calendar.days.friday")}</div>
+            </div>
+
+            {/* Calendar Days Grid */}
+            <div className="grid grid-cols-5 gap-2 md:gap-3 p-1">
+              {/* Row 1 */}
+              {/* Monday - Location Card */}
+              <div className="bg-gradient-to-br from-slate-50 to-indigo-50/30 border border-slate-100 rounded-2xl p-3 flex flex-col justify-center items-center text-center min-h-[120px] shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <MapPin className="w-5 h-5 text-indigo-600 mb-1" />
+                <span className="text-[11px] md:text-xs font-bold leading-tight text-slate-800">
+                  503 Mill St.,
+                </span>
+                <span className="text-[10px] md:text-[11px] text-slate-500 leading-tight">
+                  Sylva NC 28779
+                </span>
+              </div>
+
+              {/* Tuesday 1 & Wednesday 2 - Closed (Spanning 2 columns) */}
+              <div className="col-span-2 bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
+                <div className="flex justify-between items-center text-slate-400 font-medium text-xs md:text-sm">
+                  <span>1</span>
+                  <span>2</span>
+                </div>
+                <div className="text-[10px] md:text-xs text-red-600 font-extrabold tracking-wide uppercase bg-red-50/50 p-2 rounded-lg border border-red-100/30 text-center flex items-center justify-center gap-2">
+                  <span>&larr;</span>
+                  <span>{t("calendar.events.closed")}</span>
+                  <span>&rarr;</span>
+                </div>
+              </div>
+
+              {/* Thursday 3 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  3
+                </div>
+              </div>
+
+              {/* Friday 4 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  4
+                </div>
+              </div>
+
+              {/* Row 2 */}
+              {/* Monday - Phone & Social Media Card */}
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50/30 border border-blue-100 rounded-2xl p-3 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] text-center">
+                <div className="flex items-center justify-center gap-1 text-[11px] md:text-xs font-bold text-slate-800">
+                  <span>📞</span>
+                  <span>(828) 242-7345</span>
+                </div>
+                <div className="mt-2 space-y-1.5">
+                  <div className="flex justify-center gap-1.5 text-[9px] font-bold text-blue-600/90">
+                    <span className="bg-blue-100/50 px-1.5 py-0.5 rounded">FB</span>
+                    <span className="bg-pink-100/50 px-1.5 py-0.5 rounded text-pink-600">IG</span>
+                    <span className="bg-green-100/50 px-1.5 py-0.5 rounded text-green-600">WA</span>
+                  </div>
+                  <div className="text-[10px] md:text-[11px] text-indigo-900 font-black tracking-tight">
+                    @unidxswnc
+                  </div>
+                </div>
+              </div>
+
+              {/* Tuesday 8 - Open Pantry (Households 5+) with By Appointment & QR */}
+              <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="flex justify-between items-start">
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    8
+                  </div>
+                  <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
+                </div>
+                <div className="mt-1 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
+                  <span className="text-[8.5px] md:text-[9.5px] text-slate-800 font-bold leading-tight">
+                    {t("calendar.events.openPantry")}
+                  </span>
+                  <span className="text-[9px] md:text-[10px] text-emerald-700 font-black leading-tight">
+                    {t("calendar.events.households5")}
+                  </span>
+                  <span className="text-[8.5px] md:text-[9.5px] text-slate-700 font-bold underline mt-0.5">
+                    2:30-4:30pm
+                  </span>
+                </div>
+                <div className="mt-1 flex items-center justify-between gap-1 bg-red-50/60 p-1 rounded-lg border border-red-100">
+                  <span className="text-[8px] md:text-[9px] text-red-600 font-bold leading-tight">
+                    {t("calendar.events.byAppointment")}
+                  </span>
+                  <img
+                    src="/qr-bodega.png"
+                    alt="Cita QR"
+                    className="w-7 h-7 object-contain rounded bg-white p-0.5 border border-gray-100"
+                  />
+                </div>
+              </div>
+
+              {/* Wednesday 9 - Open Pantry (Seniors 60+ & Kids) + Open to All Evening */}
+              <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="flex justify-between items-start">
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    9
+                  </div>
+                  <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
+                </div>
+                <div className="mt-1 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
+                  <span className="text-[8.5px] md:text-[9.5px] text-slate-800 font-bold leading-tight">
+                    {t("calendar.events.openPantry")}
+                  </span>
+                  <span className="text-[8px] md:text-[9px] text-emerald-700 font-black leading-tight">
+                    {t("calendar.events.elderlySmallKids")}
+                  </span>
+                  <span className="text-[8.5px] md:text-[9.5px] text-slate-700 font-bold underline mt-0.5">
+                    10:30am-12:30pm
+                  </span>
+                  <div className="mt-1 flex items-center justify-between gap-1 bg-red-50/60 p-0.5 rounded border border-red-100">
+                    <span className="text-[7.5px] md:text-[8px] text-red-600 font-bold leading-tight">
+                      {t("calendar.events.byAppointment")}
+                    </span>
+                    <img
+                      src="/qr-bodega.png"
+                      alt="Cita QR"
+                      className="w-6 h-6 object-contain rounded bg-white p-0.5"
+                    />
+                  </div>
+                </div>
+                <div className="mt-1 text-center bg-emerald-100/60 py-1 px-1 rounded-lg border border-emerald-200/50">
+                  <span className="text-[8.5px] md:text-[9.5px] text-emerald-800 font-extrabold leading-tight block">
+                    {t("calendar.events.openToAllEvening")}
+                  </span>
+                </div>
+              </div>
+
+              {/* Thursday 10 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  10
+                </div>
+              </div>
+
+              {/* Friday 11 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  11
+                </div>
+              </div>
+
+              {/* Row 3 */}
+              {/* Monday - MANNA Foodbank Box (Spans Row 3 & 4) */}
+              <div className="row-span-2 bg-gradient-to-br from-amber-50 to-yellow-100/50 border-2 border-yellow-400 rounded-2xl p-3 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left">
+                <div className="flex items-center gap-1.5">
+                  <span className="text-[11px] md:text-xs font-black text-amber-800 uppercase tracking-tight">
+                    MANNA FOODBANK
+                  </span>
+                </div>
+                <div className="space-y-1.5 my-auto">
+                  <div className="text-[9px] md:text-[10px] font-bold text-amber-900 leading-snug">
+                    {t("calendar.events.mannaHelp")}
+                  </div>
+                  <a
+                    href="https://mannafoodbank.org/find-food/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[8.5px] md:text-[9.5px] text-amber-700 underline block font-semibold hover:text-amber-800 transition-colors break-all"
+                  >
+                    mannafoodbank.org/find-food
+                  </a>
+                  <div className="text-[8.5px] md:text-[9.5px] text-amber-900 font-medium">
+                    {t("calendar.events.mannaHelpline")}
+                  </div>
+                </div>
+              </div>
+
+              {/* Tuesday 15 & Wednesday 16 - Closed (Spanning 2 columns) */}
+              <div className="col-span-2 bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
+                <div className="flex justify-between items-center text-slate-400 font-medium text-xs md:text-sm">
+                  <span>15</span>
+                  <span>16</span>
+                </div>
+                <div className="text-[10px] md:text-xs text-red-600 font-extrabold tracking-wide uppercase bg-red-50/50 p-2 rounded-lg border border-red-100/30 text-center flex items-center justify-center gap-2">
+                  <span>&larr;</span>
+                  <span>{t("calendar.events.closed")}</span>
+                  <span>&rarr;</span>
+                </div>
+              </div>
+
+              {/* Thursday 17 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  17
+                </div>
+              </div>
+
+              {/* Friday 18 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  18
+                </div>
+              </div>
+
+              {/* Row 4 */}
+              {/* Tuesday 22 - Open Pantry (Households 5+) with By Appointment & QR */}
+              <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="flex justify-between items-start">
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    22
+                  </div>
+                  <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
+                </div>
+                <div className="mt-1 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
+                  <span className="text-[8.5px] md:text-[9.5px] text-slate-800 font-bold leading-tight">
+                    {t("calendar.events.openPantry")}
+                  </span>
+                  <span className="text-[9px] md:text-[10px] text-emerald-700 font-black leading-tight">
+                    {t("calendar.events.households5")}
+                  </span>
+                  <span className="text-[8.5px] md:text-[9.5px] text-slate-700 font-bold underline mt-0.5">
+                    2:30-4:30pm
+                  </span>
+                </div>
+                <div className="mt-1 flex items-center justify-between gap-1 bg-red-50/60 p-1 rounded-lg border border-red-100">
+                  <span className="text-[8px] md:text-[9px] text-red-600 font-bold leading-tight">
+                    {t("calendar.events.byAppointment")}
+                  </span>
+                  <img
+                    src="/qr-bodega.png"
+                    alt="Cita QR"
+                    className="w-7 h-7 object-contain rounded bg-white p-0.5 border border-gray-100"
+                  />
+                </div>
+              </div>
+
+              {/* Wednesday 23 - Open Pantry (Seniors 60+ & Kids) + Open to All Evening */}
+              <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="flex justify-between items-start">
+                  <div className="font-extrabold text-base md:text-lg text-slate-800">
+                    23
+                  </div>
+                  <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
+                </div>
+                <div className="mt-1 flex flex-col bg-emerald-500/10 rounded-lg p-1.5 border border-emerald-500/20">
+                  <span className="text-[8.5px] md:text-[9.5px] text-slate-800 font-bold leading-tight">
+                    {t("calendar.events.openPantry")}
+                  </span>
+                  <span className="text-[8px] md:text-[9px] text-emerald-700 font-black leading-tight">
+                    {t("calendar.events.elderlySmallKids")}
+                  </span>
+                  <span className="text-[8.5px] md:text-[9.5px] text-slate-700 font-bold underline mt-0.5">
+                    10:30am-12:30pm
+                  </span>
+                  <div className="mt-1 flex items-center justify-between gap-1 bg-red-50/60 p-0.5 rounded border border-red-100">
+                    <span className="text-[7.5px] md:text-[8px] text-red-600 font-bold leading-tight">
+                      {t("calendar.events.byAppointment")}
+                    </span>
+                    <img
+                      src="/qr-bodega.png"
+                      alt="Cita QR"
+                      className="w-6 h-6 object-contain rounded bg-white p-0.5"
+                    />
+                  </div>
+                </div>
+                <div className="mt-1 text-center bg-emerald-100/60 py-1 px-1 rounded-lg border border-emerald-200/50">
+                  <span className="text-[8.5px] md:text-[9.5px] text-emerald-800 font-extrabold leading-tight block">
+                    {t("calendar.events.openToAllEvening")}
+                  </span>
+                </div>
+              </div>
+
+              {/* Thursday 24 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  24
+                </div>
+              </div>
+
+              {/* Friday 25 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  25
+                </div>
+              </div>
+
+              {/* Row 5 */}
+              {/* Monday 28 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  28
+                </div>
+              </div>
+
+              {/* Tuesday 29 & Wednesday 30 - Closed (Spanning 2 columns) */}
+              <div className="col-span-2 bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
+                <div className="flex justify-between items-center text-slate-400 font-medium text-xs md:text-sm">
+                  <span>29</span>
+                  <span>30</span>
+                </div>
+                <div className="text-[10px] md:text-xs text-red-600 font-extrabold tracking-wide uppercase bg-red-50/50 p-2 rounded-lg border border-red-100/30 text-center flex items-center justify-center gap-2">
+                  <span>&larr;</span>
+                  <span>{t("calendar.events.closed")}</span>
+                  <span>&rarr;</span>
+                </div>
+              </div>
+
+              {/* Thursday & Friday - Subject to change without notice (Spanning 2 columns) */}
+              <div className="col-span-2 bg-gradient-to-br from-amber-50/60 to-orange-50/30 border border-amber-200/80 rounded-2xl p-3 md:p-4 min-h-[120px] flex flex-col justify-center items-center text-center shadow-sm hover:shadow-xl hover:border-amber-300 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
+                <div className="text-[11px] md:text-xs text-amber-900 font-black tracking-tight bg-amber-100/70 py-2.5 px-3 rounded-xl border border-amber-200/60 leading-snug">
+                  {t("calendar.events.subjectToChange")}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Calendar Info / Contact */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-8 text-center"
+          >
+            <p className="text-lg text-gray-700 mb-4">
+              *{t("calendar.volunteersNeeded")}{" "}
+              <a
+                href="mailto:bodega@unidxswnc.org"
+                className="text-blue-600 hover:text-blue-700 font-semibold underline"
+              >
+                bodega@unidxswnc.org
+              </a>
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
       {/* About Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">

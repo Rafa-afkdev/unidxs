@@ -4,25 +4,25 @@ import { motion } from "framer-motion";
 import { Heart, Users } from "lucide-react";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function MainPage() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  // const [isCalendarOpen, setIsCalendarOpen] = useState(false);
+  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
 
-  // Automatically open calendar dialog on page load (Temporarily commented out)
-  // useEffect(() => {
-  //   setIsCalendarOpen(true);
-  // }, []);
+  // Automatically open calendar dialog on page load
+  useEffect(() => {
+    setIsCalendarOpen(true);
+  }, []);
 
   const t = useTranslations("main");
   const tDialog = useTranslations("dialog");
   const locale = useLocale();
 
-  // const calendarImgSrc =
-  //   locale === "es"
-  //     ? "/calendario septiembre-español.jpg"
-  //     : "/calendario septiembre-english.jpg";
+  const calendarImgSrc =
+    locale === "es"
+      ? "/calendario septiembre-español.jpg"
+      : "/calendario septiembre-english.jpg";
 
   return (
     <main>
@@ -345,8 +345,8 @@ export default function MainPage() {
         </div>
       )}
 
-      {/* Calendar Dialog - Auto opens on page load (Temporarily commented out) */}
-      {/* {isCalendarOpen && (
+      {/* Calendar Dialog - Auto opens on page load */}
+      {isCalendarOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <button
             type="button"
@@ -382,6 +382,7 @@ export default function MainPage() {
             </button>
 
             <div className="w-full flex justify-center rounded-2xl overflow-hidden">
+              {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
               <img
                 src={calendarImgSrc}
                 alt={
@@ -394,7 +395,7 @@ export default function MainPage() {
             </div>
           </motion.div>
         </div>
-      )} */}
+      )}
     </main>
 
     //     <div className="absolute inset-0 z-0">

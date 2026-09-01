@@ -422,8 +422,10 @@
       "events": {
         "openPantry": "Despensa Abierta",
         "households5": "Familias 5+",
-        "elderlySmallKids": "Mayores y familias con niños pequeños",
+        "elderlySmallKids": "Adultos Mayores de 60 y familias con niños pequeños",
+        "byAppointment": "*Con cita previa:",
         "openToAll": "Abierto a todos",
+        "openToAllEvening": "Abierto a todos 4:30-6:30pm",
         "closed": "Cerrado",
         "subjectToChange": "¡Sujeto a cambio sin previo aviso!",
         "mannaHelp": "Si necesita ayuda para encontrar comida:",
