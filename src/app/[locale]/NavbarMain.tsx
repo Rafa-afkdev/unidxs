@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import {
-  Calendar,
   ChevronDown,
   GraduationCap,
   Heart,
@@ -130,11 +129,11 @@ export default function NavbarMain() {
 
   const servicesOptions = [
     { href: "/services", label: t("ourServices"), icon: HeartHandshake },
-    {
-      href: "/services/appointments",
-      label: t("appointments"),
-      icon: Calendar,
-    },
+    // {
+    //   href: "/services/appointments",
+    //   label: t("appointments"),
+    //   icon: Calendar,
+    // },
     { href: "/warehouse", label: t("warehouse"), icon: Package },
     { href: "/education", label: t("education"), icon: GraduationCap },
   ];
