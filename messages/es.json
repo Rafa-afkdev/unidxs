@@ -160,6 +160,53 @@
         "commitment": "Compromiso con la Inclusión"
       }
     },
+    "newsletter": {
+      "badge": "Boletín Informativo • Septiembre 2026",
+      "title": "Nuestra Comunidad en Acción",
+      "subtitle": "Descubre los avances, programas y logros más recientes de UNIDXS WNC en nuestra edición especial de septiembre de 2026.",
+      "quote": "\"Empatía. Perseverancia. UNIDXS.\" — Ricardo Bello-Ball",
+      "coverCaption": "Edición de Septiembre de 2026 • 5 páginas con historias, eventos y servicios comunitarios",
+      "viewButton": "Ver Detalles del Boletín",
+      "highlights": {
+        "pantry": {
+          "tag": "Bodega & Despensa",
+          "title": "Expansión de la Despensa",
+          "desc": "Atendemos a ~2,000 personas al mes y distribuimos cerca de 25,000 libras de alimentos con nuevas citas y áreas refrigeradas."
+        },
+        "thrift": {
+          "tag": "505 Mill Street",
+          "title": "Tienda de Segunda Mano",
+          "desc": "Inaugurada con éxito en Sylva. El 100% de los ingresos financia directamente la compra de alimentos para nuestras familias."
+        },
+        "education": {
+          "tag": "Educación Gratuita",
+          "title": "Alfabetización Digital & Laptops",
+          "desc": "Clases en línea, apoyo personalizado para FAFSA/admisión universitaria y entrega de 13 laptops configuradas a estudiantes."
+        },
+        "community": {
+          "tag": "Eventos & Cultura",
+          "title": "Verano Activo & Solidario",
+          "desc": "Primera exposición de arte comunitario, jornada de pasaportes con la Universidad de Western Carolina y presencia en Sylva Pride."
+        }
+      },
+      "modal": {
+        "title": "Boletín Informativo de UNIDXS WNC",
+        "edition": "Edición de Septiembre de 2026",
+        "page": "Página",
+        "of": "de",
+        "prev": "Anterior",
+        "next": "Siguiente",
+        "openFull": "Abrir imagen completa",
+        "close": "Cerrar",
+        "pageTitles": [
+          "Portada & Resumen de Verano (Arte, Pasaportes, Laptops)",
+          "La Despensa de Septiembre & Alimentos Frescos",
+          "Tienda de Segunda Mano & Educación Gratuita",
+          "Eventos de Septiembre & Arte Juvenil",
+          "Declaración de Nuestro Director Ejecutivo (Ricardo Bello-Ball)"
+        ]
+      }
+    },
     "cta": {
       "title": "Únete a Nosotros para Hacer la Diferencia",
       "subtitle": "Juntos, podemos construir una comunidad más inclusiva y solidaria",

@@ -79,12 +79,12 @@ export default function WarehouseComponent() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section with Fondo1-Donation.webp */}
+      {/* Hero Section with Fondo9.jpg */}
       <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center scale-105"
           style={{
-            backgroundImage: "url('/Fondo1-Donation.webp')",
+            backgroundImage: "url('/Fondo9.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60" />
@@ -648,15 +648,15 @@ export default function WarehouseComponent() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section with Fondo10.jpg */}
       <section className="relative py-32 px-4 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/Fondo2.webp')",
+            backgroundImage: "url('/Fondo10.jpg')",
           }}
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/65" />
 
         <div className="relative z-10 max-w-7xl mx-auto">
           <motion.div
@@ -834,12 +834,12 @@ export default function WarehouseComponent() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section with Fondo5.jpeg */}
       <section className="relative py-32 px-4 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/Fondo4.webp')",
+            backgroundImage: "url('/Fondo5.jpeg')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/80 to-black/80" />

@@ -159,6 +159,53 @@
         "commitment": "Commitment to Inclusion"
       }
     },
+    "newsletter": {
+      "badge": "Newsletter • September 2026",
+      "title": "Our Community in Action",
+      "subtitle": "Discover the latest updates, programs, and milestones from UNIDXS WNC in our special September 2026 edition.",
+      "quote": "\"Empathy. Perseverance. UNIDXS.\" — Ricardo Bello-Ball",
+      "coverCaption": "September 2026 Edition • 5 pages of stories, events, and community services",
+      "viewButton": "View Newsletter & Details",
+      "highlights": {
+        "pantry": {
+          "tag": "Food Pantry & Bodega",
+          "title": "Food Pantry Expansion",
+          "desc": "Serving ~2,000 people and distributing nearly 25,000 lbs of food monthly with new appointments and expanded refrigeration."
+        },
+        "thrift": {
+          "tag": "505 Mill Street",
+          "title": "New Thrift Store",
+          "desc": "Successfully opened in Sylva. 100% of all proceeds directly fund food purchases for local families in need."
+        },
+        "education": {
+          "tag": "Free Education",
+          "title": "Digital Literacy & Laptops",
+          "desc": "Online classes, personalized FAFSA and college admission guidance, and 13 configured laptops distributed to students."
+        },
+        "community": {
+          "tag": "Events & Culture",
+          "title": "Active Summer & Solidarity",
+          "desc": "Inaugural community art exhibit, bilingual passport clinic with Western Carolina University, and presence at Sylva Pride."
+        }
+      },
+      "modal": {
+        "title": "UNIDXS WNC Newsletter",
+        "edition": "September 2026 Edition",
+        "page": "Page",
+        "of": "of",
+        "prev": "Previous",
+        "next": "Next",
+        "openFull": "Open full image",
+        "close": "Close",
+        "pageTitles": [
+          "Cover & Summer Recap (Art, Passports, Laptops)",
+          "September Food Pantry & Fresh Produce",
+          "New Thrift Store & Free Education Programs",
+          "September Events & Youth Arts",
+          "Executive Director's Statement (Ricardo Bello-Ball)"
+        ]
+      }
+    },
     "cta": {
       "title": "Join Us in Making a Difference",
       "subtitle": "Together, we can build a more inclusive and supportive community",
