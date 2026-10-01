@@ -21,8 +21,8 @@ export default function MainPage() {
 
   const calendarImgSrc =
     locale === "es"
-      ? "/calendario septiembre-español.jpg"
-      : "/calendario septiembre-english.jpg";
+      ? "/calendario octubre-español.png"
+      : "/calendario octubre-english.png";
 
   return (
     <main>
@@ -387,8 +387,8 @@ export default function MainPage() {
                 src={calendarImgSrc}
                 alt={
                   locale === "es"
-                    ? "Calendario Septiembre 2026 - UNIDXS"
-                    : "September 2026 Calendar - UNIDXS"
+                    ? "Calendario Octubre 2026 - UNIDXS"
+                    : "October 2026 Calendar - UNIDXS"
                 }
                 className="w-full h-auto max-h-[85vh] rounded-2xl object-contain shadow-sm"
               />

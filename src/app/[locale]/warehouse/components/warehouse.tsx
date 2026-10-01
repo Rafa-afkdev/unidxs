@@ -198,7 +198,7 @@ export default function WarehouseComponent() {
         </div>
       </section>
 
-      {/* 3rd Section: September 2026 Calendar Section */}
+      {/* 3rd Section: October 2026 Calendar Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50/70 via-indigo-50/50 to-purple-50/70">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -261,6 +261,7 @@ export default function WarehouseComponent() {
                 {/* WhatsApp Channel Card */}
                 <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 flex items-center gap-4 text-white shadow-inner">
                   <div className="bg-white p-2 rounded-xl shadow-md flex-shrink-0">
+                    {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
                     <img
                       src="/qr group.png"
                       alt="WhatsApp Channel QR"
@@ -302,36 +303,32 @@ export default function WarehouseComponent() {
                 </span>
               </div>
 
-              {/* Tuesday 1 & Wednesday 2 - Closed (Spanning 2 columns) */}
-              <div className="col-span-2 bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
-                <div className="flex justify-between items-center text-slate-400 font-medium text-xs md:text-sm">
-                  <span>1</span>
-                  <span>2</span>
-                </div>
-                <div className="text-[10px] md:text-xs text-red-600 font-extrabold tracking-wide uppercase bg-red-50/50 p-2 rounded-lg border border-red-100/30 text-center flex items-center justify-center gap-2">
-                  <span>&larr;</span>
-                  <span>{t("calendar.events.closed")}</span>
-                  <span>&rarr;</span>
+              {/* Tuesday (Placeholder before Oct 1) */}
+              <div className="bg-white/40 rounded-2xl border border-slate-100/60 p-3 md:p-4 min-h-[120px] flex flex-col justify-between" />
+
+              {/* Wednesday (Placeholder before Oct 1) */}
+              <div className="bg-white/40 rounded-2xl border border-slate-100/60 p-3 md:p-4 min-h-[120px] flex flex-col justify-between" />
+
+              {/* Thursday 1 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  1
                 </div>
               </div>
 
-              {/* Thursday 3 */}
+              {/* Friday 2 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="font-bold text-base md:text-lg text-slate-500">
-                  3
-                </div>
-              </div>
-
-              {/* Friday 4 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  4
+                  2
                 </div>
               </div>
 
               {/* Row 2 */}
-              {/* Monday - Phone & Social Media Card */}
+              {/* Monday 5 - Phone & Social Media Card */}
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50/30 border border-blue-100 rounded-2xl p-3 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] text-center">
+                <div className="font-bold text-base md:text-lg text-slate-700 text-left">
+                  5
+                </div>
                 <div className="flex items-center justify-center gap-1 text-[11px] md:text-xs font-bold text-slate-800">
                   <span>📞</span>
                   <span>(828) 242-7345</span>
@@ -348,11 +345,11 @@ export default function WarehouseComponent() {
                 </div>
               </div>
 
-              {/* Tuesday 8 - Open Pantry (Households 5+) with By Appointment & QR */}
+              {/* Tuesday 6 - Open Pantry (Households 5+) with By Appointment & QR */}
               <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
                   <div className="font-extrabold text-base md:text-lg text-slate-800">
-                    8
+                    6
                   </div>
                   <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
                 </div>
@@ -371,6 +368,7 @@ export default function WarehouseComponent() {
                   <span className="text-[8px] md:text-[9px] text-red-600 font-bold leading-tight">
                     {t("calendar.events.byAppointment")}
                   </span>
+                  {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
                   <img
                     src="/qr-bodega.png"
                     alt="Cita QR"
@@ -379,11 +377,11 @@ export default function WarehouseComponent() {
                 </div>
               </div>
 
-              {/* Wednesday 9 - Open Pantry (Seniors 60+ & Kids) + Open to All Evening */}
+              {/* Wednesday 7 - Open Pantry (Seniors 60+ & Kids) + Open to All Evening */}
               <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
                   <div className="font-extrabold text-base md:text-lg text-slate-800">
-                    9
+                    7
                   </div>
                   <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
                 </div>
@@ -401,6 +399,7 @@ export default function WarehouseComponent() {
                     <span className="text-[7.5px] md:text-[8px] text-red-600 font-bold leading-tight">
                       {t("calendar.events.byAppointment")}
                     </span>
+                    {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
                     <img
                       src="/qr-bodega.png"
                       alt="Cita QR"
@@ -415,22 +414,60 @@ export default function WarehouseComponent() {
                 </div>
               </div>
 
-              {/* Thursday 10 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  10
+              {/* Thursday 8 - Subject to change without notice */}
+              <div className="bg-gradient-to-br from-amber-50/60 to-orange-50/30 border border-amber-200/80 rounded-2xl p-2.5 md:p-3 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-amber-300 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-extrabold text-base md:text-lg text-slate-800">
+                  8
+                </div>
+                <div className="my-auto text-[10px] md:text-xs text-amber-900 font-black tracking-tight bg-amber-100/70 py-2.5 px-3 rounded-xl border border-amber-200/60 text-center leading-snug">
+                  {t("calendar.events.subjectToChange")}
                 </div>
               </div>
 
-              {/* Friday 11 */}
+              {/* Friday 9 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="font-bold text-base md:text-lg text-slate-500">
-                  11
+                  9
                 </div>
               </div>
 
               {/* Row 3 */}
-              {/* Monday - MANNA Foodbank Box (Spans Row 3 & 4) */}
+              {/* Monday 12 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  12
+                </div>
+              </div>
+
+              {/* Tuesday 13 & Wednesday 14 - Closed (Spanning 2 columns) */}
+              <div className="col-span-2 bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
+                <div className="flex justify-between items-center text-slate-400 font-medium text-xs md:text-sm">
+                  <span>13</span>
+                  <span>14</span>
+                </div>
+                <div className="text-[10px] md:text-xs text-red-600 font-extrabold tracking-wide uppercase bg-red-50/50 p-2 rounded-lg border border-red-100/30 text-center flex items-center justify-center gap-2">
+                  <span>&larr;</span>
+                  <span>{t("calendar.events.closed")}</span>
+                  <span>&rarr;</span>
+                </div>
+              </div>
+
+              {/* Thursday 15 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  15
+                </div>
+              </div>
+
+              {/* Friday 16 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  16
+                </div>
+              </div>
+
+              {/* Row 4 */}
+              {/* Monday - MANNA Foodbank Box (Spans Row 4 & 5) */}
               <div className="row-span-2 bg-gradient-to-br from-amber-50 to-yellow-100/50 border-2 border-yellow-400 rounded-2xl p-3 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left">
                 <div className="flex items-center gap-1.5">
                   <span className="text-[11px] md:text-xs font-black text-amber-800 uppercase tracking-tight">
@@ -455,39 +492,11 @@ export default function WarehouseComponent() {
                 </div>
               </div>
 
-              {/* Tuesday 15 & Wednesday 16 - Closed (Spanning 2 columns) */}
-              <div className="col-span-2 bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
-                <div className="flex justify-between items-center text-slate-400 font-medium text-xs md:text-sm">
-                  <span>15</span>
-                  <span>16</span>
-                </div>
-                <div className="text-[10px] md:text-xs text-red-600 font-extrabold tracking-wide uppercase bg-red-50/50 p-2 rounded-lg border border-red-100/30 text-center flex items-center justify-center gap-2">
-                  <span>&larr;</span>
-                  <span>{t("calendar.events.closed")}</span>
-                  <span>&rarr;</span>
-                </div>
-              </div>
-
-              {/* Thursday 17 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  17
-                </div>
-              </div>
-
-              {/* Friday 18 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  18
-                </div>
-              </div>
-
-              {/* Row 4 */}
-              {/* Tuesday 22 - Open Pantry (Households 5+) with By Appointment & QR */}
+              {/* Tuesday 20 - Open Pantry (Households 5+) with By Appointment & QR */}
               <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
                   <div className="font-extrabold text-base md:text-lg text-slate-800">
-                    22
+                    20
                   </div>
                   <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
                 </div>
@@ -506,6 +515,7 @@ export default function WarehouseComponent() {
                   <span className="text-[8px] md:text-[9px] text-red-600 font-bold leading-tight">
                     {t("calendar.events.byAppointment")}
                   </span>
+                  {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
                   <img
                     src="/qr-bodega.png"
                     alt="Cita QR"
@@ -514,11 +524,11 @@ export default function WarehouseComponent() {
                 </div>
               </div>
 
-              {/* Wednesday 23 - Open Pantry (Seniors 60+ & Kids) + Open to All Evening */}
+              {/* Wednesday 21 - Open Pantry (Seniors 60+ & Kids) + Open to All Evening */}
               <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
                   <div className="font-extrabold text-base md:text-lg text-slate-800">
-                    23
+                    21
                   </div>
                   <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
                 </div>
@@ -536,6 +546,7 @@ export default function WarehouseComponent() {
                     <span className="text-[7.5px] md:text-[8px] text-red-600 font-bold leading-tight">
                       {t("calendar.events.byAppointment")}
                     </span>
+                    {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
                     <img
                       src="/qr-bodega.png"
                       alt="Cita QR"
@@ -550,33 +561,28 @@ export default function WarehouseComponent() {
                 </div>
               </div>
 
-              {/* Thursday 24 */}
+              {/* Thursday 22 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="font-bold text-base md:text-lg text-slate-500">
-                  24
+                  22
                 </div>
               </div>
 
-              {/* Friday 25 */}
+              {/* Friday 23 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="font-bold text-base md:text-lg text-slate-500">
-                  25
+                  23
                 </div>
               </div>
 
               {/* Row 5 */}
-              {/* Monday 28 */}
-              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-bold text-base md:text-lg text-slate-500">
-                  28
-                </div>
-              </div>
+              {/* Monday 26 (Part of MANNA row-span-2) */}
 
-              {/* Tuesday 29 & Wednesday 30 - Closed (Spanning 2 columns) */}
+              {/* Tuesday 27 & Wednesday 28 - Closed (Spanning 2 columns) */}
               <div className="col-span-2 bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
                 <div className="flex justify-between items-center text-slate-400 font-medium text-xs md:text-sm">
-                  <span>29</span>
-                  <span>30</span>
+                  <span>27</span>
+                  <span>28</span>
                 </div>
                 <div className="text-[10px] md:text-xs text-red-600 font-extrabold tracking-wide uppercase bg-red-50/50 p-2 rounded-lg border border-red-100/30 text-center flex items-center justify-center gap-2">
                   <span>&larr;</span>
@@ -585,10 +591,17 @@ export default function WarehouseComponent() {
                 </div>
               </div>
 
-              {/* Thursday & Friday - Subject to change without notice (Spanning 2 columns) */}
-              <div className="col-span-2 bg-gradient-to-br from-amber-50/60 to-orange-50/30 border border-amber-200/80 rounded-2xl p-3 md:p-4 min-h-[120px] flex flex-col justify-center items-center text-center shadow-sm hover:shadow-xl hover:border-amber-300 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
-                <div className="text-[11px] md:text-xs text-amber-900 font-black tracking-tight bg-amber-100/70 py-2.5 px-3 rounded-xl border border-amber-200/60 leading-snug">
-                  {t("calendar.events.subjectToChange")}
+              {/* Thursday 29 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  29
+                </div>
+              </div>
+
+              {/* Friday 30 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[120px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  30
                 </div>
               </div>
             </div>

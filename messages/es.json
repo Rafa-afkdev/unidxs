@@ -451,10 +451,10 @@
       }
     },
     "calendar": {
-      "title": "Horario de Septiembre 2026",
+      "title": "Horario de Octubre 2026",
       "subtitle": "Consulta nuestro calendario para horarios de apertura y eventos especiales",
-      "volunteersNeeded": "Volunteers Needed / Necesitamos voluntarios: contacto",
-      "whatsappChannel": "Escanee y siga el Canal de WhatsApp",
+      "volunteersNeeded": "Necesitamos voluntarios: contacte",
+      "whatsappChannel": "Escanee y siga el WhatsApp Channel",
       "joinGroup": "Unirse al Grupo de WhatsApp",
       "stayTuned": "Permanece atento a los cambios",
       "days": {
@@ -472,7 +472,7 @@
         "elderlySmallKids": "Adultos Mayores de 60 y familias con niños pequeños",
         "byAppointment": "*Con cita previa:",
         "openToAll": "Abierto a todos",
-        "openToAllEvening": "Abierto a todos 4:30-6:30pm",
+        "openToAllEvening": "Abierto a todos 4:30–6:30pm",
         "closed": "Cerrado",
         "subjectToChange": "¡Sujeto a cambio sin previo aviso!",
         "mannaHelp": "Si necesita ayuda para encontrar comida:",
