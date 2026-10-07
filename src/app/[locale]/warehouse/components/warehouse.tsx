@@ -159,7 +159,7 @@ export default function WarehouseComponent() {
 
               <motion.div variants={fadeInUp} className="pt-4">
                 <a
-                  href="https://www.signupgenius.com/go/10C054AADAF28A5FBC07-64619027-july"
+                  href="https://www.signupgenius.com/go/10C054AADAF28A5FBC07-66060736-october?utm_source=qrcode"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl hover:scale-[1.03] active:scale-[0.98] transition-all cursor-pointer"
@@ -183,7 +183,7 @@ export default function WarehouseComponent() {
                   <div className="bg-white p-4 rounded-2xl shadow-inner border border-gray-100 mb-4">
                     {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
                     <img
-                      src="/qr-bodega.png"
+                      src="/qr-bodega.jpeg"
                       alt={t("volunteerRegistration.scanQR")}
                       className="w-48 h-48 md:w-56 md:h-56 rounded-lg object-contain"
                     />
@@ -370,7 +370,7 @@ export default function WarehouseComponent() {
                   </span>
                   {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
                   <img
-                    src="/qr-bodega.png"
+                    src="/qr-bodega.jpeg"
                     alt="Cita QR"
                     className="w-7 h-7 object-contain rounded bg-white p-0.5 border border-gray-100"
                   />
@@ -401,7 +401,7 @@ export default function WarehouseComponent() {
                     </span>
                     {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
                     <img
-                      src="/qr-bodega.png"
+                      src="/qr-bodega.jpeg"
                       alt="Cita QR"
                       className="w-6 h-6 object-contain rounded bg-white p-0.5"
                     />
@@ -517,7 +517,7 @@ export default function WarehouseComponent() {
                   </span>
                   {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
                   <img
-                    src="/qr-bodega.png"
+                    src="/qr-bodega.jpeg"
                     alt="Cita QR"
                     className="w-7 h-7 object-contain rounded bg-white p-0.5 border border-gray-100"
                   />
@@ -548,7 +548,7 @@ export default function WarehouseComponent() {
                     </span>
                     {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
                     <img
-                      src="/qr-bodega.png"
+                      src="/qr-bodega.jpeg"
                       alt="Cita QR"
                       className="w-6 h-6 object-contain rounded bg-white p-0.5"
                     />
