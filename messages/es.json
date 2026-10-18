@@ -161,37 +161,37 @@
       }
     },
     "newsletter": {
-      "badge": "Boletín Informativo • Septiembre 2026",
+      "badge": "Boletín Informativo • Octubre 2026",
       "title": "Nuestra Comunidad en Acción",
-      "subtitle": "Descubre los avances, programas y logros más recientes de UNIDXS WNC en nuestra edición especial de septiembre de 2026.",
-      "quote": "\"Empatía. Perseverancia. UNIDXS.\" — Ricardo Bello-Ball",
-      "coverCaption": "Edición de Septiembre de 2026 • 5 páginas con historias, eventos y servicios comunitarios",
+      "subtitle": "Descubre los avances, programas y logros más recientes de UNIDXS WNC en nuestra edición especial de octubre de 2026.",
+      "quote": "\"Nadie debería ser invisible por el lugar donde vive, y seguiremos trabajando hasta que estas comunidades sean vistas, escuchadas y valoradas.\" — Ricardo Bello-Ball",
+      "coverCaption": "Edición de Octubre de 2026 • 5 páginas con historias, eventos y servicios comunitarios",
       "viewButton": "Ver Detalles del Boletín",
       "highlights": {
         "pantry": {
-          "tag": "Bodega & Despensa",
-          "title": "Expansión de la Despensa",
-          "desc": "Atendemos a ~2,000 personas al mes y distribuimos cerca de 25,000 libras de alimentos con nuevas citas y áreas refrigeradas."
+          "tag": "Certificación de Oro",
+          "title": "Despensa Saludable Premiada",
+          "desc": "Nuestra despensa obtuvo la Certificación Oro estatal (NC Healthy Food Access), sumando más alimentos frescos locales con MANNA y el sistema SWAP."
         },
         "thrift": {
-          "tag": "505 Mill Street",
-          "title": "Tienda de Segunda Mano",
-          "desc": "Inaugurada con éxito en Sylva. El 100% de los ingresos financia directamente la compra de alimentos para nuestras familias."
+          "tag": "Tienda & Cultura",
+          "title": "Tienda de Segunda Mano y Sylva Art Walk",
+          "desc": "Abierta de lunes a sábado. Nueva donación y afinación de piano con la Primera Iglesia Bautista de Sylva para el Sylva Art Walk."
         },
         "education": {
-          "tag": "Educación Gratuita",
-          "title": "Alfabetización Digital & Laptops",
-          "desc": "Clases en línea, apoyo personalizado para FAFSA/admisión universitaria y entrega de 13 laptops configuradas a estudiantes."
+          "tag": "Alianzas Educativas",
+          "title": "WCU TESOL y Club Cultural",
+          "desc": "Nueva alianza con el programa TESOL de WCU para inglés laboral en campus, apoyo continuo al Club Cultural de Smoky Mountain High School y clases gratuitas."
         },
         "community": {
-          "tag": "Eventos & Cultura",
-          "title": "Verano Activo & Solidario",
-          "desc": "Primera exposición de arte comunitario, jornada de pasaportes con la Universidad de Western Carolina y presencia en Sylva Pride."
+          "tag": "Próximos Eventos",
+          "title": "Educación Vial & Día de los Muertos",
+          "desc": "Curso de educación vial en línea para el examen de manejo y gran celebración comunitaria de Día de los Muertos con cuentacuentos y manualidades."
         }
       },
       "modal": {
         "title": "Boletín Informativo de UNIDXS WNC",
-        "edition": "Edición de Septiembre de 2026",
+        "edition": "Edición de Octubre de 2026",
         "page": "Página",
         "of": "de",
         "prev": "Anterior",
@@ -199,11 +199,11 @@
         "openFull": "Abrir imagen completa",
         "close": "Cerrar",
         "pageTitles": [
-          "Portada & Resumen de Verano (Arte, Pasaportes, Laptops)",
-          "La Despensa de Septiembre & Alimentos Frescos",
-          "Tienda de Segunda Mano & Educación Gratuita",
-          "Eventos de Septiembre & Arte Juvenil",
-          "Declaración de Nuestro Director Ejecutivo (Ricardo Bello-Ball)"
+          "Portada & Resumen de Septiembre (Herencia Hispana, DMV, Festivales)",
+          "La Despensa de Octubre & Certificación Oro",
+          "Tienda de Segunda Mano & Alianzas Educativas (WCU)",
+          "Próximos Eventos (Educación Vial y Día de los Muertos)",
+          "Una Región Invisible • Declaración de Nuestro Director Ejecutivo"
         ]
       }
     },

@@ -16,7 +16,6 @@ import {
   Newspaper,
   Palette,
   Scale,
-  ShoppingBag,
   Sparkles,
   Store,
   Target,
@@ -36,23 +35,23 @@ export default function About() {
   const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
   const [activeNewsletterPage, setActiveNewsletterPage] = useState(0);
   const [newsletterLang, setNewsletterLang] = useState<"es" | "en">(
-    locale === "es" ? "es" : "en"
+    locale === "es" ? "es" : "en",
   );
 
   const spanishNewsletterPages = [
-    "/post/Spanish NL Sept. Draft (5)_page-0001.jpg",
-    "/post/Spanish NL Sept. Draft (5)_page-0002.jpg",
-    "/post/Spanish NL Sept. Draft (5)_page-0003.jpg",
-    "/post/Spanish NL Sept. Draft (5)_page-0004.jpg",
-    "/post/Spanish NL Sept. Draft (5)_page-0005.jpg",
+    "/post/NL Oct. Draft Spn. (1)-1.png",
+    "/post/NL Oct. Draft Spn. (1)-2.png",
+    "/post/NL Oct. Draft Spn. (1)-3.png",
+    "/post/NL Oct. Draft Spn. (1)-4.png",
+    "/post/NL Oct. Draft Spn. (1)-5.png",
   ];
 
   const englishNewsletterPages = [
-    "/post/NL Sept. Draft (3)_page-0001.jpg",
-    "/post/NL Sept. Draft (3)_page-0002.jpg",
-    "/post/NL Sept. Draft (3)_page-0003.jpg",
-    "/post/NL Sept. Draft (3)_page-0004.jpg",
-    "/post/NL Sept. Draft (3)_page-0005.jpg",
+    "/post/NL Oct. Draft Eng. (1)-1.png",
+    "/post/NL Oct. Draft Eng. (1)-2.png",
+    "/post/NL Oct. Draft Eng. (1)-3.png",
+    "/post/NL Oct. Draft Eng. (1)-4.png",
+    "/post/NL Oct. Draft Eng. (1)-5.png",
   ];
 
   const currentNewsletterPages =
@@ -83,7 +82,7 @@ export default function About() {
 
   const newsletterHighlights = [
     {
-      icon: ShoppingBag,
+      icon: Award,
       tag: t("newsletter.highlights.pantry.tag"),
       title: t("newsletter.highlights.pantry.title"),
       desc: t("newsletter.highlights.pantry.desc"),
@@ -383,7 +382,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Community Highlights & September 2026 Newsletter Section */}
+      {/* Community Highlights & October 2026 Newsletter Section */}
       <section className="py-24 px-4 bg-gradient-to-b from-slate-50 via-purple-50/20 to-white relative overflow-hidden">
         {/* Decorative background glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-6xl h-96 bg-gradient-to-tr from-purple-200/25 via-pink-200/20 to-indigo-200/20 blur-3xl pointer-events-none -z-10" />
@@ -747,9 +746,9 @@ export default function About() {
                     {t("newsletter.modal.title")}
                   </h3>
                   <p className="text-xs text-purple-300">
-                    {t("newsletter.modal.edition")} • {t("newsletter.modal.page")}{" "}
-                    {activeNewsletterPage + 1} {t("newsletter.modal.of")}{" "}
-                    {currentNewsletterPages.length}
+                    {t("newsletter.modal.edition")} •{" "}
+                    {t("newsletter.modal.page")} {activeNewsletterPage + 1}{" "}
+                    {t("newsletter.modal.of")} {currentNewsletterPages.length}
                   </p>
                 </div>
               </div>
@@ -854,7 +853,7 @@ export default function About() {
                 }
                 onClick={() =>
                   setActiveNewsletterPage((prev) =>
-                    Math.min(prev + 1, currentNewsletterPages.length - 1)
+                    Math.min(prev + 1, currentNewsletterPages.length - 1),
                   )
                 }
                 className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 z-20 p-2.5 sm:p-3 rounded-full bg-black/60 hover:bg-purple-600 text-white border border-white/20 disabled:opacity-30 disabled:pointer-events-none transition-all shadow-xl cursor-pointer"
@@ -917,7 +916,7 @@ export default function About() {
                   }
                   onClick={() =>
                     setActiveNewsletterPage((prev) =>
-                      Math.min(prev + 1, currentNewsletterPages.length - 1)
+                      Math.min(prev + 1, currentNewsletterPages.length - 1),
                     )
                   }
                   className="px-4 py-2 rounded-xl text-xs font-semibold bg-white/10 hover:bg-white/20 disabled:opacity-40 disabled:pointer-events-none text-white transition-colors cursor-pointer flex items-center gap-1"
