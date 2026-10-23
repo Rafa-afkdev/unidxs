@@ -1,7 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Heart, Users } from "lucide-react";
+import {
+  Bus,
+  Calendar,
+  CheckCircle2,
+  Clock,
+  ExternalLink,
+  Heart,
+  MapPin,
+  Sparkles,
+  Users,
+  Vote,
+  X,
+  ZoomIn,
+} from "lucide-react";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
@@ -9,11 +22,24 @@ import { useEffect, useState } from "react";
 export default function MainPage() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
+  const [isPosterModalOpen, setIsPosterModalOpen] = useState(false);
 
   // Automatically open calendar dialog on page load
   useEffect(() => {
     setIsCalendarOpen(true);
   }, []);
+
+  // Handle ESC key for poster modal
+  useEffect(() => {
+    if (!isPosterModalOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsPosterModalOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isPosterModalOpen]);
 
   const t = useTranslations("main");
   const tDialog = useTranslations("dialog");
@@ -193,6 +219,259 @@ export default function MainPage() {
               {t("about.button")}
             </Link>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Vote Early & Free Voter Transportation Section (Poster Initiative) */}
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-indigo-50/40 to-slate-50 overflow-hidden">
+        {/* Decorative background glows */}
+        <div className="absolute top-1/4 left-0 -translate-x-1/2 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl pointer-events-none -z-10" />
+        <div className="absolute bottom-10 right-0 translate-x-1/3 w-96 h-96 bg-indigo-300/20 rounded-full blur-3xl pointer-events-none -z-10" />
+
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="text-center mb-16"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold bg-indigo-100 text-indigo-900 border border-indigo-200/80 shadow-sm mb-4">
+              <Vote className="w-4 h-4 text-indigo-600" />
+              <span>{t("voteEarly.badge")}</span>
+            </div>
+
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
+              <span className="block bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                {t("voteEarly.tag")}
+              </span>
+              <span className="block text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mt-2">
+                {t("voteEarly.title")}
+              </span>
+            </h2>
+
+            <p className="mt-4 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              {t("voteEarly.subtitle")}
+            </p>
+          </motion.div>
+
+          {/* Main Grid: Poster Card (Left) & Information & Logistics (Right) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            {/* Left Column: Interactive Poster Showcase */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-5 flex flex-col items-center"
+            >
+              <div className="w-full max-w-md relative group">
+                {/* Glow ring */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-3xl blur-lg opacity-40 group-hover:opacity-75 transition duration-500" />
+
+                {/* Card Container */}
+                <div className="relative bg-gradient-to-b from-slate-900 via-indigo-950 to-slate-950 p-4 sm:p-5 rounded-3xl border border-white/20 shadow-2xl text-white overflow-hidden">
+                  {/* Floating Limited Seats Badge */}
+                  <div className="absolute top-6 right-6 z-20">
+                    <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-extrabold tracking-wider uppercase bg-gradient-to-r from-amber-500 to-rose-500 text-white shadow-lg shadow-rose-500/30">
+                      <Sparkles className="w-3.5 h-3.5" />
+                      {t("voteEarly.limitedSeats")}
+                    </span>
+                  </div>
+
+                  {/* Clickable Image Preview */}
+                  <button
+                    type="button"
+                    onClick={() => setIsPosterModalOpen(true)}
+                    className="w-full relative rounded-2xl overflow-hidden cursor-pointer group/img block text-left border border-white/10"
+                  >
+                    {/* biome-ignore lint/performance/noImgElement: Poster preview */}
+                    <img
+                      src="/post/poster.jpeg"
+                      alt={t("voteEarly.title")}
+                      className="w-full h-auto object-cover rounded-2xl group-hover/img:scale-[1.03] transition-transform duration-500"
+                    />
+
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
+                      <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold bg-white/90 text-gray-900 shadow-xl backdrop-blur-md">
+                        <ZoomIn className="w-4 h-4 text-indigo-600" />
+                        {t("voteEarly.clickToZoom")}
+                      </span>
+                    </div>
+                  </button>
+
+                  {/* Slogan card below poster */}
+                  <div className="mt-4 p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 text-center">
+                    <p className="text-sm sm:text-base font-semibold text-purple-200 italic leading-snug">
+                      {t("voteEarly.slogan")}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Column: Structured Info, Schedules, Badges & Actions */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-7 flex flex-col gap-6"
+            >
+              {/* Limited seats alert bar */}
+              <div className="flex items-center justify-between p-4 bg-gradient-to-r from-amber-500/10 via-rose-500/10 to-purple-500/10 border-l-4 border-amber-500 rounded-r-2xl shadow-sm">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center font-bold shadow-md">
+                    <Bus className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-base">
+                      {t("voteEarly.limitedSeats")}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-gray-600">
+                      {locale === "es"
+                        ? "Reserva tu horario llegando puntual al punto de encuentro."
+                        : "Secure your spot by arriving on time at the meeting location."}
+                    </p>
+                  </div>
+                </div>
+                <span className="hidden sm:inline-block px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full">
+                  Sylva, NC
+                </span>
+              </div>
+
+              {/* 4 Cards Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {/* Date Card */}
+                <div className="p-5 rounded-2xl bg-white border border-gray-200/80 shadow-md hover:shadow-lg transition-all duration-300 group">
+                  <div className="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 mb-3 group-hover:scale-110 transition-transform">
+                    <Calendar className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-indigo-600">
+                    {t("voteEarly.dateLabel")}
+                  </span>
+                  <h4 className="text-lg font-bold text-gray-900 mt-0.5">
+                    {t("voteEarly.dateValue")}
+                  </h4>
+                  <p className="text-xs text-gray-500 mt-1">
+                    {locale === "es"
+                      ? "Jornada de votación anticipada"
+                      : "Early voting day initiative"}
+                  </p>
+                </div>
+
+                {/* Departure Times Card */}
+                <div className="p-5 rounded-2xl bg-white border border-gray-200/80 shadow-md hover:shadow-lg transition-all duration-300 group">
+                  <div className="w-12 h-12 rounded-xl bg-purple-50 border border-purple-100 flex items-center justify-center text-purple-600 mb-3 group-hover:scale-110 transition-transform">
+                    <Clock className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-purple-600">
+                    {t("voteEarly.departuresLabel")}
+                  </span>
+                  <h4 className="text-lg font-bold text-gray-900 mt-0.5">
+                    {t("voteEarly.departuresValue")}
+                  </h4>
+                  <p className="text-xs text-gray-500 mt-1">
+                    {t("voteEarly.departuresDesc")}
+                  </p>
+                </div>
+
+                {/* Meeting Point Card */}
+                <div className="p-5 rounded-2xl bg-white border border-gray-200/80 shadow-md hover:shadow-lg transition-all duration-300 group">
+                  <div className="w-12 h-12 rounded-xl bg-rose-50 border border-rose-100 flex items-center justify-center text-rose-600 mb-3 group-hover:scale-110 transition-transform">
+                    <MapPin className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-rose-600">
+                    {t("voteEarly.meetingPointLabel")}
+                  </span>
+                  <h4 className="text-lg font-bold text-gray-900 mt-0.5">
+                    {t("voteEarly.meetingPointValue")}
+                  </h4>
+                  <p className="text-xs text-gray-500 mt-1">
+                    {t("voteEarly.meetingPointDesc")}
+                  </p>
+                </div>
+
+                {/* Free Transport Card */}
+                <div className="p-5 rounded-2xl bg-white border border-gray-200/80 shadow-md hover:shadow-lg transition-all duration-300 group">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 mb-3 group-hover:scale-110 transition-transform">
+                    <Bus className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-emerald-600">
+                    {t("voteEarly.costLabel")}
+                  </span>
+                  <h4 className="text-lg font-bold text-emerald-700 mt-0.5">
+                    {t("voteEarly.costValue")}
+                  </h4>
+                  <p className="text-xs text-gray-500 mt-1">
+                    {t("voteEarly.costDesc")}
+                  </p>
+                </div>
+              </div>
+
+              {/* Checkmarks / Benefits List */}
+              <div className="p-5 rounded-2xl bg-gradient-to-r from-purple-50/70 to-indigo-50/70 border border-purple-100/80">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                    <span className="text-sm font-medium text-gray-800">
+                      {t("voteEarly.features.safe")}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                    <span className="text-sm font-medium text-gray-800">
+                      {t("voteEarly.features.eligible")}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                    <span className="text-sm font-medium text-gray-800">
+                      {t("voteEarly.features.free")}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                    <span className="text-sm font-medium text-gray-800">
+                      {t("voteEarly.features.vote")}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setIsPosterModalOpen(true)}
+                  className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold rounded-full shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer text-sm sm:text-base"
+                >
+                  <ZoomIn className="w-4 h-4" />
+                  {t("voteEarly.viewPoster")}
+                </button>
+
+                <a
+                  href="https://maps.google.com/?q=503+Mill+St,+Sylva,+NC+28779"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-white hover:bg-gray-50 text-gray-800 font-semibold rounded-full shadow-md hover:shadow-lg border border-gray-200 transition-all duration-300 transform hover:-translate-y-0.5 text-sm sm:text-base"
+                >
+                  <MapPin className="w-4 h-4 text-rose-500" />
+                  {t("voteEarly.openMaps")}
+                  <ExternalLink className="w-4 h-4 text-gray-400" />
+                </a>
+
+                <Link
+                  href={`/${locale}/contact`}
+                  className="inline-flex items-center gap-2 text-sm font-medium text-indigo-700 hover:text-indigo-900 transition-colors ml-auto underline underline-offset-4"
+                >
+                  {t("voteEarly.contactUs")}
+                </Link>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -391,6 +670,72 @@ export default function MainPage() {
                     : "October 2026 Calendar - UNIDXS"
                 }
                 className="w-full h-auto max-h-[85vh] rounded-2xl object-contain shadow-sm"
+              />
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+      {/* Poster Zoom Lightbox Modal */}
+      {isPosterModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 bg-black/85 backdrop-blur-md">
+          <button
+            type="button"
+            className="fixed inset-0 w-full h-full cursor-default border-none outline-none bg-transparent"
+            onClick={() => setIsPosterModalOpen(false)}
+            aria-label={t("voteEarly.close")}
+          />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            className="bg-slate-950 border border-white/20 rounded-3xl shadow-2xl max-w-3xl w-full max-h-[95vh] flex flex-col overflow-hidden text-white relative z-10"
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between p-4 sm:p-5 border-b border-white/10 bg-slate-900/80 backdrop-blur-md">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-md">
+                  <Vote className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-base sm:text-lg font-bold text-white">
+                    {t("voteEarly.modalTitle")}
+                  </h3>
+                  <p className="text-xs text-purple-300">
+                    503 Mill St, Sylva, NC • {t("voteEarly.dateValue")}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <a
+                  href="/post/poster.jpeg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white transition-colors"
+                  title={t("voteEarly.openOriginal")}
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+
+                <button
+                  type="button"
+                  onClick={() => setIsPosterModalOpen(false)}
+                  className="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white transition-colors cursor-pointer"
+                  title={t("voteEarly.close")}
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Poster Canvas */}
+            <div className="relative flex-1 min-h-0 bg-black/60 flex items-center justify-center p-3 sm:p-5 overflow-y-auto">
+              {/* biome-ignore lint/performance/noImgElement: Full poster modal display */}
+              <img
+                src="/post/poster.jpeg"
+                alt={t("voteEarly.title")}
+                className="max-h-[75vh] w-auto rounded-2xl shadow-2xl object-contain border border-white/10"
               />
             </div>
           </motion.div>

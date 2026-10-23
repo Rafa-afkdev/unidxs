@@ -47,6 +47,38 @@
       "paragraph": "Welcome to UNIDXS, where we are passionate about community improvement through our dedicated educational program and support services. Our goal is to see individuals thrive by providing them with the resources they need to overcome challenges and grow. By joining forces with us, you become part of a movement committed to making a meaningful difference in people's lives. Let's work together to create a brighter future for our community.",
       "cta": "Join Us Today"
     },
+    "voteEarly": {
+      "badge": "Community Initiative • 2026 Elections",
+      "tag": "Take Action! Vote Early",
+      "title": "Free Transportation for Eligible Voters",
+      "subtitle": "We'll take you to a voting site and bring you back to your starting point. A safe, reliable, and 100% free service for eligible voters and families in Jackson County.",
+      "limitedSeats": "Limited Seats!",
+      "dateLabel": "Event Date",
+      "dateValue": "Saturday, October 24, 2026",
+      "departuresLabel": "Departure Times",
+      "departuresValue": "9:00 AM • 11:00 AM • 12:30 PM",
+      "departuresDesc": "3 scheduled round-trip departures",
+      "meetingPointLabel": "Meeting Point",
+      "meetingPointValue": "503 Mill St, Sylva, NC",
+      "meetingPointDesc": "Meet at the Warehouse",
+      "costLabel": "Transportation Cost",
+      "costValue": "100% Free of Charge",
+      "costDesc": "Full round-trip transportation service at no cost",
+      "features": {
+        "safe": "Safe, comfortable, and reliable transportation",
+        "eligible": "For eligible individuals and families in Jackson County",
+        "free": "Completely free of charge (no cost)",
+        "vote": "Your vote matters and your voice makes a difference!"
+      },
+      "slogan": "\"Show up for your community. Make your voice heard.\"",
+      "viewPoster": "View Official Poster",
+      "openMaps": "Directions to Meeting Point",
+      "contactUs": "Questions? Contact Us",
+      "clickToZoom": "Click to expand official poster",
+      "modalTitle": "Official Poster • Free Voter Transportation",
+      "openOriginal": "Open original image",
+      "close": "Close"
+    },
     "footer": {
       "generalContact": "General Inquiries",
       "office": "UNIDXS Office",

@@ -47,6 +47,38 @@
       "paragraph": "Bienvenido a UNIDXS, donde nos apasiona mejorar nuestra comunidad a través de nuestro programa educativo y servicios de apoyo. Nuestro objetivo es que cada persona prospere, brindándole los recursos que necesita para superar desafíos y crecer. Al unirte a nosotros, pasas a ser parte de un movimiento comprometido con generar un impacto significativo en la vida de las personas. Trabajemos juntos para crear un futuro más brillante para nuestra comunidad.",
       "cta": "Únete hoy"
     },
+    "voteEarly": {
+      "badge": "Iniciativa Comunitaria • Elecciones 2026",
+      "tag": "¡Toma Acción! Vota Temprano",
+      "title": "Transporte Gratuito para Votantes Elegibles",
+      "subtitle": "Te llevamos a un centro de votación y te traemos de regreso a tu punto de partida. Un servicio seguro, confiable y 100% gratuito para votantes y familias del Condado de Jackson.",
+      "limitedSeats": "¡Cupos Limitados!",
+      "dateLabel": "Fecha del Evento",
+      "dateValue": "Sábado, 24 de Octubre del 2026",
+      "departuresLabel": "Horarios de Salida",
+      "departuresValue": "9:00 AM • 11:00 AM • 12:30 PM",
+      "departuresDesc": "3 turnos programados de ida y vuelta",
+      "meetingPointLabel": "Punto de Encuentro",
+      "meetingPointValue": "503 Mill St, Sylva, NC",
+      "meetingPointDesc": "En la Bodega (Warehouse)",
+      "costLabel": "Costo del Transporte",
+      "costValue": "100% Gratuito",
+      "costDesc": "Servicio completo de ida y regreso sin ningún costo",
+      "features": {
+        "safe": "Transporte seguro, cómodo y confiable",
+        "eligible": "Para personas y familias elegibles del Condado de Jackson",
+        "free": "Completamente gratis (sin costo)",
+        "vote": "¡Tu voto cuenta y tu voz hace la diferencia!"
+      },
+      "slogan": "\"Preséntate por tu comunidad. Haz que tu voz se escuche.\"",
+      "viewPoster": "Ver Afiche Oficial",
+      "openMaps": "Cómo Llegar al Punto de Salida",
+      "contactUs": "¿Tienes preguntas? Contáctanos",
+      "clickToZoom": "Haz clic para ampliar el afiche oficial",
+      "modalTitle": "Afiche Oficial • Transporte Gratuito para Votantes",
+      "openOriginal": "Abrir en tamaño original",
+      "close": "Cerrar"
+    },
     "footer": {
       "generalContact": "Consultas Generales",
       "office": "Oficina UNIDXS",
