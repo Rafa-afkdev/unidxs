@@ -159,7 +159,7 @@ export default function WarehouseComponent() {
 
               <motion.div variants={fadeInUp} className="pt-4">
                 <a
-                  href="https://www.signupgenius.com/go/10C054AADAF28A5FBC07-66060736-october?utm_source=qrcode"
+                  href="https://www.signupgenius.com/go/10C054AADAF28A5FBC07-67578927-december#/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl hover:scale-[1.03] active:scale-[0.98] transition-all cursor-pointer"
@@ -322,16 +322,10 @@ export default function WarehouseComponent() {
                     2:30-4:30pm
                   </span>
                 </div>
-                <div className="mt-1 flex items-center justify-between gap-1 bg-red-50/60 p-1 rounded-lg border border-red-100">
-                  <span className="text-[8px] md:text-[9px] text-red-600 font-bold leading-tight">
+                <div className="mt-1 text-center bg-red-50/60 py-1 px-1.5 rounded-lg border border-red-100">
+                  <span className="text-[8px] md:text-[9px] text-red-600 font-bold leading-tight block">
                     {t("calendar.events.byAppointment")}
                   </span>
-                  {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
-                  <img
-                    src="/qr-bodega.jpeg"
-                    alt="Cita QR"
-                    className="w-7 h-7 object-contain rounded bg-white p-0.5 border border-gray-100"
-                  />
                 </div>
               </div>
 
@@ -353,16 +347,10 @@ export default function WarehouseComponent() {
                   <span className="text-[8.5px] md:text-[9.5px] text-slate-700 font-bold underline mt-0.5">
                     10:30am-12:30pm
                   </span>
-                  <div className="mt-1 flex items-center justify-between gap-1 bg-red-50/60 p-0.5 rounded border border-red-100">
-                    <span className="text-[7.5px] md:text-[8px] text-red-600 font-bold leading-tight">
+                  <div className="mt-1 text-center bg-red-50/60 py-1 px-1 rounded border border-red-100">
+                    <span className="text-[7.5px] md:text-[8px] text-red-600 font-bold leading-tight block">
                       {t("calendar.events.byAppointment")}
                     </span>
-                    {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
-                    <img
-                      src="/qr-bodega.jpeg"
-                      alt="Cita QR"
-                      className="w-6 h-6 object-contain rounded bg-white p-0.5"
-                    />
                   </div>
                 </div>
                 <div className="mt-1 text-center bg-emerald-100/60 py-1 px-1 rounded-lg border border-emerald-200/50">
@@ -476,16 +464,10 @@ export default function WarehouseComponent() {
                     2:30-4:30pm
                   </span>
                 </div>
-                <div className="mt-1 flex items-center justify-between gap-1 bg-red-50/60 p-1 rounded-lg border border-red-100">
-                  <span className="text-[8px] md:text-[9px] text-red-600 font-bold leading-tight">
+                <div className="mt-1 text-center bg-red-50/60 py-1 px-1.5 rounded-lg border border-red-100">
+                  <span className="text-[8px] md:text-[9px] text-red-600 font-bold leading-tight block">
                     {t("calendar.events.byAppointment")}
                   </span>
-                  {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
-                  <img
-                    src="/qr-bodega.jpeg"
-                    alt="Cita QR"
-                    className="w-7 h-7 object-contain rounded bg-white p-0.5 border border-gray-100"
-                  />
                 </div>
               </div>
 
@@ -507,16 +489,10 @@ export default function WarehouseComponent() {
                   <span className="text-[8.5px] md:text-[9.5px] text-slate-700 font-bold underline mt-0.5">
                     10:30am-12:30pm
                   </span>
-                  <div className="mt-1 flex items-center justify-between gap-1 bg-red-50/60 p-0.5 rounded border border-red-100">
-                    <span className="text-[7.5px] md:text-[8px] text-red-600 font-bold leading-tight">
+                  <div className="mt-1 text-center bg-red-50/60 py-1 px-1 rounded border border-red-100">
+                    <span className="text-[7.5px] md:text-[8px] text-red-600 font-bold leading-tight block">
                       {t("calendar.events.byAppointment")}
                     </span>
-                    {/* biome-ignore lint/performance/noImgElement: Using local image in public */}
-                    <img
-                      src="/qr-bodega.jpeg"
-                      alt="Cita QR"
-                      className="w-6 h-6 object-contain rounded bg-white p-0.5"
-                    />
                   </div>
                 </div>
                 <div className="mt-1 text-center bg-emerald-100/60 py-1 px-1 rounded-lg border border-emerald-200/50">
