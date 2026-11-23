@@ -91,6 +91,17 @@
       "copyright": "© 2022 UNIDXS WNC. All rights reserved.",
       "privacy": "Privacy Policy",
       "terms": "Terms of Use"
+    },
+    "thriftStore": {
+      "title": "Unidxs Thrift Store",
+      "subtitle": "Shop here, feed them — Every purchase supports UNIDXS WNC community programs.",
+      "description": "Visit our thrift store in Sylva, one door down from our food pantry. Discover clothing, furniture, books, and home goods that rotate every week through community donations.",
+      "addressLabel": "Location",
+      "addressValue": "505 Mill Street, Sylva, NC 28779",
+      "hoursLabel": "Hours",
+      "hoursValue": "Tuesday to Saturday · 10:00 AM – 5:00 PM",
+      "ctaVisit": "Visit byunidxs.org",
+      "altFacade": "Storefront of Unidxs Thrift Store at 505 Mill Street, Sylva, NC"
     }
   },
   "team": {
@@ -482,7 +493,7 @@
       }
     },
     "calendar": {
-      "title": "November 2026 Schedule",
+      "title": "December 2026 Schedule",
       "subtitle": "Check our calendar for open hours and special events",
       "volunteersNeeded": "Volunteers Needed: contact",
       "whatsappChannel": "Scan and follow the WhatsApp Channel",
@@ -510,7 +521,8 @@
         "mannaHelpline": "MANNA Food Helpline (828) 290-9749",
         "foodBoxes": "Food boxes",
         "miniMarket": "Mini Market",
-        "address": "503 Mill St., Sylva NC 28779"
+        "address": "503 Mill St., Sylva NC 28779",
+        "jan1": "Jan. 1"
       }
     },
     "howToHelp": {
@@ -629,7 +641,7 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "lastUpdated": "Last Updated: November 2025",
+    "lastUpdated": "Last Updated: November 2026",
     "intro": "At UNIDXS WNC, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information.",
     "sections": {
       "collection": {
@@ -651,12 +663,16 @@
       "contact": {
         "title": "Contact Us",
         "content": "If you have any questions about this Privacy Policy, please contact us at (828) 242-7345 or visit our office in Western North Carolina."
+      },
+      "aiDisclosure": {
+        "title": "Use of Artificial Intelligence",
+        "content": "The design, code, and portions of the text on this website were created with the assistance of artificial intelligence tools and reviewed by members of the UNIDXS WNC team. All organizational details (hours, addresses, phone numbers, and photographs) were provided directly by UNIDXS WNC. Any personal information or messages you submit through our contact forms are never sent to any AI system and are never used to train AI models; they go directly to the UNIDXS WNC team."
       }
     }
   },
   "terms": {
     "title": "Terms of Use",
-    "lastUpdated": "Last Updated: November 2025",
+    "lastUpdated": "Last Updated: November 2026",
     "intro": "By accessing and using UNIDXS WNC services, you agree to comply with these Terms of Use. Please read them carefully.",
     "sections": {
       "services": {
@@ -678,6 +694,10 @@
       "contact": {
         "title": "Contact Information",
         "content": "For questions about these Terms of Use, please contact us at (828) 242-7345 or visit our office in Western North Carolina."
+      },
+      "aiDisclosure": {
+        "title": "AI-Assisted Website Development",
+        "content": "This website—including its design, code, and written copy—was generated with the assistance of artificial intelligence tools and reviewed by people at UNIDXS WNC. While all organizational information is provided directly by UNIDXS WNC, AI-assisted content may occasionally contain inaccuracies. In the event of any discrepancy regarding hours, services, or events, information confirmed directly by UNIDXS WNC staff always prevails."
       }
     }
   },

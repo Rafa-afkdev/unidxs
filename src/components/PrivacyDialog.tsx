@@ -78,6 +78,15 @@ export default function PrivacyDialog({ children }: PrivacyDialogProps) {
 
               <div>
                 <h3 className="font-semibold text-lg mb-2">
+                  {t("sections.aiDisclosure.title")}
+                </h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {t("sections.aiDisclosure.content")}
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-lg mb-2">
                   {t("sections.contact.title")}
                 </h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">

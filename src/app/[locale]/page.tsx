@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Heart, Users } from "lucide-react";
+import { ArrowUpRight, Clock, Heart, MapPin, Users } from "lucide-react";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
@@ -21,8 +21,8 @@ export default function MainPage() {
 
   const calendarImgSrc =
     locale === "es"
-      ? "/calendario noviembre-español.png"
-      : "/calendario noviembre-english.png";
+      ? "/calendario diciembre-español.jpeg"
+      : "/calendario diciembre-english.jpeg";
 
   return (
     <main>
@@ -192,6 +192,96 @@ export default function MainPage() {
             >
               {t("about.button")}
             </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Unidxs Thrift Store (byunidxs.org) Promotional Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-14"
+          >
+            <h2 className="font-sans text-4xl md:text-5xl font-bold text-purple-900 mb-4">
+              {t("thriftStore.title")}
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto rounded-full" />
+            <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto mt-5">
+              {t("thriftStore.subtitle")}
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="max-w-5xl mx-auto bg-gradient-to-br from-purple-50/60 via-white to-indigo-50/60 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100 overflow-hidden"
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
+              {/* Storefront Image */}
+              <div className="h-full">
+                {/* biome-ignore lint/performance/noImgElement: Local store storefront photo */}
+                <img
+                  src="/thrift-store/fachada-entrada.jpg"
+                  alt={t("thriftStore.altFacade")}
+                  className="w-full h-full min-h-[280px] max-h-[420px] object-cover"
+                />
+              </div>
+
+              {/* Clean Content */}
+              <div className="p-8 md:p-10 space-y-6">
+                <p className="text-gray-700 leading-relaxed text-base">
+                  {t("thriftStore.description")}
+                </p>
+
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4">
+                    <div className="w-11 h-11 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-full flex items-center justify-center shrink-0">
+                      <MapPin className="w-5 h-5 text-white" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-wide text-purple-900">
+                        {t("thriftStore.addressLabel")}
+                      </p>
+                      <p className="text-sm md:text-base text-gray-700 font-medium">
+                        {t("thriftStore.addressValue")}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="w-11 h-11 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center shrink-0">
+                      <Clock className="w-5 h-5 text-white" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-wide text-purple-900">
+                        {t("thriftStore.hoursLabel")}
+                      </p>
+                      <p className="text-sm md:text-base text-gray-700 font-medium">
+                        {t("thriftStore.hoursValue")}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                  <a
+                    href={`https://byunidxs.org/${locale}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-sans font-semibold text-sm tracking-wide px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  >
+                    <span>{t("thriftStore.ctaVisit")}</span>
+                    <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -387,8 +477,8 @@ export default function MainPage() {
                 src={calendarImgSrc}
                 alt={
                   locale === "es"
-                    ? "Calendario Noviembre 2026 - UNIDXS"
-                    : "November 2026 Calendar - UNIDXS"
+                    ? "Calendario Diciembre 2026 - UNIDXS"
+                    : "December 2026 Calendar - UNIDXS"
                 }
                 className="w-full h-auto max-h-[85vh] rounded-2xl object-contain shadow-sm"
               />

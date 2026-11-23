@@ -91,6 +91,17 @@
       "copyright": "© 2022 UNIDXS WNC. Todos los derechos reservados.",
       "privacy": "Política de Privacidad",
       "terms": "Términos de Uso"
+    },
+    "thriftStore": {
+      "title": "Unidxs Thrift Store",
+      "subtitle": "Shop here, feed them — Cada compra apoya los programas comunitarios de UNIDXS WNC.",
+      "description": "Visita nuestra tienda de segunda mano en Sylva, a una puerta del banco de comida. Encontrarás ropa, muebles, libros y artículos para el hogar que rotan cada semana gracias a las donaciones de la comunidad.",
+      "addressLabel": "Ubicación",
+      "addressValue": "505 Mill Street, Sylva, NC 28779",
+      "hoursLabel": "Horario",
+      "hoursValue": "Martes a sábado · 10:00 AM – 5:00 PM",
+      "ctaVisit": "Visitar byunidxs.org",
+      "altFacade": "Fachada de Unidxs Thrift Store en 505 Mill Street, Sylva, NC"
     }
   },
   "team": {
@@ -483,7 +494,7 @@
       }
     },
     "calendar": {
-      "title": "Horario de Noviembre 2026",
+      "title": "Horario de Diciembre 2026",
       "subtitle": "Consulta nuestro calendario para horarios de apertura y eventos especiales",
       "volunteersNeeded": "Necesitamos voluntarios: contacte",
       "whatsappChannel": "Escanee y siga el WhatsApp Channel",
@@ -511,7 +522,8 @@
         "mannaHelpline": "MANNA Food Helpline (828) 290-9749",
         "foodBoxes": "Cajas de comida",
         "miniMarket": "Mercado Pequeño",
-        "address": "503 Mill St., Sylva NC 28779"
+        "address": "503 Mill St., Sylva NC 28779",
+        "jan1": "1 de enero"
       }
     },
     "howToHelp": {
@@ -630,7 +642,7 @@
   },
   "privacy": {
     "title": "Política de Privacidad",
-    "lastUpdated": "Última actualización: Noviembre 2025",
+    "lastUpdated": "Última actualización: Noviembre 2026",
     "intro": "En UNIDXS WNC, estamos comprometidos con la protección de su privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos su información personal.",
     "sections": {
       "collection": {
@@ -652,12 +664,16 @@
       "contact": {
         "title": "Contáctenos",
         "content": "Si tiene alguna pregunta sobre esta Política de Privacidad, contáctenos al (828) 242-7345 o visite nuestra oficina en el oeste de Carolina del Norte."
+      },
+      "aiDisclosure": {
+        "title": "Uso de Inteligencia Artificial",
+        "content": "El diseño, el código y parte de los textos de este sitio web fueron creados con la ayuda de herramientas de inteligencia artificial y revisados por personas del equipo de UNIDXS WNC. La información institucional (horarios, direcciones, teléfonos y fotografías) fue proporcionada directamente por UNIDXS WNC. Los datos o mensajes que usted envíe a través de nuestros formularios de contacto no se envían a ningún sistema de inteligencia artificial ni se utilizan para entrenar modelos de IA; van directamente al equipo de UNIDXS WNC."
       }
     }
   },
   "terms": {
     "title": "Términos de Uso",
-    "lastUpdated": "Última actualización: Noviembre 2025",
+    "lastUpdated": "Última actualización: Noviembre 2026",
     "intro": "Al acceder y utilizar los servicios de UNIDXS WNC, usted acepta cumplir con estos Términos de Uso. Por favor, léalos cuidadosamente.",
     "sections": {
       "services": {
@@ -679,6 +695,10 @@
       "contact": {
         "title": "Información de Contacto",
         "content": "Para preguntas sobre estos Términos de Uso, contáctenos al (828) 242-7345 o visite nuestra oficina en el oeste de Carolina del Norte."
+      },
+      "aiDisclosure": {
+        "title": "Desarrollo Asistido por Inteligencia Artificial",
+        "content": "Este sitio web —incluyendo su diseño, código y redacción de textos— fue generado con la ayuda de herramientas de inteligencia artificial y revisado por personas de UNIDXS WNC. Aunque la información de la organización proviene directamente de UNIDXS WNC, los contenidos generados con apoyo de IA pueden contener imprecisiones ocasionales. Ante cualquier duda o discrepancia sobre horarios, servicios o eventos, prevalece siempre la información confirmada directamente por el personal de UNIDXS WNC."
       }
     }
   },

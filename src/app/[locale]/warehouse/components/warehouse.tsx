@@ -198,7 +198,7 @@ export default function WarehouseComponent() {
         </div>
       </section>
 
-      {/* 3rd Section: November 2026 Calendar Section */}
+      {/* 3rd Section: December 2026 Calendar Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50/70 via-indigo-50/50 to-purple-50/70">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -283,12 +283,9 @@ export default function WarehouseComponent() {
             {/* Calendar Days Grid */}
             <div className="grid grid-cols-5 gap-2 md:gap-3 p-1">
               {/* Row 1 */}
-              {/* Monday 2 - Location & Phone Card */}
-              <div className="bg-gradient-to-br from-slate-50 to-indigo-50/30 border border-slate-100 rounded-2xl p-2.5 md:p-3 flex flex-col justify-between min-h-[140px] shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                <div className="font-extrabold text-base md:text-lg text-slate-700 text-left">
-                  2
-                </div>
-                <div className="flex flex-col items-center justify-center text-center my-1">
+              {/* Monday - Location & Phone Card */}
+              <div className="bg-gradient-to-br from-slate-50 to-indigo-50/30 border border-slate-100 rounded-2xl p-2.5 md:p-3 flex flex-col justify-center items-center gap-2 min-h-[140px] shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="flex flex-col items-center justify-center text-center">
                   <MapPin className="w-4 h-4 text-indigo-600 mb-0.5" />
                   <span className="text-[11px] md:text-xs font-bold leading-tight text-slate-800">
                     503 Mill St.,
@@ -303,11 +300,11 @@ export default function WarehouseComponent() {
                 </div>
               </div>
 
-              {/* Tuesday 3 - Open Pantry (Households 5+) with By Appointment & QR */}
+              {/* Tuesday 1 - Open Pantry (Households 5+) */}
               <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
                   <div className="font-extrabold text-base md:text-lg text-slate-800">
-                    3
+                    1
                   </div>
                   <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
                 </div>
@@ -329,11 +326,11 @@ export default function WarehouseComponent() {
                 </div>
               </div>
 
-              {/* Wednesday 4 - Open Pantry (Seniors 60+ & Kids) + Open to All Evening */}
+              {/* Wednesday 2 - Open Pantry (Seniors 60+ & Kids) + Open to All Evening */}
               <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
                   <div className="font-extrabold text-base md:text-lg text-slate-800">
-                    4
+                    2
                   </div>
                   <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
                 </div>
@@ -360,11 +357,11 @@ export default function WarehouseComponent() {
                 </div>
               </div>
 
-              {/* Thursday 5 & Friday 6 - Subject to change without notice (Spanning 2 columns) */}
+              {/* Thursday 3 & Friday 4 - Subject to change without notice (Spanning 2 columns) */}
               <div className="col-span-2 bg-gradient-to-br from-amber-50/60 to-orange-50/30 border border-amber-200/80 rounded-2xl p-2.5 md:p-3 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-amber-300 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
                 <div className="flex justify-between items-center text-slate-700 font-extrabold text-base md:text-lg">
-                  <span>5</span>
-                  <span>6</span>
+                  <span>3</span>
+                  <span>4</span>
                 </div>
                 <div className="my-auto text-[11px] md:text-xs text-amber-900 font-black tracking-tight bg-amber-100/70 py-2.5 px-3 rounded-xl border border-amber-200/60 text-center leading-snug">
                   {t("calendar.events.subjectToChange")}
@@ -372,10 +369,10 @@ export default function WarehouseComponent() {
               </div>
 
               {/* Row 2 */}
-              {/* Monday 9 - Social Media Card */}
+              {/* Monday 7 - Social Media Card */}
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50/30 border border-blue-100 rounded-2xl p-3 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] text-center">
                 <div className="font-bold text-base md:text-lg text-slate-700 text-left">
-                  9
+                  7
                 </div>
                 <div className="my-auto space-y-2">
                   <div className="flex justify-center gap-1.5 text-[9px] font-bold text-blue-600/90">
@@ -389,11 +386,11 @@ export default function WarehouseComponent() {
                 </div>
               </div>
 
-              {/* Tuesday 10 & Wednesday 11 - Closed (Spanning 2 columns) */}
+              {/* Tuesday 8 & Wednesday 9 - Closed (Spanning 2 columns) */}
               <div className="col-span-2 bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
                 <div className="flex justify-between items-center text-slate-400 font-medium text-xs md:text-sm">
-                  <span>10</span>
-                  <span>11</span>
+                  <span>8</span>
+                  <span>9</span>
                 </div>
                 <div className="text-[10px] md:text-xs text-red-600 font-extrabold tracking-wide uppercase bg-red-50/50 p-2 rounded-lg border border-red-100/30 text-center flex items-center justify-center gap-2">
                   <span>&larr;</span>
@@ -402,54 +399,54 @@ export default function WarehouseComponent() {
                 </div>
               </div>
 
-              {/* Thursday 12 */}
+              {/* Thursday 10 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="font-bold text-base md:text-lg text-slate-500">
-                  12
+                  10
                 </div>
               </div>
 
-              {/* Friday 13 */}
+              {/* Friday 11 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="font-bold text-base md:text-lg text-slate-500">
-                  13
+                  11
                 </div>
               </div>
 
               {/* Row 3 */}
-              {/* Monday 16 - MANNA Foodbank Box (Spans Row 3 & 4) */}
-              <div className="row-span-2 bg-gradient-to-br from-amber-50 to-yellow-100/50 border-2 border-yellow-400 rounded-2xl p-3 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left">
+              {/* Monday 14 - MANNA Foodbank Box (Spans Row 3, 4 & 5) */}
+              <div className="row-span-3 bg-gradient-to-br from-amber-50 to-yellow-100/50 border-2 border-yellow-400 rounded-2xl p-3 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left">
                 <div className="flex items-center justify-between">
                   <span className="text-[11px] md:text-xs font-black text-amber-800 uppercase tracking-tight">
                     MANNA FOODBANK
                   </span>
                   <span className="font-bold text-base md:text-lg text-slate-700">
-                    16
+                    14
                   </span>
                 </div>
-                <div className="space-y-1.5 my-auto">
-                  <div className="text-[9px] md:text-[10px] font-bold text-amber-900 leading-snug">
+                <div className="space-y-2 my-auto">
+                  <div className="text-[9.5px] md:text-[11px] font-bold text-amber-900 leading-snug">
                     {t("calendar.events.mannaHelp")}
                   </div>
                   <a
                     href="https://mannafoodbank.org/find-food/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[8.5px] md:text-[9.5px] text-amber-700 underline block font-semibold hover:text-amber-800 transition-colors break-all"
+                    className="text-[9px] md:text-[10px] text-amber-700 underline block font-semibold hover:text-amber-800 transition-colors break-all"
                   >
                     mannafoodbank.org/find-food
                   </a>
-                  <div className="text-[8.5px] md:text-[9.5px] text-amber-900 font-medium">
+                  <div className="text-[9px] md:text-[10px] text-amber-900 font-medium">
                     {t("calendar.events.mannaHelpline")}
                   </div>
                 </div>
               </div>
 
-              {/* Tuesday 17 - Open Pantry (Households 5+) with By Appointment & QR */}
+              {/* Tuesday 15 - Open Pantry (Households 5+) */}
               <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
                   <div className="font-extrabold text-base md:text-lg text-slate-800">
-                    17
+                    15
                   </div>
                   <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
                 </div>
@@ -471,11 +468,11 @@ export default function WarehouseComponent() {
                 </div>
               </div>
 
-              {/* Wednesday 18 - Open Pantry (Seniors 60+ & Kids) + Open to All Evening */}
+              {/* Wednesday 16 - Open Pantry (Seniors 60+ & Kids) + Open to All Evening */}
               <div className="bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-100 p-2.5 md:p-3 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="flex justify-between items-start">
                   <div className="font-extrabold text-base md:text-lg text-slate-800">
-                    18
+                    16
                   </div>
                   <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-md shadow-emerald-200" />
                 </div>
@@ -502,28 +499,28 @@ export default function WarehouseComponent() {
                 </div>
               </div>
 
-              {/* Thursday 19 */}
+              {/* Thursday 17 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="font-bold text-base md:text-lg text-slate-500">
-                  19
+                  17
                 </div>
               </div>
 
-              {/* Friday 20 */}
+              {/* Friday 18 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="font-bold text-base md:text-lg text-slate-500">
-                  20
+                  18
                 </div>
               </div>
 
               {/* Row 4 */}
-              {/* Monday (Occupied by Monday 16 MANNA row-span-2) */}
+              {/* Monday (Occupied by Monday 14 MANNA row-span-3) */}
 
-              {/* Tuesday 24 & Wednesday 25 - Closed (Spanning 2 columns) */}
+              {/* Tuesday 22 & Wednesday 23 - Closed (Spanning 2 columns) */}
               <div className="col-span-2 bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
                 <div className="flex justify-between items-center text-slate-400 font-medium text-xs md:text-sm">
-                  <span>24</span>
-                  <span>25</span>
+                  <span>22</span>
+                  <span>23</span>
                 </div>
                 <div className="text-[10px] md:text-xs text-red-600 font-extrabold tracking-wide uppercase bg-red-50/50 p-2 rounded-lg border border-red-100/30 text-center flex items-center justify-center gap-2">
                   <span>&larr;</span>
@@ -532,17 +529,47 @@ export default function WarehouseComponent() {
                 </div>
               </div>
 
-              {/* Thursday 26 */}
+              {/* Thursday 24 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="font-bold text-base md:text-lg text-slate-500">
-                  26
+                  24
                 </div>
               </div>
 
-              {/* Friday 27 */}
+              {/* Friday 25 */}
               <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 <div className="font-bold text-base md:text-lg text-slate-500">
-                  27
+                  25
+                </div>
+              </div>
+
+              {/* Row 5 */}
+              {/* Monday (Occupied by Monday 14 MANNA row-span-3) */}
+
+              {/* Tuesday 29 & Wednesday 30 - Closed (Spanning 2 columns) */}
+              <div className="col-span-2 bg-gradient-to-br from-red-50/40 to-white rounded-2xl border border-red-100 p-3 md:p-4 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]">
+                <div className="flex justify-between items-center text-slate-400 font-medium text-xs md:text-sm">
+                  <span>29</span>
+                  <span>30</span>
+                </div>
+                <div className="text-[10px] md:text-xs text-red-600 font-extrabold tracking-wide uppercase bg-red-50/50 p-2 rounded-lg border border-red-100/30 text-center flex items-center justify-center gap-2">
+                  <span>&larr;</span>
+                  <span>{t("calendar.events.closed")}</span>
+                  <span>&rarr;</span>
+                </div>
+              </div>
+
+              {/* Thursday 31 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-base md:text-lg text-slate-500">
+                  31
+                </div>
+              </div>
+
+              {/* Friday Jan 1 */}
+              <div className="bg-white rounded-2xl border border-slate-100/80 p-3 md:p-4 min-h-[140px] flex flex-col justify-between shadow-sm hover:shadow-md hover:border-indigo-100/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                <div className="font-bold text-sm md:text-base text-slate-500">
+                  {t("calendar.events.jan1")}
                 </div>
               </div>
             </div>
